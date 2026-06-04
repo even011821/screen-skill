@@ -1,0 +1,55 @@
+{
+  "id": "shell-cardshell-style07",
+  "label": "Shell/CardShell/Style07",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style07",
+  "assetType": "code",
+  "theme": [
+    "deep-tech-blue",
+    "galaxy-azure"
+  ],
+  "accentColor": "#ffca75",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 280,
+    "h": 180
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-card-shell__title",
+      "default": "妯″潡鏍囬",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": ".bs-card-shell__content",
+      "required": true
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 30
+    },
+    "usesImage": false,
+    "notes": "Runtime uses component.html and shell.css. shell.html is only a direct empty-card preview. Inject business widgets into the content slot."
+  },
+  "status": "ready",
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  }
+}

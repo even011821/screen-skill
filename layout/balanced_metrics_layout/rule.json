@@ -1,0 +1,125 @@
+{
+  "id": "balanced_metrics_layout",
+  "label": "多指标均衡网格型",
+  "version": "1.0.0",
+  "mainVisualType": [
+    "multi_topic",
+    "metrics_grid",
+    "overview"
+  ],
+  "selection": {
+    "useWhen": [
+      "综合运营",
+      "数据总览",
+      "多业务主题",
+      "多部门",
+      "经营分析",
+      "指标看板"
+    ],
+    "avoidWhen": [
+      "存在强地图主对象",
+      "存在强3D/场景主对象",
+      "存在明确流程主线",
+      "画布为超宽指挥舱"
+    ],
+    "fallbackWhen": "没有绝对主视觉，但存在多个相近权重的业务主题。"
+  },
+  "canvas": {
+    "baseline": {
+      "w": 1920,
+      "h": 1080
+    },
+    "contentArea": "computed-after-topnav",
+    "gap": 16
+  },
+  "slotStrategy": {
+    "PrimarySlot": {
+      "required": false,
+      "role": "相对最高优先级区域，通常放主指标或核心主题组；具体内容由指标分析决定",
+      "shell": "CardShell",
+      "widthRatio": [
+        0.28,
+        0.42
+      ],
+      "heightRatio": [
+        0.28,
+        0.44
+      ],
+      "minSize": {
+        "w": 420,
+        "h": 260
+      },
+      "placement": "top-or-center-emphasis"
+    },
+    "ContextSlot": {
+      "required": true,
+      "role": "中高优先级辅助区域，按主题和优先级分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "grid-by-topic"
+    },
+    "StatusSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，按主题和优先级分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "grid-by-topic"
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "补充信息候选区域，通常在底部、页签或扩展区承载低优先级内容；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "bottom-or-tabbed"
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "局部说明层，仅在某个主区域需要标注时使用",
+      "shell": "none",
+      "placement": "local"
+    }
+  },
+  "densityBehavior": {
+    "low": "模块尺寸更大，保留明显留白和主次层级。",
+    "medium": "按业务主题分组，避免机械九宫格。",
+    "high": "合并主题组，使用页签或轮播承载次级指标。",
+    "extreme": "建立一级主题组，首屏只放高优先级指标。"
+  },
+  "componentPreference": {
+    "PrimarySlot": [
+      "widget:kpi-card",
+      "dom:big-number",
+      "echarts:line"
+    ],
+    "ContextSlot": [
+      "widget:kpi-card",
+      "echarts:line",
+      "echarts:bar",
+      "echarts:pie",
+      "dom:ranking-list"
+    ],
+    "StatusSlot": [
+      "dom:alert-list",
+      "widget:kpi-card"
+    ],
+    "DetailSlot": [
+      "dom:ranking-list",
+      "echarts:line",
+      "dom:table"
+    ]
+  },
+  "hardRules": [
+    "均衡不等于平均铺满，必须保留业务主次。",
+    "无强主视觉时使用该布局；有地图/3D/流程时应优先其他布局。",
+    "普通业务模块默认 CardShell。"
+  ],
+  "variantCatalog": "variants/catalog.json",
+  "variantSelection": {
+    "required": true,
+    "rule": "Read variants/catalog.json after this rule.json. Select layoutVariant before calculating panel geometry.",
+    "recordInChangeLog": [
+      "layoutVariant id",
+      "selection reason",
+      "primaryArea or structure",
+      "slot business topics"
+    ],
+    "doNotUseFixedTemplate": true
+  }
+}

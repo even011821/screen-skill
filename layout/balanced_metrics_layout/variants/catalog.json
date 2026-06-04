@@ -1,0 +1,25 @@
+{
+  "id": "balanced_metrics_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "asymmetric_topic_grid",
+      "label": "非对称主题网格",
+      "useWhen": ["无强主视觉", "多个主题权重接近"],
+      "structure": "large-primary-topic + medium-secondary-topics + compact-detail"
+    },
+    {
+      "id": "tabbed_topic_groups",
+      "label": "主题页签分组",
+      "useWhen": ["指标多于12个", "主题可合并"],
+      "structure": "top-kpi + tabbed-topic-panels + bottom-summary"
+    },
+    {
+      "id": "left_priority_right_matrix",
+      "label": "左重点右矩阵",
+      "useWhen": ["有少量高优先级指标", "其余指标为补充"],
+      "structure": "left-priority-stack + right-metric-matrix"
+    }
+  ],
+  "hardRules": ["balanced_metrics_layout 是最后兜底，也不能生成完全均匀的卡片墙。"]
+}

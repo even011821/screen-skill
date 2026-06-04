@@ -1,0 +1,50 @@
+{
+  "id": "map_command_layout_variants",
+  "schemaVersion": "1.0.0",
+  "selectionOrder": [
+    "explicit user requirement",
+    "main visual dominance",
+    "indicator density",
+    "point/region complexity",
+    "content relationship"
+  ],
+  "variants": [
+    {
+      "id": "center_map_side_rails",
+      "label": "中心地图双侧信息栏",
+      "useWhen": ["中等密度", "地图为核心", "左右都有解释性指标"],
+      "primaryArea": { "xRatio": [0.23, 0.77], "yRatio": [0.0, 0.64] },
+      "structure": "left-rail + center-map + right-rail + bottom-detail",
+      "note": "这是常规兜底变体，不得连续项目默认使用。"
+    },
+    {
+      "id": "large_map_overlay",
+      "label": "大地图浮层态势",
+      "useWhen": ["低到中等密度", "点位或区域是主角", "指标数量少"],
+      "primaryArea": { "xRatio": [0.16, 0.88], "yRatio": [0.0, 0.82] },
+      "structure": "large-map + overlay-kpi + floating-status + compact-bottom",
+      "note": "减少左右栏数量，KPI 与告警以浮层贴近地图。"
+    },
+    {
+      "id": "left_map_right_analysis",
+      "label": "左侧地图右侧分析",
+      "useWhen": ["需要突出排行/列表/分析", "地图点位中等", "右侧信息优先级高"],
+      "primaryArea": { "xRatio": [0.0, 0.62], "yRatio": [0.0, 0.74] },
+      "structure": "left-map + right-analysis-stack + bottom-trend",
+      "note": "避免所有地图类页面都居中，适合区域对比和运营分析。"
+    },
+    {
+      "id": "top_kpi_map_bottom_detail",
+      "label": "顶部指标地图底部明细",
+      "useWhen": ["核心总览指标强", "需要保留地图", "底部明细或趋势较重要"],
+      "primaryArea": { "xRatio": [0.18, 0.82], "yRatio": [0.16, 0.72] },
+      "structure": "top-kpi-band + center-map + bottom-detail + side-compact",
+      "note": "适合管理驾驶舱，不把所有指标压到左右栏。"
+    }
+  ],
+  "hardRules": [
+    "同一 layout_type 连续生成时不得总是使用 center_map_side_rails。",
+    "variant 只定义空间组织，不固定卡片数量。",
+    "坐标必须由 contentArea、TopNav 真实高度和 variant 比例计算，不得复用 420/1000/420 固定模板。"
+  ]
+}

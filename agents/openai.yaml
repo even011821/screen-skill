@@ -1,0 +1,3 @@
+display_name: Screen Skill V2
+short_description: Generate data big-screen dashboards from modular kit assets, meta.json selection rules, themes, layouts, and ECharts data bindings.
+default_prompt: Build a modular data big-screen dashboard with screen-skill-v2. Use kit/meta.json selection, choose a layout and theme, inject mock-first or provided data, and verify the generated page.

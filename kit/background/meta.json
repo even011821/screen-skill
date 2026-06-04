@@ -1,0 +1,103 @@
+{
+  "backgrounds": [
+    {
+      "id": "bg-galaxy-azure-1",
+      "theme": [
+        "galaxy-azure",
+        "frost-cyan",
+        "fresh-verdant",
+        "deep-tech-blue"
+      ],
+      "file": "bg-galaxy-azure-1.png",
+      "cssFallback": "#020817",
+      "status": "ready"
+    },
+    {
+      "id": "bg-galaxy-azure-2",
+      "theme": [
+        "galaxy-azure",
+        "frost-cyan",
+        "fresh-verdant",
+        "deep-tech-blue"
+      ],
+      "file": "bg-galaxy-azure-2.png",
+      "cssFallback": "#020817",
+      "status": "ready"
+    },
+    {
+      "id": "bg-ember-orange-1",
+      "theme": [
+        "ember-orange",
+        "dusk-rose-gold"
+      ],
+      "file": "bg-ember-orange-1.png",
+      "cssFallback": "#0a0505",
+      "status": "ready"
+    },
+    {
+      "id": "bg-dusk-rose-gold-1",
+      "theme": [
+        "dusk-rose-gold"
+      ],
+      "file": "bg-dusk-rose-gold-1.png",
+      "cssFallback": "#181C28",
+      "status": "ready"
+    },
+    {
+      "id": "bg-fresh-verdant-1",
+      "theme": [
+        "frost-cyan",
+        "fresh-verdant"
+      ],
+      "file": "bg-fresh-verdant-1.png",
+      "cssFallback": "#00121e",
+      "status": "ready"
+    },
+    {
+      "id": "bg-deep-tech-blue-1",
+      "theme": [
+        "galaxy-azure",
+        "frost-cyan",
+        "fresh-verdant",
+        "deep-tech-blue"
+      ],
+      "file": "bg-deep-tech-blue-1.png",
+      "cssFallback": "#00111e",
+      "status": "ready"
+    },
+    {
+      "id": "bg-dusk-rose-gold-2",
+      "theme": [
+        "ember-orange",
+        "dusk-rose-gold"
+      ],
+      "file": "bg-dusk-rose-gold-2.png",
+      "cssFallback": "#0c0808",
+      "status": "ready"
+    },
+    {
+      "id": "bg-deep-tech-blue-2",
+      "theme": [
+        "galaxy-azure",
+        "frost-cyan",
+        "fresh-verdant",
+        "deep-tech-blue"
+      ],
+      "file": "bg-deep-tech-blue-2.png",
+      "cssFallback": "#001323",
+      "status": "ready"
+    },
+    {
+      "id": "bg-frost-cyan-1",
+      "theme": [
+        "galaxy-azure",
+        "frost-cyan",
+        "fresh-verdant",
+        "deep-tech-blue"
+      ],
+      "file": "bg-frost-cyan-1.png",
+      "cssFallback": "#1a1e29",
+      "status": "ready"
+    }
+  ]
+}

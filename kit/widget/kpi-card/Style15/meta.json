@@ -1,0 +1,68 @@
+{
+  "id": "widget-kpi-card-style15",
+  "label": "KPI Card Style15",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style15",
+  "assetType": "code",
+  "size": {
+    "w": 179,
+    "h": 96
+  },
+  "minSize": {
+    "w": 160,
+    "h": 80
+  },
+  "maxSize": {
+    "w": 322,
+    "h": 173
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "panel-frame.png",
+      "top-icon.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "100",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "件",
+      "required": false
+    },
+    {
+      "name": "label",
+      "selector": "[data-slot='label']",
+      "default": "工单总量",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "value": "string|number",
+    "unit": "string",
+    "label": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-png-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true
+  },
+  "status": "ready"
+}

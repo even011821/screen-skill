@@ -1,0 +1,137 @@
+{
+  "id": "shell-cardshell-style04",
+  "label": "Shell/CardShell/Style04",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style04",
+  "assetType": "code",
+  "theme": [
+    "dusk-rose-gold",
+    "ember-orange"
+  ],
+  "accentColor": "#FFD15C",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 47,
+    "y": 0,
+    "fontFamily": "YouSheBiaoTiHei",
+    "fontSize": 26,
+    "fontWeight": 400,
+    "lineHeight": 34,
+    "letterSpacing": 0,
+    "color": "#FFF9BF",
+    "textShadow": "0 8px 10px rgba(199, 119, 0, 0.38)"
+  },
+  "assets": [
+    {
+      "name": "internal-background",
+      "file": "assets/internal-background.png",
+      "usage": "internal background glow layer only, not full-card screenshot"
+    },
+    {
+      "name": "edge-center",
+      "file": "assets/edge-center.svg",
+      "usage": "bottom and side center notch decoration"
+    },
+    {
+      "name": "bottom-line-left",
+      "file": "assets/bottom-line-left.svg",
+      "usage": "bottom border left segment"
+    },
+    {
+      "name": "bottom-line-right",
+      "file": "assets/bottom-line-right.svg",
+      "usage": "bottom border right segment"
+    },
+    {
+      "name": "corner-left-bottom",
+      "file": "assets/corner-left-bottom.svg",
+      "usage": "left bottom corner decoration"
+    },
+    {
+      "name": "corner-right-bottom",
+      "file": "assets/corner-right-bottom.svg",
+      "usage": "right bottom corner decoration"
+    },
+    {
+      "name": "header-mask-group",
+      "file": "assets/header-mask-group.svg",
+      "usage": "header main shaped background"
+    },
+    {
+      "name": "header-left-fill",
+      "file": "assets/header-left-fill.svg",
+      "usage": "left header glow fill"
+    },
+    {
+      "name": "header-union",
+      "file": "assets/header-union.svg",
+      "usage": "header stripe decoration"
+    },
+    {
+      "name": "header-vector",
+      "file": "assets/header-vector.svg",
+      "usage": "title leading vector line"
+    }
+  ],
+  "cssVariables": {
+    "--style04-title": "#FFF9BF",
+    "--style04-line": "#FFF4AB",
+    "--style04-accent": "#FFD15C",
+    "--style04-shadow": "rgba(199, 119, 0, 0.38)",
+    "--style04-bg-base": "rgba(19, 18, 14, 0.72)",
+    "--style04-bg-fill": "rgba(255, 209, 92, 0.1)"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "h": 40
+    },
+    "usesImage": true,
+    "usesRasterImage": true,
+    "usesRasterImageFor": "internal background glow only",
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. Selection should match by theme and component fit."
+  },
+  "status": "ready",
+  "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. Selection should match by theme and component fit."
+}

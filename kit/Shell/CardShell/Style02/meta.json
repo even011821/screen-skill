@@ -1,0 +1,135 @@
+{
+  "id": "shell-cardshell-style02",
+  "label": "Shell/CardShell/Style02",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style02",
+  "assetType": "code",
+  "theme": [
+    "deep-tech-blue",
+    "galaxy-azure",
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "accentColor": "#03C2FF",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "卡片标题名称",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 39,
+    "y": 5,
+    "fontFamily": "PingFang SC",
+    "fontSize": 16,
+    "fontWeight": 500,
+    "lineHeight": 24,
+    "letterSpacing": 0,
+    "fill": "linear-gradient(173.554deg, #FFFFFF 16.919%, #03C2FF 188.24%)",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "dot-mask",
+      "file": "assets/dot-mask.svg",
+      "parentNodeId": "27:27989",
+      "usage": "title background alpha mask, fixed mask-size 400px 36px"
+    },
+    {
+      "name": "dot-fill",
+      "file": "assets/dot-fill.svg",
+      "parentNodeId": "27:27989",
+      "usage": "title background diagonal fill rendered as img, fixed 692.5px by 30px"
+    },
+    {
+      "name": "top-line",
+      "file": "assets/top-line.svg",
+      "parentNodeId": "27:27989",
+      "usage": "title background top highlight line"
+    },
+    {
+      "name": "short-line",
+      "file": "assets/short-line.svg",
+      "usage": "header lower short rules"
+    },
+    {
+      "name": "long-line",
+      "file": "assets/long-line.svg",
+      "usage": "header lower stretch rule"
+    },
+    {
+      "name": "right-decoration",
+      "file": "assets/right-decoration.svg",
+      "usage": "right lower header decoration"
+    },
+    {
+      "name": "header-icon",
+      "file": "assets/header-icon.svg",
+      "usage": "header icon"
+    }
+  ],
+  "cssVariables": {
+    "--style02-accent": "#03C2FF",
+    "--style02-body-bg": "rgba(12, 21, 35, 0.4)",
+    "--style02-border": "rgba(3, 194, 255, 0.3)",
+    "--style02-muted-line": "rgba(114, 139, 163, 0.3)"
+  },
+  "backgroundLayers": [
+    {
+      "name": "Rectangle 2332",
+      "selector": ".bs-card-shell__header-glow",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 400,
+        "height": 33
+      },
+      "background": "radial-gradient(42.77% 62.12% at 26.1% -10.61%, rgba(80, 109, 136, 0.8) 0%, rgba(82, 110, 135, 0) 70.89%)"
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 51,
+      "left": 19,
+      "right": 19,
+      "bottom": 15
+    },
+    "header": {
+      "x": -1,
+      "y": -1,
+      "h": 38
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot."
+  },
+  "status": "ready"
+}

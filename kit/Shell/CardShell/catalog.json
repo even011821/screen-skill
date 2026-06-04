@@ -1,0 +1,87 @@
+{
+  "id": "shell-cardshell-catalog",
+  "label": "Shell CardShell code assets",
+  "category": "Shell",
+  "kind": "CardShell",
+  "structure": "Shell/CardShell/{style}",
+  "selectionPolicy": {
+    "pageLevelStyleLock": true,
+    "lockField": "cardShellStyleLock",
+    "rule": "A generated screen must use one CardShell style for all ordinary business modules. Select once by explicit user request, theme/status/size fit, or first matched business module, then reuse it. PanelShell is not part of this lock.",
+    "allowExceptionOnlyWhenUserExplicitlyRequests": true,
+    "recordInChangeLog": true
+  },
+  "updatedAt": "2026-05-21",
+  "items": [
+    {
+      "id": "shell-cardshell-style01",
+      "meta": "Style01/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style02",
+      "meta": "Style02/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style03",
+      "meta": "Style03/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style04",
+      "meta": "Style04/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style05",
+      "meta": "Style05/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style06",
+      "meta": "Style06/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style07",
+      "meta": "Style07/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style08",
+      "meta": "Style08/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style09",
+      "meta": "Style09/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style10",
+      "meta": "Style10/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style11",
+      "meta": "Style11/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style12",
+      "meta": "Style12/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style13",
+      "meta": "Style13/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-cardshell-style14",
+      "meta": "Style14/meta.json",
+      "status": "ready"
+    }
+  ]
+}

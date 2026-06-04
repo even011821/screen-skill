@@ -1,0 +1,244 @@
+.bs-card-shell--style05 {
+  --style05-accent: #15f6ee;
+  --style05-accent-2: #02adf9;
+  --style05-title: #15f6ee;
+  --style05-muted: #bdd7ff;
+  --style05-bg: rgba(15, 15, 40, 0.5);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 1200px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style05-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style05,
+.bs-card-shell--style05 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style05 .bs-card-shell__background,
+.bs-card-shell--style05 .bs-card-shell__fill,
+.bs-card-shell--style05 .bs-card-shell__top,
+.bs-card-shell--style05 .bs-card-shell__top-line,
+.bs-card-shell--style05 .bs-card-shell__top-dot,
+.bs-card-shell--style05 .bs-card-shell__top-right,
+.bs-card-shell--style05 .bs-card-shell__left-edge,
+.bs-card-shell--style05 .bs-card-shell__right-edge,
+.bs-card-shell--style05 .bs-card-shell__bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-left,
+.bs-card-shell--style05 .bs-card-shell__bottom-right,
+.bs-card-shell--style05 .bs-card-shell__left-top,
+.bs-card-shell--style05 .bs-card-shell__right-bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-line,
+.bs-card-shell--style05 .bs-card-shell__header-lines,
+.bs-card-shell--style05 .bs-card-shell__header-line {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style05 .bs-card-shell__background {
+  inset: 0;
+  z-index: 0;
+}
+
+.bs-card-shell--style05 .bs-card-shell__top,
+.bs-card-shell--style05 .bs-card-shell__top-right,
+.bs-card-shell--style05 .bs-card-shell__bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-left,
+.bs-card-shell--style05 .bs-card-shell__bottom-right,
+.bs-card-shell--style05 .bs-card-shell__left-top,
+.bs-card-shell--style05 .bs-card-shell__right-bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-line,
+.bs-card-shell--style05 .bs-card-shell__header-line {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style05 .bs-card-shell__fill {
+  left: 1px;
+  right: 1px;
+  top: 20px;
+  bottom: 10px;
+  background: var(--style05-bg);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 148px) 0,
+    calc(100% - 137px) 14.5px,
+    calc(100% - 14px) 14.5px,
+    100% 31.5px,
+    100% calc(100% - 17px),
+    calc(100% - 17.5px) 100%,
+    17.5px 100%,
+    0 calc(100% - 17px)
+  );
+}
+
+.bs-card-shell--style05 .bs-card-shell__top {
+  left: 1px;
+  top: 1px;
+  width: 250px;
+  height: 19px;
+  background-image: url("./assets/internal-top.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-line {
+  left: min(175px, calc(100% - 150px));
+  right: 148px;
+  top: 20px;
+  height: 1px;
+  background: var(--style05-accent-2);
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-dot {
+  left: min(174px, calc(100% - 151px));
+  top: 19px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #35aaff;
+  transform: translate(-1.5px, -1.5px);
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-right {
+  right: 1px;
+  top: 20px;
+  width: 148px;
+  height: 38px;
+  background-image: url("./assets/top-right-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__left-edge {
+  left: 1px;
+  top: 21px;
+  bottom: 37px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--style05-accent-2), var(--style05-accent));
+}
+
+.bs-card-shell--style05 .bs-card-shell__right-edge {
+  right: 1px;
+  top: 56px;
+  bottom: 55px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--style05-accent-2), var(--style05-accent));
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom {
+  left: 19px;
+  right: 19px;
+  bottom: 0;
+  height: 10px;
+  background-image: url("./assets/internal-bottom.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-left {
+  left: 1px;
+  bottom: 10px;
+  width: 32px;
+  height: 28px;
+  background-image: url("./assets/bottom-left-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-right {
+  right: 1px;
+  bottom: 10px;
+  width: 148px;
+  height: 28px;
+  background-image: url("./assets/bottom-right-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__left-top {
+  left: 1px;
+  top: 1px;
+  width: min(315px, 78.75%);
+  height: 128.5px;
+  background-image: url("./assets/internal-left-top.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__right-bottom {
+  right: 1px;
+  bottom: 10px;
+  width: 57px;
+  height: min(149px, calc(100% - 52px));
+  background-image: url("./assets/internal-right-bottom.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-line {
+  left: 89px;
+  right: 89px;
+  bottom: 9.5px;
+  height: 1px;
+  background-image: url("./assets/internal-bottom-line.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__header {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+  z-index: 2;
+  width: min(263px, calc(100% - 32px));
+  height: 32px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bs-card-shell--style05 .bs-card-shell__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style05-title);
+  font-family: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-lines {
+  left: 0;
+  right: 0;
+  top: 29px;
+  height: 4px;
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-line--short {
+  left: 0;
+  top: 0;
+  width: 121px;
+  height: 1px;
+  background-image: url("./assets/header-line-short.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-line--long {
+  left: 0;
+  right: 0;
+  top: 3px;
+  height: 1px;
+  background-image: url("./assets/header-line-long.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 52px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}

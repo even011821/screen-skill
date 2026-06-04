@@ -1,0 +1,155 @@
+{
+  "id": "shell-cardshell-style11",
+  "label": "Shell/CardShell/Style11",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style11",
+  "assetType": "code",
+  "theme": [
+    "dusk-rose-gold",
+    "ember-orange"
+  ],
+  "accentColor": "#FFA781",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 62.23,
+    "y": 12,
+    "fontFamily": "Alibaba PuHuiTi 2.0",
+    "fontSize": 20,
+    "fontWeight": 800,
+    "lineHeight": 32,
+    "letterSpacing": 0.4,
+    "color": "#FFF5D6",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "frame-top-left",
+      "file": "assets/frame-top-left.svg",
+      "usage": "top left frame cap"
+    },
+    {
+      "name": "frame-top-right",
+      "file": "assets/frame-top-right.svg",
+      "usage": "top right frame cap"
+    },
+    {
+      "name": "frame-bottom-left",
+      "file": "assets/frame-bottom-left.svg",
+      "usage": "bottom left frame cap"
+    },
+    {
+      "name": "frame-bottom-right",
+      "file": "assets/frame-bottom-right.svg",
+      "usage": "bottom right frame cap"
+    },
+    {
+      "name": "corner-outline",
+      "file": "assets/corner-outline.svg",
+      "usage": "small corner outer union"
+    },
+    {
+      "name": "corner-inner",
+      "file": "assets/corner-inner.svg",
+      "usage": "small corner inner union"
+    },
+    {
+      "name": "corner-top-tail",
+      "file": "assets/corner-top-tail.svg",
+      "usage": "small corner top tail"
+    },
+    {
+      "name": "corner-left-tail",
+      "file": "assets/corner-left-tail.svg",
+      "usage": "small corner vertical tail"
+    },
+    {
+      "name": "corner-top-tail-r",
+      "file": "assets/corner-top-tail-r.svg",
+      "usage": "small mirrored corner top tail"
+    },
+    {
+      "name": "corner-left-tail-r",
+      "file": "assets/corner-left-tail-r.svg",
+      "usage": "small mirrored corner vertical tail"
+    },
+    {
+      "name": "corner-triangle-a",
+      "file": "assets/corner-triangle-a.svg",
+      "usage": "small corner accent top triangle"
+    },
+    {
+      "name": "corner-triangle-b",
+      "file": "assets/corner-triangle-b.svg",
+      "usage": "small corner accent bottom triangle"
+    },
+    {
+      "name": "header-divider",
+      "file": "assets/header-divider.png",
+      "usage": "header divider exported by MCP"
+    },
+    {
+      "name": "header-icon",
+      "file": "assets/header-icon.svg",
+      "usage": "title icon"
+    }
+  ],
+  "cssVariables": {
+    "--style11-bg": "#030E21",
+    "--style11-accent": "#FFA781",
+    "--style11-accent-2": "#FB2929",
+    "--style11-line": "#D0BAAD",
+    "--style11-title": "#FFF5D6"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 61,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 5,
+      "y": 8,
+      "h": 40
+    },
+    "usesImage": true,
+    "usesRasterImage": true,
+    "usesRasterImageFor": "header divider only",
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. Same structure as Style10 with smaller fixed corner assets and CSS stretchable frame/fill."
+  },
+  "status": "ready"
+}

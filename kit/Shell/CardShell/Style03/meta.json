@@ -1,0 +1,94 @@
+{
+  "id": "shell-cardshell-style03",
+  "label": "Shell/CardShell/Style03",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style03",
+  "assetType": "code",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "accentColor": "#59C3FF",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 37,
+    "y": 9,
+    "fontFamily": "PingFang SC",
+    "fontSize": 18,
+    "fontWeight": 500,
+    "lineHeight": 26,
+    "letterSpacing": 0,
+    "color": "#E3F5FF",
+    "textShadow": "0 0 6.39px rgba(42, 145, 243, 0.5)"
+  },
+  "assets": [
+    {
+      "name": "header-bg",
+      "file": "assets/header-bg.svg",
+      "usage": "header bottom decorative rule"
+    },
+    {
+      "name": "header-icon",
+      "file": "assets/header-icon.svg",
+      "usage": "header icon"
+    }
+  ],
+  "cssVariables": {
+    "--style03-accent": "#59C3FF",
+    "--style03-title": "#E3F5FF",
+    "--style03-body-bg": "rgba(15, 24, 36, 0.92)",
+    "--style03-header-bg": "rgba(39, 69, 140, 0.1)"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 51,
+      "left": 19,
+      "right": 19,
+      "bottom": 15
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "h": 44
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot."
+  },
+  "status": "ready"
+}

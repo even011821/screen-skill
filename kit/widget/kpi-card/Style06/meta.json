@@ -1,0 +1,84 @@
+{
+  "id": "widget-kpi-card-style06",
+  "label": "KPI Card Style06",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style06",
+  "assetType": "code",
+  "size": {
+    "w": 293,
+    "h": 76
+  },
+  "minSize": {
+    "w": 293,
+    "h": 76
+  },
+  "maxSize": {
+    "w": 527,
+    "h": 137
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "divider.svg",
+      "icon-bg.svg",
+      "icon.svg",
+      "trend-up.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "出口交易额",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "(亿元)",
+      "required": false
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "851.3",
+      "required": true
+    },
+    {
+      "name": "trendLabel",
+      "selector": "[data-slot='trendLabel']",
+      "default": "同比",
+      "required": false
+    },
+    {
+      "name": "trend",
+      "selector": "[data-slot='trend']",
+      "default": "0.2%",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "unit": "string",
+    "value": "string|number",
+    "trendLabel": "string",
+    "trend": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true
+  },
+  "status": "ready"
+}

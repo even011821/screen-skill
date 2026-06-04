@@ -1,0 +1,130 @@
+{
+  "id": "business_process_layout",
+  "label": "业务流程管理型",
+  "version": "1.0.0",
+  "mainVisualType": [
+    "process",
+    "workflow",
+    "table",
+    "order",
+    "task"
+  ],
+  "selection": {
+    "useWhen": [
+      "订单",
+      "工单",
+      "审批",
+      "流程",
+      "任务",
+      "项目",
+      "表格",
+      "状态流转",
+      "进度",
+      "MES",
+      "ERP",
+      "WMS"
+    ],
+    "avoidWhen": [
+      "核心是地图态势",
+      "核心是3D主视觉",
+      "只是宣传内容"
+    ],
+    "fallbackWhen": "用户强调业务流转、任务推进、订单/工单/项目明细。"
+  },
+  "canvas": {
+    "baseline": {
+      "w": 1920,
+      "h": 1080
+    },
+    "contentArea": "computed-after-topnav",
+    "gap": 16
+  },
+  "slotStrategy": {
+    "PrimarySlot": {
+      "required": true,
+      "role": "最高优先级区域，通常放主业务对象、主指标或主流程；具体内容由指标分析决定",
+      "shell": "CardShell",
+      "widthRatio": [
+        0.48,
+        0.72
+      ],
+      "heightRatio": [
+        0.44,
+        0.72
+      ],
+      "minSize": {
+        "w": 760,
+        "h": 420
+      },
+      "placement": "center-or-middle"
+    },
+    "ContextSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠左或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "side"
+    },
+    "StatusSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠右或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "side"
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "补充信息候选区域，通常在底部、页签或扩展区承载低优先级内容；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "bottom-or-under-primary"
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "附着在主区域上的局部说明层，仅在主内容需要标注时使用",
+      "shell": "none",
+      "placement": "inside-primary"
+    }
+  },
+  "densityBehavior": {
+    "low": "流程和总览即可，减少图表数量。",
+    "medium": "流程/表格为中心，周边放状态、趋势、分类。",
+    "high": "按流程阶段合并指标，表格优先于散乱图表。",
+    "extreme": "明细使用分页、滚动表格或页签，不把所有记录展开。"
+  },
+  "componentPreference": {
+    "PrimarySlot": [
+      "dom:table",
+      "dom:process-timeline",
+      "dom:ranking-list"
+    ],
+    "ContextSlot": [
+      "widget:kpi-card",
+      "echarts:bar",
+      "echarts:pie"
+    ],
+    "StatusSlot": [
+      "dom:alert-list",
+      "widget:kpi-card"
+    ],
+    "DetailSlot": [
+      "dom:process-timeline",
+      "dom:ranking-list",
+      "echarts:line"
+    ]
+  },
+  "hardRules": [
+    "中心必须表达业务过程或明细，不以装饰场景替代流程。",
+    "表格和流程节点优先，不强行把所有数据转成图表。",
+    "带标题业务模块默认 CardShell。"
+  ],
+  "variantCatalog": "variants/catalog.json",
+  "variantSelection": {
+    "required": true,
+    "rule": "Read variants/catalog.json after this rule.json. Select layoutVariant before calculating panel geometry.",
+    "recordInChangeLog": [
+      "layoutVariant id",
+      "selection reason",
+      "primaryArea or structure",
+      "slot business topics"
+    ],
+    "doNotUseFixedTemplate": true
+  }
+}

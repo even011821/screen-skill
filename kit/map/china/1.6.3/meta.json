@@ -1,0 +1,33 @@
+{
+  "id": "map-china-1.6.3",
+  "label": "China national map",
+  "category": "map",
+  "kind": "national-boundary",
+  "scope": "china",
+  "version": "1.6.3",
+  "assetType": "local-map-data",
+  "renderer": "echarts-map",
+  "registerName": "china",
+  "dataFormat": {
+    "runtime": "geojson",
+    "source": "topojson"
+  },
+  "assets": {
+    "directory": "china/1.6.3/",
+    "runtimeGeoJson": "china.geo.json",
+    "sourceTopoJson": "china.topo.json"
+  },
+  "bbox": [
+    73.502355,
+    17.986898,
+    135.08722,
+    53.563624
+  ],
+  "featureCount": 36,
+  "usage": {
+    "load": "Copy china.geo.json to the generated screen assets/map directory and fetch it locally before calling echarts.registerMap(\"china\", geoJson).",
+    "noRemoteRuntime": true,
+    "fallback": "If local map data is missing, use an abstract SVG/CSS situation map fallback and record it in change-log."
+  },
+  "status": "ready"
+}

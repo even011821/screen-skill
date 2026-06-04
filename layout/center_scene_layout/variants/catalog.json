@@ -1,0 +1,50 @@
+{
+  "id": "center_scene_layout_variants",
+  "schemaVersion": "1.0.0",
+  "selectionOrder": [
+    "explicit user requirement",
+    "scene dominance",
+    "indicator density",
+    "operation/status priority",
+    "visual balance"
+  ],
+  "variants": [
+    {
+      "id": "scene_center_side_rails",
+      "label": "中心场景双侧信息栏",
+      "useWhen": ["中等密度", "中心场景明确", "左右都有辅助指标"],
+      "primaryArea": { "xRatio": [0.24, 0.76], "yRatio": [0.0, 0.68] },
+      "structure": "left-rail + center-scene + right-rail + bottom-detail",
+      "note": "常规变体，不得作为所有中心主视觉页面的默认形态。"
+    },
+    {
+      "id": "scene_full_bleed_overlay",
+      "label": "大场景浮层态势",
+      "useWhen": ["视觉对象强", "指标数量少到中等", "需要高级展示感"],
+      "primaryArea": { "xRatio": [0.08, 0.92], "yRatio": [0.0, 0.84] },
+      "structure": "full-bleed-scene + overlay-kpi + floating-alert + bottom-mini-trend",
+      "note": "场景最大化，指标以浮层贴附，不形成左右卡片墙。"
+    },
+    {
+      "id": "scene_left_story_right_status",
+      "label": "左叙事右状态",
+      "useWhen": ["需要解释场景流程", "右侧运行状态优先", "趋势明细较少"],
+      "primaryArea": { "xRatio": [0.18, 0.68], "yRatio": [0.08, 0.82] },
+      "structure": "left-context + center-left-scene + right-status-stack",
+      "note": "适合园区、工厂、港口、楼宇等需要左侧说明和右侧监控的页面。"
+    },
+    {
+      "id": "scene_top_summary_bottom_operations",
+      "label": "顶部总览底部作业",
+      "useWhen": ["核心 KPI 强", "底部流程/任务/趋势重要", "中心场景中等"],
+      "primaryArea": { "xRatio": [0.2, 0.8], "yRatio": [0.14, 0.7] },
+      "structure": "top-kpi-band + center-scene + bottom-operations + side-compact",
+      "note": "适合调度、生产、运输类页面，避免全部信息左右堆叠。"
+    }
+  ],
+  "hardRules": [
+    "中心主视觉页面不能固定生成左4中2右4。",
+    "场景越强，PrimarySlot 越大，周边 CardShell 数量越少。",
+    "坐标必须由 variant 计算，不得复用地图类固定坐标。"
+  ]
+}

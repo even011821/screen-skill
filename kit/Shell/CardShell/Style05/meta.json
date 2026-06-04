@@ -1,0 +1,134 @@
+{
+  "id": "shell-cardshell-style05",
+  "label": "Shell/CardShell/Style05",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style05",
+  "assetType": "code",
+  "theme": [
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "accentColor": "#15F6EE",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 16,
+    "y": 6,
+    "fontFamily": "YouSheBiaoTiHei",
+    "fontSize": 20,
+    "fontWeight": 400,
+    "lineHeight": 24,
+    "letterSpacing": 0,
+    "color": "#15F6EE",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "internal-bottom",
+      "file": "assets/internal-bottom.svg",
+      "usage": "bottom border decoration"
+    },
+    {
+      "name": "internal-top",
+      "file": "assets/internal-top.svg",
+      "usage": "top-left shaped background"
+    },
+    {
+      "name": "top-right-corner",
+      "file": "assets/top-right-corner.svg",
+      "usage": "fixed top-right header corner extracted from internal bg"
+    },
+    {
+      "name": "bottom-left-corner",
+      "file": "assets/bottom-left-corner.svg",
+      "usage": "fixed bottom-left corner extracted from internal bg"
+    },
+    {
+      "name": "bottom-right-corner",
+      "file": "assets/bottom-right-corner.svg",
+      "usage": "fixed bottom-right background corner extracted from internal bg"
+    },
+    {
+      "name": "internal-left-top",
+      "file": "assets/internal-left-top.svg",
+      "usage": "left top corner overlay"
+    },
+    {
+      "name": "internal-right-bottom",
+      "file": "assets/internal-right-bottom.svg",
+      "usage": "right bottom corner overlay"
+    },
+    {
+      "name": "internal-bottom-line",
+      "file": "assets/internal-bottom-line.svg",
+      "usage": "bottom center line"
+    },
+    {
+      "name": "header-line-short",
+      "file": "assets/header-line-short.svg",
+      "usage": "header short underline"
+    },
+    {
+      "name": "header-line-long",
+      "file": "assets/header-line-long.svg",
+      "usage": "header long underline"
+    }
+  ],
+  "cssVariables": {
+    "--style05-accent": "#15F6EE",
+    "--style05-accent-2": "#02ADF9",
+    "--style05-title": "#15F6EE",
+    "--style05-muted": "#BDD7FF",
+    "--style05-bg": "rgba(15, 15, 40, 0.5)"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 16,
+      "y": 6,
+      "h": 32
+    },
+    "usesImage": true,
+    "usesRasterImage": false,
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. The source .internal/bg layer is split: stretchable fill and straight lines are CSS, fixed header and corner structures are local SVGs."
+  },
+  "status": "ready"
+}

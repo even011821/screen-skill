@@ -1,0 +1,116 @@
+{
+  "id": "shell-cardshell-style06",
+  "label": "Shell/CardShell/Style06",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style06",
+  "assetType": "code",
+  "theme": [
+    "galaxy-azure",
+    "frost-cyan",
+    "fresh-verdant",
+    "deep-tech-blue"
+  ],
+  "accentColor": "#24CAFF",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": "center",
+    "y": 3,
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 20,
+    "fontWeight": 700,
+    "lineHeight": 30,
+    "letterSpacing": 0,
+    "color": "#FFFFFF",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "light-mask",
+      "file": "assets/light-mask.svg",
+      "usage": "bottom internal light"
+    },
+    {
+      "name": "bottom-line",
+      "file": "assets/bottom-line.svg",
+      "usage": "bottom border highlight"
+    },
+    {
+      "name": "corner-blue-a",
+      "file": "assets/corner-blue-a.svg",
+      "usage": "right corner decoration source"
+    },
+    {
+      "name": "corner-blue-b",
+      "file": "assets/corner-blue-b.svg",
+      "usage": "left corner decoration source"
+    },
+    {
+      "name": "header-bg",
+      "file": "assets/header-bg.svg",
+      "usage": "header background"
+    },
+    {
+      "name": "header-bottom-line",
+      "file": "assets/header-bottom-line.svg",
+      "usage": "header bottom line"
+    }
+  ],
+  "cssVariables": {
+    "--style06-accent": "#24CAFF",
+    "--style06-line": "#54B3FB",
+    "--style06-title": "#FFFFFF",
+    "--style06-bg": "rgba(0, 165, 255, 0.06)",
+    "--style06-shadow": "#1E66AA"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "h": 36
+    },
+    "usesImage": true,
+    "usesRasterImage": false,
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot."
+  },
+  "status": "ready"
+}

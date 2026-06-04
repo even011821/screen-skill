@@ -1,0 +1,89 @@
+.kpi-card--style14 {
+  min-width: 110px;
+  min-height: 105px;
+  max-width: 198px;
+  max-height: 189px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 159, 255, 0) 6.01%, rgba(12, 113, 186, 0.2) 63.14%);
+  border: 1px solid rgba(198, 224, 255, 0.7);
+}
+
+.kpi-card--style14::before,
+.kpi-card--style14::after,
+.kpi-card--style14 .kpi-card__frame::before,
+.kpi-card--style14 .kpi-card__frame::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 5px;
+  background: linear-gradient(180deg, #26ffff 0%, #2ea0f5 100%);
+  pointer-events: none;
+}
+
+.kpi-card--style14::before { left: -1px; top: -1px; }
+.kpi-card--style14::after { right: -1px; top: -1px; }
+.kpi-card--style14 .kpi-card__frame::before { left: -1px; bottom: -1px; }
+.kpi-card--style14 .kpi-card__frame::after { right: -1px; bottom: -1px; }
+
+.kpi-card--style14 .kpi-card__content-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 116px;
+  height: 92px;
+  transform: translate(-50%, -50%);
+}
+
+.kpi-card--style14 .kpi-card__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(14px, 14.5cqw, 16px);
+  font-weight: 700;
+  line-height: 20px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style14 .kpi-card__value {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 21px);
+  color: #ffe393;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style14 .kpi-card__unit-badge {
+  position: absolute;
+  left: 50%;
+  bottom: 0.28px;
+  width: 65.35px;
+  height: 37.72px;
+  background: url("./assets/unit-badge-half.png") center / contain no-repeat;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.kpi-card--style14 .kpi-card__unit-badge span {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  color: #ffffff;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.48px;
+  line-height: 18px;
+  transform: translateX(-50%);
+}

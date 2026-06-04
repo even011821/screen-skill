@@ -1,0 +1,81 @@
+{
+  "id": "topnav-lefttitle-1920-style01-secondnavitem",
+  "label": "TopNav LeftTitle 1920 Style01 SecondNavItem",
+  "category": "TopNav",
+  "kind": "nav-item",
+  "titlePosition": "LeftTitle",
+  "resolution": "1920",
+  "style": "Style01",
+  "subcomponent": "SecondNavItem",
+  "parentNav": "topnav-lefttitle-1920-style01",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue"
+  ],
+  "tone": "tech",
+  "accentColor": "#24caff",
+  "size": {
+    "w": 144,
+    "h": 60
+  },
+  "componentSetSize": {
+    "w": 182,
+    "h": 176
+  },
+  "variants": [
+    {
+      "name": "state=active",
+      "size": {
+        "w": 144,
+        "h": 60
+      }
+    },
+    {
+      "name": "state=default",
+      "size": {
+        "w": 144,
+        "h": 60
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "state=default",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 144,
+      "h": 60
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "left",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 38,
+    "fontWeight": 900,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0.8px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 58,
+      "fontSize": 13,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

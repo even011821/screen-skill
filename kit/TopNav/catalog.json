@@ -1,0 +1,135 @@
+{
+  "id": "topnav-catalog",
+  "label": "TopNav catalog imported from BigScreen-Skill",
+  "structure": "TopNav/{titlePosition}/{resolution}/{style}[/SecondNavItem]",
+  "overlay": {
+    "css": "overlay.css",
+    "titleSelector": ".ds-top-nav__title",
+    "subtitleSelector": ".ds-top-nav__subtitle",
+    "subtitlePolicy": "不要默认渲染副标题。只有当选中的 meta.titleOverlay.subtitle.enabled 为 true 时，才渲染 .ds-top-nav__subtitle。",
+    "note": "TopNav 图片是纯背景。主标题、时间、天气和二级标签必须作为 DOM 覆盖层渲染。副标题是可选项，由 meta.titleOverlay.subtitle.enabled 控制。"
+  },
+  "items": [
+    {
+      "id": "topnav-centertitle-1920-style01",
+      "meta": "CenterTitle/1920/Style01/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style01-secondnavitem",
+      "meta": "CenterTitle/1920/Style01/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style02",
+      "meta": "CenterTitle/1920/Style02/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style02-secondnavitem",
+      "meta": "CenterTitle/1920/Style02/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style03",
+      "meta": "CenterTitle/1920/Style03/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style04",
+      "meta": "CenterTitle/1920/Style04/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style05",
+      "meta": "CenterTitle/1920/Style05/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style05-secondnavitem",
+      "meta": "CenterTitle/1920/Style05/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style06",
+      "meta": "CenterTitle/1920/Style06/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style06-secondnavitem",
+      "meta": "CenterTitle/1920/Style06/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style07",
+      "meta": "CenterTitle/1920/Style07/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style08",
+      "meta": "CenterTitle/1920/Style08/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style09",
+      "meta": "CenterTitle/1920/Style09/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style10",
+      "meta": "CenterTitle/1920/Style10/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style11",
+      "meta": "CenterTitle/1920/Style11/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-1920-style12",
+      "meta": "CenterTitle/1920/Style12/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-3840-style01",
+      "meta": "CenterTitle/3840/Style01/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-3840-style01-secondnavitem",
+      "meta": "CenterTitle/3840/Style01/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-3840-style02",
+      "meta": "CenterTitle/3840/Style02/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-centertitle-3840-style03",
+      "meta": "CenterTitle/3840/Style03/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-lefttitle-1920-style01",
+      "meta": "LeftTitle/1920/Style01/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-lefttitle-1920-style01-secondnavitem",
+      "meta": "LeftTitle/1920/Style01/SecondNavItem/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-lefttitle-1920-style02",
+      "meta": "LeftTitle/1920/Style02/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "topnav-lefttitle-1920-style03",
+      "meta": "LeftTitle/1920/Style03/meta.json",
+      "status": "ready"
+    }
+  ],
+  "updatedAt": "2026-05-21"
+}

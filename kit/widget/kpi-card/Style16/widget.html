@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style16 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; justify-content: center; width: min(980px, 100%); }
+    .preview__card { display: grid; gap: 8px; justify-items: center; }
+    .preview__label { color: rgba(214, 238, 255, 0.68); font-size: 12px; line-height: 16px; }
+    .preview__surface { width: var(--preview-w); height: var(--preview-h); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__card">
+      <div class="preview__label">min 160x41</div>
+      <div class="preview__surface" style="--preview-w:160px; --preview-h:41px;">
+        <section class="kpi-card kpi-card--style16" data-kit="widget/kpi-card/Style16">
+          <div class="kpi-card__button-frame" aria-hidden="true">
+            <span class="kpi-card__frame-left-fill"></span><span class="kpi-card__frame-left-line"></span><span class="kpi-card__frame-body-fill"></span><span class="kpi-card__frame-body-line"></span><span class="kpi-card__edge-left-outer"></span><span class="kpi-card__edge-left-inner"></span><span class="kpi-card__icon-line"></span><span class="kpi-card__center-notch-top"></span><span class="kpi-card__center-notch-bottom"></span><span class="kpi-card__center-glow"></span><span class="kpi-card__connector-left"></span><span class="kpi-card__connector-right"></span><span class="kpi-card__right-mid"></span><span class="kpi-card__right-corner-top"></span><span class="kpi-card__right-corner-bottom"></span><span class="kpi-card__chevron-right-1"></span><span class="kpi-card__chevron-right-2"></span>
+          </div>
+          <span class="kpi-card__icon" aria-hidden="true"></span>
+          <span class="kpi-card__title" data-slot="title">总数：</span>
+          <span class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">3,806</strong><span class="kpi-card__unit" data-slot="unit">(个)</span></span>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">base 259x41</div>
+      <div class="preview__surface" style="--preview-w:259px; --preview-h:41px;">
+        <section class="kpi-card kpi-card--style16" data-kit="widget/kpi-card/Style16">
+          <div class="kpi-card__button-frame" aria-hidden="true">
+            <span class="kpi-card__frame-left-fill"></span><span class="kpi-card__frame-left-line"></span><span class="kpi-card__frame-body-fill"></span><span class="kpi-card__frame-body-line"></span><span class="kpi-card__edge-left-outer"></span><span class="kpi-card__edge-left-inner"></span><span class="kpi-card__icon-line"></span><span class="kpi-card__center-notch-top"></span><span class="kpi-card__center-notch-bottom"></span><span class="kpi-card__center-glow"></span><span class="kpi-card__connector-left"></span><span class="kpi-card__connector-right"></span><span class="kpi-card__right-mid"></span><span class="kpi-card__right-corner-top"></span><span class="kpi-card__right-corner-bottom"></span><span class="kpi-card__chevron-right-1"></span><span class="kpi-card__chevron-right-2"></span>
+          </div>
+          <span class="kpi-card__icon" aria-hidden="true"></span>
+          <span class="kpi-card__title" data-slot="title">总数：</span>
+          <span class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">3,806</strong><span class="kpi-card__unit" data-slot="unit">(个)</span></span>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">max 466x74</div>
+      <div class="preview__surface" style="--preview-w:466px; --preview-h:74px;">
+        <section class="kpi-card kpi-card--style16" data-kit="widget/kpi-card/Style16">
+          <div class="kpi-card__button-frame" aria-hidden="true">
+            <span class="kpi-card__frame-left-fill"></span><span class="kpi-card__frame-left-line"></span><span class="kpi-card__frame-body-fill"></span><span class="kpi-card__frame-body-line"></span><span class="kpi-card__edge-left-outer"></span><span class="kpi-card__edge-left-inner"></span><span class="kpi-card__icon-line"></span><span class="kpi-card__center-notch-top"></span><span class="kpi-card__center-notch-bottom"></span><span class="kpi-card__center-glow"></span><span class="kpi-card__connector-left"></span><span class="kpi-card__connector-right"></span><span class="kpi-card__right-mid"></span><span class="kpi-card__right-corner-top"></span><span class="kpi-card__right-corner-bottom"></span><span class="kpi-card__chevron-right-1"></span><span class="kpi-card__chevron-right-2"></span>
+          </div>
+          <span class="kpi-card__icon" aria-hidden="true"></span>
+          <span class="kpi-card__title" data-slot="title">设备数：</span>
+          <span class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">12,630</strong><span class="kpi-card__unit" data-slot="unit">(台)</span></span>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

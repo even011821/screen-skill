@@ -1,0 +1,25 @@
+{
+  "id": "content_portal_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "media_hero_portal",
+      "label": "媒体主视觉门户",
+      "useWhen": ["视频/图片/宣传主视觉强"],
+      "structure": "hero-media + side-news + bottom-topic-cards"
+    },
+    {
+      "id": "content_map_story",
+      "label": "内容地图叙事",
+      "useWhen": ["文旅/党建/区域内容需要地图辅助"],
+      "structure": "content-map + narrative-panels + event-list"
+    },
+    {
+      "id": "news_calendar_metrics",
+      "label": "资讯日历数据混合",
+      "useWhen": ["资讯、日历、活动和轻数据并重"],
+      "structure": "news-feed + calendar + compact-metrics + media-preview"
+    }
+  ],
+  "hardRules": ["内容门户类不能按纯业务监控卡片墙生成。"]
+}

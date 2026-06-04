@@ -1,0 +1,98 @@
+{
+  "id": "widget-kpi-card-style01",
+  "label": "Charts/kpi-card/style01",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style01",
+  "assetType": "code",
+  "size": {
+    "w": 214,
+    "h": 114
+  },
+  "minSize": {
+    "w": 160,
+    "h": 80
+  },
+  "maxSize": {
+    "w": 385,
+    "h": 205
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localSvg": [
+      "frame-header-left.svg",
+      "frame-header-right.svg",
+      "corner-core.svg",
+      "left-top-line.svg",
+      "left-side-line.svg",
+      "right-top-line.svg",
+      "right-side-line.svg",
+      "particle-field.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "港口2",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "(艘次)",
+      "required": false
+    },
+    {
+      "name": "metrics",
+      "selector": "[data-slot='metrics']",
+      "repeatable": true,
+      "required": true
+    },
+    {
+      "name": "metricItem",
+      "selector": "[data-slot='metric-item']",
+      "min": 1,
+      "default": 3,
+      "maxRecommended": 5
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "required": true
+    },
+    {
+      "name": "label",
+      "selector": "[data-slot='label']",
+      "required": true,
+      "default": "船型"
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "unit": "string",
+    "metrics": [
+      {
+        "label": "string",
+        "value": "string|number"
+      }
+    ]
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "Use base.css plus Style01/style.css. Background and simple fills are CSS; complex frame corners and particles are local SVG assets."
+  },
+  "status": "ready"
+}

@@ -1,0 +1,463 @@
+{
+  "id": "screen-skill-v2-theme-catalog",
+  "label": "数据大屏 V2 主题目录",
+  "defaultTheme": "galaxy-azure",
+  "selectionPolicy": {
+    "mode": "theme-token-fit",
+    "rule": "主题选择优先级：用户明确指定主题中文名称或中文别名优先，其次按用户要求的视觉调性或配色，再按行业/场景主题推荐，最后使用 defaultTheme。业务类别不得直接选择 TopNav、Shell、widget 或 background 的具体 kit 样式。",
+    "priority": [
+      "用户明确指定主题中文名称或中文别名",
+      "用户指定的视觉调性或配色",
+      "命中 scenarioThemeRules 的行业或场景线索",
+      "defaultTheme"
+    ],
+    "constraints": [
+      "用户输入默认按中文理解，不依赖英文别名、英文场景词或英文调性词。",
+      "行业和场景只能作为主题推荐依据。",
+      "业务类别不得直接决定 TopNav、Shell、widget 或 background 的具体 kit 样式。",
+      "主题确定后，kit 样式仍必须根据 theme、resolution、status、size、adaptation、dataShape 等 catalog 字段查表选择。",
+      "当行业/场景推荐与用户明确指定的视觉调性或配色冲突时，以用户明确视觉要求为准。"
+    ],
+    "runtimeInputs": [
+      "主题ID（内部标识）",
+      "中文主题名",
+      "中文别名",
+      "主色",
+      "辅助色",
+      "中文调性标签",
+      "推荐场景",
+      "CSS token 文件",
+      "行业",
+      "场景",
+      "场景主题规则"
+    ],
+    "userInputLanguage": "zh-CN",
+    "matchFieldsFromUserInput": [
+      "nameZh",
+      "aliases",
+      "toneTags",
+      "preferredScenes",
+      "scenarioThemeRules.match.industries",
+      "scenarioThemeRules.match.scenarios"
+    ]
+  },
+  "themes": [
+    {
+      "id": "galaxy-azure",
+      "nameZh": "星河灵蓝",
+      "nameEn": "Galaxy Azure",
+      "file": "galaxy-azure.css",
+      "primary": "#1C76FD",
+      "secondary": "#4BA687",
+      "aliases": [
+        "蓝青",
+        "科技蓝",
+        "灵蓝",
+        "政务蓝",
+        "城市蓝",
+        "通用蓝",
+        "可信蓝"
+      ],
+      "toneTags": [
+        "科技",
+        "指挥中心",
+        "可信赖",
+        "蓝青",
+        "政务",
+        "城市治理",
+        "教育"
+      ],
+      "preferredScenes": [
+        "政务指挥",
+        "城市运行",
+        "城市运行中心",
+        "交通监控",
+        "园区驾驶舱",
+        "通用数据大屏",
+        "教育指导大屏"
+      ]
+    },
+    {
+      "id": "deep-tech-blue",
+      "nameZh": "深空科技蓝",
+      "nameEn": "Deep Tech Blue",
+      "file": "deep-tech-blue.css",
+      "primary": "#045BF0",
+      "secondary": "#22D4CC",
+      "aliases": [
+        "深蓝",
+        "深色科技",
+        "科技深蓝",
+        "工业蓝",
+        "设备蓝",
+        "数据中心蓝"
+      ],
+      "toneTags": [
+        "深色",
+        "深蓝",
+        "科技",
+        "工业",
+        "设备",
+        "制造"
+      ],
+      "preferredScenes": [
+        "制造业",
+        "工业设备",
+        "生产执行系统",
+        "仓储管理系统",
+        "产线监控",
+        "设备运维",
+        "数据中心"
+      ]
+    },
+    {
+      "id": "frost-cyan",
+      "nameZh": "冰境青",
+      "nameEn": "Frost Cyan",
+      "file": "frost-cyan.css",
+      "primary": "#2FEADF",
+      "secondary": "#1596AB",
+      "aliases": [
+        "青色",
+        "冰蓝",
+        "冷青",
+        "蓝青",
+        "洁净",
+        "清爽青",
+        "医疗青"
+      ],
+      "toneTags": [
+        "洁净",
+        "医疗",
+        "数字化",
+        "冷色",
+        "青色",
+        "科技"
+      ],
+      "preferredScenes": [
+        "智慧医疗",
+        "医疗数据中心",
+        "数字医院",
+        "实验室",
+        "体检中心",
+        "科技监管"
+      ]
+    },
+    {
+      "id": "dusk-rose-gold",
+      "nameZh": "暮砂玫瑰金",
+      "nameEn": "Dusk Rose Gold",
+      "file": "dusk-rose-gold.css",
+      "primary": "#F3F3E9",
+      "secondary": "#F3BF8F",
+      "aliases": [
+        "金色",
+        "玫瑰金",
+        "蓝金",
+        "黑金",
+        "商务金",
+        "高级金"
+      ],
+      "toneTags": [
+        "商务",
+        "金融",
+        "高级",
+        "金色",
+        "高管",
+        "经营"
+      ],
+      "preferredScenes": [
+        "金融",
+        "投资",
+        "资产监管",
+        "集团经营",
+        "财务驾驶舱",
+        "高管驾驶舱"
+      ]
+    },
+    {
+      "id": "ember-orange",
+      "nameZh": "熔光橙红",
+      "nameEn": "Ember Orange",
+      "file": "ember-orange.css",
+      "primary": "#FFB801",
+      "secondary": "#E85F12",
+      "aliases": [
+        "橙色",
+        "橙红",
+        "红橙",
+        "红色"
+      ],
+      "toneTags": [
+        "党政",
+        "党建",
+        "党员",
+        "党委"
+      ],
+      "preferredScenes": [
+        "党政中心",
+        "党建管理",
+        "党员发展",
+        "党委管理"
+      ]
+    },
+    {
+      "id": "fresh-verdant",
+      "nameZh": "森氧清绿",
+      "nameEn": "Fresh Verdant",
+      "file": "fresh-verdant.css",
+      "primary": "#11C8A7",
+      "secondary": "#FFC65C",
+      "aliases": [
+        "绿色",
+        "蓝绿",
+        "清绿",
+        "健康绿",
+        "森系",
+        "清爽绿色",
+        "医疗绿"
+      ],
+      "toneTags": [
+        "清爽",
+        "洁净",
+        "医疗健康",
+        "生态",
+        "柔和科技",
+        "绿色"
+      ],
+      "preferredScenes": [
+        "医疗健康",
+        "医院运营",
+        "体检中心",
+        "公卫",
+        "生态环保",
+        "园区能源",
+        "智慧农业"
+      ]
+    }
+  ],
+  "compatibilityFiles": [
+    {
+      "file": "blue-cyan.css",
+      "aliasOf": "galaxy-azure"
+    },
+    {
+      "file": "gold.css",
+      "aliasOf": "dusk-rose-gold"
+    },
+    {
+      "file": "orange-amber.css",
+      "aliasOf": "ember-orange"
+    },
+    {
+      "file": "red-gold.css",
+      "aliasOf": "ember-orange"
+    }
+  ],
+  "updatedAt": "2026-06-03",
+  "scenarioThemeRules": [
+    {
+      "id": "medical-healthcare",
+      "match": {
+        "industries": [
+          "医疗",
+          "医院",
+          "健康",
+          "卫健",
+          "公卫",
+          "体检",
+          "医药",
+          "护理",
+          "康养"
+        ],
+        "scenarios": [
+          "医疗业务",
+          "医院运营",
+          "门急诊",
+          "住院",
+          "体检中心",
+          "区域医疗",
+          "智慧医疗",
+          "医疗收入",
+          "病床",
+          "医生",
+          "患者"
+        ]
+      },
+      "preferredThemes": [
+        "fresh-verdant",
+        "frost-cyan"
+      ],
+      "defaultTheme": "fresh-verdant",
+      "reason": "医疗健康类场景优先使用清爽、洁净、低压迫感的绿色或青色主题。"
+    },
+    {
+      "id": "industry-manufacturing",
+      "match": {
+        "industries": [
+          "制造业",
+          "工厂",
+          "工业",
+          "五金",
+          "装备",
+          "设备",
+          "生产执行系统",
+          "仓储管理系统",
+          "仓储",
+          "物流"
+        ],
+        "scenarios": [
+          "生产监控",
+          "设备运维",
+          "质量追溯",
+          "仓储物流",
+          "工厂驾驶舱",
+          "产线",
+          "工单",
+          "库存",
+          "齐套"
+        ]
+      },
+      "preferredThemes": [
+        "deep-tech-blue",
+        "galaxy-azure",
+        "frost-cyan"
+      ],
+      "defaultTheme": "deep-tech-blue",
+      "reason": "工业制造场景优先使用深蓝、蓝青、冷色科技主题，突出稳定、设备和监控属性。"
+    },
+    {
+      "id": "government-command",
+      "match": {
+        "industries": [
+          "政务",
+          "城市",
+          "交通",
+          "公安",
+          "园区",
+          "城投",
+          "住建",
+          "水务"
+        ],
+        "scenarios": [
+          "指挥中心",
+          "城市运行",
+          "城市运行中心",
+          "态势感知",
+          "交通指挥",
+          "综合治理",
+          "运营中心"
+        ]
+      },
+      "preferredThemes": [
+        "galaxy-azure",
+        "deep-tech-blue"
+      ],
+      "defaultTheme": "galaxy-azure",
+      "reason": "政务指挥类场景优先使用稳重、可信赖的蓝色或蓝青科技主题。"
+    },
+    {
+      "id": "finance-investment",
+      "match": {
+        "industries": [
+          "金融",
+          "投资",
+          "资产",
+          "经营",
+          "集团",
+          "财务",
+          "产业投资"
+        ],
+        "scenarios": [
+          "经营分析",
+          "资产监管",
+          "投资收益",
+          "财务驾驶舱",
+          "利润",
+          "营收",
+          "回款",
+          "成本"
+        ]
+      },
+      "preferredThemes": [
+        "dusk-rose-gold",
+        "galaxy-azure"
+      ],
+      "defaultTheme": "dusk-rose-gold",
+      "reason": "金融经营类场景可使用金色、蓝金或稳重商务主题，强化价值和经营感。"
+    },
+    {
+      "id": "emergency-warning",
+      "match": {
+        "industries": [
+          "党政",
+          "党建",
+          "党员",
+          "党委"
+        ],
+        "scenarios": [
+          "党政中心",
+          "党建管理",
+          "党员发展",
+          "党委管理"
+        ]
+      },
+      "preferredThemes": [
+        "ember-orange",
+        "deep-tech-blue"
+      ],
+      "defaultTheme": "ember-orange",
+      "reason": "只有在党政党建这种场景，才使用这个主题，其他场景不推荐使用。"
+    },
+    {
+      "id": "education-campus",
+      "match": {
+        "industries": [
+          "教育",
+          "校园",
+          "学校",
+          "高校",
+          "智慧教育"
+        ],
+        "scenarios": [
+          "校园治理",
+          "教学分析",
+          "学生画像",
+          "招生就业",
+          "智慧校园",
+          "校园安全"
+        ]
+      },
+      "preferredThemes": [
+        "galaxy-azure",
+        "fresh-verdant",
+        "frost-cyan"
+      ],
+      "defaultTheme": "galaxy-azure",
+      "reason": "教育校园类场景默认使用蓝青科技主题，可按清爽要求切换清绿或青色主题。"
+    }
+  ],
+  "selectionExamples": [
+    {
+      "input": "生成一个医疗业务收入大屏",
+      "expectedTheme": "fresh-verdant",
+      "reason": "命中 medical-healthcare 规则，且未指定其他视觉调性。"
+    },
+    {
+      "input": "生成一个智慧医院运营驾驶舱，风格清爽、青色",
+      "expectedTheme": "frost-cyan",
+      "reason": "命中医疗场景，同时用户指定青色调，优先选择 frost-cyan。"
+    },
+    {
+      "input": "生成一个医疗大屏，但要深蓝科技风",
+      "expectedTheme": "deep-tech-blue",
+      "reason": "用户明确视觉调性优先于行业默认主题。"
+    },
+    {
+      "input": "生成一个工业设备监控大屏",
+      "expectedTheme": "deep-tech-blue",
+      "reason": "命中 industry-manufacturing 规则。"
+    }
+  ],
+  "userInputNote": "用户输入按中文词汇解析；英文 id、file、nameEn、CSS 文件名属于内部标识或兼容信息，不作为用户输入要求。"
+}

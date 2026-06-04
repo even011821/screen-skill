@@ -1,0 +1,25 @@
+{
+  "id": "business_process_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "process_flow_center",
+      "label": "中心流程主线",
+      "useWhen": ["流程节点清晰", "状态流转是核心"],
+      "structure": "top-summary + center-process-flow + side-status + bottom-detail"
+    },
+    {
+      "id": "table_center_operations",
+      "label": "中心业务表格",
+      "useWhen": ["订单/工单/任务明细是核心"],
+      "structure": "left-filter-summary + center-table + right-status + bottom-trend"
+    },
+    {
+      "id": "kanban_stage_columns",
+      "label": "阶段看板",
+      "useWhen": ["多阶段任务并行", "各状态数量和列表同等重要"],
+      "structure": "stage-columns + top-kpi + side-alert"
+    }
+  ],
+  "hardRules": ["流程类页面必须优先表达流转或明细，不得默认套地图/场景三列。"]
+}

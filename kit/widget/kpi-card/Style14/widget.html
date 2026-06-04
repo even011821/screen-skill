@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style14 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; justify-content: center; width: min(760px, 100%); }
+    .preview__card { display: grid; gap: 8px; justify-items: center; }
+    .preview__label { color: rgba(214, 238, 255, 0.68); font-size: 12px; line-height: 16px; }
+    .preview__surface { width: var(--preview-w); height: var(--preview-h); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__card">
+      <div class="preview__label">min/base 110x105</div>
+      <div class="preview__surface" style="--preview-w:110px; --preview-h:105px;">
+        <section class="kpi-card kpi-card--style14" data-kit="widget/kpi-card/Style14">
+          <div class="kpi-card__frame" aria-hidden="true"></div>
+          <div class="kpi-card__content-frame">
+            <h3 class="kpi-card__title" data-slot="title">总数</h3>
+            <strong class="kpi-card__value" data-slot="value">98,230</strong>
+            <div class="kpi-card__unit-badge" aria-hidden="true"><span data-slot="unit">个</span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">mid 154x147</div>
+      <div class="preview__surface" style="--preview-w:154px; --preview-h:147px;">
+        <section class="kpi-card kpi-card--style14" data-kit="widget/kpi-card/Style14">
+          <div class="kpi-card__frame" aria-hidden="true"></div>
+          <div class="kpi-card__content-frame">
+            <h3 class="kpi-card__title" data-slot="title">设备数</h3>
+            <strong class="kpi-card__value" data-slot="value">12,650</strong>
+            <div class="kpi-card__unit-badge" aria-hidden="true"><span data-slot="unit">台</span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">max 198x189</div>
+      <div class="preview__surface" style="--preview-w:198px; --preview-h:189px;">
+        <section class="kpi-card kpi-card--style14" data-kit="widget/kpi-card/Style14">
+          <div class="kpi-card__frame" aria-hidden="true"></div>
+          <div class="kpi-card__content-frame">
+            <h3 class="kpi-card__title" data-slot="title">项目数</h3>
+            <strong class="kpi-card__value" data-slot="value">2,806</strong>
+            <div class="kpi-card__unit-badge" aria-hidden="true"><span data-slot="unit">项</span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

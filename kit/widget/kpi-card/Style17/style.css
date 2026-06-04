@@ -1,0 +1,186 @@
+.kpi-card--style17 {
+  --style17-base: url("./assets/base-blue.svg");
+  --style17-dome: url("./assets/dome-blue.svg");
+  --style17-arrow: url("./assets/arrow-blue.svg");
+  --style17-value: #ffffff;
+  --style17-label-glow: rgba(93, 255, 110, 0.5);
+  width: 222px;
+  height: 215px;
+  min-width: 222px;
+  min-height: 215px;
+  max-width: 222px;
+  max-height: 215px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kpi-card--style17[data-variant="red"] {
+  --style17-base: url("./assets/base-red.svg");
+  --style17-dome: url("./assets/dome-red.svg");
+  --style17-arrow: url("./assets/arrow-red.svg");
+  --style17-value: #ff725f;
+  --style17-label-glow: rgba(199, 219, 205, 0.3);
+}
+
+.kpi-card--style17[data-variant="yellow"] {
+  --style17-base: url("./assets/base-yellow.svg");
+  --style17-dome: url("./assets/dome-yellow.svg");
+  --style17-arrow: url("./assets/arrow-yellow.svg");
+  --style17-value: #fff493;
+  --style17-label-glow: rgba(199, 219, 205, 0.3);
+}
+
+.kpi-card--style17 .kpi-card__visual {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 182.154px;
+  height: 200.615px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.kpi-card--style17 .kpi-card__base,
+.kpi-card--style17 .kpi-card__dome {
+  position: absolute;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.kpi-card--style17 .kpi-card__base {
+  left: 2.39px;
+  top: 80.86px;
+  width: 177.231px;
+  height: 111px;
+  background-image: var(--style17-base);
+}
+
+.kpi-card--style17 .kpi-card__dome {
+  left: 12.28px;
+  top: 16px;
+  width: 157.859px;
+  height: 126px;
+  background-image: var(--style17-dome);
+}
+
+.kpi-card--style17 .kpi-card__data {
+  position: absolute;
+  left: 50%;
+  top: 56px;
+  z-index: 2;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style17 .kpi-card__subtitle {
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.kpi-card--style17 .kpi-card__metric-row {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-card--style17 .kpi-card__value {
+  color: var(--style17-value);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  text-align: center;
+}
+
+.kpi-card--style17 .kpi-card__arrow {
+  width: 20px;
+  height: 20px;
+  background: var(--style17-arrow) center / contain no-repeat;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.kpi-card--style17[data-variant="red"] .kpi-card__arrow,
+.kpi-card--style17[data-variant="yellow"] .kpi-card__arrow {
+  transform: rotate(90deg) scaleX(-1);
+}
+
+.kpi-card--style17 .kpi-card__content {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  width: 220px;
+  height: 49px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 8px 5px 0;
+  border: 1.44px solid rgba(38, 255, 255, 0);
+  background-image: linear-gradient(90deg, rgba(0, 29, 72, 0) 1%, rgba(0, 29, 72, 0.711) 32.405%, rgba(0, 29, 72, 0.8) 49.5%, rgba(0, 29, 72, 0.659) 67.746%, rgba(0, 29, 72, 0) 100%);
+  transform: translateX(-50%);
+}
+
+.kpi-card--style17 .kpi-card__title-row {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.kpi-card--style17 .kpi-card__dot {
+  width: 2.88px;
+  height: 2.88px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #9fffff;
+  box-shadow: 0 0 4px rgba(38, 255, 255, 0.9);
+}
+
+.kpi-card--style17 .kpi-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kpi-card--style17 .kpi-card__label {
+  display: flex;
+  width: 132px;
+  height: 19px;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgba(93, 255, 139, 0) 0%, var(--style17-label-glow) 50%, rgba(93, 255, 139, 0) 100%);
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  white-space: nowrap;
+}

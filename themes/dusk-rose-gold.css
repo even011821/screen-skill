@@ -1,0 +1,65 @@
+/* Dusk Rose Gold / 暮砂玫瑰金
+   Figma Theme node: 560:2168
+   Primary: #F3F3E9, Secondary: #F3BF8F */
+:root,
+[data-theme="dusk-rose-gold"] {
+  --theme-primary: #f3f3e9;
+  --theme-secondary: #f3bf8f;
+  --bg-0: #100d14;
+  --bg-1: #211827;
+  --panel-bg: rgba(32, 22, 32, 0.46);
+  --panel-fill: rgba(243, 191, 143, 0.06);
+  --panel-line: rgba(243, 191, 143, 0.3);
+  --panel-line-strong: #f3bf8f;
+  --panel-glow: #8a5a48;
+  --shell-panel-bg: rgba(29, 21, 31, 0.58);
+  --shell-panel-line: #f3bf8f;
+  --shell-panel-line-2: #f3f3e9;
+  --line: rgba(243, 191, 143, 0.62);
+  --line-soft: rgba(243, 191, 143, 0.22);
+  --accent: #f3bf8f;
+  --accent-2: #f3f3e9;
+  --accent-gold: #ffcf8a;
+  --chart-1: #f3bf8f;
+  --chart-2: #f3f3e9;
+  --chart-3: #d990a8;
+  --chart-4: #8fd7ff;
+  --chart-5: #ffcf8a;
+  --chart-6: #bfa4ff;
+  --text: #fffaf1;
+  --muted: rgba(245, 226, 210, 0.74);
+  --dim: rgba(245, 226, 210, 0.44);
+  --danger: #ff6f8c;
+  --ok: #6fe3b0;
+  --warning: #ffcf8a;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --screen-offset-x: 0px;
+  --screen-offset-y: 0px;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(255, 244, 230, 0.78);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(82, 45, 42, 0.72), 0 0 8px rgba(243, 191, 143, 0.58), 0 0 18px rgba(180, 120, 150, 0.38);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(248, 230, 214, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}

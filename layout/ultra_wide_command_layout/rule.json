@@ -1,0 +1,126 @@
+{
+  "id": "ultra_wide_command_layout",
+  "label": "超宽综合指挥型",
+  "version": "1.0.0",
+  "mainVisualType": [
+    "ultra_wide",
+    "command_center",
+    "multi_domain",
+    "screen_wall"
+  ],
+  "selection": {
+    "useWhen": [
+      "超宽",
+      "大屏墙",
+      "3840x1080",
+      "32:9",
+      "多系统",
+      "综合指挥",
+      "调度中心",
+      "多主题态势"
+    ],
+    "avoidWhen": [
+      "普通16:9且信息量较少",
+      "单一业务看板"
+    ],
+    "fallbackWhen": "画布横向很长，且需要多业务域并列展示。"
+  },
+  "canvas": {
+    "baseline": {
+      "w": 3840,
+      "h": 1080
+    },
+    "contentArea": "computed-after-topnav",
+    "gap": 18
+  },
+  "slotStrategy": {
+    "PrimarySlot": {
+      "required": true,
+      "role": "最高优先级区域，通常放中心主态势、主视觉或主指标；具体内容由指标分析决定",
+      "shell": "PanelShell",
+      "widthRatio": [
+        0.28,
+        0.42
+      ],
+      "heightRatio": [
+        0.62,
+        0.88
+      ],
+      "minSize": {
+        "w": 980,
+        "h": 560
+      },
+      "placement": "center"
+    },
+    "ContextSlot": {
+      "required": true,
+      "role": "中高优先级辅助区域，通常按业务域在左侧或主区域一侧分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "left-multi-column"
+    },
+    "StatusSlot": {
+      "required": true,
+      "role": "中高优先级辅助区域，通常按业务域在右侧或主区域一侧分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "right-multi-column"
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "补充信息候选区域，通常在底部、页签或扩展区承载低优先级内容；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "bottom-wide"
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "附着在主区域上的局部标注层，仅在主视觉需要说明时使用",
+      "shell": "none",
+      "placement": "inside-primary"
+    }
+  },
+  "densityBehavior": {
+    "low": "不建议使用超宽布局；如必须使用，放大主态势并减少边列。",
+    "medium": "中心态势 + 左右业务域分区。",
+    "high": "横向按业务域分区，不纵向无限堆叠。",
+    "extreme": "使用多列、页签和轮播承载，但保持中心态势对象。"
+  },
+  "componentPreference": {
+    "PrimarySlot": [
+      "PanelShell",
+      "echarts:map with local geoJSON/SVG",
+      "custom scene/canvas"
+    ],
+    "ContextSlot": [
+      "widget:kpi-card",
+      "echarts:line",
+      "echarts:bar",
+      "dom:ranking-list"
+    ],
+    "StatusSlot": [
+      "dom:alert-list",
+      "dom:ranking-list",
+      "widget:kpi-card"
+    ],
+    "DetailSlot": [
+      "dom:ranking-list",
+      "echarts:line",
+      "video-like container"
+    ]
+  },
+  "hardRules": [
+    "不能把普通16:9布局直接拉宽。",
+    "横向按业务域分区，中心仍保留主态势对象。",
+    "中心态势使用 PanelShell；两侧业务模块默认 CardShell。"
+  ],
+  "variantCatalog": "variants/catalog.json",
+  "variantSelection": {
+    "required": true,
+    "rule": "Read variants/catalog.json after this rule.json. Select layoutVariant before calculating panel geometry.",
+    "recordInChangeLog": [
+      "layoutVariant id",
+      "selection reason",
+      "primaryArea or structure",
+      "slot business topics"
+    ],
+    "doNotUseFixedTemplate": true
+  }
+}

@@ -1,0 +1,71 @@
+.kpi-card--style04 {
+  min-width: 160px;
+  min-height: 56px;
+  max-width: 378px;
+  max-height: 101px;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+}
+
+
+.kpi-card--style04 .kpi-card__icon-area {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 clamp(48px, 26.67cqw, 56px);
+  width: clamp(48px, 26.67cqw, 56px);
+  height: clamp(48px, 100cqh, 56px);
+  background: url("./assets/icon-area.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style04 .kpi-card__content {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.kpi-card--style04 .kpi-card__title-row {
+  gap: 8px;
+  width: 100%;
+  padding: 1px 2px;
+  background: linear-gradient(95.49deg, rgba(255, 234, 193, 0.25) 0.57%, rgba(255, 234, 193, 0) 93.08%);
+}
+
+.kpi-card--style04 .kpi-card__title-mark {
+  flex: 0 0 3px;
+  width: 3px;
+  height: 18px;
+  background: rgba(187, 204, 205, 0.7);
+}
+
+.kpi-card--style04 .kpi-card__title {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(12px, 6.67cqw, 14px);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.kpi-card--style04 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style04 .kpi-card__value {
+  color: #ffad67;
+  font-family: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  font-size: clamp(20px, 11.43cqw, 24px);
+  line-height: 1;
+}
+
+.kpi-card--style04 .kpi-card__unit {
+  color: rgba(242, 255, 252, 0.5);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}

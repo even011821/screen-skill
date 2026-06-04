@@ -1,0 +1,217 @@
+.bs-card-shell--style06 {
+  --style06-accent: #24caff;
+  --style06-line: #54b3fb;
+  --style06-title: #ffffff;
+  --style06-bg: rgba(0, 165, 255, 0.06);
+  --style06-shadow: #1e66aa;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 1200px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style06-title);
+  background: transparent;
+  border-radius: 4px;
+  isolation: isolate;
+}
+
+.bs-card-shell--style06,
+.bs-card-shell--style06 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style06 .bs-card-shell__background,
+.bs-card-shell--style06 .bs-card-shell__light,
+.bs-card-shell--style06 .bs-card-shell__bottom-line,
+.bs-card-shell--style06 .bs-card-shell__corner,
+.bs-card-shell--style06 .bs-card-shell__header-bg,
+.bs-card-shell--style06 .bs-card-shell__header-bottom-line {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style06 .bs-card-shell__background {
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid rgba(84, 179, 251, 0.3);
+  border-radius: 3px;
+  background: var(--style06-bg);
+  box-shadow: inset 0 0 26px 0 var(--style06-shadow);
+}
+
+.bs-card-shell--style06 .bs-card-shell__light {
+  left: 1px;
+  right: 1px;
+  bottom: -54px;
+  height: 172px;
+  opacity: 1;
+  background-image: url("./assets/light-mask.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style06 .bs-card-shell__bottom-line {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-image: url("./assets/bottom-line.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style06 .bs-card-shell__corner {
+  width: 71px;
+  height: 71px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style06 .bs-card-shell__corner--tl {
+  left: -15px;
+  top: -15px;
+  background-image: url("./assets/corner-blue-b.svg");
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style06 .bs-card-shell__corner--tr {
+  right: -15px;
+  top: -15px;
+  background-image: url("./assets/corner-blue-a.svg");
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style06 .bs-card-shell__corner--bl {
+  left: -15px;
+  bottom: -15px;
+  background-image: url("./assets/corner-blue-b.svg");
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.bs-card-shell--style06 .bs-card-shell__corner--br {
+  right: -15px;
+  bottom: -15px;
+  background-image: url("./assets/corner-blue-a.svg");
+}
+
+.bs-card-shell--style06 .bs-card-shell__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  height: 36px;
+  overflow: hidden;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  pointer-events: none;
+}
+
+.bs-card-shell--style06 .bs-card-shell__header-bg {
+  inset: 0;
+  background-image: url("./assets/header-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style06 .bs-card-shell__header-bottom-line {
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  height: 2px;
+  background-image: url("./assets/header-bottom-line.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style06 .bs-card-shell__title-wrap {
+  position: absolute;
+  left: 50%;
+  top: 3px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: calc(100% - 32px);
+  transform: translateX(-50%);
+}
+
+.bs-card-shell--style06 .bs-card-shell__title {
+  min-width: 0;
+  max-width: calc(100% - 44px);
+  margin: 0;
+  overflow: hidden;
+  color: var(--style06-title);
+  font-family: "Noto Sans SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 12px;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point::before,
+.bs-card-shell--style06 .bs-card-shell__point::after {
+  content: "";
+  position: absolute;
+  border-radius: 1px;
+  background: var(--style06-accent);
+}
+
+.bs-card-shell--style06 .bs-card-shell__point::before {
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 0.3;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point::after {
+  top: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point--left::before {
+  left: 0;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point--left::after {
+  left: 4px;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point--right::before {
+  left: 2px;
+}
+
+.bs-card-shell--style06 .bs-card-shell__point--right::after {
+  left: 0;
+}
+
+.bs-card-shell--style06 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 52px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}

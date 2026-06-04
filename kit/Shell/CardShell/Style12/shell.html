@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shell/CardShell/Style12 Preview</title>
+  <link rel="stylesheet" href="./shell.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 50% 42%, rgba(42, 145, 243, 0.16), transparent 36%),
+        linear-gradient(180deg, #061731 0%, #07112b 100%);
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    .style-preview {
+      display: grid;
+      grid-template-columns: minmax(300px, 400px) minmax(360px, 720px);
+      gap: 28px;
+      align-items: start;
+      width: min(1180px, 100%);
+    }
+
+    .style-preview__item {
+      width: 100%;
+      height: 300px;
+    }
+
+    .style-preview__item--wide {
+      height: 360px;
+    }
+
+    @media (max-width: 860px) {
+      body {
+        padding: 20px;
+      }
+
+      .style-preview {
+        grid-template-columns: 1fr;
+      }
+
+      .style-preview__item,
+      .style-preview__item--wide {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="style-preview">
+    <section class="style-preview__item">
+<section class="bs-card-shell bs-card-shell--style12" data-kit="Shell/CardShell/Style12">
+  <div class="bs-card-shell__frame" aria-hidden="true">
+    <span class="bs-card-shell__corner bs-card-shell__corner--tl"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--tr"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--bl"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--br"></span>
+    <span class="bs-card-shell__line bs-card-shell__line--top"></span>
+    <span class="bs-card-shell__line bs-card-shell__line--bottom"></span>
+    <span class="bs-card-shell__glow"></span>
+  </div>
+  <header class="bs-card-shell__header">
+    <span class="bs-card-shell__header-mark" aria-hidden="true"></span>
+    <h3 class="bs-card-shell__title" data-slot="title">模块标题</h3>
+  </header>
+  <div class="bs-card-shell__content" data-slot="content"></div>
+</section>
+
+
+    </section>
+    <section class="style-preview__item style-preview__item--wide">
+<section class="bs-card-shell bs-card-shell--style12" data-kit="Shell/CardShell/Style12">
+  <div class="bs-card-shell__frame" aria-hidden="true">
+    <span class="bs-card-shell__corner bs-card-shell__corner--tl"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--tr"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--bl"></span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--br"></span>
+    <span class="bs-card-shell__line bs-card-shell__line--top"></span>
+    <span class="bs-card-shell__line bs-card-shell__line--bottom"></span>
+    <span class="bs-card-shell__glow"></span>
+  </div>
+  <header class="bs-card-shell__header">
+    <span class="bs-card-shell__header-mark" aria-hidden="true"></span>
+    <h3 class="bs-card-shell__title" data-slot="title">宽屏自适应标题</h3>
+  </header>
+  <div class="bs-card-shell__content" data-slot="content"></div>
+</section>
+
+
+    </section>
+  </main>
+</body>
+</html>

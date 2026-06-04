@@ -1,0 +1,58 @@
+.kpi-card--style05 {
+  min-width: 174px;
+  min-height: 48px;
+  max-width: 300px;
+  max-height: 100px;
+  align-items: center;
+  padding: 5px 14px 5px 8px;
+  background: linear-gradient(90deg, rgba(97, 170, 174, 0.13) 70.47%, rgba(21, 25, 24, 0) 100%);
+  border: 1px solid;
+  border-image-source: linear-gradient(135deg, rgb(107, 174, 150, 1) 0% , hsla(159, 29%, 54%, 0) 20%);
+  border-image-slice: 1;
+}
+
+.kpi-card--style05 .kpi-card__icon-area {
+  flex: 0 0 clamp(36px, 22.99cqw, 40px);
+  width: clamp(36px, 22.99cqw, 40px);
+  height: clamp(36px, 83.33cqh, 40px);
+  background: url("./assets/icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style05 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  padding-left: 8px;
+}
+
+.kpi-card--style05 .kpi-card__title {
+  color: #88a6b8;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.kpi-card--style05 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  min-width: 0;
+}
+
+.kpi-card--style05 .kpi-card__value {
+  color: #dbfff2;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: clamp(15px, 9.2cqw, 16px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.kpi-card--style05 .kpi-card__unit {
+  color: #c9edff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.7;
+}

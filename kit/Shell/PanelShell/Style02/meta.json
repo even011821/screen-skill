@@ -1,0 +1,46 @@
+{
+  "id": "shell-panelshell-style02",
+  "label": "Shell/PanelShell/Style02",
+  "category": "Shell",
+  "kind": "PanelShell",
+  "style": "Style02",
+  "assetType": "code",
+  "theme": [
+    "galaxy-azure",
+    "frost-cyan",
+    "fresh-verdant",
+    "deep-tech-blue"
+  ],
+  "accentColor": "#15f6ee",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 260,
+    "h": 160
+  },
+  "code": {
+    "html": "shell.html",
+    "css": "shell.css"
+  },
+  "slots": [
+    {
+      "name": "content",
+      "selector": ".bs-panel-shell__content",
+      "required": true
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "contentSlot": {
+      "x": 20,
+      "y": 20,
+      "w": 360,
+      "h": 260
+    },
+    "usesImage": false,
+    "notes": "Use as a panel wrapper and inject business content into the content slot."
+  },
+  "status": "ready"
+}

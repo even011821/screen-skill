@@ -1,0 +1,28 @@
+.bs-panel-shell--style05 {
+  --panel-bg: var(--shell-panel-bg, rgba(7, 16, 36, 0.44));
+  --panel-line: var(--shell-panel-line, #76a9ff);
+  --panel-line-2: var(--shell-panel-line-2, #02adf9);
+  position: relative;
+  min-width: 260px;
+  min-height: 160px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #e6f7ff;
+  isolation: isolate;
+}
+.bs-panel-shell--style05,
+.bs-panel-shell--style05 * { box-sizing: border-box; }
+.bs-panel-shell--style05 .bs-panel-shell__frame { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.bs-panel-shell--style05 .bs-panel-shell__frame::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--panel-line-2) 10%, transparent), transparent 42%), var(--panel-bg); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+.bs-panel-shell--style05 .bs-panel-shell__frame::after { content: ""; position: absolute; inset: 0; border: 1px solid color-mix(in srgb, var(--panel-line) 72%, transparent); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); box-shadow: inset 0 0 18px color-mix(in srgb, var(--panel-line-2) 18%, transparent); opacity: 0.62; }
+.bs-panel-shell--style05 .bs-panel-shell__corner,
+.bs-panel-shell--style05 .bs-panel-shell__glow { position: absolute; display: block; }
+.bs-panel-shell--style05 .bs-panel-shell__corner { width: 42px; height: 42px; }
+.bs-panel-shell--style05 .bs-panel-shell__corner--tl { top: 0; left: 0; border-top: 2px solid var(--panel-line-2); border-left: 2px solid var(--panel-line-2); }
+.bs-panel-shell--style05 .bs-panel-shell__corner--tr { top: 0; right: 0; border-top: 2px solid var(--panel-line); border-right: 2px solid var(--panel-line); }
+.bs-panel-shell--style05 .bs-panel-shell__corner--bl { bottom: 0; left: 0; border-bottom: 2px solid var(--panel-line); border-left: 2px solid var(--panel-line); }
+.bs-panel-shell--style05 .bs-panel-shell__corner--br { bottom: 0; right: 0; border-bottom: 2px solid var(--panel-line-2); border-right: 2px solid var(--panel-line-2); }
+.bs-panel-shell--style05 .bs-panel-shell__glow { left: 12%; right: 12%; bottom: 4px; height: 20px; background: radial-gradient(ellipse at center, color-mix(in srgb, var(--panel-line-2) 44%, transparent), transparent 70%); filter: blur(2px); opacity: 0.18; }
+.bs-panel-shell--style05 .bs-panel-shell__content { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 0; overflow: hidden; }

@@ -1,0 +1,119 @@
+.kpi-card--style06 {
+  min-width: 293px;
+  min-height: 76px;
+  max-width: 527px;
+  max-height: 137px;
+  align-items: center;
+  padding: 8px 18px 8px 19px;
+  background: rgba(201, 237, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.kpi-card--style06 .kpi-card__icon-area {
+  position: relative;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.kpi-card--style06 .kpi-card__icon-bg,
+.kpi-card--style06 .kpi-card__icon-symbol {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style06 .kpi-card__icon-bg {
+  left: 50%;
+  top: calc(50% + 3px);
+  width: 55.5px;
+  height: 55.5px;
+  transform: translate(-50%, -50%);
+  background: url("./assets/icon-bg.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__icon-symbol {
+  left: 19px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  background: url("./assets/icon.svg") center / 180% 148% no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 60px;
+  margin: 0 13px;
+  background: url("./assets/divider.svg") center / 1px 60px no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style06 .kpi-card__title-row {
+  gap: 4px;
+}
+
+.kpi-card--style06 .kpi-card__title {
+  flex: 0 1 auto;
+  color: #c9edff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.kpi-card--style06 .kpi-card__unit {
+  color: #88a6b8;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.7;
+}
+
+.kpi-card--style06 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.kpi-card--style06 .kpi-card__value {
+  color: #fce7a2;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.kpi-card--style06 .kpi-card__trend-label {
+  color: #88a6b8;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.kpi-card--style06 .kpi-card__trend {
+  position: relative;
+  color: #54d690;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding-left: 12px;
+}
+
+.kpi-card--style06 .kpi-card__trend::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: url("./assets/trend-up.svg") center / 100% 100% no-repeat;
+}

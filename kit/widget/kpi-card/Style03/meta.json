@@ -1,0 +1,69 @@
+{
+  "id": "widget-kpi-card-style03",
+  "label": "KPI Card Style03",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style03",
+  "assetType": "code",
+  "size": {
+    "w": 271,
+    "h": 98
+  },
+  "minSize": {
+    "w": 160,
+    "h": 80
+  },
+  "maxSize": {
+    "w": 488,
+    "h": 176
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "corner-a.svg",
+      "corner-b.svg",
+      "corner-line.svg",
+      "frame-fill.svg",
+      "frame-line.svg",
+      "icon-diamond.svg",
+      "icon.svg",
+      "image-base.png",
+      "particle.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "进行中订单",
+      "required": true
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "70,701",
+      "required": true
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-png-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "Panel background uses local SVG shape layers; icon decoration keeps fixed visual ratio."
+  },
+  "status": "ready"
+}

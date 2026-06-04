@@ -1,0 +1,65 @@
+/* Deep Tech Blue / 深空科技蓝
+   Figma Theme node: 560:2165
+   Primary: #045BF0, Secondary: #22D4CC */
+:root,
+[data-theme="deep-tech-blue"] {
+  --theme-primary: #045bf0;
+  --theme-secondary: #22d4cc;
+  --bg-0: #020614;
+  --bg-1: #06122f;
+  --panel-bg: rgba(4, 14, 38, 0.42);
+  --panel-fill: rgba(4, 91, 240, 0.055);
+  --panel-line: rgba(34, 212, 204, 0.28);
+  --panel-line-strong: #045bf0;
+  --panel-glow: #063f9c;
+  --shell-panel-bg: rgba(5, 14, 34, 0.62);
+  --shell-panel-line: #045bf0;
+  --shell-panel-line-2: #22d4cc;
+  --line: rgba(34, 212, 204, 0.62);
+  --line-soft: rgba(34, 212, 204, 0.22);
+  --accent: #045bf0;
+  --accent-2: #22d4cc;
+  --accent-gold: #f3bf8f;
+  --chart-1: #045bf0;
+  --chart-2: #22d4cc;
+  --chart-3: #5e92ff;
+  --chart-4: #65f4ef;
+  --chart-5: #f3bf8f;
+  --chart-6: #ffb13a;
+  --text: #f1f7ff;
+  --muted: rgba(194, 224, 255, 0.72);
+  --dim: rgba(194, 224, 255, 0.44);
+  --danger: #ff647c;
+  --ok: #48efb0;
+  --warning: #ffb13a;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --screen-offset-x: 0px;
+  --screen-offset-y: 0px;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(220, 238, 255, 0.74);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(5, 28, 74, 0.78), 0 0 8px rgba(34, 212, 204, 0.48), 0 0 18px rgba(4, 91, 240, 0.62);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(204, 228, 255, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}

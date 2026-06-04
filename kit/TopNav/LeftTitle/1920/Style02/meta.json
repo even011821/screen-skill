@@ -1,0 +1,79 @@
+{
+  "id": "topnav-lefttitle-1920-style02",
+  "label": "TopNav LeftTitle 1920 Style02",
+  "category": "TopNav",
+  "kind": "nav",
+  "titlePosition": "LeftTitle",
+  "resolution": "1920",
+  "style": "Style02",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue"
+  ],
+  "tone": "tech",
+  "accentColor": "#24caff",
+  "size": {
+    "w": 1920,
+    "h": 98
+  },
+  "componentSetSize": {
+    "w": 1960,
+    "h": 266
+  },
+  "variants": [
+    {
+      "name": "navMode=secondary",
+      "size": {
+        "w": 1920,
+        "h": 100
+      }
+    },
+    {
+      "name": "navMode=none",
+      "size": {
+        "w": 1920,
+        "h": 100
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "navMode=none",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 1920,
+      "h": 98
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "left",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 38,
+    "fontWeight": 900,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0.8px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 58,
+      "fontSize": 13,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

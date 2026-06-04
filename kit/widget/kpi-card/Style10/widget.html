@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style10 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; width: min(720px, 100%); }
+    .preview__item { width: 156px; height: 156px; }
+    .preview__item--wide { width: 220px; height: 220px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style10" data-kit="widget/kpi-card/Style10">
+        <div class="kpi-card__ring" aria-hidden="true">
+          <span class="kpi-card__ring-background"></span>
+          <span class="kpi-card__ring-foreground"></span>
+        </div>
+        <div class="kpi-card__value-stack">
+          <strong class="kpi-card__value" data-slot="value">89</strong>
+          <span class="kpi-card__label" data-slot="label">运行效率指数</span>
+        </div>
+      </section>
+    </section>
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style10" data-kit="widget/kpi-card/Style10">
+        <div class="kpi-card__ring" aria-hidden="true">
+          <span class="kpi-card__ring-background"></span>
+          <span class="kpi-card__ring-foreground"></span>
+        </div>
+        <div class="kpi-card__value-stack">
+          <strong class="kpi-card__value" data-slot="value">96</strong>
+          <span class="kpi-card__label" data-slot="label">设备健康指数</span>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

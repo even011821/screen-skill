@@ -1,0 +1,121 @@
+{
+  "id": "shell-cardshell-style14",
+  "label": "Shell/CardShell/Style14",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style14",
+  "assetType": "code",
+  "theme": [
+    "fresh-verdant",
+    "deep-tech-blue",
+    "frost-cyan"
+  ],
+  "accentColor": "#b5ffe1",
+  "textColor": "#f4f8ff",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "header": {
+    "height": 56,
+    "titleFontSize": 22,
+    "titleFontWeight": 400,
+    "titleLetterSpacing": 0.44,
+    "titleColor": "#f4f8ff",
+    "titleShadow": "0 0 5px rgba(0, 163, 255, 0.5)",
+    "backgroundMode": "css-fixed-cap-stretch-bg",
+    "backgroundNote": "Header bg follows Figma adaptation: the bg container stretches with the card, the left hexagon cap remains fixed at 51.5x45.5px, and the horizontal body/frame stretches from the cap to the right edge."
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localSvg": [
+      "panel-background.svg",
+      "corner-small.svg",
+      "corner-large.svg",
+      "plus.svg",
+      "header-frame.svg",
+      "header-icon.svg",
+      "header-light.svg"
+    ],
+    "downloadedReferenceOnly": [
+      "header-bg-left.svg",
+      "header-bg-right.svg"
+    ],
+    "note": "Runtime uses CSS for the fixed left hexagon cap and stretchable title bg, plus local SVG assets for panel background, corners, plus marks, header frame, icon and light. The header bg is not a full component screenshot and the hexagon cap is not horizontally stretched."
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-card-shell__title",
+      "default": "标题内容",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": ".bs-card-shell__content",
+      "required": true
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "contentSlot": {
+      "top": 78.5,
+      "left": 19.13,
+      "right": 20.87,
+      "bottom": 16.5
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "usesFullNodeScreenshot": false,
+    "renderingMode": "css-svg-hybrid",
+    "runtimeDependency": "none",
+    "notes": "Runtime must use component.html, shell.css and local assets only. shell.html is a direct browser preview with empty content slots.",
+    "headerBg": {
+      "mode": "stretch-container-fixed-left-cap",
+      "head": {
+        "top": 16,
+        "left": 16,
+        "right": 16,
+        "height": 56
+      },
+      "bg": {
+        "left": -1.1,
+        "right": -0.12,
+        "top": 0,
+        "height": 56
+      },
+      "fixedLeftCap": {
+        "left": 2.1,
+        "top": 5,
+        "w": 51.5,
+        "h": 45.5,
+        "stretch": false
+      },
+      "stretchBody": {
+        "left": 14.94,
+        "right": -4.12,
+        "top": 9,
+        "h": 38
+      },
+      "stretchFrame": {
+        "left": 53.6,
+        "right": 0
+      }
+    }
+  },
+  "status": "ready"
+}

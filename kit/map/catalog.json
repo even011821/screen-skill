@@ -1,0 +1,21 @@
+{
+  "id": "map-catalog",
+  "label": "Map resource catalog",
+  "category": "map",
+  "assetType": "local-map-data",
+  "selectionPolicy": {
+    "mode": "scope-and-renderer-fit",
+    "rule": "Select map data by requested scope, renderer and status. Use local GeoJSON for ECharts registerMap. Do not fetch remote map data during generation or runtime.",
+    "defaultScope": "china"
+  },
+  "items": [
+    {
+      "id": "map-china-1.6.3",
+      "scope": "china",
+      "label": "China national map",
+      "meta": "china/1.6.3/meta.json",
+      "status": "ready"
+    }
+  ],
+  "updatedAt": "2026-06-01"
+}

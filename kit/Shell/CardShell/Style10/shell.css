@@ -1,0 +1,301 @@
+.bs-card-shell--style10 {
+  --style10-bg: #030e21;
+  --style10-accent: #48e9ff;
+  --style10-accent-2: #29b6fb;
+  --style10-line: #4fe6dd;
+  --style10-title: #f4f8ff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 1200px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style10-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style10,
+.bs-card-shell--style10 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background,
+.bs-card-shell--style10 .bs-card-shell__main-fill,
+.bs-card-shell--style10 .bs-card-shell__frame,
+.bs-card-shell--style10 .bs-card-shell__frame-cap,
+.bs-card-shell--style10 .bs-card-shell__frame-center,
+.bs-card-shell--style10 .bs-card-shell__corner,
+.bs-card-shell--style10 .bs-card-shell__corner span,
+.bs-card-shell--style10 .bs-card-shell__header-highlight,
+.bs-card-shell--style10 .bs-card-shell__header-divider,
+.bs-card-shell--style10 .bs-card-shell__header-divider-left,
+.bs-card-shell--style10 .bs-card-shell__header-icon {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background {
+  inset: 0;
+  z-index: 0;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::before,
+.bs-card-shell--style10 .bs-card-shell__background::after {
+  content: "";
+  position: absolute;
+  top: 76px;
+  bottom: 76px;
+  z-index: 1;
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(72, 233, 255, 0.14), rgba(72, 233, 255, 0.72) 50%, rgba(72, 233, 255, 0.14));
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::before {
+  left: 4px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::after {
+  right: 4px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__main-fill {
+  left: 6px;
+  right: 6px;
+  top: 53px;
+  bottom: 53px;
+  background: var(--style10-bg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame {
+  left: 0;
+  right: 0;
+  height: 51px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--top {
+  top: 2px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom {
+  bottom: 2px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap {
+  top: 0;
+  width: 65px;
+  height: 51px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap--left {
+  left: 1px;
+  background-image: url("./assets/frame-left.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap--right {
+  right: 1px;
+  background-image: url("./assets/frame-right.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-center {
+  left: 66px;
+  right: 66px;
+  height: 48px;
+  background: var(--style10-bg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--top .bs-card-shell__frame-center {
+  top: 3px;
+  border-top: 1px solid rgba(72, 233, 255, 0.74);
+  border-bottom: 1px solid rgba(72, 233, 255, 0.22);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-center {
+  top: 0;
+  border-top: 1px solid rgba(72, 233, 255, 0.16);
+  border-bottom: 1px solid rgba(72, 233, 255, 0.74);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-cap--left {
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-cap--right {
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner {
+  width: 88px;
+  height: 76px;
+  z-index: 2;
+  transform-origin: center;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--tl {
+  left: 0;
+  top: 0;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--tr {
+  right: 0;
+  top: 0;
+  transform: scaleX(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--bl {
+  left: 0;
+  bottom: 0;
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--br {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-outline {
+  left: 0.5px;
+  top: 0.5px;
+  width: 68.5px;
+  height: 64.5px;
+  background: url("./assets/corner-outline.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-inner {
+  left: 9.75px;
+  top: 8px;
+  width: 45.25px;
+  height: 53.5px;
+  background: url("./assets/corner-inner.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-top-tail {
+  left: 69px;
+  top: 0;
+  width: 19px;
+  height: 7px;
+  background: url("./assets/corner-top-tail.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-left-tail {
+  left: 1px;
+  bottom: 0;
+  width: 6px;
+  height: 11px;
+  background: url("./assets/corner-left-tail.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent {
+  left: 0.77px;
+  top: 50.3px;
+  width: 2.8px;
+  height: 14.4px;
+  opacity: 0.4;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::before,
+.bs-card-shell--style10 .bs-card-shell__corner-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2.8px;
+  height: 2.8px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::before {
+  top: 0;
+  background-image: url("./assets/corner-triangle-a.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::after {
+  bottom: 0;
+  background-image: url("./assets/corner-triangle-b.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent {
+  background: linear-gradient(180deg, transparent 2.8px, var(--style10-line) 2.8px, var(--style10-line) 11.6px, transparent 11.6px);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header {
+  position: absolute;
+  left: 11px;
+  right: 10px;
+  top: 11px;
+  z-index: 3;
+  height: 34px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-highlight {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 38px;
+  opacity: 0.3;
+  background: linear-gradient(90deg, rgba(41, 182, 251, 0) 0%, rgba(41, 182, 251, 0.95) 21.7%, rgba(41, 182, 251, 0) 100%);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-divider {
+  left: 0;
+  right: 0;
+  top: 36.6px;
+  height: 1.6px;
+  opacity: 0.4;
+  background: url("./assets/divider-right.png") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-divider-left {
+  left: 0;
+  top: 36.6px;
+  width: 70.4px;
+  height: 1.6px;
+  background: var(--style10-accent);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-icon {
+  left: 12px;
+  top: 8.1px;
+  width: 20.8px;
+  height: 20.8px;
+  background: url("./assets/header-icon.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__title {
+  position: absolute;
+  left: 40.8px;
+  right: 16px;
+  top: 2px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style10-title);
+  font-family: "Alibaba PuHuiTi 2.0", "Alibaba PuHuiTi", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 19.2px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.384px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bs-card-shell--style10 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 62px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}

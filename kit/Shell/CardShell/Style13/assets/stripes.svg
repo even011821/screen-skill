@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 141 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stripeFill" x1="12" y1="0" x2="12" y2="15" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0086FF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0086FF"/>
+    </linearGradient>
+  </defs>
+  <path opacity="0.1" d="M0 0H11.5684L25.1367 14.5467H13.5684L0 0Z" fill="url(#stripeFill)"/>
+  <path opacity="0.2" d="M23.14 0H34.7084L48.2767 14.5467H36.7084L23.14 0Z" fill="url(#stripeFill)"/>
+  <path opacity="0.35" d="M46.28 0H57.8484L71.4167 14.5467H59.8484L46.28 0Z" fill="url(#stripeFill)"/>
+  <path opacity="0.5" d="M69.42 0H80.9884L94.5567 14.5467H82.9884L69.42 0Z" fill="url(#stripeFill)"/>
+  <path opacity="0.7" d="M92.56 0H104.1284L117.6967 14.5467H106.1284L92.56 0Z" fill="url(#stripeFill)"/>
+  <path d="M115.7 0H127.2684L140.8367 14.5467H129.2684L115.7 0Z" fill="url(#stripeFill)"/>
+</svg>

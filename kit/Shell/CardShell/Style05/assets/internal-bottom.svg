@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 362 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="_internal/bttom" clip-path="url(#clip0_0_9)">
+<g id="Ellipse 517" filter="url(#filter0_f_0_9)">
+<ellipse cx="181" cy="-7" rx="150" ry="3" fill="var(--fill-0, #1FE4FF)" fill-opacity="0.5"/>
+</g>
+<g id="Ellipse 518" filter="url(#filter1_f_0_9)">
+<ellipse cx="181" cy="-1" rx="150" ry="2" fill="var(--fill-0, #1FE4FF)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_9" x="15" y="-26" width="332" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_0_9"/>
+</filter>
+<filter id="filter1_f_0_9" x="27" y="-7" width="308" height="12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_9"/>
+</filter>
+<clipPath id="clip0_0_9">
+<rect width="362" height="10" fill="white"/>
+</clipPath>
+</defs>
+</svg>

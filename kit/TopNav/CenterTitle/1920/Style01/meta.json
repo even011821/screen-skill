@@ -1,0 +1,80 @@
+{
+  "id": "topnav-centertitle-1920-style01",
+  "label": "TopNav CenterTitle 1920 Style01",
+  "category": "TopNav",
+  "kind": "nav",
+  "titlePosition": "CenterTitle",
+  "resolution": "1920",
+  "style": "Style01",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan"
+  ],
+  "tone": "tech",
+  "accentColor": "#15f6ee",
+  "size": {
+    "w": 1920,
+    "h": 82
+  },
+  "componentSetSize": {
+    "w": 1952,
+    "h": 294
+  },
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "navMode=none",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 1920,
+      "h": 82
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "variants": [
+    {
+      "name": "navMode=none",
+      "size": {
+        "w": 1920,
+        "h": 100
+      }
+    },
+    {
+      "name": "navMode=secondary",
+      "size": {
+        "w": 1920,
+        "h": 100
+      }
+    }
+  ],
+  "status": "ready",
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "center",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 44,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 58,
+      "fontSize": 13,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "主标题使用 DOM 覆盖层渲染，字体为 YouSheBiaoTiHei，font-weight 为 400，字号 44px，不要默认添加边框或 text-stroke。保留原有阴影。不要把标题文字烘焙进 nav.png。标题颜色固定为 #ffffff，不能受主题 token 或渐变文字填充影响。",
+    "subtitlePolicy": "仅当 titleOverlay.subtitle.enabled 为 true 时才渲染副标题",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ultra_wide_command_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "five_zone_command",
+      "label": "五区综合指挥",
+      "useWhen": ["3840x1080", "多系统并列"],
+      "structure": "left1 + left2 + center-situation + right2 + right1"
+    },
+    {
+      "id": "dual_center_command",
+      "label": "双中心态势",
+      "useWhen": ["两个主业务对象并重"],
+      "structure": "left-analysis + center-a + center-b + right-status"
+    },
+    {
+      "id": "timeline_command_wall",
+      "label": "时间线指挥墙",
+      "useWhen": ["事件流/任务推进是核心"],
+      "structure": "top-command-band + multi-column-status + bottom-timeline"
+    }
+  ],
+  "hardRules": ["仅 3840x1080 或明确超宽屏时使用，不得把 1920 页面拉宽套用。"]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "topnav-centertitle-1920-style07",
+  "label": "TopNav CenterTitle 1920 Style07",
+  "category": "TopNav",
+  "kind": "nav",
+  "titlePosition": "CenterTitle",
+  "resolution": "1920",
+  "style": "Style07",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan"
+  ],
+  "tone": "tech",
+  "accentColor": "#42a4fd",
+  "size": {
+    "w": 1920,
+    "h": 110
+  },
+  "componentSetSize": {
+    "w": 1960,
+    "h": 150
+  },
+  "variants": [
+    {
+      "name": "navMode=none",
+      "size": {
+        "w": 1920,
+        "h": 110
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "navMode=none",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 1920,
+      "h": 110
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "center",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 44,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Do not add subtitle text unless the selected component explicitly declares one. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitle": {
+      "enabled": false
+    },
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

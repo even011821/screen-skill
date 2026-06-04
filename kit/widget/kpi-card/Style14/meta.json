@@ -1,0 +1,68 @@
+{
+  "id": "widget-kpi-card-style14",
+  "label": "KPI Card Style14",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style14",
+  "assetType": "code",
+  "size": {
+    "w": 110,
+    "h": 105
+  },
+  "minSize": {
+    "w": 110,
+    "h": 105
+  },
+  "maxSize": {
+    "w": 198,
+    "h": 189
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "unit-badge-half.png"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "总数",
+      "required": true
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "98,230",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "个",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number",
+    "unit": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-png-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "KPI content stays centered; unit badge uses local image asset."
+  },
+  "status": "ready"
+}

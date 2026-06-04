@@ -1,0 +1,87 @@
+{
+  "id": "widget-kpi-card-style16",
+  "label": "KPI Card Style16",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style16",
+  "assetType": "code",
+  "size": {
+    "w": 259,
+    "h": 41
+  },
+  "minSize": {
+    "w": 160,
+    "h": 41
+  },
+  "maxSize": {
+    "w": 466,
+    "h": 74
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "center-glow.svg",
+      "center-notch.svg",
+      "chevron-right-1.svg",
+      "chevron-right-2.svg",
+      "connector-left.svg",
+      "connector-right.svg",
+      "corner-right-bottom.svg",
+      "corner-right-top.svg",
+      "edge-left-inner.svg",
+      "edge-left-outer.svg",
+      "edge-right-mid.svg",
+      "frame-body-fill.svg",
+      "frame-body-line.svg",
+      "frame-left-fill.svg",
+      "frame-left-line.svg",
+      "icon-base.svg",
+      "icon-fixed.png",
+      "icon-glow.svg",
+      "icon-line.svg",
+      "icon-vector.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "总数：",
+      "required": false
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "3,806",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "(个)",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number",
+    "unit": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-png-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "Button frame is rebuilt from local layer assets; text, value and unit remain DOM slots."
+  },
+  "status": "ready"
+}

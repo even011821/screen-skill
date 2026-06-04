@@ -1,0 +1,2318 @@
+{
+  "id": "figma-source-map",
+  "purpose": "Maintenance-only Figma source lookup for former runtime meta/catalog source fields. Runtime generation must not read this file for component selection.",
+  "generatedAt": "2026-05-29T16:32:00+08:00",
+  "entries": [
+    {
+      "meta": "kit/Shell/CardShell/Style01/meta.json",
+      "id": "shell-cardshell-style01",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "27:27983",
+        "nodeName": "Shell/CardShell/Style01",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=27-27983&t=3i62oH6028ojtxiR-4"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style02/meta.json",
+      "id": "shell-cardshell-style02",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "29:28030",
+        "nodeName": "Shell/CardShell/Style02",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=29-28030&t=3i62oH6028ojtxiR-4"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style03/meta.json",
+      "id": "shell-cardshell-style03",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "29:28061",
+        "nodeName": "Shell/CardShell/Style03",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=29-28061&t=3i62oH6028ojtxiR-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style04/meta.json",
+      "id": "shell-cardshell-style04",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style04",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "23:18365",
+        "nodeName": "Shell/CardShell/Style04",
+        "backgroundNodeId": "23:18366",
+        "headerNodeId": "29:28062",
+        "contentNodeId": "29:28164",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=23-18365&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style05/meta.json",
+      "id": "shell-cardshell-style05",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style05",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "29:28168",
+        "nodeName": "Shell/CardShell/Style05",
+        "backgroundNodeId": "29:28122",
+        "headerNodeId": "29:28159",
+        "contentNodeId": "29:28166",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=29-28168&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style06/meta.json",
+      "id": "shell-cardshell-style06",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style06",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "36:33992",
+        "nodeName": "Shell/CardShell/Style06",
+        "backgroundNodeId": "29:28170",
+        "headerNodeId": "29:28184",
+        "contentNodeId": "45:26740",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=36-33992&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style07/meta.json",
+      "id": "shell-cardshell-style07",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style07",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:12847",
+        "componentSetName": "DS/Shell/CardShell",
+        "nodeId": "91:12375",
+        "nodeName": "style=07",
+        "backgroundNodeId": "91:12376",
+        "headerNodeId": "91:12567",
+        "contentNodeId": "91:12588",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12375&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style08/meta.json",
+      "id": "shell-cardshell-style08",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style08",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "59:26770",
+        "nodeName": "Shell/CardShell/Style08",
+        "backgroundNodeId": "51:24398",
+        "headerNodeId": "51:24405",
+        "contentNodeId": "59:25654",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=59-26770&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style09/meta.json",
+      "id": "shell-cardshell-style09",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style09",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "23:19079",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=23-19079&t=3i62oH6028ojtxiR-4"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style10/meta.json",
+      "id": "shell-cardshell-style10",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style10",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "23:19154",
+        "nodeName": "Shell/CardShell/Style10",
+        "backgroundNodeId": "23:19155",
+        "headerNodeId": "23:19169",
+        "contentNodeId": "59:25664",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=23-19154&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style11/meta.json",
+      "id": "shell-cardshell-style11",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style11",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "59:26882",
+        "nodeName": "Shell/CardShell/Style11",
+        "backgroundNodeId": "59:25671",
+        "headerNodeId": "59:25685",
+        "contentNodeId": "59:25789",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=59-26882&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style12/meta.json",
+      "id": "shell-cardshell-style12",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style12",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:12847",
+        "componentSetName": "DS/Shell/CardShell",
+        "nodeId": "91:12797",
+        "nodeName": "style=12",
+        "backgroundNodeId": "91:12798",
+        "headerNodeId": "91:12805",
+        "contentNodeId": "91:12846",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12797&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style13/meta.json",
+      "id": "shell-cardshell-style13",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style13",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "340:12058",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21891&t=3i62oH6028ojtxiR-4"
+      }
+    },
+    {
+      "meta": "kit/Shell/CardShell/Style14/meta.json",
+      "id": "shell-cardshell-style14",
+      "category": "Shell",
+      "kind": "CardShell",
+      "style": "Style14",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "532:4264",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=532-4264&t=dYseYiiyZInpll7h-11"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style01/meta.json",
+      "id": "shell-panelshell-style01",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:13041",
+        "componentSetName": "DS/Shell/PanelShell",
+        "nodeId": "91:12848",
+        "nodeName": "style=01",
+        "backgroundNodeId": "91:12849",
+        "headerNodeId": null,
+        "contentNodeId": "91:12893",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12848&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style02/meta.json",
+      "id": "shell-panelshell-style02",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:13041",
+        "componentSetName": "DS/Shell/PanelShell",
+        "nodeId": "91:12897",
+        "nodeName": "style=02",
+        "backgroundNodeId": "91:12898",
+        "headerNodeId": null,
+        "contentNodeId": "91:12912",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12897&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style03/meta.json",
+      "id": "shell-panelshell-style03",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:13041",
+        "componentSetName": "DS/Shell/PanelShell",
+        "nodeId": "91:12916",
+        "nodeName": "style=03",
+        "backgroundNodeId": "91:12917",
+        "headerNodeId": null,
+        "contentNodeId": "91:12994",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12916&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style04/meta.json",
+      "id": "shell-panelshell-style04",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style04",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:13041",
+        "componentSetName": "DS/Shell/PanelShell",
+        "nodeId": "91:12998",
+        "nodeName": "style=04",
+        "backgroundNodeId": "91:12999",
+        "headerNodeId": null,
+        "contentNodeId": "91:13023",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12998&m=dev"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style05/meta.json",
+      "id": "shell-panelshell-style05",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style05",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "91:13041",
+        "componentSetName": "DS/Shell/PanelShell",
+        "nodeId": "91:13027",
+        "nodeName": "style=05",
+        "backgroundNodeId": "91:13028",
+        "headerNodeId": null,
+        "contentNodeId": "91:13037",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-13027&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style01/meta.json",
+      "id": "topnav-centertitle-1920-style01",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "3:2461",
+        "nodeName": "TopNav/CenterTitle/1920/Style01",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=3-2461&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style01/SecondNavItem/meta.json",
+      "id": "topnav-centertitle-1920-style01-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "3:8594",
+        "nodeName": "TopNav/CenterTitle/1920/Style01/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=3-8594&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style02/meta.json",
+      "id": "topnav-centertitle-1920-style02",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "8:11109",
+        "nodeName": "TopNav/CenterTitle/1920/Style02",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=8-11109&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style02/SecondNavItem/meta.json",
+      "id": "topnav-centertitle-1920-style02-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "7:11044",
+        "nodeName": "TopNav/CenterTitle/1920/Style02/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=7-11044&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style03/meta.json",
+      "id": "topnav-centertitle-1920-style03",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "14:15292",
+        "nodeName": "TopNav/CenterTitle/1920/Style03",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=14-15292&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style04/meta.json",
+      "id": "topnav-centertitle-1920-style04",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style04",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "14:15293",
+        "nodeName": "TopNav/CenterTitle/1920/Style04",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=14-15293&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style05/meta.json",
+      "id": "topnav-centertitle-1920-style05",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style05",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "14:15294",
+        "nodeName": "TopNav/CenterTitle/1920/Style05",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=14-15294&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style05/SecondNavItem/meta.json",
+      "id": "topnav-centertitle-1920-style05-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style05",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "10:14989",
+        "nodeName": "TopNav/CenterTitle/1920/Style05/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=10-14989&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style06/meta.json",
+      "id": "topnav-centertitle-1920-style06",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style06",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:15976",
+        "nodeName": "TopNav/CenterTitle/1920/Style06",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-15976&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style06/SecondNavItem/meta.json",
+      "id": "topnav-centertitle-1920-style06-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style06",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "15:15379",
+        "nodeName": "TopNav/CenterTitle/1920/Style06/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=15-15379&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style07/meta.json",
+      "id": "topnav-centertitle-1920-style07",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style07",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:16108",
+        "nodeName": "TopNav/CenterTitle/1920/Style07",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-16108&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style08/meta.json",
+      "id": "topnav-centertitle-1920-style08",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style08",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:16169",
+        "nodeName": "TopNav/CenterTitle/1920/Style08",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-16169&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style09/meta.json",
+      "id": "topnav-centertitle-1920-style09",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style09",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:16171",
+        "nodeName": "TopNav/CenterTitle/1920/Style09",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-16171&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style10/meta.json",
+      "id": "topnav-centertitle-1920-style10",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style10",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:16287",
+        "nodeName": "TopNav/CenterTitle/1920/Style10",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-16287&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style11/meta.json",
+      "id": "topnav-centertitle-1920-style11",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style11",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:17049",
+        "nodeName": "TopNav/CenterTitle/1920/Style11",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-17049&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/1920/Style12/meta.json",
+      "id": "topnav-centertitle-1920-style12",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style12",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "19:17052",
+        "nodeName": "TopNav/CenterTitle/1920/Style12",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=19-17052&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/3840/Style01/meta.json",
+      "id": "topnav-centertitle-3840-style01",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "3:5450",
+        "nodeName": "TopNav/CenterTitle/3840/Style01",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=3-5450&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/3840/Style01/SecondNavItem/meta.json",
+      "id": "topnav-centertitle-3840-style01-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "3:7954",
+        "nodeName": "TopNav/CenterTitle/3840/Style01/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=3-7954&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/3840/Style02/meta.json",
+      "id": "topnav-centertitle-3840-style02",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "14:15291",
+        "nodeName": "TopNav/CenterTitle/3840/Style02",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=14-15291&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/CenterTitle/3840/Style03/meta.json",
+      "id": "topnav-centertitle-3840-style03",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "14:15290",
+        "nodeName": "TopNav/CenterTitle/3840/Style03",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=14-15290&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/LeftTitle/1920/Style01/meta.json",
+      "id": "topnav-lefttitle-1920-style01",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "55:24839",
+        "nodeName": "TopNav/LeftTitle/1920/Style01",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=55-24839&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/LeftTitle/1920/Style01/SecondNavItem/meta.json",
+      "id": "topnav-lefttitle-1920-style01-secondnavitem",
+      "category": "TopNav",
+      "kind": "nav-item",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "55:24732",
+        "nodeName": "TopNav/LeftTitle/1920/Style01/SecondNavItem",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=55-24732&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/LeftTitle/1920/Style02/meta.json",
+      "id": "topnav-lefttitle-1920-style02",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "56:25139",
+        "nodeName": "TopNav/LeftTitle/1920/Style02",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=56-25139&m=dev"
+      }
+    },
+    {
+      "meta": "kit/TopNav/LeftTitle/1920/Style03/meta.json",
+      "id": "topnav-lefttitle-1920-style03",
+      "category": "TopNav",
+      "kind": "nav",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "57:25185",
+        "nodeName": "TopNav/LeftTitle/1920/Style03",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=57-25185&m=dev"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style01/meta.json",
+      "id": "widget-kpi-card-style01",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style01",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14017",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14017&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style02/meta.json",
+      "id": "widget-kpi-card-style02",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style02",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14110",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14110&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style03/meta.json",
+      "id": "widget-kpi-card-style03",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style03",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14111",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14111&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style04/meta.json",
+      "id": "widget-kpi-card-style04",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style04",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14129",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14129&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style05/meta.json",
+      "id": "widget-kpi-card-style05",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style05",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14199",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14199&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style06/meta.json",
+      "id": "widget-kpi-card-style06",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style06",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14240",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14240&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style07/meta.json",
+      "id": "widget-kpi-card-style07",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style07",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14313",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14313&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style08/meta.json",
+      "id": "widget-kpi-card-style08",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style08",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:13732",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-13732&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style09/meta.json",
+      "id": "widget-kpi-card-style09",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style09",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14338",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14338&t=M84CSxLKRDRl47Vy-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style10/meta.json",
+      "id": "widget-kpi-card-style10",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style10",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "108:14130",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-14130&t=M84CSxLKRDRl47Vy-11",
+        "ringNodeId": "108:12194",
+        "ringSourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=108-12194&t=yCzYJgkPJoqIbvsY-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style12/meta.json",
+      "id": "widget-kpi-card-style12",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style12",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "176:12971",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=176-12971&t=pdJmDXRBQvNPnBfD-11",
+        "variants": [
+          {
+            "name": "positive",
+            "nodeId": "176:12971",
+            "sourceStyle": "Charts/kpi-card/style12"
+          },
+          {
+            "name": "negative",
+            "nodeId": "194:13055",
+            "sourceStyle": "Charts/kpi-card/style13"
+          }
+        ]
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style14/meta.json",
+      "id": "widget-kpi-card-style14",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style14",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "194:13130",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=194-13130&t=pdJmDXRBQvNPnBfD-11"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style15/meta.json",
+      "id": "widget-kpi-card-style15",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style15",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "194:13202",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=194-13202&t=yCzYJgkPJoqIbvsY-11",
+        "panelFrameNodeId": "162:15218"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style16/meta.json",
+      "id": "widget-kpi-card-style16",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style16",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "194:13274",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=194-13274&t=yCzYJgkPJoqIbvsY-11",
+        "iconNodeId": "162:15108"
+      }
+    },
+    {
+      "meta": "kit/widget/kpi-card/Style17/meta.json",
+      "id": "widget-kpi-card-style17",
+      "category": "widget",
+      "kind": "kpi-card",
+      "style": "Style17",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "nodeId": "105:12239",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=105-12239&p=f&t=pdJmDXRBQvNPnBfD-11",
+        "variants": [
+          {
+            "name": "blue",
+            "nodeId": "194:13382",
+            "sourceStyle": "Charts/kpi-card/style17/blue"
+          },
+          {
+            "name": "red",
+            "nodeId": "194:13491",
+            "sourceStyle": "Charts/kpi-card/style17/red"
+          },
+          {
+            "name": "yellow",
+            "nodeId": "194:13600",
+            "sourceStyle": "Charts/kpi-card/style17/yellow"
+          }
+        ]
+      }
+    }
+  ],
+  "catalogEntries": [
+    {
+      "catalog": "kit/Shell/CardShell/catalog.json",
+      "id": "shell-cardshell-catalog",
+      "source": {
+        "type": "figma",
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "fileName": "BigScreen-Skill",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12847&m=dev"
+      }
+    },
+    {
+      "catalog": "kit/Shell/PanelShell/catalog.json",
+      "id": "shell-panelshell-catalog",
+      "source": {
+        "type": "figma",
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "fileName": "BigScreen-Skill",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-13041&m=dev"
+      }
+    },
+    {
+      "catalog": "kit/TopNav/catalog.json",
+      "id": "topnav-catalog",
+      "source": {
+        "type": "figma",
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "fileName": "BigScreen-Skill",
+        "rootNodeId": "22:17229",
+        "rootNodeName": "Nav",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=22-17229&m=dev"
+      }
+    },
+    {
+      "catalog": "themes/catalog.json",
+      "id": null,
+      "source": {
+        "type": "figma",
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "rootNodeId": "87:10803",
+        "rootNodeName": "Theme",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=87-10803&t=dYseYiiyZInpll7h-11"
+      },
+      "themeSources": [
+        {
+          "id": "galaxy-azure",
+          "figmaNodeId": "560:2993"
+        },
+        {
+          "id": "deep-tech-blue",
+          "figmaNodeId": "560:2165"
+        },
+        {
+          "id": "frost-cyan",
+          "figmaNodeId": "560:3250"
+        },
+        {
+          "id": "dusk-rose-gold",
+          "figmaNodeId": "560:2168"
+        },
+        {
+          "id": "ember-orange",
+          "figmaNodeId": "560:2167"
+        },
+        {
+          "id": "fresh-verdant",
+          "figmaNodeId": "560:2166"
+        }
+      ]
+    }
+  ],
+  "runtimeFieldMigrations": [
+    {
+      "path": "kit\\Shell\\CardShell\\Style01\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$",
+          "field": "figmaMinSize",
+          "value": {
+            "w": 200,
+            "h": 100
+          }
+        },
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "26:27948"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "26:27950"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "26:27958"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "26:27966"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "26:27967"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style02\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$",
+          "field": "figmaMinSize",
+          "value": {
+            "w": 260,
+            "h": 120
+          }
+        },
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "27:27992"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "27:27992"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "27:28008"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "27:28011"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "27:28013"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "27:28015"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "27:28022"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style03\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$",
+          "field": "figmaMinSize",
+          "value": {
+            "w": 200,
+            "h": 100
+          }
+        },
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "29:28038"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "29:28049"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style04\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "23:18366"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "56:25151"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "56:25150"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "56:25155"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "56:25144"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "56:25140"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "29:28071"
+        },
+        {
+          "path": "$.assets[7]",
+          "field": "nodeId",
+          "value": "29:28079"
+        },
+        {
+          "path": "$.assets[8]",
+          "field": "nodeId",
+          "value": "29:28064"
+        },
+        {
+          "path": "$.assets[9]",
+          "field": "nodeId",
+          "value": "29:28084"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style05\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "29:28116"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "29:28119"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "29:28122"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "29:28122"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "29:28122"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "29:28150"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "29:28151"
+        },
+        {
+          "path": "$.assets[7]",
+          "field": "nodeId",
+          "value": "29:28152"
+        },
+        {
+          "path": "$.assets[8]",
+          "field": "nodeId",
+          "value": "29:28162"
+        },
+        {
+          "path": "$.assets[9]",
+          "field": "nodeId",
+          "value": "29:28163"
+        },
+        {
+          "path": "$.adaptation",
+          "field": "notes",
+          "value": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. The Figma _internal/bg layer is split: stretchable fill and straight lines are CSS, fixed header and corner structures are local SVGs."
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style06\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$",
+          "field": "figmaMinSize",
+          "value": {
+            "w": 200,
+            "h": 100
+          }
+        },
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "29:28173"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "29:28176"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "46:26767"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "46:26761"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "29:28177"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "29:28179"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style08\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "51:24399"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "51:24404"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "51:24407"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "51:24408"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "51:24409"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "51:24412"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "51:24413"
+        },
+        {
+          "path": "$.assets[7]",
+          "field": "nodeId",
+          "value": "51:24416"
+        },
+        {
+          "path": "$.assets[8]",
+          "field": "nodeId",
+          "value": "51:24417"
+        },
+        {
+          "path": "$.assets[9]",
+          "field": "nodeId",
+          "value": "51:24423"
+        },
+        {
+          "path": "$.assets[10]",
+          "field": "nodeId",
+          "value": "51:24429"
+        },
+        {
+          "path": "$.assets[11]",
+          "field": "nodeId",
+          "value": "51:24430"
+        },
+        {
+          "path": "$.assets[12]",
+          "field": "nodeId",
+          "value": "51:24436"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style09\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.background.nonRenderingLayers[0]",
+          "field": "reason",
+          "value": "Figma helper/mask layer; do not render as visible gray background."
+        },
+        {
+          "path": "$.background",
+          "field": "note",
+          "value": "Matches Figma .internal/background. The root frame has no visible full border; background alpha is applied only on the background layer, never on the root component."
+        },
+        {
+          "path": "$.assets",
+          "field": "note",
+          "value": "All Figma MCP remote assets were downloaded locally. background-frame.svg is the runtime .internal/background layer. The legacy full-node-reference.png is kept only as a source/reference copy."
+        },
+        {
+          "path": "$.adaptation",
+          "field": "notes",
+          "value": "Converted to local HTML/CSS from Figma node 23:19079. Runtime must use component.html, shell.css and local assets only, without calling Figma. shell.html is a direct browser preview. The body background uses background-frame.svg exported from .internal/background, including the slanted frame, transparent #234D7E fill, linear body gradient and radial border gradients. Header shape, right cap, line, top hairline and left bar use local SVG assets. Right stripes use one exported Small Rectangles Container SVG, positioned once at the top-right with no tiling."
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style10\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "23:19209"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "23:19221"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "23:19224"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "23:19227"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "23:19218"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "23:19220"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "23:19158"
+        },
+        {
+          "path": "$.assets[7]",
+          "field": "nodeId",
+          "value": "23:19160"
+        },
+        {
+          "path": "$.assets[8]",
+          "field": "nodeId",
+          "value": "23:19172"
+        },
+        {
+          "path": "$.assets[9]",
+          "field": "nodeId",
+          "value": "23:19175"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style11\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets[0]",
+          "field": "nodeId",
+          "value": "59:25673"
+        },
+        {
+          "path": "$.assets[1]",
+          "field": "nodeId",
+          "value": "59:25675"
+        },
+        {
+          "path": "$.assets[2]",
+          "field": "nodeId",
+          "value": "59:25677"
+        },
+        {
+          "path": "$.assets[3]",
+          "field": "nodeId",
+          "value": "59:25679"
+        },
+        {
+          "path": "$.assets[4]",
+          "field": "nodeId",
+          "value": "59:26842"
+        },
+        {
+          "path": "$.assets[5]",
+          "field": "nodeId",
+          "value": "59:26854"
+        },
+        {
+          "path": "$.assets[6]",
+          "field": "nodeId",
+          "value": "59:26857"
+        },
+        {
+          "path": "$.assets[7]",
+          "field": "nodeId",
+          "value": "59:26860"
+        },
+        {
+          "path": "$.assets[8]",
+          "field": "nodeId",
+          "value": "59:26791"
+        },
+        {
+          "path": "$.assets[9]",
+          "field": "nodeId",
+          "value": "59:26794"
+        },
+        {
+          "path": "$.assets[10]",
+          "field": "nodeId",
+          "value": "59:26851"
+        },
+        {
+          "path": "$.assets[11]",
+          "field": "nodeId",
+          "value": "59:26853"
+        },
+        {
+          "path": "$.assets[12]",
+          "field": "nodeId",
+          "value": "59:25687"
+        },
+        {
+          "path": "$.assets[13]",
+          "field": "nodeId",
+          "value": "59:25689"
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style13\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets",
+          "field": "note",
+          "value": "Remote Figma MCP assets were downloaded locally. Runtime uses local segmented SVGs and CSS stretch layers, not a full component screenshot."
+        },
+        {
+          "path": "$.adaptation",
+          "field": "notes",
+          "value": "Converted from Figma node 340:12058. Runtime must use component.html, shell.css and local assets only. shell.html is a direct browser preview with empty content slots."
+        }
+      ]
+    },
+    {
+      "path": "kit\\Shell\\CardShell\\Style14\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.assets",
+          "field": "note",
+          "value": "Remote Figma MCP assets were downloaded locally. Runtime uses the Figma background-layer SVG plus CSS/SVG header decomposition; it does not use a full component screenshot."
+        },
+        {
+          "path": "$.adaptation",
+          "field": "notes",
+          "value": "Converted from Figma node 532:4264. Runtime must use component.html, shell.css and local assets only. shell.html is a direct browser preview with empty content slots."
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\catalog.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.items[0]",
+          "field": "nodeId",
+          "value": "3:2461"
+        },
+        {
+          "path": "$.items[1]",
+          "field": "nodeId",
+          "value": "3:8594"
+        },
+        {
+          "path": "$.items[2]",
+          "field": "nodeId",
+          "value": "8:11109"
+        },
+        {
+          "path": "$.items[3]",
+          "field": "nodeId",
+          "value": "7:11044"
+        },
+        {
+          "path": "$.items[4]",
+          "field": "nodeId",
+          "value": "14:15292"
+        },
+        {
+          "path": "$.items[5]",
+          "field": "nodeId",
+          "value": "14:15293"
+        },
+        {
+          "path": "$.items[6]",
+          "field": "nodeId",
+          "value": "14:15294"
+        },
+        {
+          "path": "$.items[7]",
+          "field": "nodeId",
+          "value": "10:14989"
+        },
+        {
+          "path": "$.items[8]",
+          "field": "nodeId",
+          "value": "19:15976"
+        },
+        {
+          "path": "$.items[9]",
+          "field": "nodeId",
+          "value": "15:15379"
+        },
+        {
+          "path": "$.items[10]",
+          "field": "nodeId",
+          "value": "19:16108"
+        },
+        {
+          "path": "$.items[11]",
+          "field": "nodeId",
+          "value": "19:16169"
+        },
+        {
+          "path": "$.items[12]",
+          "field": "nodeId",
+          "value": "19:16171"
+        },
+        {
+          "path": "$.items[13]",
+          "field": "nodeId",
+          "value": "19:16287"
+        },
+        {
+          "path": "$.items[14]",
+          "field": "nodeId",
+          "value": "19:17049"
+        },
+        {
+          "path": "$.items[15]",
+          "field": "nodeId",
+          "value": "19:17052"
+        },
+        {
+          "path": "$.items[16]",
+          "field": "nodeId",
+          "value": "3:5450"
+        },
+        {
+          "path": "$.items[17]",
+          "field": "nodeId",
+          "value": "3:7954"
+        },
+        {
+          "path": "$.items[18]",
+          "field": "nodeId",
+          "value": "14:15291"
+        },
+        {
+          "path": "$.items[19]",
+          "field": "nodeId",
+          "value": "14:15290"
+        },
+        {
+          "path": "$.items[20]",
+          "field": "nodeId",
+          "value": "55:24839"
+        },
+        {
+          "path": "$.items[21]",
+          "field": "nodeId",
+          "value": "55:24732"
+        },
+        {
+          "path": "$.items[22]",
+          "field": "nodeId",
+          "value": "56:25139"
+        },
+        {
+          "path": "$.items[23]",
+          "field": "nodeId",
+          "value": "57:25185"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style01\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "16:15500"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        },
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "3:2462"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "3:2531"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style01\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "3:8595"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "3:8602"
+        },
+        {
+          "path": "$.variants[2]",
+          "field": "nodeId",
+          "value": "3:8609"
+        },
+        {
+          "path": "$.variants[3]",
+          "field": "nodeId",
+          "value": "3:8616"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:8618"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style02\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "8:11108"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "8:11246"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "16:15502"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style02\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "7:11045"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "7:11050"
+        },
+        {
+          "path": "$.variants[2]",
+          "field": "nodeId",
+          "value": "7:11055"
+        },
+        {
+          "path": "$.variants[3]",
+          "field": "nodeId",
+          "value": "7:11060"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "7:11046"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "Subtract"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style03\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "9:12235"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "8:11950"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style04\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "9:12700"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "9:12589"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style05\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "10:15023"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "14:15296"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "9:14987"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style05\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "10:14990"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "10:14993"
+        },
+        {
+          "path": "$.variants[2]",
+          "field": "nodeId",
+          "value": "10:14996"
+        },
+        {
+          "path": "$.variants[3]",
+          "field": "nodeId",
+          "value": "10:14999"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "10:14992"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style06\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:15671"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "19:15670"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "14:15297"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style06\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "15:15380"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "15:15383"
+        },
+        {
+          "path": "$.variants[2]",
+          "field": "nodeId",
+          "value": "15:15386"
+        },
+        {
+          "path": "$.variants[3]",
+          "field": "nodeId",
+          "value": "15:15389"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "15:15382"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style07\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:15977"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "16:15615"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style08\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:16103"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "19:15979"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style09\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:16170"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:1778"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style10\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:16286"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:1789"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style11\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:17048"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "9:12852"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\1920\\Style12\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "19:17228"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "19:17051"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "19:17050"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\3840\\Style01\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "3:5449"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "3:5451"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:9810"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/background"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\3840\\Style01\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "3:7955"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "3:7957"
+        },
+        {
+          "path": "$.variants[2]",
+          "field": "nodeId",
+          "value": "3:7959"
+        },
+        {
+          "path": "$.variants[3]",
+          "field": "nodeId",
+          "value": "3:7961"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "I3:7960;1546:14631"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\3840\\Style02\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "14:15177"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:2336"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\CenterTitle\\3840\\Style03\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "14:15178"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:3728"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\LeftTitle\\1920\\Style01\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "55:24838"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "55:24840"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "55:24841"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\LeftTitle\\1920\\Style01\\SecondNavItem\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "55:24733"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "55:24736"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "55:24738"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\LeftTitle\\1920\\Style02\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "56:25138"
+        },
+        {
+          "path": "$.variants[1]",
+          "field": "nodeId",
+          "value": "56:25137"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:3473"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\TopNav\\LeftTitle\\1920\\Style03\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.variants[0]",
+          "field": "nodeId",
+          "value": "57:25184"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeId",
+          "value": "3:2125"
+        },
+        {
+          "path": "$.export",
+          "field": "nodeName",
+          "value": "_internal/bg"
+        },
+        {
+          "path": "$.export",
+          "field": "method",
+          "value": "figma-mcp-screenshot + sharp-resize"
+        }
+      ]
+    },
+    {
+      "path": "kit\\widget\\kpi-card\\Style12\\meta.json",
+      "removedAt": "2026-05-29",
+      "fields": [
+        {
+          "path": "$.adaptation",
+          "field": "notes",
+          "value": "Style12 and Style13 are merged into one KPI component with two variants. Positive value uses blue background, blue text and upward arrow. Negative value uses orange-tinted background, orange text and downward arrow. Backgrounds are local decoration screenshots and scale proportionally with background-size: contain; the negative variant also applies the Figma tint layer in CSS."
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-05-29"
+}

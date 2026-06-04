@@ -1,0 +1,65 @@
+/* Ember Orange / 熔光橙红
+   Figma Theme node: 560:2167
+   Primary: #FFB801, Secondary: #E85F12 */
+:root,
+[data-theme="ember-orange"] {
+  --theme-primary: #ffb801;
+  --theme-secondary: #e85f12;
+  --bg-0: #120704;
+  --bg-1: #251007;
+  --panel-bg: rgba(32, 14, 8, 0.46);
+  --panel-fill: rgba(255, 184, 1, 0.06);
+  --panel-line: rgba(232, 95, 18, 0.32);
+  --panel-line-strong: #ffb801;
+  --panel-glow: #8b3a10;
+  --shell-panel-bg: rgba(30, 13, 8, 0.6);
+  --shell-panel-line: #ffb801;
+  --shell-panel-line-2: #e85f12;
+  --line: rgba(255, 184, 1, 0.62);
+  --line-soft: rgba(255, 184, 1, 0.22);
+  --accent: #ffb801;
+  --accent-2: #e85f12;
+  --accent-gold: #ffca75;
+  --chart-1: #ffb801;
+  --chart-2: #e85f12;
+  --chart-3: #ff7a1a;
+  --chart-4: #ffd86a;
+  --chart-5: #ff4f64;
+  --chart-6: #24caff;
+  --text: #fff8ed;
+  --muted: rgba(255, 223, 190, 0.74);
+  --dim: rgba(255, 223, 190, 0.44);
+  --danger: #ff4f64;
+  --ok: #65e58f;
+  --warning: #ffb801;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --screen-offset-x: 0px;
+  --screen-offset-y: 0px;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(255, 230, 196, 0.78);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(118, 42, 14, 0.78), 0 0 8px rgba(255, 184, 1, 0.58), 0 0 18px rgba(232, 95, 18, 0.5);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(255, 225, 196, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}

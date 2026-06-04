@@ -1,0 +1,167 @@
+.bs-card-shell--style01 {
+  --style01-accent: #1aa8fd;
+  --style01-title: #eafeff;
+  --style01-body-bg: rgba(14, 22, 31, 0.94);
+  --style01-body-grad: linear-gradient(90deg, rgba(21, 80, 132, 0.24) 0%, rgba(14, 22, 31, 0) 48%, rgba(21, 80, 132, 0.12) 100%);
+  --style01-border: rgba(26, 168, 253, 0.78);
+  --style01-icon-dot: rgb(217, 217, 217);
+  --style01-header-h: 36px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 1200px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style01-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style01,
+.bs-card-shell--style01 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style01 .bs-card-shell__background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: var(--style01-body-grad), var(--style01-body-bg);
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, #298dff00 0%, #00B2FF 100%);
+  border-image-slice: 1;
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 81, 140, 0.18),
+    inset 0 0 26px rgba(7, 69, 122, 0.22);
+}
+
+.bs-card-shell--style01 .bs-card-shell__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: var(--style01-header-h);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bs-card-shell--style01 .bs-card-shell__header-bg,
+.bs-card-shell--style01 .bs-card-shell__header-left,
+.bs-card-shell--style01 .bs-card-shell__header-right,
+.bs-card-shell--style01 .bs-card-shell__header-bottom,
+.bs-card-shell--style01 .bs-card-shell__left-bar {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style01 .bs-card-shell__header-bg {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 36px;
+  background-image: url("./assets/header-bg.svg");
+}
+
+.bs-card-shell--style01 .bs-card-shell__header-left {
+  left: 0;
+  top: 1px;
+  width: 127px;
+  height: 18.252px;
+  background-image: url("./assets/internal-left.svg");
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.bs-card-shell--style01 .bs-card-shell__header-right {
+  right: 1px;
+  top: 18px;
+  width: 96px;
+  height: 18px;
+  background-image: url("./assets/internal-right.svg");
+  transform: rotate(180deg) scaleY(-1);
+  transform-origin: center;
+}
+
+.bs-card-shell--style01 .bs-card-shell__header-bottom {
+  left: 1px;
+  right: 32.5px;
+  top: 35.5px;
+  height: 1px;
+  background-image: url("./assets/bottom-line.svg");
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+.bs-card-shell--style01 .bs-card-shell__left-bar {
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 23.5px;
+  background-image: url("./assets/left-bar.svg");
+}
+
+.bs-card-shell--style01 .bs-card-shell__icon {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.bs-card-shell--style01 .bs-card-shell__icon-diamond {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #70bcff;
+  transform: rotate(-45deg) scale(0.7071);
+  transform-origin: center;
+  box-shadow: 0 0 10px rgba(67, 171, 255, 0.5);
+}
+
+.bs-card-shell--style01 .bs-card-shell__icon-dot {
+  position: absolute;
+  left: 31.82%;
+  right: 33.18%;
+  top: 32.5%;
+  bottom: 32.5%;
+  background: var(--style01-icon-dot);
+  transform: rotate(-45deg) scale(0.7071);
+  transform-origin: center;
+}
+
+.bs-card-shell--style01 .bs-card-shell__title {
+  position: absolute;
+  left: 42px;
+  right: 20px;
+  top: 6px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style01-title);
+  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: none;
+}
+
+.bs-card-shell--style01 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 52px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}

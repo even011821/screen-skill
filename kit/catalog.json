@@ -1,0 +1,110 @@
+{
+  "id": "screen-skill-v2-kit-catalog",
+  "label": "Screen Skill V2 kit global catalog",
+  "version": "2.1",
+  "updatedAt": "2026-06-01",
+  "readOrder": [
+    "kit/catalog.json",
+    "layout/catalog.json",
+    "layout/common/slot-schema.json",
+    "themes/catalog.json",
+    "kit/TopNav/catalog.json",
+    "kit/TopNav/overlay.css",
+    "kit/Shell/CardShell/catalog.json",
+    "kit/Shell/PanelShell/catalog.json",
+    "kit/widget/kpi-card/catalog.json",
+    "kit/map/catalog.json",
+    "runtime/echarts.min.js",
+    "runtime/chart-defaults.js",
+    "runtime/chart-presets.js",
+    "runtime/table-renderers.js",
+    "runtime/table-list.css",
+    "kit/background/meta.json"
+  ],
+  "branches": [
+    {
+      "id": "TopNav",
+      "label": "Top navigation",
+      "path": "TopNav/catalog.json",
+      "structure": "TopNav/{titlePosition}/{resolution}/{style}[/SecondNavItem]",
+      "assetType": "image-background",
+      "overlayCss": "TopNav/overlay.css",
+      "itemCount": 24,
+      "readyCount": 24,
+      "usage": "Use nav.png as pure background; inject title, optional subtitle, time, weather and secondary labels with DOM. Subtitle is rendered only when the selected meta enables it."
+    },
+    {
+      "id": "Shell",
+      "label": "Shell components",
+      "path": "Shell",
+      "assetType": "code",
+      "itemCount": 19,
+      "readyCount": 19,
+      "catalogs": [
+        {
+          "id": "CardShell",
+          "label": "Card shell",
+          "path": "Shell/CardShell/catalog.json",
+          "structure": "Shell/CardShell/{style}",
+          "itemCount": 14,
+          "readyCount": 14
+        },
+        {
+          "id": "PanelShell",
+          "label": "Panel shell",
+          "path": "Shell/PanelShell/catalog.json",
+          "structure": "Shell/PanelShell/{style}",
+          "itemCount": 5,
+          "readyCount": 5
+        }
+      ],
+      "usage": "Runtime must read component.html, shell.css and meta.json. CardShell style must be locked per screen; do not mix multiple CardShell styles in one generated screen unless the user explicitly requests it. PanelShell is mainly for center visual backgrounds or frames without a card title."
+    },
+    {
+      "id": "widget",
+      "label": "Design widgets",
+      "path": "widget/kpi-card/catalog.json",
+      "assetType": "code",
+      "itemCount": 15,
+      "readyCount": 15,
+      "usage": "Only KPI card is kept as a local design widget. Read widget/kpi-card/catalog.json, then use base.css plus the selected StyleXX component/style/meta. Inject KPI widgets into shell content slots. Charts, tables, rankings, alerts, maps, big numbers, tasks and event lists are runtime-rendered and must not be read from kit/widget."
+    },
+    {
+      "id": "runtime-renderers",
+      "label": "Runtime renderers",
+      "path": "runtime",
+      "assetType": "local-js-runtime",
+      "itemCount": 5,
+      "readyCount": 5,
+      "usage": "Use local ECharts 5.6.1 plus chart presets for charts. Use table-renderers.js and CSS for tables, rankings, alerts, tasks and event lists. Do not call external design tools for these modules."
+    },
+    {
+      "id": "map",
+      "label": "Map data resources",
+      "path": "map/catalog.json",
+      "structure": "map/{scope}/{version}/meta.json",
+      "assetType": "local-map-data",
+      "itemCount": 1,
+      "readyCount": 1,
+      "usage": "Use local GeoJSON map data for ECharts registerMap. For China maps, copy china.geo.json to the generated screen assets/map directory and fetch it locally; keep TopoJSON only as source data."
+    },
+    {
+      "id": "background",
+      "label": "Screen background",
+      "path": "background/meta.json",
+      "assetType": "image-or-css",
+      "itemCount": 3,
+      "usage": "Prefer ready background images by theme; use cssFallback when image is pending or missing."
+    }
+  ],
+  "selectionRules": {
+    "themeUse": "Use theme id, aliases and CSS tokens for visual compatibility. Do not use business category for kit selection.",
+    "sourceMapUse": "Runtime generation must not read maintenance source maps or external design sources.",
+    "businessCategoryUse": "Business category is only for mock data, metric naming, business grouping and copy generation."
+  },
+  "rules": {
+    "selection": "Always read this global catalog first, then read branch catalogs and final meta.json files.",
+    "fallback": "When a branch, catalog item, or ready asset is missing, generate a CSS fallback and record it in change-log.",
+    "noGuessing": "Never reference kit paths that are not present in this catalog or a branch catalog."
+  }
+}

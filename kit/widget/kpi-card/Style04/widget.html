@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style04 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; width: min(760px, 100%); }
+    .preview__item { width: 210px; height: 56px; }
+    .preview__item--wide { width: 340px; height: 88px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style04" data-kit="widget/kpi-card/Style04">
+        <span class="kpi-card__icon-area" aria-hidden="true"></span>
+        <div class="kpi-card__content"><div class="kpi-card__title-row"><span class="kpi-card__title-mark" aria-hidden="true"></span><h3 class="kpi-card__title" data-slot="title">当日计划</h3></div><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">74,554</strong><span class="kpi-card__unit" data-slot="unit">人</span></div></div>
+      </section>
+    </section>
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style04" data-kit="widget/kpi-card/Style04">
+        <span class="kpi-card__icon-area" aria-hidden="true"></span>
+        <div class="kpi-card__content"><div class="kpi-card__title-row"><span class="kpi-card__title-mark" aria-hidden="true"></span><h3 class="kpi-card__title" data-slot="title">累计到访</h3></div><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">128,640</strong><span class="kpi-card__unit" data-slot="unit">人次</span></div></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

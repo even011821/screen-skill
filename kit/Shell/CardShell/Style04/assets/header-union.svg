@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 150.001 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Union" opacity="0.3">
+<path d="M11.667 20H0L21.667 0H33.334L11.667 20ZM34.999 20H23.332L44.999 0H56.666L34.999 20ZM58.335 20H46.668L68.335 0H80.002L58.335 20ZM81.6699 20H70.0029L91.6699 0H103.337L81.6699 20ZM104.999 20H93.332L114.999 0H126.666L104.999 20ZM128.334 20H116.667L138.334 0H150.001L128.334 20Z" fill="url(#paint0_linear_0_5)"/>
+<path d="M11.667 20H0L21.667 0H33.334L11.667 20ZM34.999 20H23.332L44.999 0H56.666L34.999 20ZM58.335 20H46.668L68.335 0H80.002L58.335 20ZM81.6699 20H70.0029L91.6699 0H103.337L81.6699 20ZM104.999 20H93.332L114.999 0H126.666L104.999 20ZM128.334 20H116.667L138.334 0H150.001L128.334 20Z" fill="url(#paint1_linear_0_5)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_5" x1="187.016" y1="9.21052" x2="3.44045e-07" y2="9.21052" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD15C"/>
+<stop offset="1" stop-color="#FFD15C" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_5" x1="79.0014" y1="-8.57143" x2="72.2314" y2="16.879" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFED99"/>
+<stop offset="1" stop-color="#FFED99" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

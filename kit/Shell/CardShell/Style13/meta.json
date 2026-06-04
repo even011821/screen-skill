@@ -1,0 +1,90 @@
+{
+  "id": "shell-cardshell-style13",
+  "label": "Shell/CardShell/Style13",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style13",
+  "assetType": "code",
+  "theme": [
+    "deep-tech-blue",
+    "galaxy-azure",
+    "frost-cyan"
+  ],
+  "accentColor": "#0086ff",
+  "textColor": "#e3f5ff",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 200,
+    "h": 100
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "header": {
+    "height": 42,
+    "titleFontSize": 24,
+    "titleFontWeight": 400,
+    "titleLetterSpacing": 2.4,
+    "titleColor": "#e3f5ff"
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localSvg": [
+      "fill-left.svg",
+      "fill-right.svg",
+      "border-left-corner.svg",
+      "border-right-corner.svg",
+      "top-glow.svg",
+      "right-top-line.svg",
+      "right-notch.svg",
+      "stripes.svg"
+    ],
+    "downloadedReferenceOnly": [
+      "stripe-01.svg",
+      "stripe-02.svg",
+      "stripe-03.svg",
+      "stripe-04.svg",
+      "stripe-05.svg",
+      "stripe-06.svg"
+    ],
+    "note": "Remote remote design assets were downloaded locally. Runtime uses local segmented SVGs and CSS stretch layers, not a full component screenshot."
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-card-shell__title",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": ".bs-card-shell__content",
+      "required": true
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "renderingMode": "css-svg-hybrid",
+    "runtimeDependency": "none",
+    "notes": "Runtime must use component.html, shell.css and local assets only. shell.html is a direct browser preview with empty content slots."
+  },
+  "status": "ready"
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style17 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center; width: min(920px, 100%); }
+    .preview__card { display: grid; gap: 8px; justify-items: center; }
+    .preview__label { color: rgba(214, 238, 255, 0.68); font-size: 12px; line-height: 16px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__card">
+      <div class="preview__label">blue 222x215</div>
+      <section class="kpi-card kpi-card--style17" data-kit="widget/kpi-card/Style17" data-variant="blue">
+        <div class="kpi-card__visual" aria-hidden="true"><span class="kpi-card__base"></span><span class="kpi-card__dome"></span></div>
+        <div class="kpi-card__data"><span class="kpi-card__subtitle" data-slot="subtitle">（10%）</span><div class="kpi-card__metric-row"><strong class="kpi-card__value" data-slot="value">12%</strong><span class="kpi-card__arrow" aria-hidden="true"></span></div></div>
+        <div class="kpi-card__content"><div class="kpi-card__title-row"><span class="kpi-card__dot" aria-hidden="true"></span><h3 class="kpi-card__title" data-slot="title">职工综合服务覆盖</h3><span class="kpi-card__dot" aria-hidden="true"></span></div><span class="kpi-card__label" data-slot="label">牵头</span></div>
+      </section>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">red 222x215</div>
+      <section class="kpi-card kpi-card--style17" data-kit="widget/kpi-card/Style17" data-variant="red">
+        <div class="kpi-card__visual" aria-hidden="true"><span class="kpi-card__base"></span><span class="kpi-card__dome"></span></div>
+        <div class="kpi-card__data"><span class="kpi-card__subtitle" data-slot="subtitle">（8%）</span><div class="kpi-card__metric-row"><strong class="kpi-card__value" data-slot="value">9%</strong><span class="kpi-card__arrow" aria-hidden="true"></span></div></div>
+        <div class="kpi-card__content"><div class="kpi-card__title-row"><span class="kpi-card__dot" aria-hidden="true"></span><h3 class="kpi-card__title" data-slot="title">职工队伍建设提升</h3><span class="kpi-card__dot" aria-hidden="true"></span></div><span class="kpi-card__label" data-slot="label">参与</span></div>
+      </section>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">yellow 222x215</div>
+      <section class="kpi-card kpi-card--style17" data-kit="widget/kpi-card/Style17" data-variant="yellow">
+        <div class="kpi-card__visual" aria-hidden="true"><span class="kpi-card__base"></span><span class="kpi-card__dome"></span></div>
+        <div class="kpi-card__data"><span class="kpi-card__subtitle" data-slot="subtitle">（82%）</span><div class="kpi-card__metric-row"><strong class="kpi-card__value" data-slot="value">81%</strong><span class="kpi-card__arrow" aria-hidden="true"></span></div></div>
+        <div class="kpi-card__content"><div class="kpi-card__title-row"><span class="kpi-card__dot" aria-hidden="true"></span><h3 class="kpi-card__title" data-slot="title">基层治理建制</h3><span class="kpi-card__dot" aria-hidden="true"></span></div><span class="kpi-card__label" data-slot="label">参与</span></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

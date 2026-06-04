@@ -1,0 +1,258 @@
+.kpi-card--style16 {
+  min-width: 160px;
+  min-height: 41px;
+  max-width: 466px;
+  max-height: 74px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kpi-card--style16 .kpi-card__button-frame,
+.kpi-card--style16 .kpi-card__button-frame span,
+.kpi-card--style16 .kpi-card__icon::before,
+.kpi-card--style16 .kpi-card__icon::after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  content: "";
+}
+
+.kpi-card--style16 .kpi-card__button-frame {
+  inset: 0;
+}
+
+.kpi-card--style16 .kpi-card__frame-left-fill,
+.kpi-card--style16 .kpi-card__frame-left-line {
+  left: 0.08%;
+  top: 0.66%;
+  bottom: 1.2%;
+  width: 23.65%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__frame-left-fill {
+  background-image: url("./assets/frame-left-fill.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-left-line {
+  background-image: url("./assets/frame-left-line.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-body-fill,
+.kpi-card--style16 .kpi-card__frame-body-line {
+  left: 24.34%;
+  right: 0;
+  top: 0.66%;
+  bottom: 1.2%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__frame-body-fill {
+  background-image: url("./assets/frame-body-fill.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-body-line {
+  background-image: url("./assets/frame-body-line.svg");
+}
+
+.kpi-card--style16 .kpi-card__edge-left-outer,
+.kpi-card--style16 .kpi-card__edge-left-inner {
+  top: 0;
+  bottom: 1.07%;
+  width: 1.06%;
+  background: center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__edge-left-outer {
+  left: 0;
+  background-image: url("./assets/edge-left-outer.svg");
+}
+
+.kpi-card--style16 .kpi-card__edge-left-inner {
+  left: 0.76%;
+  background-image: url("./assets/edge-left-inner.svg");
+}
+
+.kpi-card--style16 .kpi-card__icon-line {
+  left: 2.96%;
+  top: 34.05%;
+  width: 0.76%;
+  height: 15.95%;
+  background: url("./assets/icon-line.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-top,
+.kpi-card--style16 .kpi-card__center-notch-bottom {
+  left: 22.97%;
+  width: 1.97%;
+  height: 4.92%;
+  background: url("./assets/center-notch.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-top {
+  top: 3.76%;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-bottom {
+  bottom: 18.27%;
+}
+
+.kpi-card--style16 .kpi-card__center-glow {
+  left: 23.58%;
+  top: 28.54%;
+  bottom: 29.99%;
+  width: 0.91%;
+  background: url("./assets/center-glow.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__connector-left,
+.kpi-card--style16 .kpi-card__connector-right {
+  top: 44.66%;
+  width: 1.36%;
+  height: 7.17%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__connector-left {
+  left: 20.39%;
+  background-image: url("./assets/connector-left.svg");
+}
+
+.kpi-card--style16 .kpi-card__connector-right {
+  left: 26.31%;
+  background-image: url("./assets/connector-right.svg");
+}
+
+.kpi-card--style16 .kpi-card__right-mid {
+  right: 0;
+  top: 38.16%;
+  width: 0.46%;
+  height: 22.52%;
+  background: url("./assets/edge-right-mid.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__right-corner-top,
+.kpi-card--style16 .kpi-card__right-corner-bottom {
+  right: 0;
+  width: 1.37%;
+  height: 9.32%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__right-corner-top {
+  top: 0;
+  background-image: url("./assets/corner-right-top.svg");
+}
+
+.kpi-card--style16 .kpi-card__right-corner-bottom {
+  bottom: 0;
+  background-image: url("./assets/corner-right-bottom.svg");
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-1,
+.kpi-card--style16 .kpi-card__chevron-right-2 {
+  top: 42.85%;
+  width: 1.77%;
+  height: 14.7%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-1 {
+  right: 2.21%;
+  background-image: url("./assets/chevron-right-1.svg");
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-2 {
+  right: 4.42%;
+  background-image: url("./assets/chevron-right-2.svg");
+}
+
+.kpi-card--style16 .kpi-card__icon {
+  position: absolute;
+  z-index: 2;
+  left: 2.78%;
+  top: 50%;
+  width: 17.61%;
+  height: 98.05%;
+  min-width: 34px;
+  max-width: 82px;
+  background: url("./assets/icon-base.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.kpi-card--style16 .kpi-card__icon::before {
+  left: 14.56%;
+  right: 14.02%;
+  top: 38.86%;
+  bottom: -8.54%;
+  background: url("./assets/icon-glow.svg") center / contain no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__icon::after {
+  left: 34%;
+  top: 31%;
+  width: 32%;
+  height: 38%;
+  background: url("./assets/icon-vector.svg") center / contain no-repeat;
+  opacity: 0.95;
+}
+
+.kpi-card--style16 .kpi-card__title {
+  position: absolute;
+  z-index: 3;
+  left: 30.68%;
+  top: 50%;
+  max-width: 24%;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(12px, 6.18cqw, 16px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style16 .kpi-card__metric {
+  position: absolute;
+  z-index: 3;
+  right: 10.97%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: clamp(3px, 1.85cqw, 5px);
+  max-width: 38%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style16 .kpi-card__value {
+  color: #ffe393;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: clamp(16px, 7.72cqw, 20px);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.kpi-card--style16 .kpi-card__unit {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(10px, 4.63cqw, 12px);
+  font-weight: 400;
+  line-height: 1.5;
+}

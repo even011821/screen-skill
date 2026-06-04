@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style15 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; justify-content: center; width: min(900px, 100%); }
+    .preview__card { display: grid; gap: 8px; justify-items: center; }
+    .preview__label { color: rgba(214, 238, 255, 0.68); font-size: 12px; line-height: 16px; }
+    .preview__surface { width: var(--preview-w); height: var(--preview-h); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__card">
+      <div class="preview__label">min 160x80</div>
+      <div class="preview__surface" style="--preview-w:160px; --preview-h:80px;">
+        <section class="kpi-card kpi-card--style15" data-kit="widget/kpi-card/Style15">
+          <div class="kpi-card__panel-frame" aria-hidden="true"></div>
+          <div class="kpi-card__value-stack">
+            <span class="kpi-card__icon" aria-hidden="true"></span>
+            <div class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">100</strong><span class="kpi-card__unit" data-slot="unit">件</span></div>
+            <span class="kpi-card__label" data-slot="label">工单总量</span>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">base 179x96</div>
+      <div class="preview__surface" style="--preview-w:179px; --preview-h:96px;">
+        <section class="kpi-card kpi-card--style15" data-kit="widget/kpi-card/Style15">
+          <div class="kpi-card__panel-frame" aria-hidden="true"></div>
+          <div class="kpi-card__value-stack">
+            <span class="kpi-card__icon" aria-hidden="true"></span>
+            <div class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">568</strong><span class="kpi-card__unit" data-slot="unit">项</span></div>
+            <span class="kpi-card__label" data-slot="label">任务总量</span>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">max 322x173</div>
+      <div class="preview__surface" style="--preview-w:322px; --preview-h:173px;">
+        <section class="kpi-card kpi-card--style15" data-kit="widget/kpi-card/Style15">
+          <div class="kpi-card__panel-frame" aria-hidden="true"></div>
+          <div class="kpi-card__value-stack">
+            <span class="kpi-card__icon" aria-hidden="true"></span>
+            <div class="kpi-card__metric"><strong class="kpi-card__value" data-slot="value">1,260</strong><span class="kpi-card__unit" data-slot="unit">条</span></div>
+            <span class="kpi-card__label" data-slot="label">告警总量</span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

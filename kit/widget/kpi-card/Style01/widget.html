@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style01 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      background: #020817;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    .preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+      width: min(760px, 100%);
+    }
+
+    .preview__item {
+      width: 214px;
+      height: 114px;
+    }
+
+    .preview__item--wide {
+      width: 340px;
+      height: 170px;
+    }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style01" data-kit="widget/kpi-card/Style01">
+        <div class="kpi-card__frame" aria-hidden="true">
+          <span class="kpi-card__header kpi-card__header--top"></span>
+          <span class="kpi-card__header kpi-card__header--bottom"></span>
+          <span class="kpi-card__corner kpi-card__corner--tl"></span>
+          <span class="kpi-card__corner kpi-card__corner--tr"></span>
+          <span class="kpi-card__corner kpi-card__corner--bl"></span>
+          <span class="kpi-card__corner kpi-card__corner--br"></span>
+          <span class="kpi-card__particle"></span>
+        </div>
+        <div class="kpi-card__content">
+          <div class="kpi-card__title-row">
+            <h3 class="kpi-card__title" data-slot="title">港口2</h3>
+            <span class="kpi-card__unit" data-slot="unit">(艘次)</span>
+          </div>
+          <div class="kpi-card__metrics" data-slot="metrics">
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">45</strong><span class="kpi-card__label" data-slot="label">开普船</span></span>
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">45</strong><span class="kpi-card__label" data-slot="label">海轮</span></span>
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">45</strong><span class="kpi-card__label" data-slot="label">驳船</span></span>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style01" data-kit="widget/kpi-card/Style01">
+        <div class="kpi-card__frame" aria-hidden="true">
+          <span class="kpi-card__header kpi-card__header--top"></span>
+          <span class="kpi-card__header kpi-card__header--bottom"></span>
+          <span class="kpi-card__corner kpi-card__corner--tl"></span>
+          <span class="kpi-card__corner kpi-card__corner--tr"></span>
+          <span class="kpi-card__corner kpi-card__corner--bl"></span>
+          <span class="kpi-card__corner kpi-card__corner--br"></span>
+          <span class="kpi-card__particle"></span>
+        </div>
+        <div class="kpi-card__content">
+          <div class="kpi-card__title-row">
+            <h3 class="kpi-card__title" data-slot="title">营业收入</h3>
+            <span class="kpi-card__unit" data-slot="unit">(万元)</span>
+          </div>
+          <div class="kpi-card__metrics" data-slot="metrics">
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">100</strong><span class="kpi-card__label" data-slot="label">本月</span></span>
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">82</strong><span class="kpi-card__label" data-slot="label">计划</span></span>
+            <span class="kpi-card__metric" data-slot="metric-item"><strong class="kpi-card__value" data-slot="value">18%</strong><span class="kpi-card__label" data-slot="label">增长</span></span>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

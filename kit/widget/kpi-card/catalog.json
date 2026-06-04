@@ -1,0 +1,590 @@
+{
+  "id": "widget-kpi-card",
+  "label": "KPI 指标卡",
+  "category": "widget",
+  "kind": "kpi-card",
+  "assetType": "code",
+  "baseCss": "base.css",
+  "commonAssets": "assets/common/",
+  "selectionPolicy": {
+    "mode": "data-slot-reuse-and-fit",
+    "defaultStylePolicy": "last-resort-only",
+    "rule": "不要按目录顺序直接选择第一个样式。应根据数据形态、槽位尺寸、视觉权重、变体需求和响应式能力来选择 KPI 样式。只有在无法对候选样式进行排序时，才使用 defaultStyle。",
+    "rankOrder": [
+      "数据形态匹配指标字段，例如 title / value / unit / subtitle / label",
+      "槽位尺寸符合样式的 minSize / maxSize；固定尺寸样式需要精确匹配，或有意预留对应槽位",
+      "variantRule 匹配所需状态，例如 positive / negative 或 blue / red / yellow",
+      "visualWeight 匹配信息优先级：compact、standard、emphasis、decorative",
+      "响应式能力匹配槽位是否需要拉伸",
+      "存在主题兼容性要求时，需要匹配 theme compatibility"
+    ],
+    "fallback": "如果排序后没有任何样式匹配，则使用 defaultStyle，并在 change-log 中记录本次兜底。",
+    "reuseRule": "A business metric may contain one value or multiple same-type metric items. Metric count is not component count. If a numeric metric can be represented by kpi-card, evaluate widget:kpi-card before chart/table fallbacks.",
+    "kpiCandidateSignals": [
+      "amount",
+      "count",
+      "ratio",
+      "completionRate",
+      "yearOverYear",
+      "monthOverMonth",
+      "alertCount",
+      "onlineCount",
+      "inventoryCount",
+      "projectCount",
+      "statusCount",
+      "currentValue",
+      "summaryValue",
+      "businessResult"
+    ],
+     "chartBoundary": "图表主要用于趋势、构成、排行、分布和关系表达。KPI 卡片主要用于当前值、汇总值、状态值和核心业务结果。",
+    "groupedMetricRule": "当一个业务指标包含多条同类型数据项时，优先使用现有的 grouped-metrics-card 样式，要求其支持 metrics / metricItem / repeatable，不要直接跳过 KPI。",
+    "multiInstanceRule": "多个结构相似的业务指标可以复用同一个 KPI 样式，并生成多个实例。",
+    "changeLogRule": "如果数值型汇总数据可以转换为 KPI，但最终没有使用 kpi-card，必须在 change-log 中记录原因。",
+    "themeColorRule": "只有明确标记了主题变量的 CSS 位置，才允许使用 var(--theme-primary) 或相关主题 token。不要对 KPI 卡片进行全局换色。状态色优先级高于主题主色。"
+  },
+  "styles": [
+    {
+      "id": "widget-kpi-card-style01",
+      "style": "Style01",
+      "path": "Style01/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "grouped-metrics-card",
+        "size": {
+          "w": 214,
+          "h": 114
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 385,
+          "h": 205
+        },
+        "slots": [
+          "title",
+          "unit",
+          "metrics",
+          "metricItem",
+          "value",
+          "label"
+        ],
+        "dataShape": {
+          "title": "string",
+          "unit": "string",
+          "metrics": [
+            "label",
+            "value"
+          ]
+        },
+        "repeatable": true,
+        "maxRecommended": 3,
+        "metricItem": {
+          "slot": "metricItem",
+          "itemShape": [
+            {
+              "label": "string",
+              "value": "string|number"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "widget-kpi-card-style02",
+      "style": "Style02",
+      "path": "Style02/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 185,
+          "h": 102
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 333,
+          "h": 184
+        },
+        "slots": [
+          "title",
+          "value"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number"
+        },
+        "repeatable": false,
+        "maxRecommended": 1,
+        "themeColorBindings": [
+          {
+            "slot": "value",
+            "selector": ".kpi-card--style02 .kpi-card__value",
+            "property": "color",
+            "figmaVariable": "theme/frost-cyan/primary",
+            "cssToken": "--theme-primary",
+            "fallback": "#2feadf",
+            "nodeId": "108:12098",
+            "evidence": "Figma MCP confirmed Text/Value/02 uses frost-cyan primary variable"
+          }
+        ]
+      }
+    },
+    {
+      "id": "widget-kpi-card-style03",
+      "style": "Style03",
+      "path": "Style03/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 271,
+          "h": 98
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 488,
+          "h": 176
+        },
+        "slots": [
+          "title",
+          "value"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style04",
+      "style": "Style04",
+      "path": "Style04/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 210,
+          "h": 56
+        },
+        "minSize": {
+          "w": 160,
+          "h": 56
+        },
+        "maxSize": {
+          "w": 378,
+          "h": 101
+        },
+        "slots": [
+          "title",
+          "value",
+          "unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style05",
+      "style": "Style05",
+      "path": "Style05/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 174,
+          "h": 48
+        },
+        "minSize": {
+          "w": 174,
+          "h": 48
+        },
+        "maxSize": {
+          "w": 300,
+          "h": 100
+        },
+        "slots": [
+          "title",
+          "value",
+          "unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style06",
+      "style": "Style06",
+      "path": "Style06/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 293,
+          "h": 76
+        },
+        "minSize": {
+          "w": 293,
+          "h": 76
+        },
+        "maxSize": {
+          "w": 527,
+          "h": 137
+        },
+        "slots": [
+          "title",
+          "unit",
+          "value",
+          "trendLabel",
+          "trend"
+        ],
+        "dataShape": {
+          "title": "string",
+          "unit": "string",
+          "value": "string|number",
+          "trendLabel": "string",
+          "trend": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style07",
+      "style": "Style07",
+      "path": "Style07/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 166,
+          "h": 86
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 299,
+          "h": 155
+        },
+        "slots": [
+          "title",
+          "label",
+          "value",
+          "progress"
+        ],
+        "dataShape": {
+          "title": "string",
+          "label": "string",
+          "value": "string|number",
+          "progress": "percent|string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style08",
+      "style": "Style08",
+      "path": "Style08/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 120,
+          "h": 91
+        },
+        "minSize": {
+          "w": 120,
+          "h": 91
+        },
+        "maxSize": {
+          "w": 216,
+          "h": 164
+        },
+        "slots": [
+          "value",
+          "unit",
+          "title"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "unit": "string",
+          "title": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style09",
+      "style": "Style09",
+      "path": "Style09/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 299,
+          "h": 100
+        },
+        "minSize": {
+          "w": 299,
+          "h": 100
+        },
+        "maxSize": {
+          "w": 538,
+          "h": 180
+        },
+        "slots": [
+          "title",
+          "value",
+          "unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style10",
+      "style": "Style10",
+      "path": "Style10/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 156,
+          "h": 156
+        },
+        "minSize": {
+          "w": 156,
+          "h": 156
+        },
+        "maxSize": {
+          "w": 281,
+          "h": 281
+        },
+        "slots": [
+          "value",
+          "label"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "label": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style12",
+      "style": "Style12",
+      "path": "Style12/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 200,
+          "h": 180
+        },
+        "minSize": {
+          "w": 160,
+          "h": 90
+        },
+        "maxSize": {
+          "w": 364,
+          "h": 324
+        },
+        "slots": [
+          "title",
+          "subtitle",
+          "value"
+        ],
+        "dataShape": {
+          "title": "string",
+          "subtitle": "string",
+          "value": "number|string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1,
+        "variantRule": {
+          "source": "value",
+          "variants": [
+            "positive",
+            "negative"
+          ]
+        }
+      }
+    },
+    {
+      "id": "widget-kpi-card-style14",
+      "style": "Style14",
+      "path": "Style14/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 110,
+          "h": 105
+        },
+        "minSize": {
+          "w": 110,
+          "h": 105
+        },
+        "maxSize": {
+          "w": 198,
+          "h": 189
+        },
+        "slots": [
+          "title",
+          "value",
+          "unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style15",
+      "style": "Style15",
+      "path": "Style15/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 179,
+          "h": 96
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 322,
+          "h": 173
+        },
+        "slots": [
+          "value",
+          "unit",
+          "label"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "unit": "string",
+          "label": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style16",
+      "style": "Style16",
+      "path": "Style16/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 259,
+          "h": 41
+        },
+        "minSize": {
+          "w": 160,
+          "h": 41
+        },
+        "maxSize": {
+          "w": 466,
+          "h": 74
+        },
+        "slots": [
+          "title",
+          "value",
+          "unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "repeatable": false,
+        "maxRecommended": 1
+      }
+    },
+    {
+      "id": "widget-kpi-card-style17",
+      "style": "Style17",
+      "path": "Style17/meta.json",
+      "status": "ready",
+      "summary": {
+        "cardType": "single-metric-card",
+        "size": {
+          "w": 222,
+          "h": 215
+        },
+        "minSize": {
+          "w": 222,
+          "h": 215
+        },
+        "maxSize": {
+          "w": 222,
+          "h": 215
+        },
+        "slots": [
+          "subtitle",
+          "value",
+          "title",
+          "label"
+        ],
+        "dataShape": {
+          "title": "string",
+          "subtitle": "string",
+          "value": "string|number",
+          "label": "string",
+          "variant": "blue|red|yellow"
+        },
+        "repeatable": false,
+        "maxRecommended": 3,
+        "variantRule": {
+          "source": "data-variant",
+          "variants": [
+            "blue",
+            "red",
+            "yellow"
+          ]
+        }
+      }
+    }
+  ],
+  "defaultStyle": "Style02",
+  "defaultStyleUsage": "仅作为兜底使用。绝不能仅因为它在目录顺序中排第一就使用。",
+  "status": "ready"
+}

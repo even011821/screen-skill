@@ -1,0 +1,129 @@
+.kpi-card--style07 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 299px;
+  max-height: 155px;
+  background: transparent;
+}
+
+.kpi-card--style07 .kpi-card__frame,
+.kpi-card--style07 .kpi-card__frame > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style07 .kpi-card__frame {
+  inset: 0 1.5px -0.35px 0;
+  z-index: 0;
+}
+
+.kpi-card--style07 .kpi-card__frame::before,
+.kpi-card--style07 .kpi-card__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(9px 0, calc(100% - 19px) 0, 100% 21px, 100% 100%, 9px 100%, 9px 50%, 0 38.2%, 0 11.8%);
+}
+
+.kpi-card--style07 .kpi-card__frame::before {
+  background: linear-gradient(180deg, rgba(65, 211, 243, 0) 0%, rgba(65, 211, 243, 0.24) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.kpi-card--style07 .kpi-card__frame::after {
+  background:
+    linear-gradient(135deg, rgba(65, 211, 243, 0.85), rgba(255, 255, 255, 0) 28%) border-box,
+    linear-gradient(315deg, rgba(65, 211, 243, 0.9), rgba(205, 249, 255, 0) 35%) border-box;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  padding: 1px;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.kpi-card--style07 .kpi-card__left-teeth {
+  left: 0;
+  bottom: 0;
+  width: 7.21px;
+  height: min(42.08px, 49%);
+  background: url("./assets/left-teeth.svg") left bottom / 100% 100% no-repeat;
+}
+
+.kpi-card--style07 .kpi-card__top-right-corner {
+  right: 0;
+  top: 0;
+  width: 10.55px;
+  height: 11.51px;
+  background: url("./assets/top-right-corner.svg") right top / 100% 100% no-repeat;
+}
+
+.kpi-card--style07 .kpi-card__title {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  right: 37.33px;
+  top: 8px;
+  color: rgba(205, 249, 255, 0.7);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.kpi-card--style07 .kpi-card__value-row {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  max-width: calc(100% - 32px);
+  color: #cdf9ff;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style07 .kpi-card__label {
+  color: rgba(205, 249, 255, 0.7);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.kpi-card--style07 .kpi-card__value {
+  color: #cdf9ff;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: clamp(21px, 14.49cqw, 24px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.kpi-card--style07 .kpi-card__progress {
+  position: absolute;
+  z-index: 1;
+  left: 19px;
+  right: 13.6px;
+  bottom: 9px;
+  height: 10px;
+  padding-right: 9px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+}
+
+.kpi-card--style07 .kpi-card__progress-fill {
+  display: block;
+  width: var(--progress, 92%);
+  height: 100%;
+  border-radius: 1px;
+  background:
+    linear-gradient(90deg, rgba(91, 239, 255, 0.7), rgba(65, 211, 243, 1)),
+    url("./assets/progress-fill.png") center / cover no-repeat;
+}

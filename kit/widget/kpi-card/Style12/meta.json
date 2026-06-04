@@ -1,0 +1,77 @@
+{
+  "id": "widget-kpi-card-style12",
+  "label": "Charts/kpi-card/style12 variant pair",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style12",
+  "assetType": "code",
+  "size": {
+    "w": 200,
+    "h": 180
+  },
+  "minSize": {
+    "w": 160,
+    "h": 90
+  },
+  "maxSize": {
+    "w": 364,
+    "h": 324
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "js": "variant.js",
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "background-positive.png",
+      "background-negative.png",
+      "arrow-positive.svg",
+      "arrow-negative.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "维权服务覆盖",
+      "required": true
+    },
+    {
+      "name": "subtitle",
+      "selector": "[data-slot='subtitle']",
+      "default": "(10%)",
+      "required": false
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "10%",
+      "required": true
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "subtitle": "string",
+    "value": "number|string"
+  },
+  "variantRule": {
+    "source": "value",
+    "positive": "value >= 0",
+    "negative": "value < 0",
+    "runtime": "variant.js sets data-variant from data-value or value text"
+  },
+  "adaptation": {
+    "renderingMode": "dual-variant-css-png-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "preserveAspectRatio": true,
+    "notes": "Style12 and Style13 are merged into one KPI component with two variants. Positive value uses blue background, blue text and upward arrow. Negative value uses orange-tinted background, orange text and downward arrow. Backgrounds are local decoration screenshots and scale proportionally with background-size: contain; the negative variant also applies the source tint layer in CSS."
+  },
+  "status": "ready"
+}

@@ -1,0 +1,97 @@
+{
+  "id": "topnav-centertitle-3840-style01-secondnavitem",
+  "label": "TopNav CenterTitle 3840 Style01 SecondNavItem",
+  "category": "TopNav",
+  "kind": "nav-item",
+  "titlePosition": "CenterTitle",
+  "resolution": "3840",
+  "style": "Style01",
+  "subcomponent": "SecondNavItem",
+  "parentNav": "topnav-centertitle-3840-style01",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan",
+    "dusk-rose-gold"
+  ],
+  "tone": "business",
+  "accentColor": "#ffca75",
+  "size": {
+    "w": 227,
+    "h": 50
+  },
+  "componentSetSize": {
+    "w": 525,
+    "h": 152
+  },
+  "variants": [
+    {
+      "name": "side=left, state=active",
+      "size": {
+        "w": 227,
+        "h": 50
+      }
+    },
+    {
+      "name": "side=right, state=active",
+      "size": {
+        "w": 227,
+        "h": 50
+      }
+    },
+    {
+      "name": "side=left, state=default",
+      "size": {
+        "w": 227,
+        "h": 50
+      }
+    },
+    {
+      "name": "side=right, state=default",
+      "size": {
+        "w": 227,
+        "h": 50
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "side=left, state=default",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 227,
+      "h": 50
+    },
+    "note": "Source was cloned temporarily for screenshot because the original instance subnode id is not accepted by the screenshot schema."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "center",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 76,
+    "fontWeight": 900,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 44,
+    "height": 88,
+    "stroke": "0.8px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 116,
+      "fontSize": 26,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

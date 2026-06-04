@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 373.5 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Subtract">
+<mask id="path-1-inside-1_0_18" fill="white">
+<path d="M373.5 36H24L0 0H373.5V36Z"/>
+</mask>
+<path d="M373.5 36H24L0 0H373.5V36Z" fill="url(#paint0_linear_0_18)" fill-opacity="0.5"/>
+<path d="M373.5 36V37H374.5V36H373.5ZM24 36L23.1679 36.5547L23.4648 37H24V36ZM0 0V-1H-1.86852L-0.83205 0.5547L0 0ZM373.5 0H374.5V-1H373.5V0ZM373.5 36V35H24V36V37H373.5V36ZM24 36L24.8321 35.4453L0.83205 -0.5547L0 0L-0.83205 0.5547L23.1679 36.5547L24 36ZM0 0V1H373.5V0V-1H0V0ZM373.5 0H372.5V36H373.5H374.5V0H373.5Z" fill="url(#paint1_linear_0_18)" fill-opacity="0.2" mask="url(#path-1-inside-1_0_18)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_18" x1="348.555" y1="18" x2="8.89313" y2="-36.9605" gradientUnits="userSpaceOnUse">
+<stop stop-color="#053C32" stop-opacity="0.01"/>
+<stop offset="0.383003" stop-color="#0B4B4F" stop-opacity="0.74"/>
+<stop offset="1" stop-color="#066D84"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_18" x1="38.8501" y1="10.2857" x2="320.041" y2="157.583" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1AF3F5"/>
+<stop offset="1" stop-color="#1AF3F5" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

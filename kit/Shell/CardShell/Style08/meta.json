@@ -1,0 +1,148 @@
+{
+  "id": "shell-cardshell-style08",
+  "label": "Shell/CardShell/Style08",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style08",
+  "assetType": "code",
+  "theme": [
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "accentColor": "#41D3F3",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 78,
+    "y": 3,
+    "fontFamily": "YouSheBiaoTiHei",
+    "fontSize": 20,
+    "fontWeight": 400,
+    "lineHeight": 28,
+    "letterSpacing": 1.6,
+    "color": "#EBFFFF",
+    "textShadow": "2px 2px 5px #031819"
+  },
+  "assets": [
+    {
+      "name": "bottom-left-corner",
+      "file": "assets/bottom-left-corner.svg",
+      "usage": "bottom-left corner"
+    },
+    {
+      "name": "bottom-right-corner",
+      "file": "assets/bottom-right-corner.svg",
+      "usage": "bottom-right corner"
+    },
+    {
+      "name": "header-left-bg",
+      "file": "assets/header-left-bg.svg",
+      "usage": "header left background"
+    },
+    {
+      "name": "header-left-overlay",
+      "file": "assets/header-left-overlay.svg",
+      "usage": "header left overlay"
+    },
+    {
+      "name": "header-body-shape",
+      "file": "assets/header-body-shape.svg",
+      "usage": "header main shape"
+    },
+    {
+      "name": "header-glow",
+      "file": "assets/header-glow.svg",
+      "usage": "header glow line"
+    },
+    {
+      "name": "header-body-fill",
+      "file": "assets/header-body-fill.svg",
+      "usage": "header fill overlay"
+    },
+    {
+      "name": "header-path-main",
+      "file": "assets/header-path-main.svg",
+      "usage": "title rail"
+    },
+    {
+      "name": "header-icon-shape",
+      "file": "assets/header-icon-shape.svg",
+      "usage": "title icon"
+    },
+    {
+      "name": "header-title-line",
+      "file": "assets/header-title-line.svg",
+      "usage": "title underline"
+    },
+    {
+      "name": "header-tail-line",
+      "file": "assets/header-tail-line.svg",
+      "usage": "right header decorative tail"
+    },
+    {
+      "name": "header-right-edge",
+      "file": "assets/header-right-edge.svg",
+      "usage": "right header edge"
+    },
+    {
+      "name": "header-stripes",
+      "file": "assets/header-stripes.svg",
+      "usage": "header overlay stripes"
+    }
+  ],
+  "cssVariables": {
+    "--style08-bg": "rgba(24, 43, 43, 0.86)",
+    "--style08-accent": "#41D3F3",
+    "--style08-title": "#EBFFFF",
+    "--style08-shadow": "#031819"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "h": 36
+    },
+    "usesImage": true,
+    "usesRasterImage": false,
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. The large background is rebuilt with CSS fill and edges; fixed header and bottom corner structures are local SVG assets."
+  },
+  "status": "ready"
+}

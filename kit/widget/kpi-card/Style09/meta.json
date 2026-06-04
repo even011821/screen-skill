@@ -1,0 +1,73 @@
+{
+  "id": "widget-kpi-card-style09",
+  "label": "KPI Card Style09",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style09",
+  "assetType": "code",
+  "size": {
+    "w": 299,
+    "h": 100
+  },
+  "minSize": {
+    "w": 299,
+    "h": 100
+  },
+  "maxSize": {
+    "w": 538,
+    "h": 180
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "divider.svg",
+      "dot-a.svg",
+      "dot-b.svg",
+      "icon-area.svg",
+      "small-flow.svg",
+      "top-flow-left.svg",
+      "top-flow-right.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "总能源发电",
+      "required": true
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "23,274,554",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "kW?h",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number",
+    "unit": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true
+  },
+  "status": "ready"
+}

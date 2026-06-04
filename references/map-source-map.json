@@ -1,0 +1,18 @@
+{
+  "id": "map-source-map",
+  "purpose": "Maintenance-only source lookup for local map data. Runtime generation must not fetch this URL or use it for component selection.",
+  "updatedAt": "2026-06-01",
+  "entries": [
+    {
+      "id": "map-china-1.6.3",
+      "localTopoJson": "kit/map/china/1.6.3/china.topo.json",
+      "localGeoJson": "kit/map/china/1.6.3/china.geo.json",
+      "sourceUrl": "https://geojson.cn/api/china/1.6.3/china.topo.json",
+      "resolvedUrl": "https://file.geojson.cn/china/1.6.3/china.topo.json",
+      "downloadedAt": "2026-06-01",
+      "sourceFormat": "topojson",
+      "runtimeFormat": "geojson",
+      "note": "TopoJSON is retained as source data; GeoJSON is generated locally for ECharts registerMap."
+    }
+  ]
+}

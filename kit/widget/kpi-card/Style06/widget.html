@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style06 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; width: min(900px, 100%); }
+    .preview__item { width: 293px; height: 76px; }
+    .preview__item--wide { width: 460px; height: 110px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style06" data-kit="widget/kpi-card/Style06"><div class="kpi-card__icon-area" aria-hidden="true"><span class="kpi-card__icon-bg"></span><span class="kpi-card__icon-symbol"></span></div><span class="kpi-card__divider" aria-hidden="true"></span><div class="kpi-card__content"><div class="kpi-card__title-row"><h3 class="kpi-card__title" data-slot="title">出口交易额</h3><span class="kpi-card__unit" data-slot="unit">(亿元人)</span></div><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">851.3</strong><span class="kpi-card__trend-label" data-slot="trendLabel">同比</span><span class="kpi-card__trend" data-slot="trend">0.2%</span></div></div></section>
+    </section>
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style06" data-kit="widget/kpi-card/Style06"><div class="kpi-card__icon-area" aria-hidden="true"><span class="kpi-card__icon-bg"></span><span class="kpi-card__icon-symbol"></span></div><span class="kpi-card__divider" aria-hidden="true"></span><div class="kpi-card__content"><div class="kpi-card__title-row"><h3 class="kpi-card__title" data-slot="title">进口交易额</h3><span class="kpi-card__unit" data-slot="unit">(亿元)</span></div><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">1,286.5</strong><span class="kpi-card__trend-label" data-slot="trendLabel">环比</span><span class="kpi-card__trend" data-slot="trend">4.8%</span></div></div></section>
+    </section>
+  </main>
+</body>
+</html>

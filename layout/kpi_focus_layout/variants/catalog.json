@@ -1,0 +1,25 @@
+{
+  "id": "kpi_focus_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "hero_kpi_center",
+      "label": "中心核心大指标",
+      "useWhen": ["一个核心总数或目标最重要"],
+      "structure": "center-hero-kpi + surrounding-analysis + bottom-detail"
+    },
+    {
+      "id": "top_kpi_band_analysis_grid",
+      "label": "顶部指标带分析区",
+      "useWhen": ["多个核心指标并列", "趋势和构成重要"],
+      "structure": "top-kpi-band + middle-analysis + bottom-table-or-trend"
+    },
+    {
+      "id": "kpi_story_left_to_right",
+      "label": "指标链路叙事",
+      "useWhen": ["指标存在因果链路或目标拆解"],
+      "structure": "left-core-result + middle-breakdown + right-status"
+    }
+  ],
+  "hardRules": ["不得把核心指标驾驶舱退化成均匀网格。"]
+}

@@ -1,0 +1,76 @@
+.kpi-card--style02 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 333px;
+  max-height: 184px;
+  align-items: center;
+  gap: clamp(12px, 10.81cqw, 20px);
+  background: transparent;
+}
+
+.kpi-card--style02 .kpi-card__icon-area {
+  position: relative;
+  flex: 0 0 clamp(78px, 54.59cqw, 101px);
+  width: clamp(78px, 54.59cqw, 101px);
+  height: clamp(78px, 99.02cqh, 101px);
+}
+
+.kpi-card--style02 .kpi-card__icon-area > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style02 .kpi-card__icon-shadow {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 59.4%;
+  background: url("./assets/image-base.png") center bottom / 100% auto no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-particle {
+  left: 13.86%;
+  top: 0;
+  width: 72.28%;
+  height: 59.4%;
+  background: url("./assets/particle.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-symbol {
+  left: 33.66%;
+  top: 33.66%;
+  width: 34px;
+  height: 34px;
+  background: url("./assets/icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-diamond {
+  left: 3px;
+  top: 7px;
+  width: 95.09px;
+  height: 95.09px;
+  transform: rotate(-45deg);
+  background: url("./assets/diamond.svg") center / 67.24px 67.24px no-repeat;
+  opacity: 0.9;
+}
+
+.kpi-card--style02 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.kpi-card--style02 .kpi-card__title {
+  color: #c0e1ff;
+  font-size: clamp(14px, 8.65cqw, 16px);
+  line-height: 22px;
+}
+
+.kpi-card--style02 .kpi-card__value {
+  color: var(--theme-primary, #2feadf);
+  font-size: clamp(28px, 17.3cqw, 32px);
+  line-height: 37px;
+  text-shadow: 0 0 12px rgba(9, 255, 240, 0.28);
+}

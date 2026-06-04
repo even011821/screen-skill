@@ -1,0 +1,95 @@
+{
+  "id": "widget-kpi-card-style17",
+  "label": "KPI Card Style17",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style17",
+  "assetType": "code",
+  "size": {
+    "w": 222,
+    "h": 215
+  },
+  "minSize": {
+    "w": 222,
+    "h": 215
+  },
+  "maxSize": {
+    "w": 222,
+    "h": 215
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "arrow-blue.svg",
+      "arrow-red.svg",
+      "arrow-yellow.svg",
+      "base-blue.svg",
+      "base-red.svg",
+      "base-yellow.svg",
+      "dome-blue.svg",
+      "dome-red.svg",
+      "dome-yellow.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "subtitle",
+      "selector": "[data-slot='subtitle']",
+      "default": "（10%）",
+      "required": false
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "12%",
+      "required": true
+    },
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "职工综合服务覆盖",
+      "required": true
+    },
+    {
+      "name": "label",
+      "selector": "[data-slot='label']",
+      "default": "牵头",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "subtitle": "string",
+    "value": "string|number",
+    "label": "string",
+    "variant": "blue|red|yellow"
+  },
+  "adaptation": {
+    "renderingMode": "fixed-size-variant-css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": false,
+    "supportsHeightStretch": false,
+    "preserveAspectRatio": true,
+    "responsive": false,
+    "notes": "Style17 is a fixed-size KPI component with three visual variants. No width or height stretching is implemented by design."
+  },
+  "variantRule": {
+    "source": "data-variant",
+    "variants": [
+      "blue",
+      "red",
+      "yellow"
+    ],
+    "runtime": "generator sets data-variant; no runtime script required"
+  },
+  "status": "ready"
+}

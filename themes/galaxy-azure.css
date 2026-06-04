@@ -1,0 +1,65 @@
+/* Galaxy Azure / 星河灵蓝
+   Figma Theme node: 560:2993
+   Primary: #1C76FD, Secondary: #4BA687 */
+:root,
+[data-theme="galaxy-azure"] {
+  --theme-primary: #1c76fd;
+  --theme-secondary: #4ba687;
+  --bg-0: #020817;
+  --bg-1: #03142b;
+  --panel-bg: rgba(3, 21, 42, 0.34);
+  --panel-fill: rgba(28, 118, 253, 0.05);
+  --panel-line: rgba(84, 179, 251, 0.3);
+  --panel-line-strong: #54b3fb;
+  --panel-glow: #1e66aa;
+  --shell-panel-bg: rgba(7, 16, 36, 0.58);
+  --shell-panel-line: #1c76fd;
+  --shell-panel-line-2: #4ba687;
+  --line: rgba(77, 220, 255, 0.62);
+  --line-soft: rgba(77, 220, 255, 0.22);
+  --accent: #1c76fd;
+  --accent-2: #4ba687;
+  --accent-gold: #ffb84d;
+  --chart-1: #1c76fd;
+  --chart-2: #4ba687;
+  --chart-3: #24caff;
+  --chart-4: #ffdcae;
+  --chart-5: #62f6a7;
+  --chart-6: #ffb13a;
+  --text: #f3fbff;
+  --muted: rgba(199, 231, 255, 0.72);
+  --dim: rgba(199, 231, 255, 0.45);
+  --danger: #ff647c;
+  --ok: #62f6a7;
+  --warning: #ffb13a;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --screen-offset-x: 0px;
+  --screen-offset-y: 0px;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(255, 255, 255, 0.72);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(28, 48, 92, 0.74), 0 0 8px rgba(255, 255, 255, 0.65), 0 0 18px rgba(28, 118, 253, 0.58);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(210, 232, 255, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}

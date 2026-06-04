@@ -1,0 +1,80 @@
+{
+  "id": "topnav-centertitle-1920-style05",
+  "label": "TopNav CenterTitle 1920 Style05",
+  "category": "TopNav",
+  "kind": "nav",
+  "titlePosition": "CenterTitle",
+  "resolution": "1920",
+  "style": "Style05",
+  "theme": [
+    "galaxy-azure",
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "tone": "tech",
+  "accentColor": "#38f0f0",
+  "size": {
+    "w": 1921,
+    "h": 78
+  },
+  "componentSetSize": {
+    "w": 1960,
+    "h": 285
+  },
+  "variants": [
+    {
+      "name": "navMode=none",
+      "size": {
+        "w": 1920,
+        "h": 84
+      }
+    },
+    {
+      "name": "navMode=secondary",
+      "size": {
+        "w": 1920,
+        "h": 84
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "navMode=none",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 1921,
+      "h": 78
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "center",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 44,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 58,
+      "fontSize": 13,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

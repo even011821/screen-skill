@@ -1,0 +1,69 @@
+{
+  "id": "widget-kpi-card-style08",
+  "label": "KPI Card Style08",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style08",
+  "assetType": "code",
+  "size": {
+    "w": 120,
+    "h": 91
+  },
+  "minSize": {
+    "w": 120,
+    "h": 91
+  },
+  "maxSize": {
+    "w": 216,
+    "h": 164
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "body-frame.svg",
+      "bottom-fill.svg",
+      "divider.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "51,235",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "(kW?h)",
+      "required": false
+    },
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "比亚迪",
+      "required": true
+    }
+  ],
+  "dataShape": {
+    "value": "string|number",
+    "unit": "string",
+    "title": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true
+  },
+  "status": "ready"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "widget-kpi-card-style07",
+  "label": "KPI Card Style07",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style07",
+  "assetType": "code",
+  "size": {
+    "w": 166,
+    "h": 86
+  },
+  "minSize": {
+    "w": 160,
+    "h": 80
+  },
+  "maxSize": {
+    "w": 299,
+    "h": 155
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "bg-reference.svg",
+      "left-teeth.svg",
+      "progress-fill.png",
+      "top-right-corner.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "A区（编号23411）",
+      "required": true
+    },
+    {
+      "name": "label",
+      "selector": "[data-slot='label']",
+      "default": "数量",
+      "required": false
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "32,218",
+      "required": true
+    },
+    {
+      "name": "progress",
+      "selector": "[data-slot='progress']",
+      "default": "92%",
+      "required": false,
+      "cssVar": "--progress"
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "label": "string",
+    "value": "string|number",
+    "progress": "percent|string"
+  },
+  "adaptation": {
+    "renderingMode": "css-split-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "Main background is rebuilt with CSS polygon and gradients. Left teeth and top-right corner are fixed local assets."
+  },
+  "status": "ready"
+}

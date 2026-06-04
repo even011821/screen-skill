@@ -1,0 +1,58 @@
+{
+  "id": "layout-slot-schema",
+  "schemaVersion": "1.0.0",
+  "slots": {
+    "HeaderSlot": {
+      "required": true,
+      "role": "顶部信息区域，由选中的 TopNav 决定真实高度和覆盖层内容",
+      "componentBinding": "kit/TopNav",
+      "heightRule": "read selected TopNav meta, see common/nav-height-rules.md"
+    },
+    "PrimarySlot": {
+      "required": true,
+      "role": "最高优先级信息区域，通常放主指标、主视觉或主业务对象；具体内容由需求和指标分析决定",
+      "shellDefault": "PanelShell when the slot is a main visual container or no-title background; otherwise CardShell",
+      "priority": 1
+    },
+    "ContextSlot": {
+      "required": false,
+      "role": "中高优先级辅助信息区域，通常位于主区域左侧或邻近主区域；不固定内容类型",
+      "shellDefault": "CardShell",
+      "priority": 2
+    },
+    "StatusSlot": {
+      "required": false,
+      "role": "中高优先级辅助信息区域，通常位于主区域右侧或邻近主区域；不固定内容类型",
+      "shellDefault": "CardShell",
+      "priority": 2
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "低优先级或补充信息候选区域，通常位于底部、次级页签或扩展区；不固定为任何内容类型",
+      "shellDefault": "CardShell",
+      "priority": 3
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "附着在 PrimarySlot 上的局部说明层，只在主视觉需要标注时使用",
+      "shellDefault": "none",
+      "priority": 3
+    }
+  },
+  "globalConstraints": {
+    "slotRolesArePlacementIntent": true,
+    "assignContentAfterIndicatorAnalysis": true,
+    "doNotFixCardCount": true,
+    "doNotFixLeftRightPanelCount": true,
+    "groupByBusinessTopicFirst": true,
+    "preserveMainVisualPriority": true,
+    "avoidEqualWeightForAllModules": true
+  },
+  "contentAssignmentPolicy": {
+    "step1": "先分析用户提供的指标，识别主指标、核心业务对象、辅助指标和低优先级补充信息。",
+    "step2": "主指标或主业务对象优先进入 PrimarySlot，通常位于中心或视觉重心位置。",
+    "step3": "其他指标按业务关联度和优先级分布到 PrimarySlot 左右、上下或邻近区域，不按固定内容类型分配。",
+    "step4": "低优先级内容进入底部、页签、轮播、弹窗或下钻区；是否使用 DetailSlot 由信息密度决定。",
+    "note": "Slot 的 role 只描述位置意图和优先级，不代表该区域必须放某类固定内容。"
+  }
+}

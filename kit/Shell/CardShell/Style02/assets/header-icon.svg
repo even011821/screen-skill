@@ -1,0 +1,24 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 33 34.7578" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="header/icon" filter="url(#filter0_dd_0_4)">
+<path id="Subtract" d="M25 17.3789L15.6181 26.7578V22.9502L21.1924 17.3789L15.6181 11.8066V8L25 17.3789Z" fill="var(--fill-0, #03C2FF)"/>
+<rect id="Rectangle 1656" x="8" y="15.9146" width="2.92967" height="2.92868" fill="var(--fill-0, #C9F8FB)"/>
+<path id="Rectangle 1657" d="M13.2756 12.6902L18.549 17.3761L13.2756 22.062V12.6902Z" fill="var(--fill-0, #D4F9FE)"/>
+</g>
+<defs>
+<filter id="filter0_dd_0_4" x="-2" y="-1" width="36" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.760784 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_4"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0117647 0 0 0 0 0.760784 0 0 0 0 1 0 0 0 0.44 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_0_4" result="effect2_dropShadow_0_4"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_0_4" result="shape"/>
+</filter>
+</defs>
+</svg>

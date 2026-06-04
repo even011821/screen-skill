@@ -1,0 +1,226 @@
+{
+  "id": "layout-catalog",
+  "schemaVersion": "2.0.0",
+  "mode": "rule-driven-layout",
+  "updatedAt": "2026-05-21",
+  "description": "Layout 不再存储固定的 HTML 占位模板，而是存储信息架构规则，用于选择槽位、尺寸、优先级位置以及 Shell 绑定行为。",
+  "autoSelectionPolicy": {
+    "mode": "data-first",
+    "rule": "当用户没有指定 layout_type 时，应先分析业务场景以及可用或模拟的指标，再选择布局。不要直接默认使用 balanced_metrics_layout。",
+    "steps": [
+      "解析用户场景、画布规格以及明确的业务视觉对象，例如地图、场景、设备、流程、核心 KPI、内容门户等。",
+      "优先识别画布分辨率。如果画布分辨率不是 3840x1080，则不得选择 ultra_wide_command_layout，即使用户场景中出现综合指挥、调度中心、多系统等描述。",
+      "只有当画布分辨率明确为 3840x1080 时，才允许将 ultra_wide_command_layout 加入候选布局。超宽布局属于画布形态约束，不是普通业务场景关键词。",
+      "如果指标缺失，先根据业务场景模拟 8-12 个混合业务模块，包括 KPI、趋势、构成、排行、状态、告警/事件、列表或流程模块，并根据场景选择合适类型。",
+      "将指标分类为主要对象、核心指标、辅助指标、低优先级详情，以及可选的标签页或下钻内容。",
+      "根据已分类的数据结构、业务对象和画布规格，从本目录中选择 layout_type。",
+      "当存在地图、场景、设备、流程、核心指标或内容门户等强业务信号时，优先选择对应布局；只有在没有更强业务信号时，才使用 balanced_metrics_layout。",
+      "当画布为 3840x1080，且业务场景存在多系统并列、综合指挥、跨区域调度、多屏信息汇总等特征时，才选择 ultra_wide_command_layout。"
+    ],
+    "balancedMetricsIsLastFallback": true
+  },
+  "baseline": {
+    "canvas": {
+      "w": 1920,
+      "h": 1080
+    },
+    "safePadding": {
+      "left": 24,
+      "right": 24,
+      "bottom": 24
+    },
+    "gap": 16,
+    "topNavHeightPolicy": {
+      "typicalPrimaryRange": {
+        "min": 90,
+        "max": 120
+      },
+      "rule": "Header 高度必须根据所选主 TopNav 的 meta.json 计算得出。该范围只是常见参考范围，不是硬性约束。"
+    },
+    "note": "不要硬编码 Header 高度。部分 TopNav 变体或二级导航项可能会超出常见范围。"
+  },
+  "commonRules": {
+    "slotSchema": "common/slot-schema.json",
+    "navHeightRules": "common/nav-height-rules.md",
+    "shellBindingRules": "common/shell-binding-rules.md",
+    "densityRules": "common/density-rules.md",
+    "layoutAdapter": "common/layout-adapter.md",
+    "viewportFitRules": "common/viewport-fit-rules.md",
+    "layoutVariantRules": "common/layout-variant-rules.md"
+  },
+  "layouts": [
+    {
+      "id": "center_scene_layout",
+      "label": "单主视觉环绕型",
+      "rule": "center_scene_layout/rule.json",
+      "guide": "center_scene_layout/guide.md",
+      "priority": 10,
+      "detect": [
+        "园区",
+        "工厂",
+        "楼宇",
+        "建筑",
+        "3D",
+        "数字孪生",
+        "场景",
+        "车间",
+        "基地",
+        "港口"
+      ],
+      "variants": "center_scene_layout/variants/catalog.json"
+    },
+    {
+      "id": "map_command_layout",
+      "label": "地图态势分布型",
+      "rule": "map_command_layout/rule.json",
+      "guide": "map_command_layout/guide.md",
+      "priority": 20,
+      "detect": [
+        "地图",
+        "区域",
+        "点位",
+        "热力",
+        "城市",
+        "省份",
+        "分布",
+        "态势",
+        "轨迹"
+      ],
+      "variants": "map_command_layout/variants/catalog.json"
+    },
+    {
+      "id": "kpi_focus_layout",
+      "label": "中心核心指标型",
+      "rule": "kpi_focus_layout/rule.json",
+      "guide": "kpi_focus_layout/guide.md",
+      "priority": 30,
+      "detect": [
+        "总额",
+        "总数",
+        "完成率",
+        "目标",
+        "达成",
+        "业绩",
+        "销售额",
+        "产值",
+        "核心指标"
+      ],
+      "variants": "kpi_focus_layout/variants/catalog.json"
+    },
+    {
+      "id": "business_process_layout",
+      "label": "业务流程管理型",
+      "rule": "business_process_layout/rule.json",
+      "guide": "business_process_layout/guide.md",
+      "priority": 40,
+      "detect": [
+        "订单",
+        "工单",
+        "审批",
+        "流程",
+        "任务",
+        "项目",
+        "表格",
+        "状态流转",
+        "进度"
+      ],
+      "variants": "business_process_layout/variants/catalog.json"
+    },
+    {
+      "id": "balanced_metrics_layout",
+      "label": "多指标均衡网格型",
+      "rule": "balanced_metrics_layout/rule.json",
+      "guide": "balanced_metrics_layout/guide.md",
+      "priority": 50,
+      "detect": [
+        "综合运营",
+        "数据总览",
+        "多业务主题",
+        "多部门",
+        "经营分析",
+        "指标看板"
+      ],
+      "variants": "balanced_metrics_layout/variants/catalog.json"
+    },
+    {
+      "id": "equipment_monitor_layout",
+      "label": "设备运行监控型",
+      "rule": "equipment_monitor_layout/rule.json",
+      "guide": "equipment_monitor_layout/guide.md",
+      "priority": 60,
+      "detect": [
+        "设备",
+        "产线",
+        "厂站",
+        "运行状态",
+        "温度",
+        "压力",
+        "能耗",
+        "故障",
+        "维护",
+        "告警"
+      ],
+      "variants": "equipment_monitor_layout/variants/catalog.json"
+    },
+    {
+      "id": "content_portal_layout",
+      "label": "内容展陈门户型",
+      "rule": "content_portal_layout/rule.json",
+      "guide": "content_portal_layout/guide.md",
+      "priority": 70,
+      "detect": [
+        "资讯",
+        "视频",
+        "文章",
+        "党建",
+        "文旅",
+        "展厅",
+        "宣传",
+        "品牌",
+        "专题"
+      ],
+      "variants": "content_portal_layout/variants/catalog.json"
+    },
+    {
+      "id": "ultra_wide_command_layout",
+      "label": "超宽综合指挥型",
+      "rule": "ultra_wide_command_layout/rule.json",
+      "guide": "ultra_wide_command_layout/guide.md",
+      "priority": 80,
+      "detect": [
+        "超宽",
+        "大屏墙",
+        "3840x1080",
+        "32:9",
+        "多系统",
+        "综合指挥",
+        "调度中心"
+      ],
+      "variants": "ultra_wide_command_layout/variants/catalog.json"
+    }
+  ],
+  "fallback": {
+    "id": "balanced_metrics_layout",
+    "reason": "只有在 data-first 分析确认不存在明显的地图、场景、设备、流程、核心 KPI、内容门户信号，且画布分辨率不是 3840x1080 或不存在超宽指挥特征时，才使用 balanced_metrics_layout。"
+  },
+  "legacyPlaceholders": {
+    "status": "deprecated-not-used-by-new-flow",
+    "files": [
+      "balanced-3col.html",
+      "kpi-focused.html",
+      "map-centered.html"
+    ],
+    "note": "仅为兼容性检查保留。新的生成流程应读取 rule.json 文件。"
+  },
+  "variantSelectionPolicy": {
+    "mode": "layout-type-then-variant",
+    "rule": "After selecting layout_type, read layout/{layout_type}/variants/catalog.json and choose a layoutVariant before calculating panel coordinates.",
+    "stableRandomSeed": "hash(projectTitle + layout_type + theme + resolution)",
+    "candidatePool": "top 2-4 matched variants when scores are close",
+    "hardRules": [
+      "Do not reuse the same 420/1000/420 three-column coordinates as the default for map_command_layout and center_scene_layout.",
+      "Do not fix left/right/bottom card counts.",
+      "Record layoutVariant and reason in change-log."
+    ]
+  }
+}

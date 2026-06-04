@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style12 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; justify-content: center; width: min(900px, 100%); }
+    .preview__card { display: grid; gap: 8px; justify-items: center; }
+    .preview__label { color: rgba(214, 238, 255, 0.68); font-size: 12px; line-height: 16px; }
+    .preview__surface { width: var(--preview-w); height: var(--preview-h); }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__card">
+      <div class="preview__label">min 160x90</div>
+      <div class="preview__surface" style="--preview-w:160px; --preview-h:90px;">
+        <section class="kpi-card kpi-card--style12" data-kit="widget/kpi-card/Style12" data-auto-variant="value" data-variant="positive">
+          <div class="kpi-card__platform" aria-hidden="true"></div>
+          <div class="kpi-card__header">
+            <h3 class="kpi-card__title" data-slot="title">维权服务覆盖</h3>
+            <span class="kpi-card__subtitle" data-slot="subtitle">(10%)</span>
+          </div>
+          <div class="kpi-card__metric-row">
+            <strong class="kpi-card__value" data-slot="value" data-value="10">10%</strong>
+            <span class="kpi-card__arrow" aria-hidden="true"></span>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">base 200x180</div>
+      <div class="preview__surface" style="--preview-w:200px; --preview-h:180px;">
+        <section class="kpi-card kpi-card--style12" data-kit="widget/kpi-card/Style12" data-auto-variant="value" data-variant="positive">
+          <div class="kpi-card__platform" aria-hidden="true"></div>
+          <div class="kpi-card__header">
+            <h3 class="kpi-card__title" data-slot="title">建会入会</h3>
+            <span class="kpi-card__subtitle" data-slot="subtitle">(18%)</span>
+          </div>
+          <div class="kpi-card__metric-row">
+            <strong class="kpi-card__value" data-slot="value" data-value="18">18%</strong>
+            <span class="kpi-card__arrow" aria-hidden="true"></span>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="preview__card">
+      <div class="preview__label">max 364x324 / negative</div>
+      <div class="preview__surface" style="--preview-w:364px; --preview-h:324px;">
+        <section class="kpi-card kpi-card--style12" data-kit="widget/kpi-card/Style12" data-auto-variant="value" data-variant="negative">
+          <div class="kpi-card__platform" aria-hidden="true"></div>
+          <div class="kpi-card__header">
+            <h3 class="kpi-card__title" data-slot="title">服务增长率</h3>
+            <span class="kpi-card__subtitle" data-slot="subtitle">(-6%)</span>
+          </div>
+          <div class="kpi-card__metric-row">
+            <strong class="kpi-card__value" data-slot="value" data-value="-6">-6%</strong>
+            <span class="kpi-card__arrow" aria-hidden="true"></span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="./variant.js"></script>
+</body>
+</html>

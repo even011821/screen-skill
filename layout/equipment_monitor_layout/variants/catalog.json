@@ -1,0 +1,25 @@
+{
+  "id": "equipment_monitor_layout_variants",
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "equipment_center_status_ring",
+      "label": "中心设备状态环绕",
+      "useWhen": ["单设备或设备组是主对象"],
+      "structure": "center-equipment + surrounding-parameters + bottom-trend"
+    },
+    {
+      "id": "equipment_left_operations_right_alerts",
+      "label": "左设备右告警",
+      "useWhen": ["告警和维护优先级高"],
+      "structure": "left-equipment + right-alert-stack + bottom-operations"
+    },
+    {
+      "id": "parameter_matrix_with_scene",
+      "label": "参数矩阵与场景",
+      "useWhen": ["运行参数多", "设备场景只是辅助"],
+      "structure": "top-status + center-parameter-matrix + side-scene"
+    }
+  ],
+  "hardRules": ["设备监控类不得简单复用地图态势坐标。"]
+}

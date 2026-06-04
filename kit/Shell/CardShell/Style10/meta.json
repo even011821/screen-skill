@@ -1,0 +1,136 @@
+{
+  "id": "shell-cardshell-style10",
+  "label": "Shell/CardShell/Style10",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style10",
+  "assetType": "code",
+  "theme": [
+    "frost-cyan",
+    "fresh-verdant",
+    "galaxy-azure"
+  ],
+  "accentColor": "#48E9FF",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "鍗＄墖鏍囬鍚嶇О",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 51.8,
+    "y": 13,
+    "fontFamily": "Alibaba PuHuiTi 2.0",
+    "fontSize": 19.2,
+    "fontWeight": 800,
+    "lineHeight": 32,
+    "letterSpacing": 0.384,
+    "color": "#F4F8FF",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "corner-outline",
+      "file": "assets/corner-outline.svg",
+      "usage": "corner module outer union"
+    },
+    {
+      "name": "corner-inner",
+      "file": "assets/corner-inner.svg",
+      "usage": "corner module inner union"
+    },
+    {
+      "name": "corner-top-tail",
+      "file": "assets/corner-top-tail.svg",
+      "usage": "corner module horizontal tail"
+    },
+    {
+      "name": "corner-left-tail",
+      "file": "assets/corner-left-tail.svg",
+      "usage": "corner module vertical tail"
+    },
+    {
+      "name": "corner-triangle-a",
+      "file": "assets/corner-triangle-a.svg",
+      "usage": "corner accent top triangle"
+    },
+    {
+      "name": "corner-triangle-b",
+      "file": "assets/corner-triangle-b.svg",
+      "usage": "corner accent bottom triangle"
+    },
+    {
+      "name": "frame-left",
+      "file": "assets/frame-left.svg",
+      "usage": "header and footer left cap"
+    },
+    {
+      "name": "frame-right",
+      "file": "assets/frame-right.svg",
+      "usage": "header and footer right cap"
+    },
+    {
+      "name": "divider-right",
+      "file": "assets/divider-right.png",
+      "usage": "header divider image exported by MCP"
+    },
+    {
+      "name": "header-icon",
+      "file": "assets/header-icon.svg",
+      "usage": "title icon"
+    }
+  ],
+  "cssVariables": {
+    "--style10-bg": "#030E21",
+    "--style10-accent": "#48E9FF",
+    "--style10-accent-2": "#29B6FB",
+    "--style10-line": "#4FE6DD",
+    "--style10-title": "#F4F8FF"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 62,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 11,
+      "y": 11,
+      "h": 34
+    },
+    "usesImage": true,
+    "usesRasterImage": true,
+    "usesRasterImageFor": "header divider only",
+    "usesFullNodeScreenshot": false,
+    "usesLocalSvgAssets": true,
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. Straight fill and center frame areas are CSS; fixed corner/header cap structures are local SVG/PNG assets."
+  },
+  "status": "ready"
+}

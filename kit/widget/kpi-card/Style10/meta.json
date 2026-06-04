@@ -1,0 +1,68 @@
+{
+  "id": "widget-kpi-card-style10",
+  "label": "Charts/kpi-card/style10",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style10",
+  "assetType": "code",
+  "size": {
+    "w": 156,
+    "h": 156
+  },
+  "minSize": {
+    "w": 156,
+    "h": 156
+  },
+  "maxSize": {
+    "w": 281,
+    "h": 281
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "ring-background.png",
+      "ring-foreground.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "89",
+      "required": true
+    },
+    {
+      "name": "label",
+      "selector": "[data-slot='label']",
+      "default": "杩愯鏁堢巼鎸囨暟",
+      "required": true
+    }
+  ],
+  "dataShape": {
+    "value": "string|number",
+    "label": "string"
+  },
+  "adaptation": {
+    "renderingMode": "dual-ring-image",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "scaleMode": "contain",
+    "preserveAspectRatio": true,
+    "animation": {
+      "background": "counterclockwise 5s linear infinite",
+      "foreground": "clockwise 5s linear infinite"
+    },
+    "notes": "kpi-card__ring is an aspect-ratio:1 container. Decoration/RingBackground uses local PNG @2x on the bottom layer and rotates counterclockwise. Decoration/RingForeground uses local SVG on the top layer and rotates clockwise. Both layers scale proportionally; value text remains static."
+  },
+  "status": "ready"
+}

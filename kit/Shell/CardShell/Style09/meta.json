@@ -1,0 +1,104 @@
+{
+  "id": "shell-cardshell-style09",
+  "label": "Shell/CardShell/Style09",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style09",
+  "assetType": "code",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue"
+  ],
+  "accentColor": "#2a91f3",
+  "textColor": "#e3f5ff",
+  "background": {
+    "body": "rgba(35, 77, 126, 0.1)",
+    "baseGradient": "linear-gradient(90deg, rgba(35, 77, 126, 0.4) 3.44%, rgba(16, 24, 44, 0) 162.79%)",
+    "frame": "local SVG background-frame.svg",
+    "header": "local SVG header-bg-subtract.svg",
+    "nonRenderingLayers": [
+      {
+        "name": "Rectangle 34624374",
+        "reason": "source design helper/mask layer; do not render as visible gray background."
+      }
+    ],
+    "note": "Matches source design .internal/background. The root frame has no visible full border; background alpha is applied only on the background layer, never on the root component."
+  },
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "header": {
+    "height": 40,
+    "titleFontSize": 26,
+    "titleFontWeight": 400,
+    "titleLetterSpacing": 2.6,
+    "titleColor": "#e3f5ff",
+    "titleShadow": "0 0 4px rgba(42, 145, 243, 0.38)"
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localSvg": [
+      "header-bg-subtract.svg",
+      "background-frame.svg",
+      "right-cap-subtract.svg",
+      "line-194-stroke.svg",
+      "top-hairline.svg",
+      "left-bar.svg",
+      "small-rectangles-container.svg"
+    ],
+    "downloadedReferenceOnly": [
+      "full-node-reference.png",
+      "stripe-rect-7.svg",
+      "stripe-rect-8.svg",
+      "stripe-rect-9.svg",
+      "stripe-rect-10.svg",
+      "stripe-rect-11.svg",
+      "stripe-rect-12.svg"
+    ],
+    "note": "All remote design assets were downloaded locally. background-frame.svg is the runtime .internal/background layer. The legacy full-node-reference.png is kept only as a source/reference copy."
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-card-shell__title",
+      "default": "Card title",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": ".bs-card-shell__content",
+      "required": true
+    }
+  ],
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "usesInlineSvg": true,
+    "renderingMode": "css-svg-hybrid",
+    "runtimeDependency": "none",
+    "notes": "Converted to local HTML/CSS. Runtime must use component.html, shell.css and local assets only, without calling source design. shell.html is a direct browser preview. The body background uses background-frame.svg exported from .internal/background, including the slanted frame, transparent #234D7E fill, linear body gradient and radial border gradients. Header shape, right cap, line, top hairline and left bar use local SVG assets. Right stripes use one exported Small Rectangles Container SVG, positioned once at the top-right with no tiling."
+  },
+  "status": "ready"
+}

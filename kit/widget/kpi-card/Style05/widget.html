@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style05 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; width: min(680px, 100%); }
+    .preview__item { width: 174px; height: 48px; }
+    .preview__item--wide { width: 280px; height: 72px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style05" data-kit="widget/kpi-card/Style05"><span class="kpi-card__icon-area" aria-hidden="true"></span><div class="kpi-card__content"><h3 class="kpi-card__title" data-slot="title">清洁能源发电</h3><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">2,937</strong><span class="kpi-card__unit" data-slot="unit">万kWh</span></div></div></section>
+    </section>
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style05" data-kit="widget/kpi-card/Style05"><span class="kpi-card__icon-area" aria-hidden="true"></span><div class="kpi-card__content"><h3 class="kpi-card__title" data-slot="title">绿电消纳量</h3><div class="kpi-card__value-row"><strong class="kpi-card__value" data-slot="value">18,206</strong><span class="kpi-card__unit" data-slot="unit">MWh</span></div></div></section>
+    </section>
+  </main>
+</body>
+</html>

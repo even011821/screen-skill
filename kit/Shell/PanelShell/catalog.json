@@ -1,0 +1,35 @@
+{
+  "id": "shell-panelshell-catalog",
+  "label": "Shell PanelShell code assets",
+  "category": "Shell",
+  "kind": "PanelShell",
+  "structure": "Shell/PanelShell/{style}",
+  "updatedAt": "2026-05-21",
+  "items": [
+    {
+      "id": "shell-panelshell-style01",
+      "meta": "Style01/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-panelshell-style02",
+      "meta": "Style02/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-panelshell-style03",
+      "meta": "Style03/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-panelshell-style04",
+      "meta": "Style04/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-panelshell-style05",
+      "meta": "Style05/meta.json",
+      "status": "ready"
+    }
+  ]
+}

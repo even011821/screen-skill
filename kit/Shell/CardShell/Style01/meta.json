@@ -1,0 +1,112 @@
+{
+  "id": "shell-cardshell-style01",
+  "label": "Shell/CardShell/Style01",
+  "category": "Shell",
+  "kind": "CardShell",
+  "style": "Style01",
+  "assetType": "code",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan",
+    "fresh-verdant"
+  ],
+  "accentColor": "#1AA8FD",
+  "size": {
+    "w": 400,
+    "h": 300
+  },
+  "minSize": {
+    "w": 300,
+    "h": 180
+  },
+  "maxSize": {
+    "w": 1200,
+    "h": 800
+  },
+  "code": {
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot=\"title\"]",
+      "default": "卡片标题名称",
+      "required": false
+    },
+    {
+      "name": "content",
+      "selector": "[data-slot=\"content\"]",
+      "required": true
+    }
+  ],
+  "titleStyle": {
+    "x": 42,
+    "y": 6,
+    "fontFamily": "PingFang SC",
+    "fontSize": 16,
+    "fontWeight": 600,
+    "lineHeight": "normal",
+    "letterSpacing": 0,
+    "color": "#EAFEFF",
+    "textShadow": "none"
+  },
+  "assets": [
+    {
+      "name": "header-bg",
+      "file": "assets/header-bg.svg",
+      "usage": "header background path"
+    },
+    {
+      "name": "internal-left",
+      "file": "assets/internal-left.svg",
+      "usage": "left header decoration"
+    },
+    {
+      "name": "internal-right",
+      "file": "assets/internal-right.svg",
+      "usage": "right header decoration"
+    },
+    {
+      "name": "bottom-line",
+      "file": "assets/bottom-line.svg",
+      "usage": "header bottom line"
+    },
+    {
+      "name": "left-bar",
+      "file": "assets/left-bar.svg",
+      "usage": "left header accent"
+    }
+  ],
+  "cssVariables": {
+    "--style01-accent": "#1AA8FD",
+    "--style01-title": "#EAFEFF",
+    "--style01-body-bg": "rgba(14, 22, 31, 0.94)",
+    "--style01-border": "rgba(26, 168, 253, 0.78)"
+  },
+  "adaptation": {
+    "layout": "stretchable-code-shell",
+    "renderingMode": "css-svg-hybrid",
+    "contentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "h": 36
+    },
+    "usesImage": false,
+    "usesRasterImage": false,
+    "usesLocalSvgAssets": true,
+    "forbiddenAssets": [
+      "whole-component-screenshot"
+    ],
+    "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot."
+  },
+  "status": "ready"
+}

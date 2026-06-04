@@ -1,0 +1,117 @@
+/* table-list.css — default DOM table/list styles for Screen Skill V2 */
+.data-table-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text, #eaf7ff);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft, rgba(120, 190, 255, 0.18));
+  white-space: nowrap;
+}
+
+.data-table th {
+  color: var(--muted, rgba(220, 240, 255, 0.72));
+  font-weight: 500;
+  background: linear-gradient(90deg, rgba(35, 77, 126, 0.28), rgba(35, 77, 126, 0.04));
+}
+
+.data-table tbody tr:hover {
+  background: rgba(80, 170, 255, 0.08);
+}
+
+.data-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.data-list__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 30px;
+  padding: 6px 8px;
+  color: var(--text, #eaf7ff);
+  background: linear-gradient(90deg, rgba(35, 77, 126, 0.18), rgba(35, 77, 126, 0.03));
+  border-bottom: 1px solid var(--line-soft, rgba(120, 190, 255, 0.16));
+}
+
+.data-list__main {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-list__value,
+.data-list__time {
+  color: var(--muted, rgba(220, 240, 255, 0.72));
+  font-family: var(--font-num, Arial, sans-serif);
+  white-space: nowrap;
+}
+
+.rank-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  color: var(--accent-2, #ffffff);
+  font-family: var(--font-num, Arial, sans-serif);
+  background: rgba(24, 231, 255, 0.14);
+  border: 1px solid rgba(24, 231, 255, 0.42);
+}
+
+.status-pill,
+.trend-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 22px;
+  padding: 0 8px;
+  color: var(--muted, rgba(220, 240, 255, 0.72));
+  background: rgba(120, 190, 255, 0.1);
+  border: 1px solid rgba(120, 190, 255, 0.24);
+}
+
+.status--normal,
+.status--done,
+.status-pill.status--normal,
+.status-pill.status--done {
+  color: var(--ok, #6fe3b0);
+  border-color: rgba(111, 227, 176, 0.45);
+  background: rgba(111, 227, 176, 0.1);
+}
+
+.status--warning,
+.status-pill.status--warning,
+.trend-tag--up {
+  color: var(--warning, #ffcf8a);
+  border-color: rgba(255, 207, 138, 0.45);
+  background: rgba(255, 207, 138, 0.1);
+}
+
+.status--danger,
+.status-pill.status--danger,
+.trend-tag--down {
+  color: var(--danger, #ff6f8c);
+  border-color: rgba(255, 111, 140, 0.45);
+  background: rgba(255, 111, 140, 0.1);
+}

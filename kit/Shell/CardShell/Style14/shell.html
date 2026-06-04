@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shell/CardShell/Style14 Preview</title>
+  <link rel="stylesheet" href="./shell.css">
+  <style>
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      background: linear-gradient(180deg, #061731 0%, #07112b 100%);
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .style-preview {
+      display: grid;
+      grid-template-columns: minmax(300px, 400px) minmax(360px, 720px);
+      gap: 28px;
+      align-items: start;
+      width: min(1180px, 100%);
+    }
+    .style-preview__item { width: 100%; height: 300px; }
+    .style-preview__item--wide { height: 360px; }
+    @media (max-width: 860px) {
+      body { padding: 20px; }
+      .style-preview { grid-template-columns: 1fr; }
+      .style-preview__item, .style-preview__item--wide { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="style-preview">
+    <section class="style-preview__item">
+      <section class="bs-card-shell bs-card-shell--style14" data-kit="Shell/CardShell/Style14">
+        <div class="bs-card-shell__frame" aria-hidden="true"></div>
+        <span class="bs-card-shell__corner bs-card-shell__corner--tl" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--tr" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--bl" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--br" aria-hidden="true"></span>
+        <span class="bs-card-shell__plus bs-card-shell__plus--top" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--right" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--bottom" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--left" aria-hidden="true"></span>
+        <header class="bs-card-shell__header" aria-label="card header"><div class="bs-card-shell__header-bg" aria-hidden="true"></div><span class="bs-card-shell__header-frame" aria-hidden="true"></span><span class="bs-card-shell__header-light" aria-hidden="true"></span><span class="bs-card-shell__header-icon" aria-hidden="true"></span><h3 class="bs-card-shell__title" data-slot="title">标题内容</h3></header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+    <section class="style-preview__item style-preview__item--wide">
+      <section class="bs-card-shell bs-card-shell--style14" data-kit="Shell/CardShell/Style14">
+        <div class="bs-card-shell__frame" aria-hidden="true"></div>
+        <span class="bs-card-shell__corner bs-card-shell__corner--tl" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--tr" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--bl" aria-hidden="true"></span><span class="bs-card-shell__corner bs-card-shell__corner--br" aria-hidden="true"></span>
+        <span class="bs-card-shell__plus bs-card-shell__plus--top" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--right" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--bottom" aria-hidden="true"></span><span class="bs-card-shell__plus bs-card-shell__plus--left" aria-hidden="true"></span>
+        <header class="bs-card-shell__header" aria-label="card header"><div class="bs-card-shell__header-bg" aria-hidden="true"></div><span class="bs-card-shell__header-frame" aria-hidden="true"></span><span class="bs-card-shell__header-light" aria-hidden="true"></span><span class="bs-card-shell__header-icon" aria-hidden="true"></span><h3 class="bs-card-shell__title" data-slot="title">宽屏自适应标题</h3></header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

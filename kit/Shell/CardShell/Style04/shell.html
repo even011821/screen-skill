@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shell/CardShell/Style04</title>
+  <link rel="stylesheet" href="./shell.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #090909;
+      color: #fff9bf;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 40px;
+    }
+
+    .preview-stage {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, auto));
+      gap: 32px;
+      align-items: start;
+    }
+
+    .preview-card {
+      position: relative;
+    }
+
+    .preview-card--base {
+      width: 400px;
+      height: 300px;
+    }
+
+    .preview-card--wide {
+      width: 720px;
+      height: 360px;
+    }
+
+    @media (max-width: 1220px) {
+      body {
+        place-items: start center;
+        padding: 24px;
+      }
+
+      .preview-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-card--wide {
+        width: min(720px, calc(100vw - 48px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-stage">
+    <section class="preview-card preview-card--base">
+      <section class="bs-card-shell bs-card-shell--style04" data-kit="Shell/CardShell/Style04">
+        <div class="bs-card-shell__background" aria-hidden="true">
+          <span class="bs-card-shell__background-glow"></span>
+        </div>
+        <div class="bs-card-shell__frame" aria-hidden="true">
+          <span class="bs-card-shell__side-decor bs-card-shell__side-decor--left">
+            <span class="bs-card-shell__side-center"></span>
+          </span>
+          <span class="bs-card-shell__side-decor bs-card-shell__side-decor--right">
+            <span class="bs-card-shell__side-center"></span>
+          </span>
+          <span class="bs-card-shell__bottom-decor">
+            <span class="bs-card-shell__bottom-center"></span>
+          </span>
+          <span class="bs-card-shell__corner bs-card-shell__corner--left-bottom"></span>
+          <span class="bs-card-shell__corner bs-card-shell__corner--right-bottom"></span>
+        </div>
+        <header class="bs-card-shell__header" data-node-id="29:28062">
+          <span class="bs-card-shell__header-main" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-mask" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-left-fill" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-stripes" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-vector" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-icon" aria-hidden="true"></span>
+          <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+        </header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+
+    <section class="preview-card preview-card--wide">
+      <section class="bs-card-shell bs-card-shell--style04" data-kit="Shell/CardShell/Style04">
+        <div class="bs-card-shell__background" aria-hidden="true">
+          <span class="bs-card-shell__background-glow"></span>
+        </div>
+        <div class="bs-card-shell__frame" aria-hidden="true">
+          <span class="bs-card-shell__side-decor bs-card-shell__side-decor--left">
+            <span class="bs-card-shell__side-center"></span>
+          </span>
+          <span class="bs-card-shell__side-decor bs-card-shell__side-decor--right">
+            <span class="bs-card-shell__side-center"></span>
+          </span>
+          <span class="bs-card-shell__bottom-decor">
+            <span class="bs-card-shell__bottom-center"></span>
+          </span>
+          <span class="bs-card-shell__corner bs-card-shell__corner--left-bottom"></span>
+          <span class="bs-card-shell__corner bs-card-shell__corner--right-bottom"></span>
+        </div>
+        <header class="bs-card-shell__header" data-node-id="29:28062">
+          <span class="bs-card-shell__header-main" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-mask" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-left-fill" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-stripes" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-vector" aria-hidden="true"></span>
+          <span class="bs-card-shell__header-icon" aria-hidden="true"></span>
+          <h3 class="bs-card-shell__title" data-slot="title">宽屏自适应标题</h3>
+        </header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "id": "widget-kpi-card-style02",
+  "label": "Charts/kpi-card/style02",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style02",
+  "assetType": "code",
+  "size": {
+    "w": 185,
+    "h": 102
+  },
+  "minSize": {
+    "w": 160,
+    "h": 80
+  },
+  "maxSize": {
+    "w": 333,
+    "h": 184
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "image-base.png",
+      "particle.svg",
+      "icon.svg",
+      "diamond.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "完工数量",
+      "required": true
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "10",
+      "required": true
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-png-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true,
+    "notes": "Icon decoration keeps fixed visual ratio; text is editable."
+  },
+  "status": "ready"
+}

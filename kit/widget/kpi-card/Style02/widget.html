@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>widget/kpi-card/Style02 Preview</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    html, body { width: 100%; min-height: 100%; margin: 0; box-sizing: border-box; background: #020817; font-family: "Microsoft YaHei", Arial, sans-serif; }
+    *, *::before, *::after { box-sizing: inherit; }
+    body { display: grid; place-items: center; padding: 40px; overflow-x: hidden; }
+    .preview { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; width: min(720px, 100%); }
+    .preview__item { width: 185px; height: 102px; }
+    .preview__item--wide { width: 300px; height: 150px; }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section class="preview__item">
+      <section class="kpi-card kpi-card--style02" data-kit="widget/kpi-card/Style02">
+        <div class="kpi-card__icon-area" aria-hidden="true"><span class="kpi-card__icon-shadow"></span><span class="kpi-card__icon-particle"></span><span class="kpi-card__icon-diamond"></span><span class="kpi-card__icon-symbol"></span></div>
+        <div class="kpi-card__content"><h3 class="kpi-card__title" data-slot="title">完工数量</h3><strong class="kpi-card__value" data-slot="value">10</strong></div>
+      </section>
+    </section>
+    <section class="preview__item preview__item--wide">
+      <section class="kpi-card kpi-card--style02" data-kit="widget/kpi-card/Style02">
+        <div class="kpi-card__icon-area" aria-hidden="true"><span class="kpi-card__icon-shadow"></span><span class="kpi-card__icon-particle"></span><span class="kpi-card__icon-diamond"></span><span class="kpi-card__icon-symbol"></span></div>
+        <div class="kpi-card__content"><h3 class="kpi-card__title" data-slot="title">设备完工数</h3><strong class="kpi-card__value" data-slot="value">128</strong></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

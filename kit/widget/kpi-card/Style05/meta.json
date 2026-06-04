@@ -1,0 +1,67 @@
+{
+  "id": "widget-kpi-card-style05",
+  "label": "Charts/kpi-card/style05",
+  "category": "widget",
+  "kind": "kpi-card",
+  "style": "Style05",
+  "assetType": "code",
+  "size": {
+    "w": 174,
+    "h": 48
+  },
+  "minSize": {
+    "w": 174,
+    "h": 48
+  },
+  "maxSize": {
+    "w": 300,
+    "h": 100
+  },
+  "code": {
+    "html": "component.html",
+    "css": [
+      "../base.css",
+      "style.css"
+    ],
+    "preview": "widget.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "local": [
+      "icon.svg"
+    ]
+  },
+  "slots": [
+    {
+      "name": "title",
+      "selector": "[data-slot='title']",
+      "default": "销售额",
+      "required": true
+    },
+    {
+      "name": "value",
+      "selector": "[data-slot='value']",
+      "default": "2,937",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "selector": "[data-slot='unit']",
+      "default": "万元",
+      "required": false
+    }
+  ],
+  "dataShape": {
+    "title": "string",
+    "value": "string|number",
+    "unit": "string"
+  },
+  "adaptation": {
+    "renderingMode": "css-svg-hybrid",
+    "usesFullNodeScreenshot": false,
+    "usesLocalAssets": true,
+    "supportsWidthStretch": true,
+    "supportsHeightStretch": true
+  },
+  "status": "ready"
+}

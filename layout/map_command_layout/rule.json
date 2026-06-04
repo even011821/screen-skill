@@ -1,0 +1,131 @@
+{
+  "id": "map_command_layout",
+  "label": "地图态势分布型",
+  "version": "1.0.0",
+  "mainVisualType": [
+    "map",
+    "geo",
+    "region",
+    "point_distribution",
+    "heatmap",
+    "trajectory"
+  ],
+  "selection": {
+    "useWhen": [
+      "地图",
+      "区域",
+      "点位",
+      "热力",
+      "城市",
+      "省份",
+      "分布",
+      "态势",
+      "轨迹",
+      "网格"
+    ],
+    "avoidWhen": [
+      "没有区域或点位关系",
+      "核心对象是订单流程",
+      "核心对象是单一设备模型"
+    ],
+    "fallbackWhen": "用户强调哪里发生了什么、区域分布、点位态势、风险空间分布。"
+  },
+  "canvas": {
+    "baseline": {
+      "w": 1920,
+      "h": 1080
+    },
+    "contentArea": "computed-after-topnav",
+    "gap": 16
+  },
+  "slotStrategy": {
+    "PrimarySlot": {
+      "required": true,
+      "role": "最高优先级区域，通常放地图或区域主态势；具体内容由指标分析决定",
+      "shell": "PanelShell",
+      "widthRatio": [
+        0.46,
+        0.66
+      ],
+      "heightRatio": [
+        0.66,
+        0.9
+      ],
+      "minSize": {
+        "w": 760,
+        "h": 560
+      },
+      "placement": "center-dominant"
+    },
+    "ContextSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠左或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "left-or-top-side"
+    },
+    "StatusSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠右或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "right-side"
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "补充信息候选区域，通常在底部、页签或扩展区承载低优先级内容；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "bottom-or-tabbed"
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "附着在主区域上的局部标注层，仅在主视觉需要说明时使用",
+      "shell": "none",
+      "placement": "inside-primary"
+    }
+  },
+  "densityBehavior": {
+    "low": "地图更大，侧边只保留总览和关键风险。",
+    "medium": "地图保持中心，左右按概览/风险分组。",
+    "high": "按区域、风险、事件、趋势分组；点位使用聚合或浮层。",
+    "extreme": "点位密集时优先聚合、热力、筛选和弹窗，不把所有点位文字展开。"
+  },
+  "componentPreference": {
+    "PrimarySlot": [
+      "PanelShell",
+      "echarts:map with local geoJSON/SVG",
+      "custom svg/canvas map"
+    ],
+    "ContextSlot": [
+      "widget:kpi-card",
+      "dom:ranking-list",
+      "echarts:line",
+      "echarts:bar"
+    ],
+    "StatusSlot": [
+      "dom:alert-list",
+      "dom:ranking-list",
+      "widget:kpi-card"
+    ],
+    "DetailSlot": [
+      "dom:ranking-list",
+      "echarts:line",
+      "echarts:bar"
+    ]
+  },
+  "hardRules": [
+    "地图是业务核心，周边数据必须解释地图。",
+    "点位多时使用聚合、热力或弹窗，不平铺文字标签。",
+    "PrimarySlot 地图背景优先 PanelShell；普通业务模块默认 CardShell。"
+  ],
+  "variantCatalog": "variants/catalog.json",
+  "variantSelection": {
+    "required": true,
+    "rule": "Read variants/catalog.json after this rule.json. Select layoutVariant before calculating panel geometry.",
+    "recordInChangeLog": [
+      "layoutVariant id",
+      "selection reason",
+      "primaryArea or structure",
+      "slot business topics"
+    ],
+    "doNotUseFixedTemplate": true
+  }
+}

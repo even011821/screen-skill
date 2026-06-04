@@ -1,0 +1,96 @@
+{
+  "id": "topnav-centertitle-1920-style02-secondnavitem",
+  "label": "TopNav CenterTitle 1920 Style02 SecondNavItem",
+  "category": "TopNav",
+  "kind": "nav-item",
+  "titlePosition": "CenterTitle",
+  "resolution": "1920",
+  "style": "Style02",
+  "subcomponent": "SecondNavItem",
+  "parentNav": "topnav-centertitle-1920-style02",
+  "theme": [
+    "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan"
+  ],
+  "tone": "business",
+  "accentColor": "#ffca75",
+  "size": {
+    "w": 190,
+    "h": 40
+  },
+  "componentSetSize": {
+    "w": 230,
+    "h": 260
+  },
+  "variants": [
+    {
+      "name": "side=left, state=default",
+      "size": {
+        "w": 190,
+        "h": 40
+      }
+    },
+    {
+      "name": "side=left, state=active",
+      "size": {
+        "w": 190,
+        "h": 40
+      }
+    },
+    {
+      "name": "side=right, state=default",
+      "size": {
+        "w": 190,
+        "h": 40
+      }
+    },
+    {
+      "name": "side=right, state=active",
+      "size": {
+        "w": 190,
+        "h": 40
+      }
+    }
+  ],
+  "status": "ready",
+  "file": "nav.png",
+  "pngFallback": "nav.png",
+  "assetStatus": "ready",
+  "export": {
+    "variant": "side=left, state=default",
+    "method": "local-asset-export + resize",
+    "outputSize": {
+      "w": 190,
+      "h": 40
+    },
+    "note": "Pure background slice; text, time, weather, and labels are excluded."
+  },
+  "titleOverlay": {
+    "htmlClass": "ds-top-nav__title",
+    "css": "kit/TopNav/overlay.css",
+    "align": "center",
+    "fontFamilyToken": "--font-title",
+    "fontSize": 44,
+    "fontWeight": 400,
+    "lineHeight": 1,
+    "letterSpacing": 0,
+    "y": 22,
+    "height": 44,
+    "stroke": "0px",
+    "strokeColorToken": "--top-nav-title-stroke-color",
+    "shadowToken": "--top-nav-title-shadow",
+    "subtitle": {
+      "htmlClass": "ds-top-nav__subtitle",
+      "y": 58,
+      "fontSize": 13,
+      "weight": 400,
+      "enabled": false
+    },
+    "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+    "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+    "color": "#ffffff",
+    "fill": "#ffffff",
+    "colorMode": "fixed-white"
+  }
+}

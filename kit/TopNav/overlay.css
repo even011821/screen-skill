@@ -1,0 +1,75 @@
+.ds-top-nav {
+  position: relative;
+  width: var(--top-nav-bg-w, 1920px);
+  height: var(--top-nav-bg-h, 110px);
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+.ds-top-nav__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ds-top-nav__title-wrap {
+  position: absolute;
+  left: 50%;
+  top: var(--top-nav-title-y, 22px);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(760px, calc(100% - 560px));
+  min-width: 360px;
+  height: var(--top-nav-title-h, 48px);
+  pointer-events: none;
+}
+
+.ds-top-nav__title {
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: var(--font-title, "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Microsoft YaHei", sans-serif);
+  font-size: var(--top-nav-title-size, 48px);
+  font-weight: var(--top-nav-title-weight, 400);
+  line-height: var(--top-nav-title-line-height, 1);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
+  background: transparent;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: var(--top-nav-title-stroke, 0px) var(--top-nav-title-stroke-color, transparent);
+  text-shadow: var(--top-nav-title-shadow, 0 0 3px rgba(57, 180, 255, 0.24));
+}
+
+.ds-top-nav__subtitle {
+  position: absolute;
+  left: 50%;
+  top: var(--top-nav-subtitle-y, 58px);
+  transform: translateX(-50%);
+  margin: 0;
+  width: min(560px, calc(100% - 680px));
+  min-width: 320px;
+  overflow: hidden;
+  color: var(--top-nav-subtitle-color, rgba(255, 255, 255, 0.8));
+  font-family: var(--font-body);
+  font-size: var(--top-nav-subtitle-size, 14px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 3px rgba(43, 160, 255, 0.22);
+}

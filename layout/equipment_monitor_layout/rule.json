@@ -1,0 +1,129 @@
+{
+  "id": "equipment_monitor_layout",
+  "label": "设备运行监控型",
+  "version": "1.0.0",
+  "mainVisualType": [
+    "equipment",
+    "system",
+    "production_line",
+    "plant",
+    "machine"
+  ],
+  "selection": {
+    "useWhen": [
+      "设备",
+      "产线",
+      "厂站",
+      "运行状态",
+      "温度",
+      "压力",
+      "能耗",
+      "故障",
+      "维护",
+      "告警",
+      "负载"
+    ],
+    "avoidWhen": [
+      "核心是区域地图",
+      "核心是经营KPI",
+      "核心是内容宣传"
+    ],
+    "fallbackWhen": "用户关注某个设备、产线、厂站或系统是否正常运行。"
+  },
+  "canvas": {
+    "baseline": {
+      "w": 1920,
+      "h": 1080
+    },
+    "contentArea": "computed-after-topnav",
+    "gap": 16
+  },
+  "slotStrategy": {
+    "PrimarySlot": {
+      "required": true,
+      "role": "最高优先级区域，通常放设备主对象或主运行指标；具体内容由指标分析决定",
+      "shell": "PanelShell",
+      "widthRatio": [
+        0.42,
+        0.62
+      ],
+      "heightRatio": [
+        0.58,
+        0.82
+      ],
+      "minSize": {
+        "w": 720,
+        "h": 500
+      },
+      "placement": "center-or-left-dominant"
+    },
+    "ContextSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠左或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "side"
+    },
+    "StatusSlot": {
+      "required": false,
+      "role": "中高优先级辅助区域，通常靠右或靠近主区域分布；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "right-or-near-primary"
+    },
+    "DetailSlot": {
+      "required": false,
+      "role": "补充信息候选区域，通常在底部、页签或扩展区承载低优先级内容；不固定内容类型",
+      "shell": "CardShell",
+      "placement": "bottom"
+    },
+    "OverlaySlot": {
+      "required": false,
+      "role": "附着在主区域上的局部标注层，仅在主视觉需要说明时使用",
+      "shell": "none",
+      "placement": "inside-primary"
+    }
+  },
+  "densityBehavior": {
+    "low": "突出设备主对象和核心运行参数。",
+    "medium": "按运行、告警、能耗、趋势分组。",
+    "high": "合并维护、故障、效率、能耗等主题，避免参数散乱。",
+    "extreme": "实时指标优先，历史分析进入页签或下钻。"
+  },
+  "componentPreference": {
+    "PrimarySlot": [
+      "PanelShell",
+      "custom equipment svg/canvas/3d container"
+    ],
+    "ContextSlot": [
+      "widget:kpi-card",
+      "echarts:line",
+      "echarts:bar"
+    ],
+    "StatusSlot": [
+      "dom:alert-list",
+      "widget:kpi-card",
+      "dom:ranking-list"
+    ],
+    "DetailSlot": [
+      "echarts:line",
+      "dom:table",
+      "dom:ranking-list"
+    ]
+  },
+  "hardRules": [
+    "设备对象是核心，不用普通指标网格替代。",
+    "实时运行状态优先级高于分析性指标。",
+    "设备主画面优先 PanelShell；参数、告警、趋势默认 CardShell。"
+  ],
+  "variantCatalog": "variants/catalog.json",
+  "variantSelection": {
+    "required": true,
+    "rule": "Read variants/catalog.json after this rule.json. Select layoutVariant before calculating panel geometry.",
+    "recordInChangeLog": [
+      "layoutVariant id",
+      "selection reason",
+      "primaryArea or structure",
+      "slot business topics"
+    ],
+    "doNotUseFixedTemplate": true
+  }
+}

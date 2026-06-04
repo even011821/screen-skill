@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shell/CardShell/Style02</title>
+  <link rel="stylesheet" href="./shell.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #1d1d1d;
+      color: #eafeff;
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 40px;
+    }
+
+    .preview-stage {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, auto));
+      gap: 32px;
+      align-items: start;
+    }
+
+    .preview-card {
+      position: relative;
+    }
+
+    .preview-card--base {
+      width: 400px;
+      height: 300px;
+    }
+
+    .preview-card--wide {
+      width: 720px;
+      height: 360px;
+    }
+
+    @media (max-width: 1220px) {
+      body {
+        place-items: start center;
+        padding: 24px;
+      }
+
+      .preview-stage {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-card--wide {
+        width: min(720px, calc(100vw - 48px));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview-stage">
+    <section class="preview-card preview-card--base">
+      <section class="bs-card-shell bs-card-shell--style02" data-kit="Shell/CardShell/Style02">
+        <div class="bs-card-shell__background" aria-hidden="true"></div>
+        <header class="bs-card-shell__header" data-node-id="27:27987">
+          <span class="bs-card-shell__header-glow" aria-hidden="true"></span>
+          <span class="bs-card-shell__dot-field" data-node-id="27:27989" aria-hidden="true">
+            <img class="bs-card-shell__dot-fill" src="./assets/dot-fill.svg" alt="">
+          </span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--short-a" aria-hidden="true"></span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--short-b" aria-hidden="true"></span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--long" aria-hidden="true"></span>
+          <span class="bs-card-shell__right-decoration" aria-hidden="true"></span>
+          <span class="bs-card-shell__left-bar" aria-hidden="true"></span>
+          <span class="bs-card-shell__icon" aria-hidden="true"></span>
+          <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+        </header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+
+    <section class="preview-card preview-card--wide">
+      <section class="bs-card-shell bs-card-shell--style02" data-kit="Shell/CardShell/Style02">
+        <div class="bs-card-shell__background" aria-hidden="true"></div>
+        <header class="bs-card-shell__header" data-node-id="27:27987">
+          <span class="bs-card-shell__header-glow" aria-hidden="true"></span>
+          <span class="bs-card-shell__dot-field" data-node-id="27:27989" aria-hidden="true">
+            <img class="bs-card-shell__dot-fill" src="./assets/dot-fill.svg" alt="">
+          </span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--short-a" aria-hidden="true"></span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--short-b" aria-hidden="true"></span>
+          <span class="bs-card-shell__rule bs-card-shell__rule--long" aria-hidden="true"></span>
+          <span class="bs-card-shell__right-decoration" aria-hidden="true"></span>
+          <span class="bs-card-shell__left-bar" aria-hidden="true"></span>
+          <span class="bs-card-shell__icon" aria-hidden="true"></span>
+          <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+        </header>
+        <div class="bs-card-shell__content" data-slot="content"></div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
