@@ -80,14 +80,15 @@ Step 3: 按 layout 槽位与 shell-binding-rules 选择 Shell → 读 kit/Shell/
         ↓
 Step 4: 组件渲染：KPI 读 kit/widget/kpi-card，按 dataShape + slot size + variantRule + visualWeight 选择，不按 catalog 第一个；图表用 runtime/echarts.min.js + chart-presets.js；表格/排名/告警/任务/事件列表用 table-renderers.js
         ↓        所有 KPI/图表/列表必须按 Shell contentSlot 计算内部尺寸；放不下时调整内容密度、卡片高度或转页签，不得裁切/滚动/省略
+        ↓        ECharts 必须在 fitScreen + requestAnimationFrame 后、容器 clientWidth/clientHeight 非 0 时初始化；优先使用 ChartDefaults.initWhenReady()
         ↓
 Step 5: 读 kit/background/meta.json → 按 theme 选背景图，无则纯色 CSS
         ↓
 Step 6: 链接 themes/{主题}.css + runtime/*.js
         ↓
-Step 7: 生成 data/sample-data.json
+Step 7: 生成 data/sample-data.json，同时在 index.html 内联同一份数据到 window.__SCREEN_DATA__ 或 <script id="screen-data" type="application/json">
         ↓
-Step 8: 输出完整 index.html → 按浏览器视口居中缩放（不限制视口分辨率，必须计算 offsetX/offsetY）→ 无横向/纵向滚动条自检
+Step 8: 输出完整 index.html → 使用单一居中缩放方案（fixed center + translate(-50%, -50%) + scale）→ 无横向/纵向滚动条自检
 ```
 
 ### 6.1 降级策略
@@ -153,7 +154,7 @@ Step 8: 输出完整 index.html → 按浏览器视口居中缩放（不限制�
   "assetType": "code",
   "theme": ["galaxy-azure", "frost-cyan", "fresh-verdant", "deep-tech-blue"],
   "minSize": { "w": 300, "h": 180 },
-  "maxSize": { "w": 1200, "h": 800 },
+  "maxSize": { "w": 2000, "h": 800 },
   "code": { "html": "component.html", "css": "shell.css", "preview": "shell.html" },
   "adaptation": {
     "layout": "stretchable-code-shell",
@@ -220,14 +221,16 @@ Step 8: 输出完整 index.html → 按浏览器视口居中缩放（不限制�
 **选组件：**
 1. `kit/widget/kpi-card`。只有 KPI 指标卡读取 `kit/widget/kpi-card/catalog.json`，再读取选中 `StyleXX/meta.json`、`StyleXX/component.html`、`base.css` 和 `StyleXX/style.css`。
 2. KPI Style 不能按 catalog 顺序或 `defaultStyle` 直接选择。必须按 `dataShape`、槽位尺寸、`variantRule`、视觉权重、是否可适配、主题兼容排序。
-3. `defaultStyle` 只作为最后兜底；使用时必须写入 change-log。
-4. 图表不读取 `kit/widget/chart-*`，统一使用本地 `runtime/echarts.min.js`、`chart-defaults.js`、`chart-presets.js`。
-5. ECharts preset 支持 line、area-line、bar、stacked-bar、horizontal-bar、pie、donut、rose、gauge、radar、scatter、effect-scatter、heatmap、funnel、sankey、treemap、map。
-6. 地图类图表必须使用本地 geoJSON/SVG 注册；没有本地地图数据时，用 CSS/SVG 抽象态势降级，不调用外部地图或 Figma。
-7. 表格、排名、告警、任务、事件列表不读取 Figma widget，统一使用 `runtime/table-renderers.js` 生成 DOM，并用 `components.css/tables.css` 控制样式。
-8. 大数字、普通状态条、简单标签用 DOM/CSS 渲染，不作为 widget 维护。
-9. 所有组件内容仍必须注入 Shell 的 `adaptation.contentSlot` 或声明的 content slot。
-10. KPI、图表、列表、排行、告警、任务等组件必须先根据 Shell content slot 计算可用宽高，再生成内部 DOM/canvas。生成后必须检查 `scrollHeight/clientHeight` 与 `scrollWidth/clientWidth`；如内容溢出，优先压缩 gap、行高、padding、图例和次级文本，其次调整卡片高度或把低优先级内容转入页签/轮播，保证 1920x1080 下不裁切、不滚动、不省略。
+3. 顶部指标带、PrimarySlot 辅助 KPI、核心汇总 KPI 如果需要跟随主题主色，候选排序必须优先选择 `summary.themeColorBindings` 中包含 value 且 `cssToken:"--theme-primary"` 的 KPI Style；没有该绑定的样式保持组件固定色，不允许强行全局改色。
+4. `defaultStyle` 只作为最后兜底；使用时必须写入 change-log。
+5. 图表不读取 `kit/widget/chart-*`，统一使用本地 `runtime/echarts.min.js`、`chart-defaults.js`、`chart-presets.js`。
+6. ECharts 必须延迟初始化：先执行 `fitScreen`，再等待 `requestAnimationFrame` 和容器非 0 尺寸；生成代码优先使用 `ChartDefaults.initWhenReady(el, option)`，并绑定 `ResizeObserver` 或等价 resize 逻辑。
+7. ECharts preset 支持 line、area-line、bar、stacked-bar、horizontal-bar、pie、donut、rose、gauge、radar、scatter、effect-scatter、heatmap、funnel、sankey、treemap、map。
+8. 地图类图表必须使用本地 geoJSON/SVG 注册；没有本地地图数据时，用 CSS/SVG 抽象态势降级，不调用外部地图或 Figma。
+9. 表格、排名、告警、任务、事件列表不读取 Figma widget，统一使用 `runtime/table-renderers.js` 生成 DOM，并用 `components.css/tables.css` 控制样式。
+10. 大数字、普通状态条、简单标签用 DOM/CSS 渲染，不作为 widget 维护。
+11. 所有组件内容仍必须注入 Shell 的 `adaptation.contentSlot` 或声明的 content slot。
+12. KPI、图表、列表、排行、告警、任务等组件必须先根据 Shell content slot 计算可用宽高，再生成内部 DOM/canvas。生成后必须检查 `scrollHeight/clientHeight` 与 `scrollWidth/clientWidth`；如内容溢出，优先压缩 gap、行高、padding、图例和次级文本，其次调整卡片高度或把低优先级内容转入页签/轮播，保证 1920x1080 下不裁切、不滚动、不省略。
 
 **选背景：**
 1. 读 `kit/background/meta.json`
@@ -273,6 +276,8 @@ screen/
 
 - 行业场景只用于 mock 数据、指标命名、业务分组和文案生成；不得用于 TopNav、Shell、widget、background 等 kit 组件选择
 - Mock 数据标记 `source: "mock"`
+- 生成页面必须支持直接 `file://` 打开。mock/真实绑定数据除输出 `data/sample-data.json` 外，还必须在 `index.html` 内联到 `window.__SCREEN_DATA__` 或 `<script id="screen-data" type="application/json">`。
+- `runtime/data-loader.js` 读取优先级：内联数据优先，其次 `fetch("./data/sample-data.json")`；`file://` 下 fetch 失败时必须回退到内联数据，不能只返回空默认数据。
 - 推断字段标记 `source: "inferred"`
 - 真实字段标记 `source: "real"`
 - 状态枚举统一：normal / warning / danger / offline / processing / done
@@ -284,7 +289,7 @@ screen/
 ## 9. 自检清单（P0）
 
 1. 目标分辨率画布在浏览器视口内无滚动条
-2. `.screen-root` 使用中心缩放，`scale.js` 必须计算 `offsetX/offsetY`，页面在任意宽屏视口内水平/垂直居中，`html/body` 不出现横向或纵向滚动条
+2. `.screen-root` 使用单一居中缩放方案：`position: fixed; left:50%; top:50%; transform: translate(-50%, -50%) scale(var(--screen-scale)); transform-origin:center center;`。`scale.js` 只计算 `--screen-scale`，不得再计算或使用 `offsetX/offsetY`
 3. 所有 `.module/.screen-card` 已检查矩形碰撞和最小间距；相邻模块不得共边，间距必须不小于 layout `canvas.gap`，1920x1080 默认至少 16px
 4. 页面可本地打开，无语法错误
 5. 已记录命中的 `layout_type`、TopNav id、TopNav 真实高度、contentArea
@@ -305,7 +310,7 @@ screen/
 20. Mock 数据已标记
 21. 字段映射表存在
 22. kit 使用情况记录在 change-log
-23. 图表容器支持 resize
+23. 图表容器使用延迟初始化，初始化前已确认容器宽高非 0，并支持 resize
 
 ## 10. 禁止行为
 
@@ -313,7 +318,7 @@ screen/
 - 把 Mock 数据描述成真实数据
 - 把业务模块导出成不可编辑图片
 - 在目标分辨率出现滚动条
-- `scale.js` 只缩放不计算 `offsetX/offsetY`，导致宽屏浏览器中画布贴左或贴上
+- 同时使用 `translate(-50%, -50%)` 居中缩放和 `offsetX/offsetY`、`--screen-offset-x/y`、`transform-origin:left top` 的左上角 stage 缩放方案
 - 保留占位标题
 - 有资源不用却走降级，或该降级时假装有资源
 - 直接使用旧 layout HTML 占位作为新流程骨架
@@ -330,6 +335,8 @@ screen/
 - `layout_type:auto` 时跳过数据分析直接使用均衡网格
 - KPI widget 因 catalog 顺序或 defaultStyle 直接选第一个
 - 用滚动条、裁切、隐藏溢出或省略号解决内容溢出
+- 生成页只依赖 `fetch("./data/sample-data.json")` 加载数据，导致 `file://` 直接打开时数据空白
+- 在 DOMContentLoaded 时立即 `echarts.init()`，未等待缩放完成和容器非 0 尺寸
 
 ## 11. 新增积木指南
 
@@ -372,6 +379,8 @@ screen/
 - 图表优先用于趋势、构成、排行、分布和关系；KPI 优先用于当前值、汇总值、状态值和核心结果。
 - `kit/widget/kpi-card/catalog.json` 的 `summary` 只作为轻量选择摘要使用，不替代 `StyleXX/meta.json`；命中候选后仍需读取对应 `meta.json`、`component.html`、`base.css` 和 `style.css`。
 - 主题色只作用在已通过 Figma 变量确认并写入 `summary.themeColorBindings` 的 CSS 位置；没有变量标识的文字、背景、边框、SVG 和状态色不得被全局改成主题主色。
+- 顶部指标带、核心汇总 KPI 和高视觉权重 KPI 如果希望体现当前主题主色，必须优先选择带 `themeColorBindings` 的 KPI Style；例如当前 catalog 中只有明确绑定的样式才可让主数值使用 `var(--theme-primary)`。
+- 如果选中的 KPI Style 不带 `themeColorBindings`，它的主数值颜色视为组件固定色。不得因为页面主题变化而手工覆盖其 value、背景、边框或 SVG 颜色；如因此未使用主题主色，必须在 `change-log` 记录。
 - 如果存在可转 KPI 的数值型汇总数据但最终没有使用 KPI，必须在 `change-log` 记录放弃原因。
 
 ## Layout Variant And Output Optimization Addendum

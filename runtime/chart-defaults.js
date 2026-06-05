@@ -76,6 +76,50 @@ var ChartDefaults = (function () {
     };
   }
 
+  function getElement(elOrId) {
+    return typeof elOrId === "string" ? document.getElementById(elOrId) : elOrId;
+  }
+
+  function waitForSize(el, maxFrames) {
+    maxFrames = maxFrames || 12;
+    return new Promise(function (resolve) {
+      var frame = 0;
+      function check() {
+        if (!el || frame >= maxFrames || (el.clientWidth > 0 && el.clientHeight > 0)) {
+          resolve(el);
+          return;
+        }
+        frame += 1;
+        requestAnimationFrame(check);
+      }
+      requestAnimationFrame(check);
+    });
+  }
+
+  function bindResize(chart, el) {
+    if (!chart || !el) return chart;
+    if (typeof ResizeObserver !== "undefined") {
+      var observer = new ResizeObserver(function () {
+        chart.resize();
+      });
+      observer.observe(el);
+      chart.__screenResizeObserver = observer;
+    }
+    window.addEventListener("resize", function () { chart.resize(); }, { passive: true });
+    return chart;
+  }
+
+  async function initWhenReady(elOrId, option, opts) {
+    opts = opts || {};
+    var el = getElement(elOrId);
+    await waitForSize(el, opts.maxFrames || 12);
+    if (!el || typeof echarts === "undefined") return null;
+    var chart = echarts.init(el, opts.theme || null, opts.initOptions || undefined);
+    chart.setOption(option || {});
+    requestAnimationFrame(function () { chart.resize(); });
+    return bindResize(chart, el);
+  }
+
   return {
     AXIS_STYLE: AXIS_STYLE,
     TOOLTIP_STYLE: TOOLTIP_STYLE,
@@ -84,5 +128,8 @@ var ChartDefaults = (function () {
     makeLineOption: makeLineOption,
     makeBarOption: makeBarOption,
     makePieOption: makePieOption,
+    waitForSize: waitForSize,
+    initWhenReady: initWhenReady,
+    bindResize: bindResize,
   };
 })();

@@ -10,7 +10,7 @@
 
 | 类型 | 策略 |
 |---|---|
-| 整体页面 | `transform: scale()` 按窗口比例缩放 stage |
+| 整体页面 | 单一居中缩放：`.screen-root` 使用 `position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(var(--screen-scale)); transform-origin: center center;` |
 | 全屏背景 | `object-fit: cover`，不破坏主体 |
 | 布局规则 | 先读 `layout/catalog.json` 与 `rule.json`，按指标优先级分配槽位，不读取旧 HTML 占位 |
 | 顶部导航 | `kit/TopNav` 纯背景 PNG + `overlay.css` DOM 文本/时间/天气覆盖，主标题默认视觉加粗 |
@@ -22,8 +22,18 @@
 ## CSS 结构约定
 
 ```css
-.screen-viewport { width: 100vw; height: 100vh; overflow: hidden; }
-.screen-stage { width: 1920px; height: 1080px; transform-origin: left top; }
+html,
+body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+.screen-root {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform: translate(-50%, -50%) scale(var(--screen-scale, 1));
+  transform-origin: center center;
+  overflow: hidden;
+}
 ```
 
 ## 顶部主标题
@@ -46,6 +56,7 @@
 ## 不允许
 
 - 目标分辨率下出现滚动条
+- 同时使用居中缩放和 offset/left-top stage 两套缩放方案
 - 固定像素截图式图表
 - 直接使用旧 layout HTML 占位作为新流程骨架
 - 写死 TopNav 高度或 contentArea 顶部

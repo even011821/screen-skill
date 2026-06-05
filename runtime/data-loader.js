@@ -6,14 +6,35 @@ const DataLoader = (function () {
     weather: "--",
   };
 
+  function getInlineData() {
+    if (window.__SCREEN_DATA__ && typeof window.__SCREEN_DATA__ === "object") {
+      return window.__SCREEN_DATA__;
+    }
+
+    var node = document.getElementById("screen-data");
+    if (!node) return null;
+
+    try {
+      return JSON.parse(node.textContent || "{}");
+    } catch {
+      console.warn("DataLoader: 内联数据解析失败");
+      return null;
+    }
+  }
+
   async function load(url) {
+    var inlineData = getInlineData();
+    if (inlineData) return { ...DEFAULT_DATA, ...inlineData };
+
     try {
       const res = await fetch(url || "./data/sample-data.json");
       if (!res.ok) return DEFAULT_DATA;
       return { ...DEFAULT_DATA, ...(await res.json()) };
     } catch {
-      console.warn("DataLoader: 无法加载数据，使用默认值");
-      return DEFAULT_DATA;
+      inlineData = getInlineData();
+      if (inlineData) return { ...DEFAULT_DATA, ...inlineData };
+      console.warn("DataLoader: 无法加载数据且没有内联数据，使用默认值");
+      return { ...DEFAULT_DATA };
     }
   }
 
@@ -36,5 +57,5 @@ const DataLoader = (function () {
     return String(n);
   }
 
-  return { load: load, bindText: bindText, tickClock: tickClock, formatNum: formatNum, DEFAULT_DATA: DEFAULT_DATA };
+  return { load: load, bindText: bindText, tickClock: tickClock, formatNum: formatNum, getInlineData: getInlineData, DEFAULT_DATA: DEFAULT_DATA };
 })();

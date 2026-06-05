@@ -7,8 +7,7 @@
   "resolution": "1920",
   "style": "Style04",
   "theme": [
-    "ember-orange",
-    "dusk-rose-gold"
+    "ember-orange"
   ],
   "tone": "formal",
   "accentColor": "#ffea9f",

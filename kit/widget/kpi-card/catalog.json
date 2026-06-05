@@ -15,6 +15,7 @@
       "槽位尺寸符合样式的 minSize / maxSize；固定尺寸样式需要精确匹配，或有意预留对应槽位",
       "variantRule 匹配所需状态，例如 positive / negative 或 blue / red / yellow",
       "visualWeight 匹配信息优先级：compact、standard、emphasis、decorative",
+      "当 KPI 主数值需要跟随主题主色时，优先选择 summary.themeColorBindings 中包含 value 且 cssToken 为 --theme-primary 的样式",
       "响应式能力匹配槽位是否需要拉伸",
       "存在主题兼容性要求时，需要匹配 theme compatibility"
     ],
@@ -40,7 +41,8 @@
     "groupedMetricRule": "当一个业务指标包含多条同类型数据项时，优先使用现有的 grouped-metrics-card 样式，要求其支持 metrics / metricItem / repeatable，不要直接跳过 KPI。",
     "multiInstanceRule": "多个结构相似的业务指标可以复用同一个 KPI 样式，并生成多个实例。",
     "changeLogRule": "如果数值型汇总数据可以转换为 KPI，但最终没有使用 kpi-card，必须在 change-log 中记录原因。",
-    "themeColorRule": "只有明确标记了主题变量的 CSS 位置，才允许使用 var(--theme-primary) 或相关主题 token。不要对 KPI 卡片进行全局换色。状态色优先级高于主题主色。"
+    "themeColorRule": "只有明确标记了主题变量的 CSS 位置，才允许使用 var(--theme-primary) 或相关主题 token。不要对 KPI 卡片进行全局换色。状态色优先级高于主题主色。",
+    "themeColorSelectionRule": "顶部指标带、PrimarySlot 辅助 KPI、核心汇总 KPI 如需要体现当前主题主色，候选排序必须优先选择带 themeColorBindings 的样式；如果最终选择不带 themeColorBindings 的样式，其主数值保持组件固定色，并在 change-log 记录原因。"
   },
   "styles": [
     {

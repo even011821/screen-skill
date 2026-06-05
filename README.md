@@ -124,7 +124,7 @@ Run the same install command again. If the target directory is already a git rep
 Download a release archive:
 
 ```text
-https://github.com/even011821/screen-skill/archive/refs/tags/v0.1.0.zip
+https://github.com/even011821/screen-skill/archive/refs/tags/v0.1.1.zip
 ```
 
 Then unzip it into the target agent skill directory and make sure the final path contains:

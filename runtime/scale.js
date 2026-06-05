@@ -1,4 +1,4 @@
-/* scale.js — 视口等比缩放，保持设计画布比例，并保持整屏居中无滚动条 */
+/* scale.js — 单一居中缩放方案：fixed center + translate(-50%, -50%) + scale */
 (function () {
   var rootStyle = document.documentElement.style;
   var DESIGN_WIDTH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--screen-w")) || 1920;
@@ -11,8 +11,6 @@
     );
 
     rootStyle.setProperty("--screen-scale", scale.toFixed(6));
-    rootStyle.setProperty("--screen-offset-x", "0px");
-    rootStyle.setProperty("--screen-offset-y", "0px");
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
   }
