@@ -1,25 +1,55 @@
 {
   "id": "screen-skill-v2-kit-catalog",
   "label": "Screen Skill V2 kit global catalog",
-  "version": "2.1",
-  "updatedAt": "2026-06-01",
-  "readOrder": [
-    "kit/catalog.json",
+  "version": "2.2",
+  "updatedAt": "2026-08-23",
+  "instructionReadOrder": [
     "layout/catalog.json",
-    "layout/common/slot-schema.json",
     "themes/catalog.json",
-    "kit/TopNav/catalog.json",
-    "kit/TopNav/overlay.css",
-    "kit/Shell/CardShell/catalog.json",
-    "kit/Shell/PanelShell/catalog.json",
-    "kit/widget/kpi-card/catalog.json",
-    "kit/map/catalog.json",
+    "kit/catalog.json"
+  ],
+  "conditionalReads": {
+    "create": [
+      "selected layout rule and variants/catalog.json",
+      "layout/common/slot-schema.json",
+      "layout/common/nav-height-rules.md",
+      "layout/common/viewport-fit-rules.md",
+      "needed branch catalog.json",
+      "selected meta.json/code/css only"
+    ],
+    "refine": [
+      "screen/build-manifest.json",
+      "changed page files",
+      "selected component meta/code/css only"
+    ],
+    "map": [
+      "kit/map/catalog.json",
+      "selected map meta.json",
+      "references/map-kit-rules.md"
+    ],
+    "kpi": [
+      "kit/widget/kpi-card/catalog.json",
+      "references/widget-kpi-card-rules.md"
+    ],
+    "chart": [
+      "runtime/chart-defaults.js",
+      "runtime/chart-presets.js"
+    ],
+    "tableOrList": [
+      "runtime/table-renderers.js",
+      "runtime/table-list.css"
+    ],
+    "baseRuntime": [
+      "runtime/data-loader.js",
+      "runtime/scale.js"
+    ]
+  },
+  "copyOnlyAssets": [
     "runtime/echarts.min.js",
-    "runtime/chart-defaults.js",
-    "runtime/chart-presets.js",
-    "runtime/table-renderers.js",
-    "runtime/table-list.css",
-    "kit/background/meta.json"
+    "kit/**/*.png",
+    "kit/**/*.svg",
+    "kit/**/*.geo.json",
+    "kit/**/*.{woff,woff2,ttf}"
   ],
   "branches": [
     {
@@ -31,7 +61,7 @@
       "overlayCss": "TopNav/overlay.css",
       "itemCount": 24,
       "readyCount": 24,
-      "usage": "Use nav.png as pure background; inject title, optional subtitle, time, weather and secondary labels with DOM. Subtitle is rendered only when the selected meta enables it."
+      "usage": "Use nav.png as pure background. Default DOM overlay contains title, live time and date only. Subtitle or other labels require an explicit user request and a matching slot/meta capability."
     },
     {
       "id": "Shell",
@@ -86,14 +116,15 @@
       "assetType": "local-map-data",
       "itemCount": 1,
       "readyCount": 1,
-      "usage": "Use local GeoJSON map data for ECharts registerMap. For China maps, copy china.geo.json to the generated screen assets/map directory and fetch it locally; keep TopoJSON only as source data."
+      "usage": "Use local GeoJSON for ECharts registerMap. Standalone/file:// output must inline the selected GeoJSON or provide an equivalent local fallback; keep TopoJSON only as maintenance source data."
     },
     {
       "id": "background",
       "label": "Screen background",
       "path": "background/meta.json",
       "assetType": "image-or-css",
-      "itemCount": 3,
+      "itemCount": 9,
+      "readyCount": 9,
       "usage": "Prefer ready background images by theme; use cssFallback when image is pending or missing."
     }
   ],
@@ -103,7 +134,7 @@
     "businessCategoryUse": "Business category is only for mock data, metric naming, business grouping and copy generation."
   },
   "rules": {
-    "selection": "Always read this global catalog first, then read branch catalogs and final meta.json files.",
+    "selection": "After data-first layout and theme selection, read this catalog, then only the needed branch catalogs and selected meta/code/css files.",
     "fallback": "When a branch, catalog item, or ready asset is missing, generate a CSS fallback and record it in change-log.",
     "noGuessing": "Never reference kit paths that are not present in this catalog or a branch catalog."
   }

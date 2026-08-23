@@ -7,7 +7,7 @@
     "titleSelector": ".ds-top-nav__title",
     "subtitleSelector": ".ds-top-nav__subtitle",
     "subtitlePolicy": "不要默认渲染副标题。只有当选中的 meta.titleOverlay.subtitle.enabled 为 true 时，才渲染 .ds-top-nav__subtitle。",
-    "note": "TopNav 图片是纯背景。主标题、时间、天气和二级标签必须作为 DOM 覆盖层渲染。副标题是可选项，由 meta.titleOverlay.subtitle.enabled 控制。"
+    "note": "TopNav 图片是纯背景。默认仅以 DOM 覆盖主标题、实时时间和日期。副标题或其他标签必须由用户明确要求，并由 meta 中的对应能力控制。"
   },
   "items": [
     {

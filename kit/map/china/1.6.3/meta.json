@@ -25,7 +25,7 @@
   ],
   "featureCount": 36,
   "usage": {
-    "load": "Copy china.geo.json to the generated screen assets/map directory and fetch it locally before calling echarts.registerMap(\"china\", geoJson).",
+    "load": "For standalone/file:// output, inline china.geo.json into window.__SCREEN_MAPS__ or an application/json script tag before calling echarts.registerMap. Use local fetch only as an http/https fallback.",
     "noRemoteRuntime": true,
     "fallback": "If local map data is missing, use an abstract SVG/CSS situation map fallback and record it in change-log."
   },

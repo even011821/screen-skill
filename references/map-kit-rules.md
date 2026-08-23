@@ -1,29 +1,35 @@
 # Map Kit Rules
 
-`kit/map` stores local map boundary data for generated big-screen pages.
+`kit/map` 只保存本地边界数据，地图视觉仍由 ECharts options、主题 token 和页面 CSS 控制。
 
-## Runtime Use
+## 选择
 
-1. Read `kit/map/catalog.json` when a page needs a map.
-2. For China national maps, read `kit/map/china/1.6.3/meta.json`.
-3. Copy `kit/map/china/1.6.3/china.geo.json` to the generated screen, normally `assets/map/china.geo.json`.
-4. Register the map before building the ECharts option:
+1. 页面确实需要地图时才读 `kit/map/catalog.json`。
+2. 按 scope、renderer、status 选择；全国地图读取 `kit/map/china/1.6.3/meta.json`。
+3. 运行时使用 meta 的 `registerName`，不得从记忆编造名称或路径。
+4. `china.topo.json` 只用于维护；生成页优先使用 `china.geo.json`。
+
+## Standalone 与 file://
+
+直接 `fetch("./assets/map/china.geo.json")` 在 `file://` 下可能被浏览器阻止。Standalone 输出必须满足以下一种方式：
+
+1. 推荐：将所选 GeoJSON 内联到 `window.__SCREEN_MAPS__.china` 或 `<script type="application/json" id="map-geo-china">`。
+2. 同时输出 GeoJSON 文件，但先读取内联数据；仅在 http/https 环境且内联数据不存在时 fetch。
+3. 使用本地 JS wrapper 设置 `window.__SCREEN_MAPS__`，不得依赖远程请求。
+
+注册示例：
 
 ```js
-const geoJson = await fetch("./assets/map/china.geo.json").then((res) => res.json());
-echarts.registerMap("china", geoJson);
+const geoJson = window.__SCREEN_MAPS__?.china
+  ?? JSON.parse(document.querySelector("#map-geo-china")?.textContent || "null");
+
+if (geoJson) {
+  echarts.registerMap("china", geoJson);
+}
 ```
 
-5. Use the local map name from `meta.json > registerName`.
-6. Keep map styling in ECharts options and theme tokens; do not encode visual theme into map data.
+## 维护与降级
 
-## Source Data
-
-- `china.topo.json` is retained as local source data.
-- `china.geo.json` is the runtime asset for ECharts.
-- Remote source URLs are maintenance-only and live in `references/map-source-map.json`.
-- Generated pages must not fetch remote map URLs.
-
-## Fallback
-
-If local map data is missing, use an abstract SVG/CSS situation map fallback and record the missing map id in `change-log`.
+- 远程来源 URL 只允许出现在 `references/map-source-map.json`，普通生成不得读取。
+- 本地地图数据缺失时使用抽象 SVG/CSS 态势图，并在 manifest/change log 记录。
+- 生成页只复制一种实际使用的地图数据，不同时复制 GeoJSON、TopoJSON 和其他重复格式。

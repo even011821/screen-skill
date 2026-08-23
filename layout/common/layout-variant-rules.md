@@ -21,18 +21,19 @@ data analysis -> layout_type -> layoutVariant -> slot geometry
 - 指标数量少时，扩大主视觉或核心指标，不强行填满左右栏。
 - 指标数量中等时，按业务主题分布到主区邻近位置。
 - 指标数量多时，先合并主题，再使用页签、轮播、弹窗或下钻，不在首屏平铺全部卡片。
-- 同一 `layout_type` 下不得连续默认使用第一个 variant；多个候选相近时，使用稳定随机选择。
+- 默认选择最高得分 variant；只有最高分相同才使用确定性平局规则。
 
-## 稳定随机
+## 确定性平局规则
 
-为避免同类项目生成结果完全一致，多个候选同分时使用稳定随机：
+多个候选同分时使用可复现的 FNV-1a 规则：
 
 ```text
-seed = hash(projectTitle + layout_type + theme + resolution)
-pick one from top 2-4 candidates
+sort equal highest-score candidates by id
+seed = FNV-1a(projectTitle + layout_type + layoutVariant + theme + resolution + variationSeed)
+pick index = seed % candidateCount
 ```
 
-稳定随机只用于跨项目差异化；同一页面内仍需保持风格统一。
+相同 brief 和空 `variationSeed` 必须返回相同结果。只有调用方明确需要视觉变化时才设置新的 `variationSeed`；同一页面内仍保持风格统一。
 
 ## 禁止项
 

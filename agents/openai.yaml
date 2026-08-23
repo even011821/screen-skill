@@ -1,3 +1,4 @@
-display_name: Screen Skill V2
-short_description: Generate data big-screen dashboards from modular kit assets, meta.json selection rules, themes, layouts, and ECharts data bindings.
-default_prompt: Build a modular data big-screen dashboard with screen-skill-v2. Use kit/meta.json selection, choose a layout and theme, inject mock-first or provided data, and verify the generated page.
+interface:
+  display_name: "数据大屏生成 V2"
+  short_description: "使用本地布局、主题和组件，高效创建、修改和检查可离线运行的数据大屏。"
+  default_prompt: "使用 $screen-skill：告诉我大屏主题、最重要的 6–15 项内容，以及是否有真实数据或参考图；未说明时默认 1920×1080，并将补充数据标记为模拟数据。"

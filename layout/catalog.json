@@ -213,10 +213,11 @@
     "note": "仅为兼容性检查保留。新的生成流程应读取 rule.json 文件。"
   },
   "variantSelectionPolicy": {
-    "mode": "layout-type-then-variant",
+    "mode": "scored-deterministic",
     "rule": "After selecting layout_type, read layout/{layout_type}/variants/catalog.json and choose a layoutVariant before calculating panel coordinates.",
-    "stableRandomSeed": "hash(projectTitle + layout_type + theme + resolution)",
-    "candidatePool": "top 2-4 matched variants when scores are close",
+    "resolver": "scripts/resolve-plan.mjs",
+    "tieBreaker": "Sort equal highest-score candidates by id, then choose with FNV-1a(projectTitle + layout_type + layoutVariant + theme + resolution + variationSeed).",
+    "diversityPolicy": "Use variationSeed only when deliberate cross-project variation is requested. The same brief without a new variationSeed must return the same candidate.",
     "hardRules": [
       "Do not reuse the same 420/1000/420 three-column coordinates as the default for map_command_layout and center_scene_layout.",
       "Do not fix left/right/bottom card counts.",

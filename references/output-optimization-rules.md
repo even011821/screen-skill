@@ -6,11 +6,13 @@
 
 - `standalone`：默认交付模式。只复制当前页面实际用到的 runtime、assets 和样式。
 - `linked`：开发加速模式。允许引用 skill 内公共 runtime，不复制大体积公共库；交付前需要切回 `standalone`。
+- `refine` 修改已有页面时，复用现有 manifest 和资源；只复制本次新增或被替换的文件，不重新展开完整输出。
 
 ## 必须复制
 
 - `index.html`
 - `main.js`
+- `build-manifest.json`
 - `data/sample-data.json`
 - 实际使用的主题 CSS tokens
 - 实际使用的 TopNav 背景和 overlay 样式
@@ -46,10 +48,20 @@ catalog summary -> rank candidates -> read selected meta/code/assets -> generate
 
 不要一开始读取所有 TopNav、Shell、KPI 的完整 HTML/CSS/assets。
 
+以下文件只能复制或引用路径，不作为模型说明材料读取：
+
+- `runtime/echarts.min.js`
+- PNG/JPG/GIF
+- 字体文件
+- GeoJSON/TopoJSON
+- 未被选中的 SVG 与组件 assets
+
+`refine` 模式先读取 `build-manifest.json`，不得重新遍历所有 catalog，除非用户明确要求更换布局、主题或组件。
+
 ## 校验优化
 
 - JSON 只校验实际读取和输出的文件。
 - SVG 只校验实际复制的 SVG。
-- 浏览器预览只验证最终页面一次。
+- create 的浏览器预览只验证最终页面一次；refine 先验证受影响区域，再做一次页面级检查。
 - `shell.html`、`widget.html` 不参与生成阶段校验。
 - `change-log` 必须记录 outputMode、复制的 runtime 和被裁剪的维护文件类别。

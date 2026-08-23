@@ -13,7 +13,7 @@
 | 整体页面 | 单一居中缩放：`.screen-root` 使用 `position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(var(--screen-scale)); transform-origin: center center;` |
 | 全屏背景 | `object-fit: cover`，不破坏主体 |
 | 布局规则 | 先读 `layout/catalog.json` 与 `rule.json`，按指标优先级分配槽位，不读取旧 HTML 占位 |
-| 顶部导航 | `kit/TopNav` 纯背景 PNG + `overlay.css` DOM 文本/时间/天气覆盖，主标题默认视觉加粗 |
+| 顶部导航 | `kit/TopNav` 纯背景 PNG + `overlay.css` DOM 主标题、实时时间和日期覆盖；其他内容需用户明确要求且 meta 支持 |
 | 面板外壳 | `kit/Shell` 代码外壳，引用 HTML/CSS 并把内容注入 slot |
 | 图表模块 | 本地 ECharts 5.6.1 + chart presets，`chart.resize()` 响应容器变化 |
 | KPI 卡片 | DOM 自适应 |
@@ -39,9 +39,8 @@ body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
 ## 顶部主标题
 
 - 主标题必须用 DOM 文本覆盖在 TopNav 纯背景上，不写进 `nav.png`。
-- 默认引用 `kit/TopNav/overlay.css` 的 `.ds-top-nav__title`。
-- 视觉按加粗标题处理：`font-weight: 900`、`letter-spacing: 0`、轻描边、渐变填充、发光投影。
-- 1920 导航默认标题字号为 38px，3840 导航按比例使用 76px；生成时可读取 `meta.json.titleOverlay` 写入 CSS 变量。
+- 引用 `kit/TopNav/overlay.css` 的 `.ds-top-nav__title`。
+- 字体、字号、位置、字重、颜色、描边和阴影以选中 `meta.json.titleOverlay` 为唯一来源，不使用固定的 38/44/48/76px 或统一加粗规则覆盖组件。
 - TopNav 高度不能写死。按 `layout/common/nav-height-rules.md` 读取 `layoutMetrics.reservedHeight > max(variants[].size.h, size.h, export.outputSize.h) > fallback 100`。
 
 ## 槽位适配

@@ -13,9 +13,10 @@
 
 ```json
 {
-  "screenMeta": { "title": "", "subtitle": "", "date": "", "weather": "" },
+  "screenMeta": { "title": "", "subtitle": "", "date": "", "time": "" },
   "layout": {
     "layout_type": "auto|center_scene_layout|map_command_layout|kpi_focus_layout|business_process_layout|balanced_metrics_layout|equipment_monitor_layout|content_portal_layout|ultra_wide_command_layout",
+    "layoutVariant": "",
     "topNavId": "",
     "topNavHeight": 0,
     "contentArea": { "x": 0, "y": 0, "w": 0, "h": 0 },
@@ -25,13 +26,15 @@
   },
   "theme": { "id": "galaxy-azure", "name": "星河灵蓝", "inferred": true },
   "kpiCards": [{ "id": "", "label": "", "value": 0, "unit": "", "trend": "", "direction": "up", "status": "normal", "source": "mock" }],
-  "charts": [{ "id": "", "title": "", "type": "line|area-line|bar|stacked-bar|horizontal-bar|pie|donut|rose|gauge|radar|heatmap|funnel|sankey|treemap|map", "xAxis": [], "series": [{ "name": "", "data": [] }] }],
-  "tables": [{ "id": "", "title": "", "columns": [{ "key": "name", "label": "名称" }], "rows": [] }],
-  "lists": [{ "id": "", "title": "", "type": "ranking-list|alert-list|task-list|event-list|status-list", "items": [] }],
+  "charts": [{ "id": "", "title": "", "type": "line|area-line|bar|stacked-bar|horizontal-bar|pie|donut|rose|gauge|radar|heatmap|funnel|sankey|treemap|map", "source": "mock", "xAxis": [], "series": [{ "name": "", "data": [] }] }],
+  "tables": [{ "id": "", "title": "", "source": "mock", "columns": [{ "key": "name", "label": "名称" }], "rows": [] }],
+  "lists": [{ "id": "", "title": "", "type": "ranking-list|alert-list|task-list|event-list|status-list", "source": "mock", "items": [] }],
   "map": { "type": "echarts-map|local-svg|abstract-css", "mapName": "", "geoJson": "local path only", "points": [] },
-  "bigNumbers": [{ "id": "", "label": "", "value": 0, "unit": "", "render": "dom-css" }]
+  "bigNumbers": [{ "id": "", "label": "", "value": 0, "unit": "", "source": "mock", "render": "dom-css" }]
 }
 ```
+
+`screenMeta.weather` 不作为默认字段生成。只有用户明确提供天气数据并要求展示，且所选 TopNav 有对应能力时才扩展。
 
 ## 状态枚举
 

@@ -4,6 +4,8 @@
 
 The repository root is the skill package. `SKILL.md` is the entrypoint, and the bundled `kit/`, `layout/`, `runtime/`, `themes/`, and `references/` folders are loaded on demand by compatible agents.
 
+中文用户可直接查看 [豆包、Kimi、WorkBuddy 与通用国产 Agent 安装说明](docs/install-cn-agents.md)。
+
 ## Install
 
 Replace `even011821/screen-skill` only if you fork this repository.
@@ -99,6 +101,56 @@ Manual paths:
 ~/.config/opencode/agents/screen-skill.md
 ```
 
+### Kimi Code
+
+Kimi Code supports directory-form Agent Skills. Install to its user-level Skills directory:
+
+macOS, Linux, or WSL:
+
+    curl -fsSL https://raw.githubusercontent.com/even011821/screen-skill/main/install.sh | bash -s -- kimi
+
+Windows PowerShell:
+
+    $script="$env:TEMP\install-screen-skill.ps1"
+    irm https://raw.githubusercontent.com/even011821/screen-skill/main/install.ps1 -OutFile $script
+    powershell -NoProfile -ExecutionPolicy Bypass -File $script -Agent kimi
+
+Default path:
+
+    ~/.kimi-code/skills/screen-skill
+
+Restart the Kimi Code session, then invoke /skill:screen-skill or describe a data-screen task normally.
+
+### WorkBuddy
+
+The recommended method is WorkBuddy's local Skill package upload: clone or download this complete repository, then upload the screen-skill folder or ZIP from **Experts · Skills · Connectors → Add Skill → Upload Skill**.
+
+Optional direct local-directory install:
+
+    curl -fsSL https://raw.githubusercontent.com/even011821/screen-skill/main/install.sh | bash -s -- workbuddy
+
+Windows PowerShell:
+
+    $script="$env:TEMP\install-screen-skill.ps1"
+    irm https://raw.githubusercontent.com/even011821/screen-skill/main/install.ps1 -OutFile $script
+    powershell -NoProfile -ExecutionPolicy Bypass -File $script -Agent workbuddy
+
+If the current WorkBuddy build does not discover the local directory, use the upload workflow above.
+
+### Doubao-powered and other domestic Agents
+
+Doubao is a model/service family rather than one fixed local Skill host. For Volcengine AgentKit or another Agent using a Doubao model, install the complete repository into a directory the host can read, then configure the host to load SKILL.md or adapters/generic/AGENTS.md.
+
+Generic shared directory:
+
+    curl -fsSL https://raw.githubusercontent.com/even011821/screen-skill/main/install.sh | bash -s -- generic
+
+Custom directory:
+
+    curl -fsSL https://raw.githubusercontent.com/even011821/screen-skill/main/install.sh | bash -s -- generic /absolute/path/to/screen-skill
+
+Do not copy only SKILL.md: generation also needs layout/, kit/, themes/, runtime/, references/, and scripts/.
+
 ### Install Everywhere
 
 macOS, Linux, or WSL:
@@ -124,7 +176,7 @@ Run the same install command again. If the target directory is already a git rep
 Download a release archive:
 
 ```text
-https://github.com/even011821/screen-skill/archive/refs/tags/v0.1.1.zip
+https://github.com/even011821/screen-skill/archive/refs/heads/main.zip
 ```
 
 Then unzip it into the target agent skill directory and make sure the final path contains:
@@ -135,9 +187,15 @@ screen-skill/SKILL.md
 
 ## Usage
 
-Codex, Claude Code, and Hermes can load the skill from its installed `SKILL.md` directory. In Hermes, installed skills are also available as slash commands in new sessions.
+Codex, Claude Code, Hermes, Kimi Code, and compatible domestic Agents can load the skill from its installed `SKILL.md` directory. In Hermes and Kimi Code, installed skills are also available as slash commands in new sessions.
 
 For OpenCode, invoke the wrapper agent with `@screen-skill`.
+
+For prompt-only or custom Agent hosts, use this bootstrap instruction:
+
+    Treat <skill-directory> as skillRoot. Read SKILL.md completely, choose the correct mode,
+    then read only the files routed by that entrypoint. If browser or screenshot capability
+    is unavailable, complete static validation and report the missing higher validation levels.
 
 ## Package Contents
 
@@ -150,6 +208,8 @@ references/
 runtime/
 themes/
 adapters/
+docs/
+scripts/
 install.sh
 install.ps1
 ```

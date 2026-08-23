@@ -36,7 +36,7 @@
 ```text
 1. 先根据用户显式要求、主题、可用状态和目标槽位尺寸确定页面级 cardShellStyleLock。
 2. 如果用户显式指定 Shell/CardShell/StyleXX，则 cardShellStyleLock = 指定 Style。
-3. 如果用户未指定，则先按 theme/status/size/adaptation/contentSlot 过滤和排序，再从前 2-4 个适配候选中稳定随机选择一个作为 cardShellStyleLock。
+3. 如果用户未指定，则先按 theme/status/size/adaptation/contentSlot 过滤和评分。默认选最高分；最高分相同时按候选 id 排序并使用 `scripts/resolve-plan.mjs` 的 FNV-1a 规则确定一个 cardShellStyleLock。
 4. 后续所有 KPI、图表、列表、任务、告警、明细等普通业务模块必须复用 cardShellStyleLock。
 5. PanelShell 不参与 CardShell 锁定；它只用于中心主视觉或无标题背景。
 6. 只有用户明确要求某个模块使用不同 CardShell，才允许例外，并必须写入 change-log。
@@ -79,29 +79,29 @@ code.css
 ## 禁止项
 
 - 不允许把 Shell 外壳重新切成整图背景。
-- 不允许读取 `shell.html` 当业务模板；`shell.html` 只用于人工预览。
+- CardShell 不允许读取 `shell.html` 当业务模板；CardShell 的 `shell.html` 只用于人工预览。PanelShell 如在 meta 的 `code.html` 中明确指向 `shell.html`，则按 meta 使用。
 - 不允许忽略 `contentSlot` 直接铺满卡片。
 - 不允许同一页面同时混用多个 CardShell 风格，例如 `Style01` 和 `Style09` 同屏出现。
 
-## Cross Project Style Diversity
+## 跨项目样式选择
 
-同一页面内普通业务模块仍必须使用同一个 `cardShellStyleLock`，但不同项目之间不得总是命中同一个 CardShell。
+同一页面内普通业务模块必须使用同一个 `cardShellStyleLock`。跨项目差异不能牺牲可复现性。
 
 候选选择流程：
 
 ```text
-theme/status/size/adaptation filter -> rank by slot fit -> stable random from top 2-4 -> lock page cardShellStyleLock
+theme/status/size/adaptation filter -> score by slot fit -> highest score -> deterministic tie-break -> lock cardShellStyleLock
 ```
 
 - 如果用户显式指定 `Shell/CardShell/StyleXX`，直接使用指定样式。
 - 如果没有显式指定，先按 `theme`、`status:"ready"`、`assetType:"code"`、槽位尺寸和 `contentSlot` 适配过滤。
-- 多个候选适配度接近时，不要选 catalog 第一个；使用 `hash(projectTitle + layout_type + layoutVariant + theme + resolution)` 做稳定随机。
+- 多个候选最高分相同时，按 id 排序并使用 `FNV-1a(projectTitle + layout_type + layoutVariant + theme + resolution + variationSeed)` 计算索引。
 - 页面内锁定后，后续 KPI、图表、列表、状态、任务和明细等普通业务模块继续复用该 CardShell。
 - `PanelShell` 也应按同样方式在候选中选择，但不参与 `cardShellStyleLock`。
-- TopNav 和 background 也应用同主题候选轮换；除非用户指定，不得连续项目总是使用同一个 `Style09` 或同一个背景图。
+- TopNav、PanelShell 和 background 使用相同平局规则。相同 brief 必须复现；需要主动变化时才设置新的 `variationSeed`。
 
 `change-log` 必须记录：
 
 - 候选过滤条件。
 - 选中的 CardShell、PanelShell、TopNav、background。
-- 如果使用稳定随机，记录 seed 字段来源，不需要记录 hash 具体值。
+- 如果发生平局选择，记录 seed 字段来源和 `variationSeed`，不需要记录 hash 具体值。

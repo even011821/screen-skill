@@ -1,109 +1,95 @@
 # 积木选择规则
 
-## 核心流程
+本文件仅用于 `create` 或用户明确要求更换布局、主题、导航、外壳和组件的 `refine`。普通局部修改不重新执行候选选择。
 
-```
-读 layout/catalog.json → 读 layout/common/* → 读 layout/{layout_type}/rule.json → 读 themes/catalog.json → 读 kit/catalog.json → 读分支 catalog.json → 读候选 meta.json → 按 layout/theme/resolution/status 过滤 → 有则用，无则 CSS 降级
-```
-
-## 全局入口
-
-1. 先读 `layout/catalog.json`，判断 `layout_type`。
-2. 读取 `layout/common/slot-schema.json`、`nav-height-rules.md`、`shell-binding-rules.md`、`density-rules.md`。
-3. 读取 `layout/{layout_type}/rule.json` 和 `guide.md`。
-4. 再读 `themes/catalog.json`，确认主题 id、别名和主题 CSS 文件；行业只用于 mock 数据、指标命名、业务分组和文案生成，不参与 kit 选择。
-5. 再读 `kit/catalog.json`，确认当前可用视觉积木分支。
-6. TopNav 读 `kit/TopNav/catalog.json` 后再读具体 `meta.json`。
-7. TopNav 命中后同时读取 `kit/TopNav/overlay.css`，用 `meta.json.titleOverlay` 设置主标题覆盖层，并按 `nav-height-rules.md` 计算真实内容区；`SecondNavItem` 不能单独替代主 TopNav。
-8. Shell 读 `kit/Shell/CardShell/catalog.json`、`kit/Shell/PanelShell/catalog.json` 后再读具体 `meta.json`。
-9. 只有 KPI 指标卡读取 `kit/widget/kpi-card`；图表读取 runtime ECharts，表格/列表读取 DOM renderer，background 保持原路径读取。
-10. widget 必须使用 skill 中已沉淀的本地 HTML/CSS/图片资产，生成阶段不访问外部设计文件。图表、表格、列表不得作为 Figma widget 读取。
-
-## Layout 选择
-
-1. `center_scene_layout`：园区、工厂、楼宇、建筑、3D、数字孪生、场景。
-2. `map_command_layout`：地图、区域、点位、热力、轨迹、态势。
-3. `kpi_focus_layout`：总额、总数、完成率、目标达成、核心指标。
-4. `business_process_layout`：订单、工单、审批、流程、任务、表格、状态流转。
-5. `balanced_metrics_layout`：无强主视觉但有多业务主题。
-6. `equipment_monitor_layout`：设备、产线、厂站、运行状态、温度、压力、故障、维护。
-7. `content_portal_layout`：资讯、视频、党建、文旅、展厅、宣传、品牌。
-8. `ultra_wide_command_layout`：超宽、大屏墙、32:9、多系统综合指挥。
-
-槽位只表示位置意图和优先级。先分析指标，主指标或主对象进入 `PrimarySlot`，其他指标按优先级和业务关系分布到左右、上下、底部、页签或下钻区域。
-
-## 行业使用边界
-
-行业场景只用于 mock 数据、指标命名、业务分组和文案生成。
-
-kit 组件选择不得依赖行业：
-
-- TopNav 按 `resolution`、`titlePosition`、`theme`、`status` 选择。
-- Shell/CardShell 按 `theme`、`status`、尺寸和 `compatible` 选择。
-- kpi-card 按 `dataShape`、槽位尺寸、变体、视觉权重和主题兼容选择。
-- background 按 `theme` 选择。
-
-## Shell 选择
-
-1. 用户显式指定 Shell，例如 `Shell/CardShell/Style09`，优先服从指定样式，再用主题 tokens 控制可变色值。
-2. `PanelShell` 一般只用于 `PrimarySlot` 中心主视觉区域背景，或不含主标题的背景框、组合底板、中心视觉承载框。
-3. 其他带标题、承载业务指标、图表、列表、状态、任务、明细的模块默认 `CardShell`。
-4. 只选 `assetType:"code"`、`status:"ready"`，并排除 `adaptation.usesFullNodeScreenshot:true` 的整图拉伸实现；允许局部 SVG、局部 PNG/JPG 素材。
-5. Shell/CardShell 按 `theme` 过滤；无精确匹配时选同主题通用 Shell。第一次命中的业务 CardShell 锁定为页面级 `cardShellStyleLock`，后续普通业务模块复用同一风格；不要依赖 `industry` 或 `tone`。
-6. CardShell 必须读取 `adaptation.contentSlot`，业务内容不能直接贴满外壳。
-7. 仍无匹配时使用 CSS 降级，并记录到 `change-log`。
-
-## 组件选择
-
-| 区域功能 | 渲染方式 | 规则 | 降级 |
-|---|---|---|---|
-| KPI 指标卡 | `kit/widget/kpi-card` | 从本地 skill 合并 kpi-card.css，注入 style01~style35.html | CSS `.kpi-card` |
-| 折线/面积/柱状/饼图 | ECharts | 使用 `runtime/echarts.min.js` + `chart-presets.js` | ECharts 不可用时 SVG/CSS fallback |
-| 仪表盘/雷达/热力/漏斗/桑基/树图 | ECharts | 使用对应 preset，数据来自 JSON | SVG/CSS fallback |
-| 地图 | ECharts map 或本地 SVG | 必须有本地 geoJSON/SVG；不得调用外部地图或 Figma | 抽象 SVG/CSS 态势 |
-| 表格 | DOM renderer | 使用 `runtime/table-renderers.js` + `runtime/table-list.css`，生成时复制为 `styles/tables.css` | CSS table |
-| 排名/告警/任务/事件列表 | DOM renderer | 使用 `runtime/table-renderers.js` + `runtime/table-list.css` | CSS list |
-| 大字报/状态条/标签 | DOM/CSS | 直接生成可编辑 DOM | CSS fallback |
-
-`kit/widget` 只保留 `kpi-card`。不得再读取 `kit/widget/chart-line`、`chart-bar`、`chart-pie`、`ranking-list`、`alert-list`、`big-number`、`map-area`。
-
-## 降级顺序
-
-1. KPI 查 `kit/widget/kpi-card`。
-2. 图表查 runtime ECharts preset。
-3. 表格/列表查 DOM renderer。
-4. 主题匹配但 `status:pending` 时用 CSS 降级。
-5. 完全不匹配时用 CSS/SVG 降级。
-6. 记录到 `change-log`，说明未命中的 theme、component。
-## Map Resource Selection
-
-1. When the request contains national map, China map, regional distribution, province statistics, point distribution, map command, heat map, migration lines, or situation map signals, read `kit/map/catalog.json`.
-2. Select map data by `scope`, `renderer`, and `status`. For China maps, use `kit/map/china/1.6.3/meta.json`.
-3. ECharts map rendering must use local GeoJSON: copy `kit/map/china/1.6.3/china.geo.json` to the generated screen `assets/map/china.geo.json`, then fetch it locally and call `echarts.registerMap("china", geoJson)`.
-4. Keep `china.topo.json` only as source data for maintenance. Do not register TopoJSON directly unless a local converter is included in the generated page.
-5. Do not fetch remote map data during generation or runtime. Remote source URLs belong only in `references/map-source-map.json`.
-6. If local map data is missing, use an abstract SVG/CSS situation map fallback and record the fallback in `change-log`.
-
-## Variant And Candidate Selection
-
-生成时必须把布局和视觉积木拆成两级选择。
+## 轻量读取顺序
 
 ```text
-layout_type -> layoutVariant -> kit candidate
+ScreenBrief
+-> layout/catalog.json
+-> selected layout rule + variants/catalog.json
+-> themes/catalog.json
+-> kit/catalog.json
+-> needed branch catalog
+-> selected meta/code/css only
 ```
 
-- 选中 `layout_type` 后，继续读取 `layout/{layout_type}/variants/catalog.json`。
-- `layoutVariant` 决定空间结构，禁止直接套旧的三列固定坐标。
-- TopNav、PanelShell、CardShell、background 在主题匹配后，如果有多个 ready 候选，使用稳定随机从前 2-4 个候选中选择。
-- 稳定随机 seed 使用 `projectTitle + layout_type + layoutVariant + theme + resolution`。
-- 页面内 CardShell 必须统一；跨项目允许不同。
-- `change-log` 必须记录 `layoutVariant` 和 kit 候选选择原因。
+PNG、SVG、字体、GeoJSON 和 `runtime/echarts.min.js` 是 copy-only assets，不读取内容。禁止读取 `layout/common/*`；根据 SKILL.md 的条件表打开具体规则。
 
-## Output Pruning
+有 Node.js 时优先使用：
 
-生成输出时读取 `references/output-optimization-rules.md`。
+```bash
+node scripts/resolve-plan.mjs --brief <brief.json> --output <screen/build-manifest.json>
+```
 
-- 只复制实际使用的 runtime、assets、CSS 和数据。
-- 不复制 `shell.html`、`widget.html`、`meta.json`、未命中的 Style 目录和未使用 assets。
-- 地图只复制一种本地数据文件；中国地图优先 `china.geo.json`，不要同时复制 `china.js` 和 `china.geo.json`。
-- 先读 catalog summary，命中后再读具体 meta/code/assets，避免全量读取所有组件。
+## Layout
+
+1. 用户明确指定且与画布兼容时直接使用。
+2. 未指定时 data-first：先整理用户内容；缺失时规划 8–12 个混合模块。
+3. 地图、场景、设备、流程、核心 KPI、内容门户和超宽画布属于强信号。
+4. `balanced_metrics_layout` 仅在没有强信号时兜底。
+5. `ultra_wide_command_layout` 只允许用于明确的 3840x1080/32:9 画布。
+6. 选中 layout 后必须选择其 variant，再根据 TopNav 真实高度、contentArea 和 variant 比例计算坐标。
+7. Slot 只描述位置和优先级，不固定卡片类型或数量。
+
+## Theme
+
+选择优先级：
+
+```text
+用户明确主题 id/中文名/别名
+> 用户指定配色或视觉调性
+> themes/catalog.json 场景匹配
+> defaultTheme
+```
+
+行业只用于主题推荐、数据模拟和文案；不得直接决定具体 TopNav、Shell、KPI 或 background。
+
+## TopNav
+
+1. 读 `kit/TopNav/catalog.json`，按用户指定、resolution、titlePosition、theme、status 排序。
+2. 只读最终候选 `meta.json` 和 `overlay.css`。
+3. `SecondNavItem` 不能单独替代主 TopNav。
+4. 高度按 `layoutMetrics.reservedHeight > max(variants/size/export height) > 100` 计算。
+5. 主标题的字体、字号、位置、字重、颜色和阴影全部以选中 meta 的 `titleOverlay` 为准。
+6. 默认 DOM 只生成主标题、实时时间和日期。副标题或其他标签必须由用户明确要求，且 meta 提供相应能力。
+
+## Shell
+
+1. 用户明确指定的 Shell 优先。
+2. 只选 `assetType:"code"`、`status:"ready"`，排除整组件截图拉伸实现。
+3. 普通带标题业务模块使用 CardShell；中心主视觉或无标题背景框可使用 PanelShell。
+4. 首次选择普通 CardShell 后写入 `cardShellStyleLock`，同屏复用同一风格。
+5. 内容必须注入 meta 声明的 `contentSlot`。
+6. 只读取最终候选的 meta、component HTML、CSS 和被引用的局部 assets。
+
+## KPI 与运行时组件
+
+| 数据表达 | 实现 |
+|---|---|
+| 当前值、汇总值、状态值、核心结果 | `kit/widget/kpi-card` |
+| 趋势、构成、排行、分布、关系 | 本地 ECharts presets |
+| 表格、告警、任务、事件、状态列表 | 本地 DOM renderer |
+| 地图 | 本地 GeoJSON/SVG + ECharts，或抽象 SVG/CSS 降级 |
+| 简单数字、标签、状态条 | 可编辑 DOM/CSS |
+
+KPI 按 catalog summary 初筛，再读取最终 Style 的 meta/component/base/style。当前 Ready 样式数量以 `kit/widget/kpi-card/catalog.json > styles` 为准，不使用写死的 Style 上限。
+
+## 候选平局
+
+默认选择最高得分。只有最高分相同才执行：
+
+```text
+sort candidates by id
+index = FNV-1a(projectTitle + layout + variant + theme + resolution + variationSeed) % count
+```
+
+相同 brief 必须返回相同结果。只有需要主动变化时才设置新的 `variationSeed`。
+
+## 降级
+
+仅在 catalog/meta 不存在、状态不可用或尺寸不兼容时降级：
+
+1. 先确认没有 Ready 候选。
+2. 使用 CSS/SVG/DOM 降级，不编造路径。
+3. 在 manifest 和 change log 记录未命中的条件及降级实现。

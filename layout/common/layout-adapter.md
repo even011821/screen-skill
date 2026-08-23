@@ -4,7 +4,7 @@
 
 ```text
 1. 读取用户需求，判断是否显式指定 layout_type。
-2. 整理数据结构：使用用户指标；若缺失则先 mock 8-12 个混合业务模块；若过多则先分组。
+2. 整理数据结构：用户通常提供 6–15 项内容；若缺失则先 mock 8–12 个混合业务模块；超过 15 项则先分组。
 3. 分析主业务对象、主指标、辅助指标、低优先级内容、指标密度和业务关系。
 4. 从 layout/catalog.json 选择 layout_type；auto 模式下必须 data-first，不能直接落到网格。
 5. 读取 layout/{layout_type}/rule.json。
@@ -50,7 +50,7 @@ layout/catalog.json -> layout/{layout_type}/rule.json -> layout/{layout_type}/va
 - `layout_type` 决定信息架构类别，`layoutVariant` 决定空间组织方式。
 - `layoutVariant` 不是 HTML 模板，不固定卡片数量，只给 PrimarySlot、辅助区域和扩展区的比例与组织方式。
 - 生成器必须在 `change-log` 中记录命中的 `layoutVariant`、选择原因和主要槽位业务主题。
-- 多个 variant 都适合时，从排名前 2-4 个候选中使用稳定随机选择：`hash(projectTitle + layout_type + theme + resolution)`。
+- 多个 variant 最高分相同时，按 id 排序并使用 `scripts/resolve-plan.mjs` 的 FNV-1a 平局规则；相同 brief 必须复现。
 - 禁止所有 1920 页面默认复用左 420px、中 1000px、右 420px 的三列坐标。
 - `map_command_layout` 和 `center_scene_layout` 即使都包含中心主视觉，也必须根据点位复杂度、指标密度和主视觉权重选择不同 variant。
 - 所有 variant 生成的实际模块坐标必须遵守 layout `canvas.gap`；相邻 `.module/.screen-card` 不得共边或重叠。

@@ -1,6 +1,7 @@
 param(
-  [ValidateSet("codex", "claude", "claude-code", "hermes", "hermes-agent", "opencode", "open-code", "all")]
-  [string]$Agent = "codex"
+  [ValidateSet("codex", "claude", "claude-code", "hermes", "hermes-agent", "opencode", "open-code", "kimi", "kimi-code", "workbuddy", "work-buddy", "generic", "agents", "portable", "all")]
+  [string]$Agent = "codex",
+  [string]$Destination = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -44,16 +45,46 @@ function Install-OpenCode {
   Write-Host "Installed OpenCode wrapper: $agentFile"
 }
 
+function Install-Kimi {
+  $kimiHome = if ($env:KIMI_CODE_HOME) { $env:KIMI_CODE_HOME } else { Join-Path $HOME ".kimi-code" }
+  Clone-OrUpdate (Join-Path $kimiHome "skills\screen-skill")
+}
+
+function Install-WorkBuddy {
+  $skillDir = Join-Path $HOME ".workbuddy\skills\screen-skill"
+  Clone-OrUpdate $skillDir
+  Write-Host "If WorkBuddy does not discover the folder automatically, upload this folder from its Skills UI."
+}
+
+function Install-Generic {
+  $dest = $Destination
+  if (-not $dest) {
+    $dest = $env:SCREEN_SKILL_DEST
+  }
+  if (-not $dest) {
+    $dest = Join-Path $HOME ".agents\skills\screen-skill"
+  }
+  Clone-OrUpdate $dest
+  Write-Host "Generic install ready: $dest"
+  Write-Host "Configure the host Agent to load $dest\SKILL.md or $dest\adapters\generic\AGENTS.md."
+}
+
 switch ($Agent) {
   "codex" { Install-Codex }
   { $_ -in @("claude", "claude-code") } { Install-Claude }
   { $_ -in @("hermes", "hermes-agent") } { Install-Hermes }
   { $_ -in @("opencode", "open-code") } { Install-OpenCode }
+  { $_ -in @("kimi", "kimi-code") } { Install-Kimi }
+  { $_ -in @("workbuddy", "work-buddy") } { Install-WorkBuddy }
+  { $_ -in @("generic", "agents", "portable") } { Install-Generic }
   "all" {
     Install-Codex
     Install-Claude
     Install-Hermes
     Install-OpenCode
+    Install-Kimi
+    Install-WorkBuddy
+    Install-Generic
   }
 }
 
