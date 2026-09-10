@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>清透青色标准型</title>
+  <style>/* Frost Cyan / 冰境青
+   Figma Theme node: 560:3250
+   Primary: #2FEADF, Secondary: #1596AB */
+:root,
+[data-theme="frost-cyan"] {
+  --theme-primary: #2feadf;
+  --theme-secondary: #1596ab;
+  --bg-0: #021116;
+  --bg-1: #062431;
+  --panel-bg: rgba(3, 28, 38, 0.38);
+  --panel-fill: rgba(47, 234, 223, 0.05);
+  --panel-line: rgba(47, 234, 223, 0.3);
+  --panel-line-strong: #2feadf;
+  --panel-glow: #0a7e92;
+  --shell-panel-bg: rgba(5, 21, 31, 0.56);
+  --shell-panel-line: #2feadf;
+  --shell-panel-line-2: #1596ab;
+  --line: rgba(47, 234, 223, 0.64);
+  --line-soft: rgba(47, 234, 223, 0.2);
+  --accent: #2feadf;
+  --accent-2: #1596ab;
+  --accent-gold: #ffc65c;
+  --chart-1: #2feadf;
+  --chart-2: #1596ab;
+  --chart-3: #7ff7f0;
+  --chart-4: #7db8ff;
+  --chart-5: #ffc65c;
+  --chart-6: #48efb0;
+  --text: #f0feff;
+  --muted: rgba(198, 244, 246, 0.72);
+  --dim: rgba(198, 244, 246, 0.44);
+  --danger: #ff647c;
+  --ok: #48efb0;
+  --warning: #ffc65c;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(235, 255, 255, 0.76);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(8, 63, 80, 0.72), 0 0 8px rgba(47, 234, 223, 0.54), 0 0 18px rgba(21, 150, 171, 0.5);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(210, 248, 250, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}
+</style>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#030817;color:#edf8ff;font-family:"Microsoft YaHei",Arial,sans-serif}body{padding:34px;background:radial-gradient(circle at 50% -10%,color-mix(in srgb,var(--theme-primary) 20%,transparent),transparent 42%),linear-gradient(180deg,var(--bg-1,#07162d),var(--bg-0,#020817))}.page-title{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid color-mix(in srgb,var(--theme-primary) 45%,transparent)}h1{margin:0;font-size:31px;letter-spacing:2px}.page-title p{margin:0;color:var(--muted,#9eb6c8);font-size:15px}.section{margin-top:24px}.section h2{margin:0 0 12px;font-size:20px;color:var(--text,#fff)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid--two{grid-template-columns:repeat(2,minmax(0,1fr))}.component-card,.nav-card,.background-card{border:1px solid color-mix(in srgb,var(--theme-primary) 34%,transparent);background:rgba(2,9,22,.62);overflow:hidden;border-radius:4px}.component-stage{height:220px;padding:12px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(255,255,255,.025),rgba(0,0,0,.08))}.component-stage--card>*{width:100%;height:100%}.component-stage--panel>*{width:100%;height:100%}.component-stage--kpi{height:150px}.component-stage--kpi>*{max-width:95%;max-height:130px}.component-stage .bs-card-shell__content,.component-stage .bs-panel-shell__content{position:relative}.component-stage .bs-card-shell__content:empty::after,.component-stage .bs-panel-shell__content:empty::after{content:"示例内容区  ·  趋势 / 列表 / 状态";position:absolute;inset:12px;display:grid;place-items:center;color:var(--muted,#9eb6c8);font-size:14px;border:1px dashed color-mix(in srgb,var(--theme-primary) 28%,transparent);background:linear-gradient(180deg,transparent,rgba(255,255,255,.025))}.nav-stage{height:100px;display:grid;place-items:center;background:#020817}.nav-stage img{display:block;width:100%;height:auto;max-height:100%;object-fit:fill}.background-card>img{display:block;width:100%;height:190px;object-fit:cover}.component-label{min-height:52px;padding:9px 11px;display:flex;gap:8px;flex-direction:column;border-top:1px solid rgba(255,255,255,.07)}.component-label strong{font-size:12px;word-break:break-all}.component-label span{font-size:12px;color:var(--muted,#9eb6c8)}.note{padding:12px 14px;border-left:3px solid var(--theme-primary);background:rgba(255,255,255,.035);color:var(--muted,#9eb6c8);font-size:14px}.footer{margin-top:24px;text-align:right;color:var(--dim,#72869a);font-size:12px}
+  </style>
+</head>
+<body data-theme="frost-cyan">
+  <header class="page-title"><div><h1>清透青色标准型</h1><p>cyan-clean-standard</p></div><p>真实本地组件 · 主题兼容候选</p></header>
+
+    <div class="note">主题：冰境青 / frost-cyan　密度：standard　当前状态：已批准候选</div>
+    <section class="section"><h2>01 · TopNav 候选</h2><div class="grid">
+    <article class="nav-card">
+      <div class="nav-stage"><img src="../../kit/TopNav/CenterTitle/1920/Style05/nav.png" alt="topnav-centertitle-1920-style05"></div>
+      <div class="component-label"><strong>topnav-centertitle-1920-style05</strong><span>1921×78</span></div>
+    </article>
+    <article class="nav-card">
+      <div class="nav-stage"><img src="../../kit/TopNav/CenterTitle/1920/Style06/nav.png" alt="topnav-centertitle-1920-style06"></div>
+      <div class="component-label"><strong>topnav-centertitle-1920-style06</strong><span>1921×78</span></div>
+    </article>
+    <article class="nav-card">
+      <div class="nav-stage"><img src="../../kit/TopNav/CenterTitle/1920/Style11/nav.png" alt="topnav-centertitle-1920-style11"></div>
+      <div class="component-label"><strong>topnav-centertitle-1920-style11</strong><span>1920×96</span></div>
+    </article>
+    <article class="nav-card">
+      <div class="nav-stage"><img src="../../kit/TopNav/LeftTitle/1920/Style02/nav.png" alt="topnav-lefttitle-1920-style02"></div>
+      <div class="component-label"><strong>topnav-lefttitle-1920-style02</strong><span>1920×98</span></div>
+    </article></div></section>
+    <section class="section"><h2>02 · CardShell 候选</h2><div class="grid">
+    <article class="component-card">
+      <div class="component-stage component-stage--card">
+        <style>.bs-card-shell--style05 {
+  --style05-accent: #15f6ee;
+  --style05-accent-2: #02adf9;
+  --style05-title: #15f6ee;
+  --style05-muted: #bdd7ff;
+  --style05-bg: rgba(15, 15, 40, 0.5);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 2000px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style05-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style05,
+.bs-card-shell--style05 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style05 .bs-card-shell__background,
+.bs-card-shell--style05 .bs-card-shell__fill,
+.bs-card-shell--style05 .bs-card-shell__top,
+.bs-card-shell--style05 .bs-card-shell__top-line,
+.bs-card-shell--style05 .bs-card-shell__top-dot,
+.bs-card-shell--style05 .bs-card-shell__top-right,
+.bs-card-shell--style05 .bs-card-shell__left-edge,
+.bs-card-shell--style05 .bs-card-shell__right-edge,
+.bs-card-shell--style05 .bs-card-shell__bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-left,
+.bs-card-shell--style05 .bs-card-shell__bottom-right,
+.bs-card-shell--style05 .bs-card-shell__left-top,
+.bs-card-shell--style05 .bs-card-shell__right-bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-line,
+.bs-card-shell--style05 .bs-card-shell__header-lines,
+.bs-card-shell--style05 .bs-card-shell__header-line {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style05 .bs-card-shell__background {
+  inset: 0;
+  z-index: 0;
+}
+
+.bs-card-shell--style05 .bs-card-shell__top,
+.bs-card-shell--style05 .bs-card-shell__top-right,
+.bs-card-shell--style05 .bs-card-shell__bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-left,
+.bs-card-shell--style05 .bs-card-shell__bottom-right,
+.bs-card-shell--style05 .bs-card-shell__left-top,
+.bs-card-shell--style05 .bs-card-shell__right-bottom,
+.bs-card-shell--style05 .bs-card-shell__bottom-line,
+.bs-card-shell--style05 .bs-card-shell__header-line {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style05 .bs-card-shell__fill {
+  left: 1px;
+  right: 1px;
+  top: 20px;
+  bottom: 10px;
+  background: var(--style05-bg);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 148px) 0,
+    calc(100% - 137px) 14.5px,
+    calc(100% - 14px) 14.5px,
+    100% 31.5px,
+    100% calc(100% - 17px),
+    calc(100% - 17.5px) 100%,
+    17.5px 100%,
+    0 calc(100% - 17px)
+  );
+}
+
+.bs-card-shell--style05 .bs-card-shell__top {
+  left: 1px;
+  top: 1px;
+  width: 250px;
+  height: 19px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/internal-top.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-line {
+  left: min(175px, calc(100% - 150px));
+  right: 148px;
+  top: 20px;
+  height: 1px;
+  background: var(--style05-accent-2);
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-dot {
+  left: min(174px, calc(100% - 151px));
+  top: 19px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #35aaff;
+  transform: translate(-1.5px, -1.5px);
+}
+
+.bs-card-shell--style05 .bs-card-shell__top-right {
+  right: 1px;
+  top: 20px;
+  width: 148px;
+  height: 38px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/top-right-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__left-edge {
+  left: 1px;
+  top: 21px;
+  bottom: 37px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--style05-accent-2), var(--style05-accent));
+}
+
+.bs-card-shell--style05 .bs-card-shell__right-edge {
+  right: 1px;
+  top: 56px;
+  bottom: 55px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--style05-accent-2), var(--style05-accent));
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom {
+  left: 19px;
+  right: 19px;
+  bottom: 0;
+  height: 10px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/internal-bottom.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-left {
+  left: 1px;
+  bottom: 10px;
+  width: 32px;
+  height: 28px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/bottom-left-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-right {
+  right: 1px;
+  bottom: 10px;
+  width: 148px;
+  height: 28px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/bottom-right-corner.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__left-top {
+  left: 1px;
+  top: 1px;
+  width: min(315px, 78.75%);
+  height: 128.5px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/internal-left-top.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__right-bottom {
+  right: 1px;
+  bottom: 10px;
+  width: 57px;
+  height: min(149px, calc(100% - 52px));
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/internal-right-bottom.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__bottom-line {
+  left: 89px;
+  right: 89px;
+  bottom: 9.5px;
+  height: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/internal-bottom-line.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__header {
+  position: absolute;
+  left: 16px;
+  top: 6px;
+  z-index: 2;
+  width: min(263px, calc(100% - 32px));
+  height: 32px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bs-card-shell--style05 .bs-card-shell__title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style05-title);
+  font-family: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-lines {
+  left: 0;
+  right: 0;
+  top: 29px;
+  height: 4px;
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-line--short {
+  left: 0;
+  top: 0;
+  width: 121px;
+  height: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/header-line-short.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__header-line--long {
+  left: 0;
+  right: 0;
+  top: 3px;
+  height: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style05/assets/header-line-long.svg");
+}
+
+.bs-card-shell--style05 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 52px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+</style>
+        <section class="bs-card-shell bs-card-shell--style05" data-kit="Shell/CardShell/Style05">
+  <div class="bs-card-shell__background" aria-hidden="true">
+    <span class="bs-card-shell__fill"></span>
+    <span class="bs-card-shell__top"></span>
+    <span class="bs-card-shell__top-line"></span>
+    <span class="bs-card-shell__top-dot"></span>
+    <span class="bs-card-shell__top-right"></span>
+    <span class="bs-card-shell__left-edge"></span>
+    <span class="bs-card-shell__right-edge"></span>
+    <span class="bs-card-shell__bottom"></span>
+    <span class="bs-card-shell__bottom-left"></span>
+    <span class="bs-card-shell__bottom-right"></span>
+    <span class="bs-card-shell__left-top"></span>
+    <span class="bs-card-shell__right-bottom"></span>
+    <span class="bs-card-shell__bottom-line"></span>
+  </div>
+  <header class="bs-card-shell__header" data-node-id="29:28159">
+    <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+    <span class="bs-card-shell__header-lines" aria-hidden="true">
+      <span class="bs-card-shell__header-line bs-card-shell__header-line--short"></span>
+      <span class="bs-card-shell__header-line bs-card-shell__header-line--long"></span>
+    </span>
+  </header>
+  <div class="bs-card-shell__content" data-slot="content"></div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-cardshell-style05</strong><span>内容起点 52px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--card">
+        <style>.bs-card-shell--style08 {
+  --style08-bg: rgba(24, 43, 43, 0.86);
+  --style08-accent: #41d3f3;
+  --style08-title: #ebffff;
+  --style08-shadow: #031819;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 2000px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style08-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style08,
+.bs-card-shell--style08 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style08 .bs-card-shell__background,
+.bs-card-shell--style08 .bs-card-shell__fill,
+.bs-card-shell--style08 .bs-card-shell__edge,
+.bs-card-shell--style08 .bs-card-shell__bottom-corner,
+.bs-card-shell--style08 .bs-card-shell__header span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style08 .bs-card-shell__background {
+  inset: 0 0 0.5px 0;
+  z-index: 0;
+}
+
+.bs-card-shell--style08 .bs-card-shell__fill {
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(65, 211, 243, 0.02) 0%, rgba(65, 211, 243, 0.14) 100%),
+    var(--style08-bg);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 17px), calc(100% - 17px) 100%, 17px 100%, 0 calc(100% - 17px));
+}
+
+.bs-card-shell--style08 .bs-card-shell__edge--left,
+.bs-card-shell--style08 .bs-card-shell__edge--right {
+  top: 0;
+  bottom: 17px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(65, 211, 243, 0.18), rgba(65, 211, 243, 0.9));
+}
+
+.bs-card-shell--style08 .bs-card-shell__edge--left {
+  left: 0;
+}
+
+.bs-card-shell--style08 .bs-card-shell__edge--right {
+  right: 0;
+}
+
+.bs-card-shell--style08 .bs-card-shell__edge--bottom {
+  left: 17px;
+  right: 17px;
+  bottom: 0;
+  height: 1px;
+  background: var(--style08-accent);
+}
+
+.bs-card-shell--style08 .bs-card-shell__bottom-corner {
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style08 .bs-card-shell__bottom-corner--left {
+  left: 0;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/bottom-left-corner.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__bottom-corner--right {
+  right: 0;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/bottom-right-corner.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  height: 36px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bs-card-shell--style08 .bs-card-shell__header span {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-left-bg {
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 36px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-left-bg.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-left-overlay {
+  left: 7px;
+  top: 6px;
+  width: 33px;
+  height: 28px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-left-overlay.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-body-shape {
+  left: 30px;
+  top: 0;
+  width: 373.5px;
+  height: 36px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-body-shape.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-glow {
+  left: 43px;
+  right: -48px;
+  top: 19px;
+  height: 17px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-glow.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-body-fill {
+  left: 30px;
+  top: 0;
+  width: 370px;
+  height: 36px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-body-fill.svg");
+}
+
+
+.bs-card-shell--style08 .bs-card-shell__header-path-main {
+  left: 48.5px;
+  top: 8px;
+  width: min(270px, calc(100% - 86px));
+  height: 24px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-path-main.svg");
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-icon-shape {
+  left: 50.5px;
+  top: 5px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-icon-shape.svg");
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-title-line {
+  left: 84.5px;
+  top: 29px;
+  width: 44px;
+  height: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-title-line.svg");
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-tail-line {
+  left: 220.5px;
+  right: 0;
+  top: 19px;
+  height: 6px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-tail-line.svg");
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-right-edge {
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 16.2px;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-right-edge.svg");
+  transform: rotate(90deg) scaleY(-1);
+}
+
+.bs-card-shell--style08 .bs-card-shell__header-stripes {
+  left: 170px;
+  top: 11px;
+  width: 78.77px;
+  height: 14.4px;
+  mix-blend-mode: overlay;
+  background-image: url("../../kit/Shell/CardShell/Style08/assets/header-stripes.svg");
+}
+
+.bs-card-shell--style08 .bs-card-shell__title {
+  position: absolute;
+  left: 78px;
+  top: 3px;
+  width: min(220px, calc(100% - 98px));
+  height: 28px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style08-title);
+  font-family: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1.6px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 2px 2px 5px var(--style08-shadow);
+}
+
+.bs-card-shell--style08 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 52px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+</style>
+        <section class="bs-card-shell bs-card-shell--style08" data-kit="Shell/CardShell/Style08">
+  <div class="bs-card-shell__background" aria-hidden="true">
+    <span class="bs-card-shell__fill"></span>
+    <span class="bs-card-shell__edge bs-card-shell__edge--left"></span>
+    <span class="bs-card-shell__edge bs-card-shell__edge--right"></span>
+    <span class="bs-card-shell__edge bs-card-shell__edge--bottom"></span>
+    <span class="bs-card-shell__bottom-corner bs-card-shell__bottom-corner--left"></span>
+    <span class="bs-card-shell__bottom-corner bs-card-shell__bottom-corner--right"></span>
+  </div>
+  <header class="bs-card-shell__header" data-node-id="51:24405">
+    <span class="bs-card-shell__header-left-bg" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-left-overlay" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-body-shape" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-glow" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-body-fill" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-path-main" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-icon-shape" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-title-line" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-tail-line" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-right-edge" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-stripes" aria-hidden="true"></span>
+    <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+  </header>
+  <div class="bs-card-shell__content" data-slot="content"></div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-cardshell-style08</strong><span>内容起点 52px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--card">
+        <style>.bs-card-shell--style10 {
+  --style10-bg: #030e21;
+  --style10-accent: #48e9ff;
+  --style10-accent-2: #29b6fb;
+  --style10-line: #4fe6dd;
+  --style10-title: #f4f8ff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+  min-height: 180px;
+  max-width: 2000px;
+  max-height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: var(--style10-title);
+  background: transparent;
+  isolation: isolate;
+}
+
+.bs-card-shell--style10,
+.bs-card-shell--style10 * {
+  box-sizing: border-box;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background,
+.bs-card-shell--style10 .bs-card-shell__main-fill,
+.bs-card-shell--style10 .bs-card-shell__frame,
+.bs-card-shell--style10 .bs-card-shell__frame-cap,
+.bs-card-shell--style10 .bs-card-shell__frame-center,
+.bs-card-shell--style10 .bs-card-shell__corner,
+.bs-card-shell--style10 .bs-card-shell__corner span,
+.bs-card-shell--style10 .bs-card-shell__header-highlight,
+.bs-card-shell--style10 .bs-card-shell__header-divider,
+.bs-card-shell--style10 .bs-card-shell__header-divider-left,
+.bs-card-shell--style10 .bs-card-shell__header-icon {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background {
+  inset: 0;
+  z-index: 0;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::before,
+.bs-card-shell--style10 .bs-card-shell__background::after {
+  content: "";
+  position: absolute;
+  top: 76px;
+  bottom: 76px;
+  z-index: 1;
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(72, 233, 255, 0.14), rgba(72, 233, 255, 0.72) 50%, rgba(72, 233, 255, 0.14));
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::before {
+  left: 4px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__background::after {
+  right: 4px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__main-fill {
+  left: 6px;
+  right: 6px;
+  top: 53px;
+  bottom: 53px;
+  background: var(--style10-bg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame {
+  left: 0;
+  right: 0;
+  height: 51px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--top {
+  top: 2px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom {
+  bottom: 2px;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap {
+  top: 0;
+  width: 65px;
+  height: 51px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap--left {
+  left: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style10/assets/frame-left.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-cap--right {
+  right: 1px;
+  background-image: url("../../kit/Shell/CardShell/Style10/assets/frame-right.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame-center {
+  left: 66px;
+  right: 66px;
+  height: 48px;
+  background: var(--style10-bg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--top .bs-card-shell__frame-center {
+  top: 3px;
+  border-top: 1px solid rgba(72, 233, 255, 0.74);
+  border-bottom: 1px solid rgba(72, 233, 255, 0.22);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-center {
+  top: 0;
+  border-top: 1px solid rgba(72, 233, 255, 0.16);
+  border-bottom: 1px solid rgba(72, 233, 255, 0.74);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-cap--left {
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__frame--bottom .bs-card-shell__frame-cap--right {
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner {
+  width: 88px;
+  height: 76px;
+  z-index: 2;
+  transform-origin: center;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--tl {
+  left: 0;
+  top: 0;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--tr {
+  right: 0;
+  top: 0;
+  transform: scaleX(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--bl {
+  left: 0;
+  bottom: 0;
+  transform: scaleY(-1);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner--br {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-outline {
+  left: 0.5px;
+  top: 0.5px;
+  width: 68.5px;
+  height: 64.5px;
+  background: url("../../kit/Shell/CardShell/Style10/assets/corner-outline.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-inner {
+  left: 9.75px;
+  top: 8px;
+  width: 45.25px;
+  height: 53.5px;
+  background: url("../../kit/Shell/CardShell/Style10/assets/corner-inner.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-top-tail {
+  left: 69px;
+  top: 0;
+  width: 19px;
+  height: 7px;
+  background: url("../../kit/Shell/CardShell/Style10/assets/corner-top-tail.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-left-tail {
+  left: 1px;
+  bottom: 0;
+  width: 6px;
+  height: 11px;
+  background: url("../../kit/Shell/CardShell/Style10/assets/corner-left-tail.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent {
+  left: 0.77px;
+  top: 50.3px;
+  width: 2.8px;
+  height: 14.4px;
+  opacity: 0.4;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::before,
+.bs-card-shell--style10 .bs-card-shell__corner-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2.8px;
+  height: 2.8px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::before {
+  top: 0;
+  background-image: url("../../kit/Shell/CardShell/Style10/assets/corner-triangle-a.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent::after {
+  bottom: 0;
+  background-image: url("../../kit/Shell/CardShell/Style10/assets/corner-triangle-b.svg");
+}
+
+.bs-card-shell--style10 .bs-card-shell__corner-accent {
+  background: linear-gradient(180deg, transparent 2.8px, var(--style10-line) 2.8px, var(--style10-line) 11.6px, transparent 11.6px);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header {
+  position: absolute;
+  left: 11px;
+  right: 10px;
+  top: 11px;
+  z-index: 3;
+  height: 34px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-highlight {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 38px;
+  opacity: 0.3;
+  background: linear-gradient(90deg, rgba(41, 182, 251, 0) 0%, rgba(41, 182, 251, 0.95) 21.7%, rgba(41, 182, 251, 0) 100%);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-divider {
+  left: 0;
+  right: 0;
+  top: 36.6px;
+  height: 1.6px;
+  opacity: 0.4;
+  background: url("../../kit/Shell/CardShell/Style10/assets/divider-right.png") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-divider-left {
+  left: 0;
+  top: 36.6px;
+  width: 70.4px;
+  height: 1.6px;
+  background: var(--style10-accent);
+}
+
+.bs-card-shell--style10 .bs-card-shell__header-icon {
+  left: 12px;
+  top: 8.1px;
+  width: 20.8px;
+  height: 20.8px;
+  background: url("../../kit/Shell/CardShell/Style10/assets/header-icon.svg") no-repeat 0 0 / 100% 100%;
+}
+
+.bs-card-shell--style10 .bs-card-shell__title {
+  position: absolute;
+  left: 40.8px;
+  right: 16px;
+  top: 2px;
+  margin: 0;
+  overflow: hidden;
+  color: var(--style10-title);
+  font-family: "Alibaba PuHuiTi 2.0", "Alibaba PuHuiTi", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 19.2px;
+  font-weight: 800;
+  line-height: 32px;
+  letter-spacing: 0.384px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bs-card-shell--style10 .bs-card-shell__content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 62px;
+  bottom: 16px;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+</style>
+        <section class="bs-card-shell bs-card-shell--style10" data-kit="Shell/CardShell/Style10">
+  <div class="bs-card-shell__background" aria-hidden="true">
+    <span class="bs-card-shell__main-fill"></span>
+    <span class="bs-card-shell__frame bs-card-shell__frame--top">
+      <span class="bs-card-shell__frame-cap bs-card-shell__frame-cap--left"></span>
+      <span class="bs-card-shell__frame-center"></span>
+      <span class="bs-card-shell__frame-cap bs-card-shell__frame-cap--right"></span>
+    </span>
+    <span class="bs-card-shell__frame bs-card-shell__frame--bottom">
+      <span class="bs-card-shell__frame-cap bs-card-shell__frame-cap--left"></span>
+      <span class="bs-card-shell__frame-center"></span>
+      <span class="bs-card-shell__frame-cap bs-card-shell__frame-cap--right"></span>
+    </span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--tl">
+      <span class="bs-card-shell__corner-outline"></span>
+      <span class="bs-card-shell__corner-inner"></span>
+      <span class="bs-card-shell__corner-top-tail"></span>
+      <span class="bs-card-shell__corner-left-tail"></span>
+      <span class="bs-card-shell__corner-accent"></span>
+    </span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--tr">
+      <span class="bs-card-shell__corner-outline"></span>
+      <span class="bs-card-shell__corner-inner"></span>
+      <span class="bs-card-shell__corner-top-tail"></span>
+      <span class="bs-card-shell__corner-left-tail"></span>
+      <span class="bs-card-shell__corner-accent"></span>
+    </span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--bl">
+      <span class="bs-card-shell__corner-outline"></span>
+      <span class="bs-card-shell__corner-inner"></span>
+      <span class="bs-card-shell__corner-top-tail"></span>
+      <span class="bs-card-shell__corner-left-tail"></span>
+      <span class="bs-card-shell__corner-accent"></span>
+    </span>
+    <span class="bs-card-shell__corner bs-card-shell__corner--br">
+      <span class="bs-card-shell__corner-outline"></span>
+      <span class="bs-card-shell__corner-inner"></span>
+      <span class="bs-card-shell__corner-top-tail"></span>
+      <span class="bs-card-shell__corner-left-tail"></span>
+      <span class="bs-card-shell__corner-accent"></span>
+    </span>
+  </div>
+  <header class="bs-card-shell__header" data-node-id="23:19169">
+    <span class="bs-card-shell__header-highlight" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-divider" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-divider-left" aria-hidden="true"></span>
+    <span class="bs-card-shell__header-icon" aria-hidden="true"></span>
+    <h3 class="bs-card-shell__title" data-slot="title">卡片标题名称</h3>
+  </header>
+  <div class="bs-card-shell__content" data-slot="content"></div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-cardshell-style10</strong><span>内容起点 62px</span></div>
+    </article></div></section>
+    <section class="section"><h2>03 · PanelShell 候选</h2><div class="grid">
+    <article class="component-card">
+      <div class="component-stage component-stage--panel">
+        <style>.bs-panel-shell--style03 {
+  --panel-title: var(--shell-panel-title, #ffffff);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 180px;
+  min-height: 150px;
+  max-width: 1600px;
+  max-height: 900px;
+  box-sizing: border-box;
+  color: var(--panel-title);
+  isolation: isolate;
+}
+.bs-panel-shell--style03,
+.bs-panel-shell--style03 * { box-sizing: border-box; }
+.bs-panel-shell--style03 .bs-panel-shell__frame { position: absolute; inset: 0 -1px 0 0; z-index: 0; pointer-events: none; background: url("../../kit/Shell/PanelShell/Style03/assets/frame.png") 0 0/100% 100% no-repeat; }
+.bs-panel-shell--style03 .bs-panel-shell__corner,
+.bs-panel-shell--style03 .bs-panel-shell__glow { display: none; }
+.bs-panel-shell--style03 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style03 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style03 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style03 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style03[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style03[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }
+</style>
+        <section class="bs-panel-shell bs-panel-shell--style03" data-kit="Shell/PanelShell/Style03">
+  <div class="bs-panel-shell__frame" aria-hidden="true">
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tr"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--bl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--br"></span>
+    <span class="bs-panel-shell__glow"></span>
+  </div>
+  <div class="bs-panel-shell__content-wrap">
+    <header class="bs-panel-shell__header"><h3 class="bs-panel-shell__title" data-slot="title">标题区域</h3></header>
+    <div class="bs-panel-shell__content" data-slot="content"></div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-panelshell-style03</strong><span>内容起点 72px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--panel">
+        <style>.bs-panel-shell--style04 {
+  --panel-title: var(--shell-panel-title, #ffffff);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 120px;
+  min-height: 100px;
+  max-width: 1600px;
+  max-height: 900px;
+  box-sizing: border-box;
+  color: var(--panel-title);
+  isolation: isolate;
+}
+.bs-panel-shell--style04,
+.bs-panel-shell--style04 * { box-sizing: border-box; }
+.bs-panel-shell--style04 .bs-panel-shell__frame,
+.bs-panel-shell--style04 .bs-panel-shell__corner,
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark { position: absolute; pointer-events: none; }
+.bs-panel-shell--style04 .bs-panel-shell__frame { inset: 0; z-index: 0; overflow: hidden; background: url("../../kit/Shell/PanelShell/Style04/assets/face.svg") center/100% 100% no-repeat; }
+.bs-panel-shell--style04 .bs-panel-shell__corner { width: 20px; height: 20px; z-index: 2; background-repeat: no-repeat; background-size: 20px 20px; }
+.bs-panel-shell--style04 .bs-panel-shell__corner--tl { top: 0; left: 0; background-image: url("../../kit/Shell/PanelShell/Style04/assets/corner-left.svg"); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--tr { top: 0; right: 0; background-image: url("../../kit/Shell/PanelShell/Style04/assets/corner-right.svg"); transform: rotate(180deg) scaleY(-1); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--bl { bottom: 0; left: 0; background-image: url("../../kit/Shell/PanelShell/Style04/assets/corner-left.svg"); transform: scaleY(-1); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--br { right: 0; bottom: 0; background-image: url("../../kit/Shell/PanelShell/Style04/assets/corner-right.svg"); transform: rotate(180deg); }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark { width: 7px; height: 7px; z-index: 2; background: url("../../kit/Shell/PanelShell/Style04/assets/edge-mark.svg") center/7px 7px no-repeat; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--left { top: calc(50% - 3px); left: 2px; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--top { top: 2px; left: calc(50% - 3px); }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--right { top: calc(50% - 3px); right: 2px; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--bottom { bottom: 2px; left: calc(50% - 3px); }
+.bs-panel-shell--style04 .bs-panel-shell__glow { display: none; }
+.bs-panel-shell--style04 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style04 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style04 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style04 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style04[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style04[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }
+</style>
+        <section class="bs-panel-shell bs-panel-shell--style04" data-kit="Shell/PanelShell/Style04">
+  <div class="bs-panel-shell__frame" aria-hidden="true">
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tr"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--bl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--br"></span>
+    <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--left"></span>
+    <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--top"></span>
+    <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--right"></span>
+    <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--bottom"></span>
+    <span class="bs-panel-shell__glow"></span>
+  </div>
+  <div class="bs-panel-shell__content-wrap">
+    <header class="bs-panel-shell__header"><h3 class="bs-panel-shell__title" data-slot="title">标题区域</h3></header>
+    <div class="bs-panel-shell__content" data-slot="content"></div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-panelshell-style04</strong><span>内容起点 72px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--panel">
+        <style>.bs-panel-shell--style05 {
+  --panel-title: var(--shell-panel-title, #ffffff);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 240px;
+  min-height: 160px;
+  max-width: 1600px;
+  max-height: 900px;
+  box-sizing: border-box;
+  color: var(--panel-title);
+  isolation: isolate;
+}
+.bs-panel-shell--style05,
+.bs-panel-shell--style05 * { box-sizing: border-box; }
+.bs-panel-shell--style05 .bs-panel-shell__frame,
+.bs-panel-shell--style05 .bs-panel-shell__corner { position: absolute; pointer-events: none; }
+.bs-panel-shell--style05 .bs-panel-shell__frame { inset: 0; z-index: 0; }
+.bs-panel-shell--style05 .bs-panel-shell__corner { width: 75px; height: 76px; z-index: 2; background: url("../../kit/Shell/PanelShell/Style05/assets/corner.png") 0 0/75px 76px no-repeat; }
+.bs-panel-shell--style05 .bs-panel-shell__corner--tl { top: 0; left: 0; }
+.bs-panel-shell--style05 .bs-panel-shell__corner--tr { top: 0; right: 0; transform: rotate(180deg) scaleY(-1); }
+.bs-panel-shell--style05 .bs-panel-shell__corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.bs-panel-shell--style05 .bs-panel-shell__corner--br { right: 0; bottom: 0; transform: rotate(180deg); }
+.bs-panel-shell--style05 .bs-panel-shell__glow { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: url("../../kit/Shell/PanelShell/Style05/assets/edge-top.png"), url("../../kit/Shell/PanelShell/Style05/assets/edge-bottom.png"), url("../../kit/Shell/PanelShell/Style05/assets/edge-left.png"), url("../../kit/Shell/PanelShell/Style05/assets/edge-right.png"); background-position: left 75px top 4px, left 75px bottom 4px, left 4px center, right 4px center; background-size: calc(100% - 150px) 4px, calc(100% - 150px) 4px, 4px calc(100% - 141px), 4px calc(100% - 141px); background-repeat: no-repeat; }
+.bs-panel-shell--style05 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style05 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style05 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style05 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style05[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style05[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }
+</style>
+        <section class="bs-panel-shell bs-panel-shell--style05" data-kit="Shell/PanelShell/Style05">
+  <div class="bs-panel-shell__frame" aria-hidden="true">
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tr"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--bl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--br"></span>
+    <span class="bs-panel-shell__glow"></span>
+  </div>
+  <div class="bs-panel-shell__content-wrap">
+    <header class="bs-panel-shell__header"><h3 class="bs-panel-shell__title" data-slot="title">标题区域</h3></header>
+    <div class="bs-panel-shell__content" data-slot="content"></div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-panelshell-style05</strong><span>内容起点 72px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--panel">
+        <style>.bs-panel-shell--style06 {
+  --panel-title: var(--shell-panel-title, #ffffff);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 120px;
+  max-width: 1600px;
+  max-height: 900px;
+  box-sizing: border-box;
+  color: var(--panel-title);
+  isolation: isolate;
+}
+.bs-panel-shell--style06,
+.bs-panel-shell--style06 * { box-sizing: border-box; }
+.bs-panel-shell--style06 .bs-panel-shell__frame,
+.bs-panel-shell--style06 .bs-panel-shell__corner { position: absolute; pointer-events: none; }
+.bs-panel-shell--style06 .bs-panel-shell__frame { inset: 0; z-index: 0; }
+.bs-panel-shell--style06 .bs-panel-shell__corner { width: 32px; height: 32px; z-index: 2; background: url("../../kit/Shell/PanelShell/Style06/assets/corner.png") 0 0/32px 32px no-repeat; }
+.bs-panel-shell--style06 .bs-panel-shell__corner--tl { top: 0; left: 0; }
+.bs-panel-shell--style06 .bs-panel-shell__corner--tr { top: 0; right: 0; transform: rotate(180deg) scaleY(-1); }
+.bs-panel-shell--style06 .bs-panel-shell__corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.bs-panel-shell--style06 .bs-panel-shell__corner--br { right: 0; bottom: 0; transform: rotate(180deg); }
+.bs-panel-shell--style06 .bs-panel-shell__glow { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: url("../../kit/Shell/PanelShell/Style06/assets/edge-top.png"), url("../../kit/Shell/PanelShell/Style06/assets/edge-bottom.png"), url("../../kit/Shell/PanelShell/Style06/assets/edge-left.png"), url("../../kit/Shell/PanelShell/Style06/assets/edge-right.png"); background-position: left 25px top 0, left 25px bottom 0, left 0 top 25px, right 0 top 25px; background-size: calc(100% - 50px) 17px, calc(100% - 50px) 17px, 17px calc(100% - 50px), 17px calc(100% - 50px); background-repeat: no-repeat; }
+.bs-panel-shell--style06 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style06 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style06 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style06 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style06[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style06[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }
+</style>
+        <section class="bs-panel-shell bs-panel-shell--style06" data-kit="Shell/PanelShell/Style06">
+  <div class="bs-panel-shell__frame" aria-hidden="true">
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--tr"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--bl"></span>
+    <span class="bs-panel-shell__corner bs-panel-shell__corner--br"></span>
+    <span class="bs-panel-shell__glow"></span>
+  </div>
+  <div class="bs-panel-shell__content-wrap">
+    <header class="bs-panel-shell__header"><h3 class="bs-panel-shell__title" data-slot="title">标题区域</h3></header>
+    <div class="bs-panel-shell__content" data-slot="content"></div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>shell-panelshell-style06</strong><span>内容起点 72px</span></div>
+    </article></div></section>
+    <section class="section"><h2>04 · 背景候选</h2><div class="grid grid--two">
+    <article class="background-card">
+      <img src="../../kit/background/bg-frost-cyan-1.png" alt="bg-frost-cyan-1">
+      <div class="component-label"><strong>bg-frost-cyan-1</strong><span>#1a1e29</span></div>
+    </article></div></section>
+  <footer class="footer">该页面展示已批准候选，并验证资源与主题匹配；规划器仍按布局和槽位确定单个组件。</footer>
+</body>
+</html>

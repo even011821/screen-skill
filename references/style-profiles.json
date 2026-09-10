@@ -1,0 +1,243 @@
+{
+  "schemaVersion": "1.1.0",
+  "status": "approved",
+  "selectionEnabled": true,
+  "approvedAt": "2026-09-10",
+  "selectionSource": "docs/style-profile-selection-checklist.md",
+  "selectionInterpretation": "Every component listed under a theme is selected. Empty markdown checkboxes are presentation only and do not mean unselected.",
+  "contrastMode": "dark",
+  "fixedColorPolicy": "Keep Figma fixed-color assets unchanged. Use only candidates listed for the selected theme; do not globally recolor SVG or raster decorations.",
+  "automation": {
+    "fullVerification": "node scripts/verify-style-system.mjs --render",
+    "metadataSync": "node scripts/sync-style-metadata.mjs --write",
+    "profileAudit": "node scripts/audit-style-profiles.mjs",
+    "runtimeAudit": "node scripts/audit-shell-runtime.mjs --write-meta",
+    "regression": "node scripts/run-regression.mjs --runtime",
+    "inventory": "references/style-inventory.generated.json",
+    "runtimeReport": "references/shell-runtime-audit.generated.json",
+    "regressionReport": "references/regression-report.generated.json",
+    "verificationReport": "references/style-system-verification.generated.json"
+  },
+  "profiles": [
+    {
+      "id": "blue-command-standard",
+      "label": "蓝色指挥标准型",
+      "theme": "galaxy-azure",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style01",
+        "topnav-centertitle-1920-style02",
+        "topnav-centertitle-1920-style03",
+        "topnav-centertitle-1920-style07",
+        "topnav-centertitle-1920-style08",
+        "topnav-centertitle-1920-style09",
+        "topnav-centertitle-1920-style12",
+        "topnav-lefttitle-1920-style01",
+        "topnav-centertitle-3840-style01"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style01",
+        "shell-cardshell-style02",
+        "shell-cardshell-style03",
+        "shell-cardshell-style06",
+        "shell-cardshell-style09",
+        "shell-cardshell-style13"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style02",
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-galaxy-azure-1",
+        "bg-galaxy-azure-2"
+      ]
+    },
+    {
+      "id": "industrial-blue-compact",
+      "label": "工业深蓝紧凑型",
+      "theme": "deep-tech-blue",
+      "densityMode": "compact",
+      "topNavCandidates": [
+        "topnav-lefttitle-1920-style01",
+        "topnav-centertitle-1920-style02",
+        "topnav-centertitle-1920-style03",
+        "topnav-centertitle-1920-style07",
+        "topnav-centertitle-1920-style08",
+        "topnav-centertitle-1920-style09",
+        "topnav-centertitle-1920-style12",
+        "topnav-centertitle-3840-style01"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style01",
+        "shell-cardshell-style07",
+        "shell-cardshell-style09",
+        "shell-cardshell-style13"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style02",
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-deep-tech-blue-1",
+        "bg-deep-tech-blue-2"
+      ]
+    },
+    {
+      "id": "cyan-clean-standard",
+      "label": "清透青色标准型",
+      "theme": "frost-cyan",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style05",
+        "topnav-centertitle-1920-style06",
+        "topnav-centertitle-1920-style11",
+        "topnav-lefttitle-1920-style02"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style05",
+        "shell-cardshell-style08",
+        "shell-cardshell-style10"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style03",
+        "shell-panelshell-style04",
+        "shell-panelshell-style05",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-frost-cyan-1"
+      ]
+    },
+    {
+      "id": "verdant-health-standard",
+      "label": "清绿健康标准型",
+      "theme": "fresh-verdant",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style05",
+        "topnav-centertitle-1920-style06",
+        "topnav-centertitle-1920-style11",
+        "topnav-lefttitle-1920-style02"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style05",
+        "shell-cardshell-style08",
+        "shell-cardshell-style10",
+        "shell-cardshell-style14"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style03",
+        "shell-panelshell-style04",
+        "shell-panelshell-style05",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-fresh-verdant-1"
+      ]
+    },
+    {
+      "id": "gold-executive-standard",
+      "label": "金色经营标准型",
+      "theme": "dusk-rose-gold",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style12",
+        "topnav-lefttitle-1920-style03",
+        "topnav-centertitle-3840-style03"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style04",
+        "shell-cardshell-style11",
+        "shell-cardshell-style12"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-dusk-rose-gold-1",
+        "bg-dusk-rose-gold-2"
+      ]
+    },
+    {
+      "id": "orange-formal-standard",
+      "label": "橙红正式标准型",
+      "theme": "ember-orange",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style04"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style04",
+        "shell-cardshell-style11"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-ember-orange-1"
+      ]
+    }
+  ],
+  "kpiRoutingCandidates": [
+    {
+      "id": "grouped-metrics",
+      "match": "多个同类指标组成一组",
+      "candidates": ["widget-kpi-card-style01"]
+    },
+    {
+      "id": "trend-comparison",
+      "match": "需要同比、环比或趋势文字",
+      "candidates": ["widget-kpi-card-style06"]
+    },
+    {
+      "id": "progress",
+      "match": "需要进度或完成率",
+      "candidates": ["widget-kpi-card-style07"]
+    },
+    {
+      "id": "positive-negative",
+      "match": "需要正负方向状态",
+      "candidates": ["widget-kpi-card-style12"]
+    },
+    {
+      "id": "multi-state",
+      "match": "需要蓝、红、黄多状态并列",
+      "candidates": ["widget-kpi-card-style17"]
+    },
+    {
+      "id": "compact-title-value-unit",
+      "match": "紧凑纵向标题、数值、单位",
+      "candidates": ["widget-kpi-card-style04"]
+    },
+    {
+      "id": "compact-title-value",
+      "match": "紧凑纵向标题、数值",
+      "candidates": ["widget-kpi-card-style02", "widget-kpi-card-style03"]
+    },
+    {
+      "id": "compact-title-value-unit-variants",
+      "match": "紧凑标题、数值、单位的多尺寸候选",
+      "candidates": [
+        "widget-kpi-card-style05",
+        "widget-kpi-card-style08",
+        "widget-kpi-card-style09",
+        "widget-kpi-card-style15",
+        "widget-kpi-card-style16"
+      ]
+    },
+    {
+      "id": "horizontal-compact",
+      "match": "横向紧凑标题、数值、单位或进度",
+      "candidates": ["widget-kpi-card-style16", "widget-kpi-card-style07"]
+    },
+    {
+      "id": "total-completed",
+      "match": "总量、已完成等单个强调结果",
+      "candidates": ["widget-kpi-card-style10"]
+    }
+  ]
+}

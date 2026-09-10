@@ -218,14 +218,14 @@
       "style": "Style01",
       "figma": {
         "fileKey": "Le0uixa62TTpV9FkmU6nJy",
-        "componentSetNodeId": "91:13041",
-        "componentSetName": "DS/Shell/PanelShell",
-        "nodeId": "91:12848",
-        "nodeName": "style=01",
-        "backgroundNodeId": "91:12849",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "63:27499",
+        "nodeName": "Shell/PanelShell/Style01",
+        "backgroundNodeId": "59:26698",
         "headerNodeId": null,
-        "contentNodeId": "91:12893",
-        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12848&m=dev"
+        "contentNodeId": "71:7757",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
       }
     },
     {
@@ -236,14 +236,14 @@
       "style": "Style02",
       "figma": {
         "fileKey": "Le0uixa62TTpV9FkmU6nJy",
-        "componentSetNodeId": "91:13041",
-        "componentSetName": "DS/Shell/PanelShell",
-        "nodeId": "91:12897",
-        "nodeName": "style=02",
-        "backgroundNodeId": "91:12898",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "64:28146",
+        "nodeName": "Shell/PanelShell/Style02",
+        "backgroundNodeId": "59:26910",
         "headerNodeId": null,
-        "contentNodeId": "91:12912",
-        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12897&m=dev"
+        "contentNodeId": "71:7758",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
       }
     },
     {
@@ -254,14 +254,14 @@
       "style": "Style03",
       "figma": {
         "fileKey": "Le0uixa62TTpV9FkmU6nJy",
-        "componentSetNodeId": "91:13041",
-        "componentSetName": "DS/Shell/PanelShell",
-        "nodeId": "91:12916",
-        "nodeName": "style=03",
-        "backgroundNodeId": "91:12917",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "64:28143",
+        "nodeName": "Shell/PanelShell/Style03",
+        "backgroundNodeId": "23:18968",
         "headerNodeId": null,
-        "contentNodeId": "91:12994",
-        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12916&m=dev"
+        "contentNodeId": "71:7763",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
       }
     },
     {
@@ -272,14 +272,14 @@
       "style": "Style04",
       "figma": {
         "fileKey": "Le0uixa62TTpV9FkmU6nJy",
-        "componentSetNodeId": "91:13041",
-        "componentSetName": "DS/Shell/PanelShell",
-        "nodeId": "91:12998",
-        "nodeName": "style=04",
-        "backgroundNodeId": "91:12999",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "64:27500",
+        "nodeName": "Shell/PanelShell/Style04",
+        "backgroundNodeId": "59:25559",
         "headerNodeId": null,
-        "contentNodeId": "91:13023",
-        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-12998&m=dev"
+        "contentNodeId": "71:7768",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
       }
     },
     {
@@ -290,14 +290,32 @@
       "style": "Style05",
       "figma": {
         "fileKey": "Le0uixa62TTpV9FkmU6nJy",
-        "componentSetNodeId": "91:13041",
-        "componentSetName": "DS/Shell/PanelShell",
-        "nodeId": "91:13027",
-        "nodeName": "style=05",
-        "backgroundNodeId": "91:13028",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "64:28144",
+        "nodeName": "Shell/PanelShell/Style05",
+        "backgroundNodeId": "64:28145",
         "headerNodeId": null,
-        "contentNodeId": "91:13037",
-        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=91-13027&m=dev"
+        "contentNodeId": "71:7773",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
+      }
+    },
+    {
+      "meta": "kit/Shell/PanelShell/Style06/meta.json",
+      "id": "shell-panelshell-style06",
+      "category": "Shell",
+      "kind": "PanelShell",
+      "style": "Style06",
+      "figma": {
+        "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+        "componentSetNodeId": "343:21892",
+        "componentSetName": "PanelShell",
+        "nodeId": "64:27896",
+        "nodeName": "Shell/PanelShell/Style06",
+        "backgroundNodeId": "23:18977",
+        "headerNodeId": null,
+        "contentNodeId": "71:7778",
+        "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
       }
     },
     {

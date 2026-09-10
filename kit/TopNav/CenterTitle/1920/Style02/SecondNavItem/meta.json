@@ -92,5 +92,6 @@
     "color": "#ffffff",
     "fill": "#ffffff",
     "colorMode": "fixed-white"
-  }
+  },
+  "approvedProfiles": []
 }

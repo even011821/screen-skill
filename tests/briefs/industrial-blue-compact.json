@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "title": "工业深蓝紧凑型回归测试",
+  "resolution": "1920x1080",
+  "styleProfile": "industrial-blue-compact",
+  "dataSource": "mock-first",
+  "contentItems": [
+    { "id": "k1", "title": "指标", "type": "kpi" },
+    { "id": "m1", "title": "中心态势", "type": "map" },
+    { "id": "t1", "title": "趋势", "type": "trend" }
+  ]
+}

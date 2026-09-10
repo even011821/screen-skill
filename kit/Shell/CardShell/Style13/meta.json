@@ -17,8 +17,8 @@
     "h": 300
   },
   "minSize": {
-    "w": 200,
-    "h": 100
+    "w": 300,
+    "h": 180
   },
   "maxSize": {
     "w": 2000,
@@ -62,7 +62,7 @@
     {
       "name": "title",
       "selector": ".bs-card-shell__title",
-      "default": "鍗＄墖鏍囬鍚嶇О",
+      "default": "卡片标题名称",
       "required": false
     },
     {
@@ -86,5 +86,43 @@
     "runtimeDependency": "none",
     "notes": "Runtime must use component.html, shell.css and local assets only. shell.html is a direct browser preview with empty content slots."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedProfiles": [
+    "blue-command-standard",
+    "industrial-blue-compact"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 300,
+        "h": 180
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16,
+      "width": 360,
+      "height": 232
+    },
+    "titleCapacity": {
+      "cjk": 8,
+      "latinWide": 9,
+      "recommendedMaxCjk": 6,
+      "fontSize": 24,
+      "availableWidth": 225
+    },
+    "failedChecks": []
+  }
 }

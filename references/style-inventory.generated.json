@@ -1,0 +1,3884 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "scripts/sync-style-metadata.mjs",
+  "source": "references/style-profiles.json",
+  "counts": {
+    "topNav": 24,
+    "cardShell": 14,
+    "panelShell": 6,
+    "kpi": 15,
+    "backgrounds": 9
+  },
+  "inventory": {
+    "topNav": [
+      {
+        "id": "topnav-centertitle-1920-style01",
+        "label": "TopNav CenterTitle 1920 Style01",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 82
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "主标题使用 DOM 覆盖层渲染，字体为 YouSheBiaoTiHei，font-weight 为 400，字号 44px，不要默认添加边框或 text-stroke。保留原有阴影。不要把标题文字烘焙进 nav.png。标题颜色固定为 #ffffff，不能受主题 token 或渐变文字填充影响。",
+          "subtitlePolicy": "仅当 titleOverlay.subtitle.enabled 为 true 时才渲染副标题",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style01/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style01-secondnavitem",
+        "label": "TopNav CenterTitle 1920 Style01 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 88,
+          "h": 44
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style01/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style02",
+        "label": "TopNav CenterTitle 1920 Style02",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 93
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style02/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style02-secondnavitem",
+        "label": "TopNav CenterTitle 1920 Style02 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 190,
+          "h": 40
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style02/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style03",
+        "label": "TopNav CenterTitle 1920 Style03",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 110
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style03/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style04",
+        "label": "TopNav CenterTitle 1920 Style04",
+        "status": "ready",
+        "themes": [
+          "ember-orange"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 80
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "orange-formal-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style04/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style05",
+        "label": "TopNav CenterTitle 1920 Style05",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 1921,
+          "h": 78
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style05/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style05-secondnavitem",
+        "label": "TopNav CenterTitle 1920 Style05 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 185,
+          "h": 46
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style05/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style06",
+        "label": "TopNav CenterTitle 1920 Style06",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 1921,
+          "h": 78
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style06/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style06-secondnavitem",
+        "label": "TopNav CenterTitle 1920 Style06 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 185,
+          "h": 46
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style06/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style07",
+        "label": "TopNav CenterTitle 1920 Style07",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 110
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Do not add subtitle text unless the selected component explicitly declares one. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitle": {
+            "enabled": false
+          },
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style07/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style08",
+        "label": "TopNav CenterTitle 1920 Style08",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 1898,
+          "h": 97
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": true
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style08/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style09",
+        "label": "TopNav CenterTitle 1920 Style09",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1927,
+          "h": 107
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style09/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style10",
+        "label": "TopNav CenterTitle 1920 Style10",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1923,
+          "h": 120
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style10/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style11",
+        "label": "TopNav CenterTitle 1920 Style11",
+        "status": "ready",
+        "themes": [
+          "fresh-verdant",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 96
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style11/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-1920-style12",
+        "label": "TopNav CenterTitle 1920 Style12",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "dusk-rose-gold"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 82
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 44,
+          "fontWeight": 400,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses DOM overlay with YouSheBiaoTiHei, font-weight 400, 44px, no default border/text-stroke. Keep the original shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "gold-executive-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/1920/Style12/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-3840-style01",
+        "label": "TopNav CenterTitle 3840 Style01",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "dusk-rose-gold"
+        ],
+        "size": {
+          "w": 3840,
+          "h": 100
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 76,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 44,
+          "height": 88,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 116,
+            "fontSize": 26,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/3840/Style01/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-3840-style01-secondnavitem",
+        "label": "TopNav CenterTitle 3840 Style01 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "dusk-rose-gold"
+        ],
+        "size": {
+          "w": 227,
+          "h": 50
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 76,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 44,
+          "height": 88,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 116,
+            "fontSize": 26,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/3840/Style01/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-3840-style02",
+        "label": "TopNav CenterTitle 3840 Style02",
+        "status": "ready",
+        "themes": [
+          "fresh-verdant",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 3840,
+          "h": 112
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 76,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 44,
+          "height": 88,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 116,
+            "fontSize": 26,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/3840/Style02/meta.json"
+      },
+      {
+        "id": "topnav-centertitle-3840-style03",
+        "label": "TopNav CenterTitle 3840 Style03",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "dusk-rose-gold"
+        ],
+        "size": {
+          "w": 3840,
+          "h": 120
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "center",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 76,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 44,
+          "height": 88,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 116,
+            "fontSize": 26,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "gold-executive-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/CenterTitle/3840/Style03/meta.json"
+      },
+      {
+        "id": "topnav-lefttitle-1920-style01",
+        "label": "TopNav LeftTitle 1920 Style01",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 70
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "left",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 38,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/LeftTitle/1920/Style01/meta.json"
+      },
+      {
+        "id": "topnav-lefttitle-1920-style01-secondnavitem",
+        "label": "TopNav LeftTitle 1920 Style01 SecondNavItem",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 144,
+          "h": 60
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "left",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 38,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/LeftTitle/1920/Style01/SecondNavItem/meta.json"
+      },
+      {
+        "id": "topnav-lefttitle-1920-style02",
+        "label": "TopNav LeftTitle 1920 Style02",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 98
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "left",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 38,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/LeftTitle/1920/Style02/meta.json"
+      },
+      {
+        "id": "topnav-lefttitle-1920-style03",
+        "label": "TopNav LeftTitle 1920 Style03",
+        "status": "ready",
+        "themes": [
+          "dusk-rose-gold",
+          "ember-orange"
+        ],
+        "size": {
+          "w": 1920,
+          "h": 96
+        },
+        "minSize": null,
+        "maxSize": null,
+        "title": {
+          "htmlClass": "ds-top-nav__title",
+          "css": "kit/TopNav/overlay.css",
+          "align": "left",
+          "fontFamilyToken": "--font-title",
+          "fontSize": 38,
+          "fontWeight": 900,
+          "lineHeight": 1,
+          "letterSpacing": 0,
+          "y": 22,
+          "height": 44,
+          "stroke": "0.8px",
+          "strokeColorToken": "--top-nav-title-stroke-color",
+          "shadowToken": "--top-nav-title-shadow",
+          "subtitle": {
+            "htmlClass": "ds-top-nav__subtitle",
+            "y": 58,
+            "fontSize": 13,
+            "weight": 400,
+            "enabled": false
+          },
+          "note": "Main title uses visually bold DOM overlay: heavy title font, light stroke, gradient fill, and glow/shadow. Do not bake title text into nav.png. Title color is fixed #ffffff and must not be affected by theme tokens or gradient text fill.",
+          "subtitlePolicy": "render only when titleOverlay.subtitle.enabled is true",
+          "color": "#ffffff",
+          "fill": "#ffffff",
+          "colorMode": "fixed-white"
+        },
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": null,
+        "assets": [],
+        "approvedProfiles": [
+          "gold-executive-standard"
+        ],
+        "runtimeAudit": null,
+        "metaPath": "kit/TopNav/LeftTitle/1920/Style03/meta.json"
+      }
+    ],
+    "cardShell": [
+      {
+        "id": "shell-cardshell-style01",
+        "label": "Shell/CardShell/Style01",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 42,
+          "y": 6,
+          "fontFamily": "PingFang SC",
+          "fontSize": 16,
+          "fontWeight": 600,
+          "lineHeight": "normal",
+          "letterSpacing": 0,
+          "color": "#EAFEFF",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/header-bg.svg",
+          "assets/internal-left.svg",
+          "assets/internal-right.svg",
+          "assets/bottom-line.svg",
+          "assets/left-bar.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 21,
+            "latinWide": 19,
+            "recommendedMaxCjk": 17,
+            "fontSize": 16,
+            "availableWidth": 338
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style01/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style02",
+        "label": "Shell/CardShell/Style02",
+        "status": "ready",
+        "themes": [
+          "deep-tech-blue",
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 39,
+          "y": 5,
+          "fontFamily": "PingFang SC",
+          "fontSize": 16,
+          "fontWeight": 500,
+          "lineHeight": 24,
+          "letterSpacing": 0,
+          "fill": "linear-gradient(173.554deg, #FFFFFF 16.919%, #03C2FF 188.24%)",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 51,
+          "left": 19,
+          "right": 19,
+          "bottom": 15
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/dot-mask.svg",
+          "assets/dot-fill.svg",
+          "assets/top-line.svg",
+          "assets/short-line.svg",
+          "assets/long-line.svg",
+          "assets/right-decoration.svg",
+          "assets/header-icon.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 51,
+            "left": 19,
+            "right": 19,
+            "bottom": 15,
+            "width": 362,
+            "height": 234
+          },
+          "titleCapacity": {
+            "cjk": 21,
+            "latinWide": 21,
+            "recommendedMaxCjk": 17,
+            "fontSize": 16,
+            "availableWidth": 343
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style02/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style03",
+        "label": "Shell/CardShell/Style03",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 37,
+          "y": 9,
+          "fontFamily": "PingFang SC",
+          "fontSize": 18,
+          "fontWeight": 500,
+          "lineHeight": 26,
+          "letterSpacing": 0,
+          "color": "#E3F5FF",
+          "textShadow": "0 0 6.39px rgba(42, 145, 243, 0.5)"
+        },
+        "contentSlot": {
+          "top": 51,
+          "left": 19,
+          "right": 19,
+          "bottom": 15
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/header-bg.svg",
+          "assets/header-icon.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 51,
+            "left": 19,
+            "right": 19,
+            "bottom": 15,
+            "width": 362,
+            "height": 234
+          },
+          "titleCapacity": {
+            "cjk": 19,
+            "latinWide": 18,
+            "recommendedMaxCjk": 16,
+            "fontSize": 18,
+            "availableWidth": 344
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style03/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style04",
+        "label": "Shell/CardShell/Style04",
+        "status": "ready",
+        "themes": [
+          "dusk-rose-gold",
+          "ember-orange"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 47,
+          "y": 0,
+          "fontFamily": "YouSheBiaoTiHei",
+          "fontSize": 26,
+          "fontWeight": 400,
+          "lineHeight": 34,
+          "letterSpacing": 0,
+          "color": "#FFF9BF",
+          "textShadow": "0 8px 10px rgba(199, 119, 0, 0.38)"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/internal-background.png",
+          "assets/edge-center.svg",
+          "assets/bottom-line-left.svg",
+          "assets/bottom-line-right.svg",
+          "assets/corner-left-bottom.svg",
+          "assets/corner-right-bottom.svg",
+          "assets/header-mask-group.svg",
+          "assets/header-left-fill.svg",
+          "assets/header-union.svg",
+          "assets/header-vector.svg"
+        ],
+        "approvedProfiles": [
+          "gold-executive-standard",
+          "orange-formal-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 12,
+            "latinWide": 12,
+            "recommendedMaxCjk": 10,
+            "fontSize": 26,
+            "availableWidth": 333
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style04/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style05",
+        "label": "Shell/CardShell/Style05",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 16,
+          "y": 6,
+          "fontFamily": "YouSheBiaoTiHei",
+          "fontSize": 20,
+          "fontWeight": 400,
+          "lineHeight": 24,
+          "letterSpacing": 0,
+          "color": "#15F6EE",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/internal-bottom.svg",
+          "assets/internal-top.svg",
+          "assets/top-right-corner.svg",
+          "assets/bottom-left-corner.svg",
+          "assets/bottom-right-corner.svg",
+          "assets/internal-left-top.svg",
+          "assets/internal-right-bottom.svg",
+          "assets/internal-bottom-line.svg",
+          "assets/header-line-short.svg",
+          "assets/header-line-long.svg"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 13,
+            "latinWide": 12,
+            "recommendedMaxCjk": 11,
+            "fontSize": 20,
+            "availableWidth": 263
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style05/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style06",
+        "label": "Shell/CardShell/Style06",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": "center",
+          "y": 3,
+          "fontFamily": "Noto Sans SC",
+          "fontSize": 20,
+          "fontWeight": 700,
+          "lineHeight": 30,
+          "letterSpacing": 0,
+          "color": "#FFFFFF",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/light-mask.svg",
+          "assets/bottom-line.svg",
+          "assets/corner-blue-a.svg",
+          "assets/corner-blue-b.svg",
+          "assets/header-bg.svg",
+          "assets/header-bottom-line.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 16,
+            "latinWide": 17,
+            "recommendedMaxCjk": 13,
+            "fontSize": 20,
+            "availableWidth": 324
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style06/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style07",
+        "label": "Shell/CardShell/Style07",
+        "status": "ready",
+        "themes": [
+          "deep-tech-blue",
+          "galaxy-azure"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 280,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": null,
+        "contentSlot": {
+          "top": 58,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [],
+        "approvedProfiles": [
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 280,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 58,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 226
+          },
+          "titleCapacity": {
+            "cjk": 15,
+            "latinWide": 13,
+            "recommendedMaxCjk": 12,
+            "fontSize": 16,
+            "availableWidth": 240
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style07/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style08",
+        "label": "Shell/CardShell/Style08",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 78,
+          "y": 3,
+          "fontFamily": "YouSheBiaoTiHei",
+          "fontSize": 20,
+          "fontWeight": 400,
+          "lineHeight": 28,
+          "letterSpacing": 1.6,
+          "color": "#EBFFFF",
+          "textShadow": "2px 2px 5px #031819"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/bottom-left-corner.svg",
+          "assets/bottom-right-corner.svg",
+          "assets/header-left-bg.svg",
+          "assets/header-left-overlay.svg",
+          "assets/header-body-shape.svg",
+          "assets/header-glow.svg",
+          "assets/header-body-fill.svg",
+          "assets/header-path-main.svg",
+          "assets/header-icon-shape.svg",
+          "assets/header-title-line.svg",
+          "assets/header-tail-line.svg",
+          "assets/header-right-edge.svg",
+          "assets/header-stripes.svg"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 10,
+            "latinWide": 10,
+            "recommendedMaxCjk": 8,
+            "fontSize": 20,
+            "availableWidth": 220
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style08/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style09",
+        "label": "Shell/CardShell/Style09",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 26,
+          "titleFontWeight": 400,
+          "titleLetterSpacing": 2.6,
+          "titleColor": "#e3f5ff",
+          "titleShadow": "0 0 4px rgba(42, 145, 243, 0.38)"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/header-bg-subtract.svg",
+          "assets/background-frame.svg",
+          "assets/right-cap-subtract.svg",
+          "assets/line-194-stroke.svg",
+          "assets/top-hairline.svg",
+          "assets/left-bar.svg",
+          "assets/small-rectangles-container.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 7,
+            "latinWide": 8,
+            "recommendedMaxCjk": 5,
+            "fontSize": 26,
+            "availableWidth": 207
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style09/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style10",
+        "label": "Shell/CardShell/Style10",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant",
+          "galaxy-azure"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 51.8,
+          "y": 13,
+          "fontFamily": "Alibaba PuHuiTi 2.0",
+          "fontSize": 19.2,
+          "fontWeight": 800,
+          "lineHeight": 32,
+          "letterSpacing": 0.384,
+          "color": "#F4F8FF",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 62,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/corner-outline.svg",
+          "assets/corner-inner.svg",
+          "assets/corner-top-tail.svg",
+          "assets/corner-left-tail.svg",
+          "assets/corner-triangle-a.svg",
+          "assets/corner-triangle-b.svg",
+          "assets/frame-left.svg",
+          "assets/frame-right.svg",
+          "assets/divider-right.png",
+          "assets/header-icon.svg"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 62,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 222
+          },
+          "titleCapacity": {
+            "cjk": 16,
+            "latinWide": 15,
+            "recommendedMaxCjk": 13,
+            "fontSize": 19.2,
+            "availableWidth": 322
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style10/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style11",
+        "label": "Shell/CardShell/Style11",
+        "status": "ready",
+        "themes": [
+          "dusk-rose-gold",
+          "ember-orange"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "x": 62.23,
+          "y": 12,
+          "fontFamily": "Alibaba PuHuiTi 2.0",
+          "fontSize": 20,
+          "fontWeight": 800,
+          "lineHeight": 32,
+          "letterSpacing": 0.4,
+          "color": "#FFF5D6",
+          "textShadow": "none"
+        },
+        "contentSlot": {
+          "top": 61,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/frame-top-left.svg",
+          "assets/frame-top-right.svg",
+          "assets/frame-bottom-left.svg",
+          "assets/frame-bottom-right.svg",
+          "assets/corner-outline.svg",
+          "assets/corner-inner.svg",
+          "assets/corner-top-tail.svg",
+          "assets/corner-left-tail.svg",
+          "assets/corner-top-tail-r.svg",
+          "assets/corner-left-tail-r.svg",
+          "assets/corner-triangle-a.svg",
+          "assets/corner-triangle-b.svg",
+          "assets/header-divider.png",
+          "assets/header-icon.svg"
+        ],
+        "approvedProfiles": [
+          "gold-executive-standard",
+          "orange-formal-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 61,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 223
+          },
+          "titleCapacity": {
+            "cjk": 15,
+            "latinWide": 14,
+            "recommendedMaxCjk": 12,
+            "fontSize": 20,
+            "availableWidth": 312
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style11/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style12",
+        "label": "Shell/CardShell/Style12",
+        "status": "ready",
+        "themes": [
+          "dusk-rose-gold",
+          "deep-tech-blue",
+          "galaxy-azure"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 280,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": null,
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [],
+        "approvedProfiles": [
+          "gold-executive-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 280,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 13,
+            "latinWide": 12,
+            "recommendedMaxCjk": 11,
+            "fontSize": 18,
+            "availableWidth": 240
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style12/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style13",
+        "label": "Shell/CardShell/Style13",
+        "status": "ready",
+        "themes": [
+          "deep-tech-blue",
+          "galaxy-azure",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "height": 42,
+          "titleFontSize": 24,
+          "titleFontWeight": 400,
+          "titleLetterSpacing": 2.4,
+          "titleColor": "#e3f5ff"
+        },
+        "contentSlot": {
+          "top": 52,
+          "left": 20,
+          "right": 20,
+          "bottom": 16
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/fill-left.svg",
+          "assets/fill-right.svg",
+          "assets/border-left-corner.svg",
+          "assets/border-right-corner.svg",
+          "assets/top-glow.svg",
+          "assets/right-top-line.svg",
+          "assets/right-notch.svg",
+          "assets/stripes.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 52,
+            "left": 20,
+            "right": 20,
+            "bottom": 16,
+            "width": 360,
+            "height": 232
+          },
+          "titleCapacity": {
+            "cjk": 8,
+            "latinWide": 9,
+            "recommendedMaxCjk": 6,
+            "fontSize": 24,
+            "availableWidth": 225
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style13/meta.json"
+      },
+      {
+        "id": "shell-cardshell-style14",
+        "label": "Shell/CardShell/Style14",
+        "status": "ready",
+        "themes": [
+          "fresh-verdant",
+          "deep-tech-blue",
+          "frost-cyan"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 300,
+          "h": 180
+        },
+        "maxSize": {
+          "w": 2000,
+          "h": 800
+        },
+        "title": {
+          "height": 56,
+          "titleFontSize": 22,
+          "titleFontWeight": 400,
+          "titleLetterSpacing": 0.44,
+          "titleColor": "#f4f8ff",
+          "titleShadow": "0 0 5px rgba(0, 163, 255, 0.5)",
+          "backgroundMode": "css-fixed-cap-stretch-bg",
+          "backgroundNote": "Header bg follows Figma adaptation: the bg container stretches with the card, the left hexagon cap remains fixed at 51.5x45.5px, and the horizontal body/frame stretches from the cap to the right edge."
+        },
+        "contentSlot": {
+          "top": 78.5,
+          "left": 19.13,
+          "right": 20.87,
+          "bottom": 16.5
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/panel-background.svg",
+          "assets/corner-small.svg",
+          "assets/corner-large.svg",
+          "assets/plus.svg",
+          "assets/header-frame.svg",
+          "assets/header-icon.svg",
+          "assets/header-light.svg"
+        ],
+        "approvedProfiles": [
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 300,
+              "h": 180
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 78.5,
+            "left": 19.13,
+            "right": 20.86,
+            "bottom": 16.5,
+            "width": 360.02,
+            "height": 205
+          },
+          "titleCapacity": {
+            "cjk": 13,
+            "latinWide": 14,
+            "recommendedMaxCjk": 11,
+            "fontSize": 22,
+            "availableWidth": 294
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/CardShell/Style14/meta.json"
+      }
+    ],
+    "panelShell": [
+      {
+        "id": "shell-panelshell-style01",
+        "label": "Shell/PanelShell/Style01",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "dusk-rose-gold",
+          "ember-orange"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 120,
+          "h": 100
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/face.svg",
+          "assets/edge.svg",
+          "assets/corner-left.svg",
+          "assets/corner-right.svg",
+          "assets/edge-mark.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "gold-executive-standard",
+          "industrial-blue-compact",
+          "orange-formal-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 120,
+              "h": 100
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style01/meta.json"
+      },
+      {
+        "id": "shell-panelshell-style02",
+        "label": "Shell/PanelShell/Style02",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 180,
+          "h": 150
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "nine-slice-raster-shell",
+        "backgroundMode": "transparent-border-only",
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/frame.png"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "industrial-blue-compact"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 180,
+              "h": 150
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style02/meta.json"
+      },
+      {
+        "id": "shell-panelshell-style03",
+        "label": "Shell/PanelShell/Style03",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 180,
+          "h": 150
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "stretchable-background-shell",
+        "backgroundMode": "transparent-border-only",
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/frame.png"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 180,
+              "h": 150
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style03/meta.json"
+      },
+      {
+        "id": "shell-panelshell-style04",
+        "label": "Shell/PanelShell/Style04",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "deep-tech-blue",
+          "frost-cyan",
+          "fresh-verdant",
+          "dusk-rose-gold",
+          "ember-orange"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 120,
+          "h": 100
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "stretchable-code-shell",
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/face.svg",
+          "assets/corner-left.svg",
+          "assets/corner-right.svg",
+          "assets/edge-mark.svg"
+        ],
+        "approvedProfiles": [
+          "blue-command-standard",
+          "cyan-clean-standard",
+          "gold-executive-standard",
+          "industrial-blue-compact",
+          "orange-formal-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 120,
+              "h": 100
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style04/meta.json"
+      },
+      {
+        "id": "shell-panelshell-style05",
+        "label": "Shell/PanelShell/Style05",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 240,
+          "h": 160
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "fixed-corners-fluid-edges",
+        "backgroundMode": "transparent-border-only",
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/corner.png",
+          "assets/edge-top.png",
+          "assets/edge-bottom.png",
+          "assets/edge-left.png",
+          "assets/edge-right.png"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 240,
+              "h": 160
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style05/meta.json"
+      },
+      {
+        "id": "shell-panelshell-style06",
+        "label": "Shell/PanelShell/Style06",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "size": {
+          "w": 400,
+          "h": 300
+        },
+        "minSize": {
+          "w": 200,
+          "h": 120
+        },
+        "maxSize": {
+          "w": 1600,
+          "h": 900
+        },
+        "title": {
+          "height": 40,
+          "titleFontSize": 20,
+          "titleFontWeight": 600,
+          "titleLetterSpacing": 0.4,
+          "titleColor": "#ffffff",
+          "fontFamily": "Alibaba PuHuiTi 2.0"
+        },
+        "contentSlot": {
+          "top": 72,
+          "left": 20,
+          "right": 20,
+          "bottom": 20
+        },
+        "adaptationLayout": "fixed-corners-fluid-edges",
+        "backgroundMode": "transparent-border-only",
+        "code": {
+          "html": "component.html",
+          "css": "shell.css",
+          "preview": "shell.html"
+        },
+        "assets": [
+          "assets/corner.png",
+          "assets/edge-top.png",
+          "assets/edge-bottom.png",
+          "assets/edge-left.png",
+          "assets/edge-right.png"
+        ],
+        "approvedProfiles": [
+          "cyan-clean-standard",
+          "verdant-health-standard"
+        ],
+        "runtimeAudit": {
+          "status": "pass",
+          "report": "../../../../references/shell-runtime-audit.generated.json",
+          "testedSizes": [
+            {
+              "w": 200,
+              "h": 120
+            },
+            {
+              "w": 400,
+              "h": 300
+            },
+            {
+              "w": 640,
+              "h": 360
+            }
+          ],
+          "measuredContentSlot": {
+            "top": 72,
+            "left": 20,
+            "right": 20,
+            "bottom": 20,
+            "width": 360,
+            "height": 208
+          },
+          "titleCapacity": {
+            "cjk": 17,
+            "latinWide": 16,
+            "recommendedMaxCjk": 14,
+            "fontSize": 20,
+            "availableWidth": 360
+          },
+          "failedChecks": []
+        },
+        "metaPath": "kit/Shell/PanelShell/Style06/meta.json"
+      }
+    ],
+    "kpi": [
+      {
+        "id": "widget-kpi-card-style01",
+        "label": "Charts/kpi-card/style01",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 214,
+          "h": 114
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 385,
+          "h": 205
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [
+          "assets/frame-header-left.svg",
+          "assets/frame-header-right.svg",
+          "assets/corner-core.svg",
+          "assets/left-top-line.svg",
+          "assets/left-side-line.svg",
+          "assets/right-top-line.svg",
+          "assets/right-side-line.svg",
+          "assets/particle-field.svg"
+        ],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style01/meta.json",
+        "approvedKpiRoutes": [
+          "grouped-metrics"
+        ],
+        "dataShape": {
+          "title": "string",
+          "unit": "string",
+          "metrics": [
+            {
+              "label": "string",
+              "value": "string|number"
+            }
+          ]
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style02",
+        "label": "Charts/kpi-card/style02",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 185,
+          "h": 102
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 333,
+          "h": 184
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style02/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style03",
+        "label": "KPI Card Style03",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 271,
+          "h": 98
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 488,
+          "h": 176
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style03/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style04",
+        "label": "KPI Card Style04",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 210,
+          "h": 56
+        },
+        "minSize": {
+          "w": 160,
+          "h": 56
+        },
+        "maxSize": {
+          "w": 378,
+          "h": 101
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style04/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style05",
+        "label": "Charts/kpi-card/style05",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 174,
+          "h": 48
+        },
+        "minSize": {
+          "w": 174,
+          "h": 48
+        },
+        "maxSize": {
+          "w": 300,
+          "h": 100
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style05/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit-variants"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style06",
+        "label": "KPI Card Style06",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 293,
+          "h": 76
+        },
+        "minSize": {
+          "w": 293,
+          "h": 76
+        },
+        "maxSize": {
+          "w": 527,
+          "h": 137
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style06/meta.json",
+        "approvedKpiRoutes": [
+          "trend-comparison"
+        ],
+        "dataShape": {
+          "title": "string",
+          "unit": "string",
+          "value": "string|number",
+          "trendLabel": "string",
+          "trend": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style07",
+        "label": "KPI Card Style07",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 166,
+          "h": 86
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 299,
+          "h": 155
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style07/meta.json",
+        "approvedKpiRoutes": [
+          "horizontal-compact",
+          "progress"
+        ],
+        "dataShape": {
+          "title": "string",
+          "label": "string",
+          "value": "string|number",
+          "progress": "percent|string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style08",
+        "label": "KPI Card Style08",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 120,
+          "h": 91
+        },
+        "minSize": {
+          "w": 120,
+          "h": 91
+        },
+        "maxSize": {
+          "w": 216,
+          "h": 164
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style08/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit-variants"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "unit": "string",
+          "title": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style09",
+        "label": "KPI Card Style09",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 299,
+          "h": 100
+        },
+        "minSize": {
+          "w": 299,
+          "h": 100
+        },
+        "maxSize": {
+          "w": 538,
+          "h": 180
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style09/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit-variants"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style10",
+        "label": "Charts/kpi-card/style10",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 156,
+          "h": 156
+        },
+        "minSize": {
+          "w": 156,
+          "h": 156
+        },
+        "maxSize": {
+          "w": 281,
+          "h": 281
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style10/meta.json",
+        "approvedKpiRoutes": [
+          "total-completed"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "label": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style12",
+        "label": "Charts/kpi-card/style12 variant pair",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 200,
+          "h": 180
+        },
+        "minSize": {
+          "w": 160,
+          "h": 90
+        },
+        "maxSize": {
+          "w": 364,
+          "h": 324
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "js": "variant.js",
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style12/meta.json",
+        "approvedKpiRoutes": [
+          "positive-negative"
+        ],
+        "dataShape": {
+          "title": "string",
+          "subtitle": "string",
+          "value": "number|string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style14",
+        "label": "KPI Card Style14",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 110,
+          "h": 105
+        },
+        "minSize": {
+          "w": 110,
+          "h": 105
+        },
+        "maxSize": {
+          "w": 198,
+          "h": 189
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style14/meta.json",
+        "approvedKpiRoutes": [],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style15",
+        "label": "KPI Card Style15",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 179,
+          "h": 96
+        },
+        "minSize": {
+          "w": 160,
+          "h": 80
+        },
+        "maxSize": {
+          "w": 322,
+          "h": 173
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style15/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit-variants"
+        ],
+        "dataShape": {
+          "value": "string|number",
+          "unit": "string",
+          "label": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style16",
+        "label": "KPI Card Style16",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 259,
+          "h": 41
+        },
+        "minSize": {
+          "w": 160,
+          "h": 41
+        },
+        "maxSize": {
+          "w": 466,
+          "h": 74
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style16/meta.json",
+        "approvedKpiRoutes": [
+          "compact-title-value-unit-variants",
+          "horizontal-compact"
+        ],
+        "dataShape": {
+          "title": "string",
+          "value": "string|number",
+          "unit": "string"
+        },
+        "visualWeight": null
+      },
+      {
+        "id": "widget-kpi-card-style17",
+        "label": "KPI Card Style17",
+        "status": "ready",
+        "themes": [],
+        "size": {
+          "w": 222,
+          "h": 215
+        },
+        "minSize": {
+          "w": 222,
+          "h": 215
+        },
+        "maxSize": {
+          "w": 222,
+          "h": 215
+        },
+        "title": null,
+        "contentSlot": null,
+        "adaptationLayout": null,
+        "backgroundMode": null,
+        "code": {
+          "html": "component.html",
+          "css": [
+            "../base.css",
+            "style.css"
+          ],
+          "preview": "widget.html"
+        },
+        "assets": [],
+        "approvedProfiles": [],
+        "runtimeAudit": null,
+        "metaPath": "kit/widget/kpi-card/Style17/meta.json",
+        "approvedKpiRoutes": [
+          "multi-state"
+        ],
+        "dataShape": {
+          "title": "string",
+          "subtitle": "string",
+          "value": "string|number",
+          "label": "string",
+          "variant": "blue|red|yellow"
+        },
+        "visualWeight": null
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "bg-deep-tech-blue-1",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "file": "bg-deep-tech-blue-1.png",
+        "cssFallback": "#00111e",
+        "approvedProfiles": [
+          "industrial-blue-compact"
+        ]
+      },
+      {
+        "id": "bg-deep-tech-blue-2",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "file": "bg-deep-tech-blue-2.png",
+        "cssFallback": "#001323",
+        "approvedProfiles": [
+          "industrial-blue-compact"
+        ]
+      },
+      {
+        "id": "bg-dusk-rose-gold-1",
+        "status": "ready",
+        "themes": [
+          "dusk-rose-gold"
+        ],
+        "file": "bg-dusk-rose-gold-1.png",
+        "cssFallback": "#181C28",
+        "approvedProfiles": [
+          "gold-executive-standard"
+        ]
+      },
+      {
+        "id": "bg-dusk-rose-gold-2",
+        "status": "ready",
+        "themes": [
+          "ember-orange",
+          "dusk-rose-gold"
+        ],
+        "file": "bg-dusk-rose-gold-2.png",
+        "cssFallback": "#0c0808",
+        "approvedProfiles": [
+          "gold-executive-standard"
+        ]
+      },
+      {
+        "id": "bg-ember-orange-1",
+        "status": "ready",
+        "themes": [
+          "ember-orange",
+          "dusk-rose-gold"
+        ],
+        "file": "bg-ember-orange-1.png",
+        "cssFallback": "#0a0505",
+        "approvedProfiles": [
+          "orange-formal-standard"
+        ]
+      },
+      {
+        "id": "bg-fresh-verdant-1",
+        "status": "ready",
+        "themes": [
+          "frost-cyan",
+          "fresh-verdant"
+        ],
+        "file": "bg-fresh-verdant-1.png",
+        "cssFallback": "#00121e",
+        "approvedProfiles": [
+          "verdant-health-standard"
+        ]
+      },
+      {
+        "id": "bg-frost-cyan-1",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "file": "bg-frost-cyan-1.png",
+        "cssFallback": "#1a1e29",
+        "approvedProfiles": [
+          "cyan-clean-standard"
+        ]
+      },
+      {
+        "id": "bg-galaxy-azure-1",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "file": "bg-galaxy-azure-1.png",
+        "cssFallback": "#020817",
+        "approvedProfiles": [
+          "blue-command-standard"
+        ]
+      },
+      {
+        "id": "bg-galaxy-azure-2",
+        "status": "ready",
+        "themes": [
+          "galaxy-azure",
+          "frost-cyan",
+          "fresh-verdant",
+          "deep-tech-blue"
+        ],
+        "file": "bg-galaxy-azure-2.png",
+        "cssFallback": "#020817",
+        "approvedProfiles": [
+          "blue-command-standard"
+        ]
+      }
+    ]
+  }
+}

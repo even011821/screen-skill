@@ -69,5 +69,9 @@
     "color": "#ffffff",
     "fill": "#ffffff",
     "colorMode": "fixed-white"
-  }
+  },
+  "approvedProfiles": [
+    "blue-command-standard",
+    "industrial-blue-compact"
+  ]
 }

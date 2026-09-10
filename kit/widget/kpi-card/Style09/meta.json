@@ -69,5 +69,8 @@
     "supportsWidthStretch": true,
     "supportsHeightStretch": true
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "compact-title-value-unit-variants"
+  ]
 }

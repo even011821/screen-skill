@@ -64,5 +64,6 @@
     "supportsHeightStretch": true,
     "notes": "KPI content stays centered; unit badge uses local image asset."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": []
 }

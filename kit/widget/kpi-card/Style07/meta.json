@@ -75,5 +75,9 @@
     "supportsHeightStretch": true,
     "notes": "Main background is rebuilt with CSS polygon and gradients. Left teeth and top-right corner are fixed local assets."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "horizontal-compact",
+    "progress"
+  ]
 }

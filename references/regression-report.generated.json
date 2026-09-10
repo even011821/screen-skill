@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "scripts/run-regression.mjs",
+  "runtimeExecuted": false,
+  "summary": {
+    "briefs": 6,
+    "expectedBriefs": 6,
+    "runtimeComponents": 20,
+    "runtimeCases": 60,
+    "errors": 0,
+    "status": "pass"
+  },
+  "results": [
+    {
+      "brief": "blue-command-standard.json",
+      "profile": "blue-command-standard",
+      "selection": {
+        "theme": "galaxy-azure",
+        "topNav": "topnav-centertitle-1920-style12",
+        "cardShellStyleLock": "shell-cardshell-style03",
+        "panelShell": "shell-panelshell-style02",
+        "background": "bg-galaxy-azure-1"
+      },
+      "repeatable": true
+    },
+    {
+      "brief": "cyan-clean-standard.json",
+      "profile": "cyan-clean-standard",
+      "selection": {
+        "theme": "frost-cyan",
+        "topNav": "topnav-centertitle-1920-style06",
+        "cardShellStyleLock": "shell-cardshell-style08",
+        "panelShell": "shell-panelshell-style03",
+        "background": "bg-frost-cyan-1"
+      },
+      "repeatable": true
+    },
+    {
+      "brief": "gold-executive-standard.json",
+      "profile": "gold-executive-standard",
+      "selection": {
+        "theme": "dusk-rose-gold",
+        "topNav": "topnav-centertitle-1920-style12",
+        "cardShellStyleLock": "shell-cardshell-style11",
+        "panelShell": "shell-panelshell-style01",
+        "background": "bg-dusk-rose-gold-1"
+      },
+      "repeatable": true
+    },
+    {
+      "brief": "industrial-blue-compact.json",
+      "profile": "industrial-blue-compact",
+      "selection": {
+        "theme": "deep-tech-blue",
+        "topNav": "topnav-centertitle-1920-style03",
+        "cardShellStyleLock": "shell-cardshell-style13",
+        "panelShell": "shell-panelshell-style01",
+        "background": "bg-deep-tech-blue-2"
+      },
+      "repeatable": true
+    },
+    {
+      "brief": "orange-formal-standard.json",
+      "profile": "orange-formal-standard",
+      "selection": {
+        "theme": "ember-orange",
+        "topNav": "topnav-centertitle-1920-style04",
+        "cardShellStyleLock": "shell-cardshell-style04",
+        "panelShell": "shell-panelshell-style01",
+        "background": "bg-ember-orange-1"
+      },
+      "repeatable": true
+    },
+    {
+      "brief": "verdant-health-standard.json",
+      "profile": "verdant-health-standard",
+      "selection": {
+        "theme": "fresh-verdant",
+        "topNav": "topnav-centertitle-1920-style05",
+        "cardShellStyleLock": "shell-cardshell-style05",
+        "panelShell": "shell-panelshell-style03",
+        "background": "bg-fresh-verdant-1"
+      },
+      "repeatable": true
+    }
+  ],
+  "errors": []
+}

@@ -1,28 +1,36 @@
 .bs-panel-shell--style04 {
-  --panel-bg: var(--shell-panel-bg, rgba(7, 16, 36, 0.58));
-  --panel-line: var(--shell-panel-line, #ffca75);
-  --panel-line-2: var(--shell-panel-line-2, #ff6b35);
+  --panel-title: var(--shell-panel-title, #ffffff);
   position: relative;
-  min-width: 260px;
-  min-height: 160px;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  min-width: 120px;
+  min-height: 100px;
+  max-width: 1600px;
+  max-height: 900px;
   box-sizing: border-box;
-  color: #e6f7ff;
+  color: var(--panel-title);
   isolation: isolate;
 }
 .bs-panel-shell--style04,
 .bs-panel-shell--style04 * { box-sizing: border-box; }
-.bs-panel-shell--style04 .bs-panel-shell__frame { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.bs-panel-shell--style04 .bs-panel-shell__frame::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--panel-line-2) 10%, transparent), transparent 42%), var(--panel-bg); clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px)); }
-.bs-panel-shell--style04 .bs-panel-shell__frame::after { content: ""; position: absolute; inset: 0; border: 1px solid color-mix(in srgb, var(--panel-line) 72%, transparent); clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px)); box-shadow: inset 0 0 18px color-mix(in srgb, var(--panel-line-2) 18%, transparent); opacity: 0.9; }
+.bs-panel-shell--style04 .bs-panel-shell__frame,
 .bs-panel-shell--style04 .bs-panel-shell__corner,
-.bs-panel-shell--style04 .bs-panel-shell__glow { position: absolute; display: block; }
-.bs-panel-shell--style04 .bs-panel-shell__corner { width: 42px; height: 42px; }
-.bs-panel-shell--style04 .bs-panel-shell__corner--tl { top: 0; left: 0; border-top: 2px solid var(--panel-line-2); border-left: 2px solid var(--panel-line-2); }
-.bs-panel-shell--style04 .bs-panel-shell__corner--tr { top: 0; right: 0; border-top: 2px solid var(--panel-line); border-right: 2px solid var(--panel-line); }
-.bs-panel-shell--style04 .bs-panel-shell__corner--bl { bottom: 0; left: 0; border-bottom: 2px solid var(--panel-line); border-left: 2px solid var(--panel-line); }
-.bs-panel-shell--style04 .bs-panel-shell__corner--br { bottom: 0; right: 0; border-bottom: 2px solid var(--panel-line-2); border-right: 2px solid var(--panel-line-2); }
-.bs-panel-shell--style04 .bs-panel-shell__glow { left: 12%; right: 12%; bottom: 4px; height: 20px; background: radial-gradient(ellipse at center, color-mix(in srgb, var(--panel-line-2) 44%, transparent), transparent 70%); filter: blur(2px); opacity: 0.42; }
-.bs-panel-shell--style04 .bs-panel-shell__content { position: relative; z-index: 1; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark { position: absolute; pointer-events: none; }
+.bs-panel-shell--style04 .bs-panel-shell__frame { inset: 0; z-index: 0; overflow: hidden; background: url("./assets/face.svg") center/100% 100% no-repeat; }
+.bs-panel-shell--style04 .bs-panel-shell__corner { width: 20px; height: 20px; z-index: 2; background-repeat: no-repeat; background-size: 20px 20px; }
+.bs-panel-shell--style04 .bs-panel-shell__corner--tl { top: 0; left: 0; background-image: url("./assets/corner-left.svg"); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--tr { top: 0; right: 0; background-image: url("./assets/corner-right.svg"); transform: rotate(180deg) scaleY(-1); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--bl { bottom: 0; left: 0; background-image: url("./assets/corner-left.svg"); transform: scaleY(-1); }
+.bs-panel-shell--style04 .bs-panel-shell__corner--br { right: 0; bottom: 0; background-image: url("./assets/corner-right.svg"); transform: rotate(180deg); }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark { width: 7px; height: 7px; z-index: 2; background: url("./assets/edge-mark.svg") center/7px 7px no-repeat; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--left { top: calc(50% - 3px); left: 2px; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--top { top: 2px; left: calc(50% - 3px); }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--right { top: calc(50% - 3px); right: 2px; }
+.bs-panel-shell--style04 .bs-panel-shell__edge-mark--bottom { bottom: 2px; left: calc(50% - 3px); }
+.bs-panel-shell--style04 .bs-panel-shell__glow { display: none; }
+.bs-panel-shell--style04 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style04 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style04 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style04 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style04[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style04[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }

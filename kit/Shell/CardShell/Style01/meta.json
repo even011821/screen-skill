@@ -108,5 +108,43 @@
     ],
     "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedProfiles": [
+    "blue-command-standard",
+    "industrial-blue-compact"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 300,
+        "h": 180
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 52,
+      "left": 20,
+      "right": 20,
+      "bottom": 16,
+      "width": 360,
+      "height": 232
+    },
+    "titleCapacity": {
+      "cjk": 21,
+      "latinWide": 19,
+      "recommendedMaxCjk": 17,
+      "fontSize": 16,
+      "availableWidth": 338
+    },
+    "failedChecks": []
+  }
 }

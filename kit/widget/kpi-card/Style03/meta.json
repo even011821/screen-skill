@@ -65,5 +65,8 @@
     "supportsHeightStretch": true,
     "notes": "Panel background uses local SVG shape layers; icon decoration keeps fixed visual ratio."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "compact-title-value"
+  ]
 }

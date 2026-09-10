@@ -60,5 +60,8 @@
     "supportsHeightStretch": true,
     "notes": "Icon decoration keeps fixed visual ratio; text is editable."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "compact-title-value"
+  ]
 }

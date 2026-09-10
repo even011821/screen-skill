@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "scripts/verify-style-system.mjs",
+  "renderEnabled": true,
+  "status": "pass",
+  "steps": [
+    {
+      "id": "metadata-sync-before",
+      "command": "node scripts/sync-style-metadata.mjs --write",
+      "status": "pass",
+      "output": "{\n  \"mode\": \"write\",\n  \"touched\": 0,\n  \"counts\": {\n    \"topNav\": 24,\n    \"cardShell\": 14,\n    \"panelShell\": 6,\n    \"kpi\": 15,\n    \"backgrounds\": 9\n  },\n  \"status\": \"ok\"\n}"
+    },
+    {
+      "id": "catalog-audit",
+      "command": "node scripts/audit-catalogs.mjs",
+      "status": "pass",
+      "output": "Catalog audit passed: 24 TopNav, 14 CardShell, 6 PanelShell, 15 KPI, 9 backgrounds."
+    },
+    {
+      "id": "profile-audit",
+      "command": "node scripts/audit-style-profiles.mjs",
+      "status": "pass",
+      "output": "{\n  \"profiles\": 6,\n  \"profilePlacements\": 78,\n  \"uniqueProfileComponents\": 45,\n  \"kpiRoutes\": 10,\n  \"uniqueKpiStyles\": 14,\n  \"status\": \"ok\"\n}"
+    },
+    {
+      "id": "shell-runtime-audit",
+      "command": "node scripts/audit-shell-runtime.mjs --write-meta",
+      "status": "pass",
+      "output": "{\n  \"components\": 20,\n  \"cases\": 60,\n  \"passedComponents\": 20,\n  \"failedComponents\": 0\n}"
+    },
+    {
+      "id": "metadata-sync-after",
+      "command": "node scripts/sync-style-metadata.mjs --write",
+      "status": "pass",
+      "output": "{\n  \"mode\": \"write\",\n  \"touched\": 0,\n  \"counts\": {\n    \"topNav\": 24,\n    \"cardShell\": 14,\n    \"panelShell\": 6,\n    \"kpi\": 15,\n    \"backgrounds\": 9\n  },\n  \"status\": \"ok\"\n}"
+    },
+    {
+      "id": "regression",
+      "command": "node scripts/run-regression.mjs",
+      "status": "pass",
+      "output": "{\n  \"briefs\": 6,\n  \"expectedBriefs\": 6,\n  \"runtimeComponents\": 20,\n  \"runtimeCases\": 60,\n  \"errors\": 0,\n  \"status\": \"pass\"\n}"
+    },
+    {
+      "id": "profile-previews",
+      "command": "node docs/style-profile-review/render-style-comparisons.mjs",
+      "status": "pass",
+      "output": "Rendered 6 profile pages, KPI comparison and overview to docs/style-profile-review"
+    }
+  ]
+}

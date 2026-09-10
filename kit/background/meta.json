@@ -10,7 +10,10 @@
       ],
       "file": "bg-galaxy-azure-1.png",
       "cssFallback": "#020817",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "blue-command-standard"
+      ]
     },
     {
       "id": "bg-galaxy-azure-2",
@@ -22,7 +25,10 @@
       ],
       "file": "bg-galaxy-azure-2.png",
       "cssFallback": "#020817",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "blue-command-standard"
+      ]
     },
     {
       "id": "bg-ember-orange-1",
@@ -32,7 +38,10 @@
       ],
       "file": "bg-ember-orange-1.png",
       "cssFallback": "#0a0505",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "orange-formal-standard"
+      ]
     },
     {
       "id": "bg-dusk-rose-gold-1",
@@ -41,7 +50,10 @@
       ],
       "file": "bg-dusk-rose-gold-1.png",
       "cssFallback": "#181C28",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "gold-executive-standard"
+      ]
     },
     {
       "id": "bg-fresh-verdant-1",
@@ -51,7 +63,10 @@
       ],
       "file": "bg-fresh-verdant-1.png",
       "cssFallback": "#00121e",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "verdant-health-standard"
+      ]
     },
     {
       "id": "bg-deep-tech-blue-1",
@@ -63,7 +78,10 @@
       ],
       "file": "bg-deep-tech-blue-1.png",
       "cssFallback": "#00111e",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "industrial-blue-compact"
+      ]
     },
     {
       "id": "bg-dusk-rose-gold-2",
@@ -73,7 +91,10 @@
       ],
       "file": "bg-dusk-rose-gold-2.png",
       "cssFallback": "#0c0808",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "gold-executive-standard"
+      ]
     },
     {
       "id": "bg-deep-tech-blue-2",
@@ -85,7 +106,10 @@
       ],
       "file": "bg-deep-tech-blue-2.png",
       "cssFallback": "#001323",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "industrial-blue-compact"
+      ]
     },
     {
       "id": "bg-frost-cyan-1",
@@ -97,7 +121,10 @@
       ],
       "file": "bg-frost-cyan-1.png",
       "cssFallback": "#1a1e29",
-      "status": "ready"
+      "status": "ready",
+      "approvedProfiles": [
+        "cyan-clean-standard"
+      ]
     }
   ]
 }

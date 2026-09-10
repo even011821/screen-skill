@@ -31,7 +31,7 @@
     {
       "name": "title",
       "selector": "[data-slot=\"title\"]",
-      "default": "鍗＄墖鏍囬鍚嶇О",
+      "default": "卡片标题名称",
       "required": false
     },
     {
@@ -151,5 +151,43 @@
     "usesLocalSvgAssets": true,
     "notes": "Runtime uses component.html and shell.css. shell.html is an empty-card preview only; business widgets must be injected into the content slot. Same structure as Style10 with smaller fixed corner assets and CSS stretchable frame/fill."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedProfiles": [
+    "gold-executive-standard",
+    "orange-formal-standard"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 300,
+        "h": 180
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 61,
+      "left": 20,
+      "right": 20,
+      "bottom": 16,
+      "width": 360,
+      "height": 223
+    },
+    "titleCapacity": {
+      "cjk": 15,
+      "latinWide": 14,
+      "recommendedMaxCjk": 12,
+      "fontSize": 20,
+      "availableWidth": 312
+    },
+    "failedChecks": []
+  }
 }

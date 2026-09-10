@@ -1,0 +1,4112 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedBy": "scripts/audit-shell-runtime.mjs",
+  "browser": {
+    "executable": "msedge.exe",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0"
+  },
+  "standards": {
+    "sizes": "min, base and 640x360 capped by maxSize",
+    "slotTolerancePx": 2,
+    "titleRecommendation": "85% of measured repeated-CJK capacity",
+    "checks": [
+      "content exists and has positive size",
+      "content stays inside root and matches meta contentSlot",
+      "header does not collide with content",
+      "title capacity is measurable for CJK and wide Latin text",
+      "long title is contained and remains above decoration",
+      "content layer remains above frame",
+      "component viewport has no horizontal or vertical scrollbar"
+    ]
+  },
+  "summary": {
+    "components": 20,
+    "cases": 60,
+    "passedComponents": 20,
+    "failedComponents": 0
+  },
+  "components": [
+    {
+      "id": "shell-cardshell-style01",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style01/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 21,
+        "latinWide": 19,
+        "recommendedMaxCjk": 17,
+        "fontSize": 16,
+        "availableWidth": 338
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style02",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style02/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 362,
+        "height": 234
+      },
+      "titleCapacity": {
+        "cjk": 21,
+        "latinWide": 21,
+        "recommendedMaxCjk": 17,
+        "fontSize": 16,
+        "availableWidth": 343
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style03",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style03/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 362,
+        "height": 234
+      },
+      "titleCapacity": {
+        "cjk": 19,
+        "latinWide": 18,
+        "recommendedMaxCjk": 16,
+        "fontSize": 18,
+        "availableWidth": 344
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style04",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style04/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 12,
+        "latinWide": 12,
+        "recommendedMaxCjk": 10,
+        "fontSize": 26,
+        "availableWidth": 333
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style05",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style05/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 20,
+        "availableWidth": 263
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style06",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style06/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 16,
+        "latinWide": 17,
+        "recommendedMaxCjk": 13,
+        "fontSize": 20,
+        "availableWidth": 324
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style07",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style07/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 280,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 226
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 13,
+        "recommendedMaxCjk": 12,
+        "fontSize": 16,
+        "availableWidth": 240
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style08",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style08/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 10,
+        "latinWide": 10,
+        "recommendedMaxCjk": 8,
+        "fontSize": 20,
+        "availableWidth": 220
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style09",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style09/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 7,
+        "latinWide": 8,
+        "recommendedMaxCjk": 5,
+        "fontSize": 26,
+        "availableWidth": 207
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style10",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style10/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 222
+      },
+      "titleCapacity": {
+        "cjk": 16,
+        "latinWide": 15,
+        "recommendedMaxCjk": 13,
+        "fontSize": 19.2,
+        "availableWidth": 322
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style11",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style11/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 223
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 14,
+        "recommendedMaxCjk": 12,
+        "fontSize": 20,
+        "availableWidth": 312
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style12",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style12/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 280,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 18,
+        "availableWidth": 240
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style13",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style13/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "titleCapacity": {
+        "cjk": 8,
+        "latinWide": 9,
+        "recommendedMaxCjk": 6,
+        "fontSize": 24,
+        "availableWidth": 225
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-cardshell-style14",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style14/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 300,
+          "h": 180
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.86,
+        "bottom": 16.5,
+        "width": 360.02,
+        "height": 205
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 14,
+        "recommendedMaxCjk": 11,
+        "fontSize": 22,
+        "availableWidth": 294
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style01",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style01/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 120,
+          "h": 100
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style02",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style02/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 180,
+          "h": 150
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style03",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style03/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 180,
+          "h": 150
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style04",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style04/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 120,
+          "h": 100
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style05",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style05/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 240,
+          "h": 160
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    },
+    {
+      "id": "shell-panelshell-style06",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style06/meta.json",
+      "status": "pass",
+      "testedSizes": [
+        {
+          "w": 200,
+          "h": 120
+        },
+        {
+          "w": 400,
+          "h": 300
+        },
+        {
+          "w": 640,
+          "h": 360
+        }
+      ],
+      "baseMeasuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "failedChecks": []
+    }
+  ],
+  "cases": [
+    {
+      "id": "shell-cardshell-style01",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style01/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 14,
+        "latinWide": 13,
+        "recommendedMaxCjk": 11,
+        "fontSize": 16,
+        "availableWidth": 238
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style01",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style01/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 21,
+        "latinWide": 19,
+        "recommendedMaxCjk": 17,
+        "fontSize": 16,
+        "availableWidth": 338
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style01",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style01/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 36,
+        "latinWide": 33,
+        "recommendedMaxCjk": 30,
+        "fontSize": 16,
+        "availableWidth": 578
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style02",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style02/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 262,
+        "height": 114
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 14,
+        "recommendedMaxCjk": 12,
+        "fontSize": 16,
+        "availableWidth": 243
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style02",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style02/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 362,
+        "height": 234
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 21,
+        "latinWide": 21,
+        "recommendedMaxCjk": 17,
+        "fontSize": 16,
+        "availableWidth": 343
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style02",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style02/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 602,
+        "height": 294
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 36,
+        "latinWide": 35,
+        "recommendedMaxCjk": 30,
+        "fontSize": 16,
+        "availableWidth": 583
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style03",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style03/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 262,
+        "height": 114
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 13,
+        "recommendedMaxCjk": 11,
+        "fontSize": 18,
+        "availableWidth": 244
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style03",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style03/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 362,
+        "height": 234
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 19,
+        "latinWide": 18,
+        "recommendedMaxCjk": 16,
+        "fontSize": 18,
+        "availableWidth": 344
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style03",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style03/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15
+      },
+      "measuredContentSlot": {
+        "top": 51,
+        "left": 19,
+        "right": 19,
+        "bottom": 15,
+        "width": 602,
+        "height": 294
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 32,
+        "latinWide": 31,
+        "recommendedMaxCjk": 27,
+        "fontSize": 18,
+        "availableWidth": 584
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style04",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style04/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 8,
+        "latinWide": 8,
+        "recommendedMaxCjk": 6,
+        "fontSize": 26,
+        "availableWidth": 233
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style04",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style04/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 12,
+        "latinWide": 12,
+        "recommendedMaxCjk": 10,
+        "fontSize": 26,
+        "availableWidth": 333
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style04",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style04/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 22,
+        "latinWide": 21,
+        "recommendedMaxCjk": 18,
+        "fontSize": 26,
+        "availableWidth": 573
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style05",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style05/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 20,
+        "availableWidth": 263
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style05",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style05/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 20,
+        "availableWidth": 263
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style05",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style05/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 20,
+        "availableWidth": 263
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style06",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style06/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 11,
+        "latinWide": 12,
+        "recommendedMaxCjk": 9,
+        "fontSize": 20,
+        "availableWidth": 224
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style06",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style06/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 16,
+        "latinWide": 17,
+        "recommendedMaxCjk": 13,
+        "fontSize": 20,
+        "availableWidth": 324
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style06",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style06/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 28,
+        "latinWide": 30,
+        "recommendedMaxCjk": 23,
+        "fontSize": 20,
+        "availableWidth": 564
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style07",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style07/meta.json",
+      "size": {
+        "w": 280,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 240,
+        "height": 106
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 10,
+        "latinWide": 9,
+        "recommendedMaxCjk": 8,
+        "fontSize": 16,
+        "availableWidth": 168
+      },
+      "viewportMetrics": {
+        "clientWidth": 280,
+        "clientHeight": 180,
+        "scrollWidth": 280,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style07",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style07/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 226
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 13,
+        "recommendedMaxCjk": 12,
+        "fontSize": 16,
+        "availableWidth": 240
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style07",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style07/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 58,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 286
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 13,
+        "recommendedMaxCjk": 12,
+        "fontSize": 16,
+        "availableWidth": 240
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style08",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style08/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 9,
+        "latinWide": 9,
+        "recommendedMaxCjk": 7,
+        "fontSize": 20,
+        "availableWidth": 202
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style08",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style08/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 10,
+        "latinWide": 10,
+        "recommendedMaxCjk": 8,
+        "fontSize": 20,
+        "availableWidth": 220
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style08",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style08/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 10,
+        "latinWide": 10,
+        "recommendedMaxCjk": 8,
+        "fontSize": 20,
+        "availableWidth": 220
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style09",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style09/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 3,
+        "latinWide": 4,
+        "recommendedMaxCjk": 2,
+        "fontSize": 26,
+        "availableWidth": 107
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style09",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style09/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 7,
+        "latinWide": 8,
+        "recommendedMaxCjk": 5,
+        "fontSize": 26,
+        "availableWidth": 207
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style09",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style09/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 17,
+        "recommendedMaxCjk": 12,
+        "fontSize": 26,
+        "availableWidth": 447
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style10",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style10/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 102
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 11,
+        "latinWide": 10,
+        "recommendedMaxCjk": 9,
+        "fontSize": 19.2,
+        "availableWidth": 222
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style10",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style10/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 222
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 16,
+        "latinWide": 15,
+        "recommendedMaxCjk": 13,
+        "fontSize": 19.2,
+        "availableWidth": 322
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style10",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style10/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 62,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 282
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 28,
+        "latinWide": 26,
+        "recommendedMaxCjk": 23,
+        "fontSize": 19.2,
+        "availableWidth": 562
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style11",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style11/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 103
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 10,
+        "latinWide": 9,
+        "recommendedMaxCjk": 8,
+        "fontSize": 20,
+        "availableWidth": 212
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style11",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style11/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 223
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 15,
+        "latinWide": 14,
+        "recommendedMaxCjk": 12,
+        "fontSize": 20,
+        "availableWidth": 312
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style11",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style11/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 61,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 283
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 27,
+        "latinWide": 25,
+        "recommendedMaxCjk": 22,
+        "fontSize": 20,
+        "availableWidth": 552
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style12",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style12/meta.json",
+      "size": {
+        "w": 280,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 240,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 9,
+        "latinWide": 8,
+        "recommendedMaxCjk": 7,
+        "fontSize": 18,
+        "availableWidth": 168
+      },
+      "viewportMetrics": {
+        "clientWidth": 280,
+        "clientHeight": 180,
+        "scrollWidth": 280,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style12",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style12/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 18,
+        "availableWidth": 240
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style12",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style12/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 12,
+        "recommendedMaxCjk": 11,
+        "fontSize": 18,
+        "availableWidth": 240
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style13",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style13/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 260,
+        "height": 112
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 4,
+        "latinWide": 5,
+        "recommendedMaxCjk": 3,
+        "fontSize": 24,
+        "availableWidth": 125
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style13",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style13/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 360,
+        "height": 232
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 8,
+        "latinWide": 9,
+        "recommendedMaxCjk": 6,
+        "fontSize": 24,
+        "availableWidth": 225
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style13",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style13/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16
+      },
+      "measuredContentSlot": {
+        "top": 52,
+        "left": 20,
+        "right": 20,
+        "bottom": 16,
+        "width": 600,
+        "height": 292
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 19,
+        "recommendedMaxCjk": 14,
+        "fontSize": 24,
+        "availableWidth": 465
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style14",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style14/meta.json",
+      "size": {
+        "w": 300,
+        "h": 180
+      },
+      "expectedContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.87,
+        "bottom": 16.5
+      },
+      "measuredContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.86,
+        "bottom": 16.5,
+        "width": 260.02,
+        "height": 85
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": -0.01,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 8,
+        "latinWide": 9,
+        "recommendedMaxCjk": 6,
+        "fontSize": 22,
+        "availableWidth": 194
+      },
+      "viewportMetrics": {
+        "clientWidth": 300,
+        "clientHeight": 180,
+        "scrollWidth": 300,
+        "scrollHeight": 180
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style14",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style14/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.87,
+        "bottom": 16.5
+      },
+      "measuredContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.86,
+        "bottom": 16.5,
+        "width": 360.02,
+        "height": 205
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": -0.01,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 13,
+        "latinWide": 14,
+        "recommendedMaxCjk": 11,
+        "fontSize": 22,
+        "availableWidth": 294
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-cardshell-style14",
+      "kind": "CardShell",
+      "metaPath": "kit/Shell/CardShell/Style14/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.87,
+        "bottom": 16.5
+      },
+      "measuredContentSlot": {
+        "top": 78.5,
+        "left": 19.13,
+        "right": 20.86,
+        "bottom": 16.5,
+        "width": 600.02,
+        "height": 265
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": -0.01,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 23,
+        "latinWide": 27,
+        "recommendedMaxCjk": 19,
+        "fontSize": 22,
+        "availableWidth": 534
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style01",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style01/meta.json",
+      "size": {
+        "w": 120,
+        "h": 100
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 80,
+        "height": 8
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 3,
+        "latinWide": 3,
+        "recommendedMaxCjk": 2,
+        "fontSize": 20,
+        "availableWidth": 80
+      },
+      "viewportMetrics": {
+        "clientWidth": 120,
+        "clientHeight": 100,
+        "scrollWidth": 120,
+        "scrollHeight": 100
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style01",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style01/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style01",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style01/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style02",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style02/meta.json",
+      "size": {
+        "w": 180,
+        "h": 150
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 140,
+        "height": 58
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 6,
+        "latinWide": 6,
+        "recommendedMaxCjk": 5,
+        "fontSize": 20,
+        "availableWidth": 140
+      },
+      "viewportMetrics": {
+        "clientWidth": 180,
+        "clientHeight": 150,
+        "scrollWidth": 180,
+        "scrollHeight": 151
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style02",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style02/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 301
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style02",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style02/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 361
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style03",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style03/meta.json",
+      "size": {
+        "w": 180,
+        "h": 150
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 140,
+        "height": 58
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 6,
+        "latinWide": 6,
+        "recommendedMaxCjk": 5,
+        "fontSize": 20,
+        "availableWidth": 140
+      },
+      "viewportMetrics": {
+        "clientWidth": 180,
+        "clientHeight": 150,
+        "scrollWidth": 181,
+        "scrollHeight": 150
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style03",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style03/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 401,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style03",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style03/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 641,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style04",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style04/meta.json",
+      "size": {
+        "w": 120,
+        "h": 100
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 80,
+        "height": 8
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 3,
+        "latinWide": 3,
+        "recommendedMaxCjk": 2,
+        "fontSize": 20,
+        "availableWidth": 80
+      },
+      "viewportMetrics": {
+        "clientWidth": 120,
+        "clientHeight": 100,
+        "scrollWidth": 120,
+        "scrollHeight": 100
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style04",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style04/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style04",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style04/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style05",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style05/meta.json",
+      "size": {
+        "w": 240,
+        "h": 160
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 200,
+        "height": 68
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 9,
+        "latinWide": 9,
+        "recommendedMaxCjk": 7,
+        "fontSize": 20,
+        "availableWidth": 200
+      },
+      "viewportMetrics": {
+        "clientWidth": 240,
+        "clientHeight": 160,
+        "scrollWidth": 240,
+        "scrollHeight": 160
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style05",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style05/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style05",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style05/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style06",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style06/meta.json",
+      "size": {
+        "w": 200,
+        "h": 120
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 160,
+        "height": 28
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 7,
+        "latinWide": 7,
+        "recommendedMaxCjk": 5,
+        "fontSize": 20,
+        "availableWidth": 160
+      },
+      "viewportMetrics": {
+        "clientWidth": 200,
+        "clientHeight": 120,
+        "scrollWidth": 200,
+        "scrollHeight": 120
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style06",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style06/meta.json",
+      "size": {
+        "w": 400,
+        "h": 300
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 360,
+        "height": 208
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 17,
+        "latinWide": 16,
+        "recommendedMaxCjk": 14,
+        "fontSize": 20,
+        "availableWidth": 360
+      },
+      "viewportMetrics": {
+        "clientWidth": 400,
+        "clientHeight": 300,
+        "scrollWidth": 400,
+        "scrollHeight": 300
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    },
+    {
+      "id": "shell-panelshell-style06",
+      "kind": "PanelShell",
+      "metaPath": "kit/Shell/PanelShell/Style06/meta.json",
+      "size": {
+        "w": 640,
+        "h": 360
+      },
+      "expectedContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20
+      },
+      "measuredContentSlot": {
+        "top": 72,
+        "left": 20,
+        "right": 20,
+        "bottom": 20,
+        "width": 600,
+        "height": 268
+      },
+      "slotDelta": {
+        "top": 0,
+        "left": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "titleCapacity": {
+        "cjk": 29,
+        "latinWide": 27,
+        "recommendedMaxCjk": 24,
+        "fontSize": 20,
+        "availableWidth": 600
+      },
+      "viewportMetrics": {
+        "clientWidth": 640,
+        "clientHeight": 360,
+        "scrollWidth": 640,
+        "scrollHeight": 360
+      },
+      "checks": {
+        "contentExists": true,
+        "contentPositive": true,
+        "contentWithinRoot": true,
+        "contentSlotMatchesMeta": true,
+        "headerSeparatedFromContent": true,
+        "titleCapacityMeasurable": true,
+        "longTitleContained": true,
+        "titleNotObscured": true,
+        "contentAboveFrame": true,
+        "noHorizontalScrollbar": true,
+        "noVerticalScrollbar": true
+      },
+      "status": "pass"
+    }
+  ]
+}

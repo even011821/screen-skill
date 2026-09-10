@@ -83,5 +83,9 @@
     "supportsHeightStretch": true,
     "notes": "Button frame is rebuilt from local layer assets; text, value and unit remain DOM slots."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "compact-title-value-unit-variants",
+    "horizontal-compact"
+  ]
 }

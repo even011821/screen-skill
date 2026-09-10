@@ -1,0 +1,3461 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KPI 组件对照</title>
+  <style>/* Galaxy Azure / 星河灵蓝
+   Figma Theme node: 560:2993
+   Primary: #1C76FD, Secondary: #4BA687 */
+:root,
+[data-theme="galaxy-azure"] {
+  --theme-primary: #1c76fd;
+  --theme-secondary: #4ba687;
+  --bg-0: #020817;
+  --bg-1: #03142b;
+  --panel-bg: rgba(3, 21, 42, 0.34);
+  --panel-fill: rgba(28, 118, 253, 0.05);
+  --panel-line: rgba(84, 179, 251, 0.3);
+  --panel-line-strong: #54b3fb;
+  --panel-glow: #1e66aa;
+  --shell-panel-bg: rgba(7, 16, 36, 0.58);
+  --shell-panel-line: #1c76fd;
+  --shell-panel-line-2: #4ba687;
+  --line: rgba(77, 220, 255, 0.62);
+  --line-soft: rgba(77, 220, 255, 0.22);
+  --accent: #1c76fd;
+  --accent-2: #4ba687;
+  --accent-gold: #ffb84d;
+  --chart-1: #1c76fd;
+  --chart-2: #4ba687;
+  --chart-3: #24caff;
+  --chart-4: #ffdcae;
+  --chart-5: #62f6a7;
+  --chart-6: #ffb13a;
+  --text: #f3fbff;
+  --muted: rgba(199, 231, 255, 0.72);
+  --dim: rgba(199, 231, 255, 0.45);
+  --danger: #ff647c;
+  --ok: #62f6a7;
+  --warning: #ffb13a;
+  --font-title: "YouSheBiaoTiHei", "YouSheBiaoTiHei-Regular", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-num: "D-DIN-PRO", "Orbitron", Arial, sans-serif;
+  --screen-w: 1920px;
+  --screen-h: 1080px;
+  --screen-scale: 1;
+  --header-h: 110px;
+  --top-nav-bg-w: 1920px;
+  --top-nav-bg-h: 110px;
+  --top-nav-title-y: 22px;
+  --top-nav-title-h: 44px;
+  --top-nav-title-size: 38px;
+  --top-nav-title-weight: 900;
+  --top-nav-title-line-height: 1;
+  --top-nav-title-stroke: 0.8px;
+  --top-nav-title-stroke-color: rgba(255, 255, 255, 0.72);
+  --top-nav-title-color: #ffffff;
+  --top-nav-title-fill: #ffffff;
+  --top-nav-title-shadow: 0 2px 0 rgba(28, 48, 92, 0.74), 0 0 8px rgba(255, 255, 255, 0.65), 0 0 18px rgba(28, 118, 253, 0.58);
+  --top-nav-subtitle-y: 58px;
+  --top-nav-subtitle-size: 13px;
+  --top-nav-subtitle-color: rgba(210, 232, 255, 0.82);
+  --gap: clamp(12px, 1vw, 20px);
+  --panel-header-h: 36px;
+  --panel-radius: 4px;
+  --panel-corner: 56px;
+  --panel-pad-x: clamp(14px, 2.8cqw, 24px);
+  --panel-pad-y: clamp(12px, 3cqh, 20px);
+}
+</style>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#030817;color:#edf8ff;font-family:"Microsoft YaHei",Arial,sans-serif}body{padding:34px;background:radial-gradient(circle at 50% -10%,color-mix(in srgb,var(--theme-primary) 20%,transparent),transparent 42%),linear-gradient(180deg,var(--bg-1,#07162d),var(--bg-0,#020817))}.page-title{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid color-mix(in srgb,var(--theme-primary) 45%,transparent)}h1{margin:0;font-size:31px;letter-spacing:2px}.page-title p{margin:0;color:var(--muted,#9eb6c8);font-size:15px}.section{margin-top:24px}.section h2{margin:0 0 12px;font-size:20px;color:var(--text,#fff)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.grid--two{grid-template-columns:repeat(2,minmax(0,1fr))}.component-card,.nav-card,.background-card{border:1px solid color-mix(in srgb,var(--theme-primary) 34%,transparent);background:rgba(2,9,22,.62);overflow:hidden;border-radius:4px}.component-stage{height:220px;padding:12px;display:grid;place-items:center;background:linear-gradient(160deg,rgba(255,255,255,.025),rgba(0,0,0,.08))}.component-stage--card>*{width:100%;height:100%}.component-stage--panel>*{width:100%;height:100%}.component-stage--kpi{height:150px}.component-stage--kpi>*{max-width:95%;max-height:130px}.component-stage .bs-card-shell__content,.component-stage .bs-panel-shell__content{position:relative}.component-stage .bs-card-shell__content:empty::after,.component-stage .bs-panel-shell__content:empty::after{content:"示例内容区  ·  趋势 / 列表 / 状态";position:absolute;inset:12px;display:grid;place-items:center;color:var(--muted,#9eb6c8);font-size:14px;border:1px dashed color-mix(in srgb,var(--theme-primary) 28%,transparent);background:linear-gradient(180deg,transparent,rgba(255,255,255,.025))}.nav-stage{height:100px;display:grid;place-items:center;background:#020817}.nav-stage img{display:block;width:100%;height:auto;max-height:100%;object-fit:fill}.background-card>img{display:block;width:100%;height:190px;object-fit:cover}.component-label{min-height:52px;padding:9px 11px;display:flex;gap:8px;flex-direction:column;border-top:1px solid rgba(255,255,255,.07)}.component-label strong{font-size:12px;word-break:break-all}.component-label span{font-size:12px;color:var(--muted,#9eb6c8)}.note{padding:12px 14px;border-left:3px solid var(--theme-primary);background:rgba(255,255,255,.035);color:var(--muted,#9eb6c8);font-size:14px}.footer{margin-top:24px;text-align:right;color:var(--dim,#72869a);font-size:12px}
+  </style>
+</head>
+<body data-theme="galaxy-azure">
+  <header class="page-title"><div><h1>KPI 组件对照</h1><p>按 dataShape 分组</p></div><p>真实本地组件 · 主题兼容候选</p></header>
+  <div class="note">KPI 不按主题固定，先按数据结构和槽位尺寸筛选，再做主题颜色验证。</div><section class="section"><h2>KPI 数据结构候选</h2><div class="grid">
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style01 {
+  --kpi-style01-bg: #081428;
+  --kpi-style01-line: #4fe6dd;
+  --kpi-style01-line-2: #47d7ff;
+  --kpi-style01-pad-x: clamp(14px, 9.35cqw, 20px);
+  --kpi-style01-pad-top: clamp(13px, 16.67cqh, 19px);
+  --kpi-style01-pad-bottom: clamp(12px, 17.54cqh, 20px);
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 385px;
+  max-height: 205px;
+  padding: var(--kpi-style01-pad-top) 18px var(--kpi-style01-pad-bottom) var(--kpi-style01-pad-x);
+  background: transparent;
+}
+
+.kpi-card--style01 .kpi-card__frame,
+.kpi-card--style01 .kpi-card__frame > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style01 .kpi-card__frame {
+  inset: 0;
+  z-index: 0;
+}
+
+.kpi-card--style01 .kpi-card__frame::before {
+  content: "";
+  position: absolute;
+  left: 5.54px;
+  right: 5.35px;
+  top: 28.31px;
+  bottom: 28.11px;
+  background: var(--kpi-style01-bg);
+}
+
+.kpi-card--style01 .kpi-card__frame::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(79, 230, 221, 0.34);
+  box-shadow:
+    inset 0 0 10px rgba(71, 215, 255, 0.2),
+    0 0 9px rgba(79, 230, 221, 0.16);
+  clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+}
+
+.kpi-card--style01 .kpi-card__header {
+  left: 5.54px;
+  right: 5.35px;
+  height: 27.24px;
+  background:
+    url("../../kit/widget/kpi-card/Style01/assets/frame-header-left.svg") left top / 34.72px 27.24px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/frame-header-right.svg") right top / 34.72px 27.24px no-repeat,
+    linear-gradient(90deg, transparent 0 34.72px, var(--kpi-style01-bg) 34.72px calc(100% - 34.72px), transparent calc(100% - 34.72px));
+}
+
+.kpi-card--style01 .kpi-card__header--top {
+  top: 5.07px;
+}
+
+.kpi-card--style01 .kpi-card__header--bottom {
+  bottom: 0.87px;
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.kpi-card--style01 .kpi-card__corner {
+  width: clamp(34px, 21.96cqw, 47px);
+  height: clamp(30px, 35.62cqh, 40.6px);
+  background:
+    url("../../kit/widget/kpi-card/Style01/assets/corner-core.svg") left top / 36.59px 34.45px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/left-top-line.svg") 36.85px top / calc(100% - 36.85px) 3.74px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/left-side-line.svg") 0.53px 34.72px / 3.21px calc(100% - 34.72px) no-repeat;
+}
+
+.kpi-card--style01 .kpi-card__corner--tl {
+  left: 0;
+  top: 0;
+}
+
+.kpi-card--style01 .kpi-card__corner--tr {
+  top: 0;
+  right: 0;
+  width: min(167.18px, 78.12%);
+  height: min(73.61px, 64.57%);
+  background:
+    url("../../kit/widget/kpi-card/Style01/assets/corner-core.svg") left top / 36.59px 34.45px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/right-top-line.svg") 36.85px top / calc(100% - 36.85px) 3.74px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/right-side-line.svg") 0.53px 34.72px / 3.21px calc(100% - 34.72px) no-repeat;
+  transform: rotate(180deg) scaleY(-1);
+  transform-origin: center;
+}
+
+.kpi-card--style01 .kpi-card__corner--bl {
+  left: 0;
+  bottom: -0.2px;
+  width: min(167.18px, 78.12%);
+  height: min(73.61px, 64.57%);
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
+.kpi-card--style01 .kpi-card__corner--br {
+  right: 0;
+  bottom: -0.2px;
+  width: min(167.18px, 78.12%);
+  height: min(73.61px, 64.57%);
+  background:
+    url("../../kit/widget/kpi-card/Style01/assets/corner-core.svg") left top / 36.59px 34.45px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/right-top-line.svg") 36.85px top / calc(100% - 36.85px) 3.74px no-repeat,
+    url("../../kit/widget/kpi-card/Style01/assets/right-side-line.svg") 0.53px 34.72px / 3.21px calc(100% - 34.72px) no-repeat;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+.kpi-card--style01 .kpi-card__particle {
+  left: 50%;
+  bottom: 21px;
+  width: min(177px, 82.71%);
+  height: min(35px, 30.7%);
+  transform: translateX(-50%) rotate(180deg) scaleY(-1);
+  background: url("../../kit/widget/kpi-card/Style01/assets/particle-field.svg") center / 100% 100% no-repeat;
+  opacity: 0.82;
+}
+
+.kpi-card--style01 .kpi-card__content {
+  justify-content: center;
+  gap: clamp(5px, 7.02cqh, 8px);
+  height: 100%;
+}
+
+.kpi-card--style01 .kpi-card__title-row {
+  gap: 6px;
+}
+
+.kpi-card--style01 .kpi-card__title {
+  flex: 1 1 auto;
+  font-size: clamp(15px, 8.41cqw, 18px);
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.kpi-card--style01 .kpi-card__unit {
+  font-size: clamp(10px, 5.61cqw, 12px);
+}
+
+.kpi-card--style01 .kpi-card__metrics {
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  align-items: start;
+  gap: clamp(2px, 1.87cqw, 4px);
+  text-align: center;
+}
+
+.kpi-card--style01 .kpi-card__value {
+  font-size: clamp(18px, 11.21cqw, 24px);
+  line-height: 27px;
+}
+
+.kpi-card--style01 .kpi-card__label {
+  font-size: clamp(11px, 6.54cqw, 14px);
+  line-height: 17px;
+}
+</style>
+        <section class="kpi-card kpi-card--style01" data-kit="widget/kpi-card/Style01">
+  <div class="kpi-card__frame" aria-hidden="true">
+    <span class="kpi-card__header kpi-card__header--top"></span>
+    <span class="kpi-card__header kpi-card__header--bottom"></span>
+    <span class="kpi-card__corner kpi-card__corner--tl"></span>
+    <span class="kpi-card__corner kpi-card__corner--tr"></span>
+    <span class="kpi-card__corner kpi-card__corner--bl"></span>
+    <span class="kpi-card__corner kpi-card__corner--br"></span>
+    <span class="kpi-card__particle"></span>
+  </div>
+  <div class="kpi-card__content">
+    <div class="kpi-card__title-row">
+      <h3 class="kpi-card__title" data-slot="title">港口2</h3>
+      <span class="kpi-card__unit" data-slot="unit">(艘次)</span>
+    </div>
+    <div class="kpi-card__metrics" data-slot="metrics">
+      <span class="kpi-card__metric" data-slot="metric-item">
+        <strong class="kpi-card__value" data-slot="value">45</strong>
+        <span class="kpi-card__label" data-slot="label">开普船</span>
+      </span>
+      <span class="kpi-card__metric" data-slot="metric-item">
+        <strong class="kpi-card__value" data-slot="value">45</strong>
+        <span class="kpi-card__label" data-slot="label">海轮</span>
+      </span>
+      <span class="kpi-card__metric" data-slot="metric-item">
+        <strong class="kpi-card__value" data-slot="value">45</strong>
+        <span class="kpi-card__label" data-slot="label">驳船</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style01</strong><span>多个同类指标组成一组 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style06 {
+  min-width: 293px;
+  min-height: 76px;
+  max-width: 527px;
+  max-height: 137px;
+  align-items: center;
+  padding: 8px 18px 8px 19px;
+  background: rgba(201, 237, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.kpi-card--style06 .kpi-card__icon-area {
+  position: relative;
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.kpi-card--style06 .kpi-card__icon-bg,
+.kpi-card--style06 .kpi-card__icon-symbol {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style06 .kpi-card__icon-bg {
+  left: 50%;
+  top: calc(50% + 3px);
+  width: 55.5px;
+  height: 55.5px;
+  transform: translate(-50%, -50%);
+  background: url("../../kit/widget/kpi-card/Style06/assets/icon-bg.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__icon-symbol {
+  left: 19px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  background: url("../../kit/widget/kpi-card/Style06/assets/icon.svg") center / 180% 148% no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 60px;
+  margin: 0 13px;
+  background: url("../../kit/widget/kpi-card/Style06/assets/divider.svg") center / 1px 60px no-repeat;
+}
+
+.kpi-card--style06 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style06 .kpi-card__title-row {
+  gap: 4px;
+}
+
+.kpi-card--style06 .kpi-card__title {
+  flex: 0 1 auto;
+  color: #c9edff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.kpi-card--style06 .kpi-card__unit {
+  color: #88a6b8;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.7;
+}
+
+.kpi-card--style06 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+
+.kpi-card--style06 .kpi-card__value {
+  color: #fce7a2;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.kpi-card--style06 .kpi-card__trend-label {
+  color: #88a6b8;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.kpi-card--style06 .kpi-card__trend {
+  position: relative;
+  color: #54d690;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  padding-left: 12px;
+}
+
+.kpi-card--style06 .kpi-card__trend::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: url("../../kit/widget/kpi-card/Style06/assets/trend-up.svg") center / 100% 100% no-repeat;
+}
+</style>
+        <section class="kpi-card kpi-card--style06" data-kit="widget/kpi-card/Style06">
+  <div class="kpi-card__icon-area" aria-hidden="true">
+    <span class="kpi-card__icon-bg"></span>
+    <span class="kpi-card__icon-symbol"></span>
+  </div>
+  <span class="kpi-card__divider" aria-hidden="true"></span>
+  <div class="kpi-card__content">
+    <div class="kpi-card__title-row">
+      <h3 class="kpi-card__title" data-slot="title">出口交易额</h3>
+      <span class="kpi-card__unit" data-slot="unit">(亿元人)</span>
+    </div>
+    <div class="kpi-card__value-row">
+      <strong class="kpi-card__value" data-slot="value">851.3</strong>
+      <span class="kpi-card__trend-label" data-slot="trendLabel">同比</span>
+      <span class="kpi-card__trend" data-slot="trend">0.2%</span>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style06</strong><span>需要同比、环比或趋势文字 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style07 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 299px;
+  max-height: 155px;
+  background: transparent;
+}
+
+.kpi-card--style07 .kpi-card__frame,
+.kpi-card--style07 .kpi-card__frame > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style07 .kpi-card__frame {
+  inset: 0 1.5px -0.35px 0;
+  z-index: 0;
+}
+
+.kpi-card--style07 .kpi-card__frame::before,
+.kpi-card--style07 .kpi-card__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(9px 0, calc(100% - 19px) 0, 100% 21px, 100% 100%, 9px 100%, 9px 50%, 0 38.2%, 0 11.8%);
+}
+
+.kpi-card--style07 .kpi-card__frame::before {
+  background: linear-gradient(180deg, rgba(65, 211, 243, 0) 0%, rgba(65, 211, 243, 0.24) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.kpi-card--style07 .kpi-card__frame::after {
+  background:
+    linear-gradient(135deg, rgba(65, 211, 243, 0.85), rgba(255, 255, 255, 0) 28%) border-box,
+    linear-gradient(315deg, rgba(65, 211, 243, 0.9), rgba(205, 249, 255, 0) 35%) border-box;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  padding: 1px;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.kpi-card--style07 .kpi-card__left-teeth {
+  left: 0;
+  bottom: 0;
+  width: 7.21px;
+  height: min(42.08px, 49%);
+  background: url("../../kit/widget/kpi-card/Style07/assets/left-teeth.svg") left bottom / 100% 100% no-repeat;
+}
+
+.kpi-card--style07 .kpi-card__top-right-corner {
+  right: 0;
+  top: 0;
+  width: 10.55px;
+  height: 11.51px;
+  background: url("../../kit/widget/kpi-card/Style07/assets/top-right-corner.svg") right top / 100% 100% no-repeat;
+}
+
+.kpi-card--style07 .kpi-card__title {
+  position: absolute;
+  z-index: 1;
+  left: 16px;
+  right: 37.33px;
+  top: 8px;
+  color: rgba(205, 249, 255, 0.7);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.kpi-card--style07 .kpi-card__value-row {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  max-width: calc(100% - 32px);
+  color: #cdf9ff;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style07 .kpi-card__label {
+  color: rgba(205, 249, 255, 0.7);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.kpi-card--style07 .kpi-card__value {
+  color: #cdf9ff;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: clamp(21px, 14.49cqw, 24px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.kpi-card--style07 .kpi-card__progress {
+  position: absolute;
+  z-index: 1;
+  left: 19px;
+  right: 13.6px;
+  bottom: 9px;
+  height: 10px;
+  padding-right: 9px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+}
+
+.kpi-card--style07 .kpi-card__progress-fill {
+  display: block;
+  width: var(--progress, 92%);
+  height: 100%;
+  border-radius: 1px;
+  background:
+    linear-gradient(90deg, rgba(91, 239, 255, 0.7), rgba(65, 211, 243, 1)),
+    url("../../kit/widget/kpi-card/Style07/assets/progress-fill.png") center / cover no-repeat;
+}
+</style>
+        <section class="kpi-card kpi-card--style07" data-kit="widget/kpi-card/Style07">
+  <div class="kpi-card__frame" aria-hidden="true">
+    <span class="kpi-card__left-teeth"></span>
+    <span class="kpi-card__top-right-corner"></span>
+  </div>
+  <h3 class="kpi-card__title" data-slot="title">A区（编号23411）</h3>
+  <div class="kpi-card__value-row">
+    <span class="kpi-card__label" data-slot="label">数量</span>
+    <strong class="kpi-card__value" data-slot="value">32,218</strong>
+  </div>
+  <div class="kpi-card__progress" data-slot="progress" style="--progress: 92%">
+    <span class="kpi-card__progress-fill"></span>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style07</strong><span>横向紧凑标题、数值、单位或进度 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style12 {
+  --style12-accent: #75deff;
+  --style12-bg: url("../../kit/widget/kpi-card/Style12/assets/background-positive.png");
+  --style12-arrow: url("../../kit/widget/kpi-card/Style12/assets/arrow-positive.svg");
+  --style12-arrow-transform: rotate(90deg);
+  min-width: 160px;
+  min-height: 90px;
+  max-width: 364px;
+  max-height: 324px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.kpi-card--style12[data-variant="negative"] {
+  --style12-accent: #f79828;
+  --style12-bg: url("../../kit/widget/kpi-card/Style12/assets/background-negative.png");
+  --style12-arrow: url("../../kit/widget/kpi-card/Style12/assets/arrow-negative.svg");
+  --style12-arrow-transform: rotate(90deg) scaleX(-1);
+}
+
+.kpi-card--style12 .kpi-card__platform {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 32.22%;
+  bottom: 8.89%;
+  background-image: var(--style12-bg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.kpi-card--style12 .kpi-card__platform::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(ellipse at 50% 58%, rgba(247, 152, 40, 1) 0%, rgba(247, 152, 40, 0.57) 54%, rgba(247, 152, 40, 0) 82%);
+  mix-blend-mode: color;
+}
+
+.kpi-card--style12[data-variant="negative"] .kpi-card__platform::after {
+  opacity: 1;
+}
+
+.kpi-card--style12 .kpi-card__header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.kpi-card--style12 .kpi-card__title {
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(16px, 9cqw, 18px);
+  font-weight: 500;
+  line-height: 24px;
+  text-overflow: ellipsis;
+}
+
+.kpi-card--style12 .kpi-card__subtitle {
+  max-width: 100%;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(14px, 8cqw, 16px);
+  font-weight: 700;
+  line-height: 22px;
+  text-overflow: ellipsis;
+}
+
+.kpi-card--style12 .kpi-card__metric-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 32px);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.kpi-card--style12 .kpi-card__value {
+  color: var(--style12-accent);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(24px, 15cqw, 30px);
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.kpi-card--style12 .kpi-card__arrow {
+  width: 24px;
+  height: 24px;
+  background-image: var(--style12-arrow);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  transform: var(--style12-arrow-transform);
+  transform-origin: 50% 50%;
+}
+
+@container (max-height: 120px) {
+  .kpi-card--style12 .kpi-card__platform {
+    left: 10%;
+    right: 10%;
+    top: 42%;
+    bottom: 2%;
+  }
+
+  .kpi-card--style12 .kpi-card__header {
+    top: 4px;
+  }
+
+  .kpi-card--style12 .kpi-card__title {
+    font-size: clamp(11px, 7.5cqw, 13px);
+    line-height: 16px;
+  }
+
+  .kpi-card--style12 .kpi-card__subtitle {
+    font-size: clamp(10px, 6.5cqw, 12px);
+    line-height: 14px;
+  }
+
+  .kpi-card--style12 .kpi-card__metric-row {
+    top: 34px;
+  }
+
+  .kpi-card--style12 .kpi-card__value {
+    font-size: clamp(18px, 12cqw, 22px);
+    line-height: 26px;
+  }
+
+  .kpi-card--style12 .kpi-card__arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+</style>
+        <section class="kpi-card kpi-card--style12" data-kit="widget/kpi-card/Style12" data-auto-variant="value" data-variant="positive">
+  <div class="kpi-card__platform" aria-hidden="true"></div>
+  <div class="kpi-card__header">
+    <h3 class="kpi-card__title" data-slot="title">维权服务覆盖</h3>
+    <span class="kpi-card__subtitle" data-slot="subtitle">(10%)</span>
+  </div>
+  <div class="kpi-card__metric-row">
+    <strong class="kpi-card__value" data-slot="value" data-value="10">10%</strong>
+    <span class="kpi-card__arrow" aria-hidden="true"></span>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style12</strong><span>需要正负方向状态 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style17 {
+  --style17-base: url("../../kit/widget/kpi-card/Style17/assets/base-blue.svg");
+  --style17-dome: url("../../kit/widget/kpi-card/Style17/assets/dome-blue.svg");
+  --style17-arrow: url("../../kit/widget/kpi-card/Style17/assets/arrow-blue.svg");
+  --style17-value: #ffffff;
+  --style17-label-glow: rgba(93, 255, 110, 0.5);
+  width: 222px;
+  height: 215px;
+  min-width: 222px;
+  min-height: 215px;
+  max-width: 222px;
+  max-height: 215px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kpi-card--style17[data-variant="red"] {
+  --style17-base: url("../../kit/widget/kpi-card/Style17/assets/base-red.svg");
+  --style17-dome: url("../../kit/widget/kpi-card/Style17/assets/dome-red.svg");
+  --style17-arrow: url("../../kit/widget/kpi-card/Style17/assets/arrow-red.svg");
+  --style17-value: #ff725f;
+  --style17-label-glow: rgba(199, 219, 205, 0.3);
+}
+
+.kpi-card--style17[data-variant="yellow"] {
+  --style17-base: url("../../kit/widget/kpi-card/Style17/assets/base-yellow.svg");
+  --style17-dome: url("../../kit/widget/kpi-card/Style17/assets/dome-yellow.svg");
+  --style17-arrow: url("../../kit/widget/kpi-card/Style17/assets/arrow-yellow.svg");
+  --style17-value: #fff493;
+  --style17-label-glow: rgba(199, 219, 205, 0.3);
+}
+
+.kpi-card--style17 .kpi-card__visual {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 182.154px;
+  height: 200.615px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.kpi-card--style17 .kpi-card__base,
+.kpi-card--style17 .kpi-card__dome {
+  position: absolute;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.kpi-card--style17 .kpi-card__base {
+  left: 2.39px;
+  top: 80.86px;
+  width: 177.231px;
+  height: 111px;
+  background-image: var(--style17-base);
+}
+
+.kpi-card--style17 .kpi-card__dome {
+  left: 12.28px;
+  top: 16px;
+  width: 157.859px;
+  height: 126px;
+  background-image: var(--style17-dome);
+}
+
+.kpi-card--style17 .kpi-card__data {
+  position: absolute;
+  left: 50%;
+  top: 56px;
+  z-index: 2;
+  display: flex;
+  width: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style17 .kpi-card__subtitle {
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+.kpi-card--style17 .kpi-card__metric-row {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-card--style17 .kpi-card__value {
+  color: var(--style17-value);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  text-align: center;
+}
+
+.kpi-card--style17 .kpi-card__arrow {
+  width: 20px;
+  height: 20px;
+  background: var(--style17-arrow) center / contain no-repeat;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.kpi-card--style17[data-variant="red"] .kpi-card__arrow,
+.kpi-card--style17[data-variant="yellow"] .kpi-card__arrow {
+  transform: rotate(90deg) scaleX(-1);
+}
+
+.kpi-card--style17 .kpi-card__content {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  width: 220px;
+  height: 49px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 8px 5px 0;
+  border: 1.44px solid rgba(38, 255, 255, 0);
+  background-image: linear-gradient(90deg, rgba(0, 29, 72, 0) 1%, rgba(0, 29, 72, 0.711) 32.405%, rgba(0, 29, 72, 0.8) 49.5%, rgba(0, 29, 72, 0.659) 67.746%, rgba(0, 29, 72, 0) 100%);
+  transform: translateX(-50%);
+}
+
+.kpi-card--style17 .kpi-card__title-row {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.kpi-card--style17 .kpi-card__dot {
+  width: 2.88px;
+  height: 2.88px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #9fffff;
+  box-shadow: 0 0 4px rgba(38, 255, 255, 0.9);
+}
+
+.kpi-card--style17 .kpi-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kpi-card--style17 .kpi-card__label {
+  display: flex;
+  width: 132px;
+  height: 19px;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgba(93, 255, 139, 0) 0%, var(--style17-label-glow) 50%, rgba(93, 255, 139, 0) 100%);
+  font-family: "Alibaba PuHuiTi 2.0", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  white-space: nowrap;
+}
+</style>
+        <section class="kpi-card kpi-card--style17" data-kit="widget/kpi-card/Style17" data-variant="blue">
+  <div class="kpi-card__visual" aria-hidden="true">
+    <span class="kpi-card__base"></span>
+    <span class="kpi-card__dome"></span>
+  </div>
+  <div class="kpi-card__data">
+    <span class="kpi-card__subtitle" data-slot="subtitle">（10%）</span>
+    <div class="kpi-card__metric-row">
+      <strong class="kpi-card__value" data-slot="value">12%</strong>
+      <span class="kpi-card__arrow" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div class="kpi-card__content">
+    <div class="kpi-card__title-row">
+      <span class="kpi-card__dot" aria-hidden="true"></span>
+      <h3 class="kpi-card__title" data-slot="title">职工综合服务覆盖</h3>
+      <span class="kpi-card__dot" aria-hidden="true"></span>
+    </div>
+    <span class="kpi-card__label" data-slot="label">牵头</span>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style17</strong><span>需要蓝、红、黄多状态并列 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style04 {
+  min-width: 160px;
+  min-height: 56px;
+  max-width: 378px;
+  max-height: 101px;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+}
+
+
+.kpi-card--style04 .kpi-card__icon-area {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 clamp(48px, 26.67cqw, 56px);
+  width: clamp(48px, 26.67cqw, 56px);
+  height: clamp(48px, 100cqh, 56px);
+  background: url("../../kit/widget/kpi-card/Style04/assets/icon-area.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style04 .kpi-card__content {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.kpi-card--style04 .kpi-card__title-row {
+  gap: 8px;
+  width: 100%;
+  padding: 1px 2px;
+  background: linear-gradient(95.49deg, rgba(255, 234, 193, 0.25) 0.57%, rgba(255, 234, 193, 0) 93.08%);
+}
+
+.kpi-card--style04 .kpi-card__title-mark {
+  flex: 0 0 3px;
+  width: 3px;
+  height: 18px;
+  background: rgba(187, 204, 205, 0.7);
+}
+
+.kpi-card--style04 .kpi-card__title {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(12px, 6.67cqw, 14px);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.kpi-card--style04 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style04 .kpi-card__value {
+  color: #ffad67;
+  font-family: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  font-size: clamp(20px, 11.43cqw, 24px);
+  line-height: 1;
+}
+
+.kpi-card--style04 .kpi-card__unit {
+  color: rgba(242, 255, 252, 0.5);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+</style>
+        <section class="kpi-card kpi-card--style04" data-kit="widget/kpi-card/Style04">
+  <span class="kpi-card__icon-area" aria-hidden="true"></span>
+  <div class="kpi-card__content">
+    <div class="kpi-card__title-row">
+      <span class="kpi-card__title-mark" aria-hidden="true"></span>
+      <h3 class="kpi-card__title" data-slot="title">当日计划</h3>
+    </div>
+    <div class="kpi-card__value-row">
+      <strong class="kpi-card__value" data-slot="value">74,554</strong>
+      <span class="kpi-card__unit" data-slot="unit">人</span>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style04</strong><span>紧凑纵向标题、数值、单位 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style02 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 333px;
+  max-height: 184px;
+  align-items: center;
+  gap: clamp(12px, 10.81cqw, 20px);
+  background: transparent;
+}
+
+.kpi-card--style02 .kpi-card__icon-area {
+  position: relative;
+  flex: 0 0 clamp(78px, 54.59cqw, 101px);
+  width: clamp(78px, 54.59cqw, 101px);
+  height: clamp(78px, 99.02cqh, 101px);
+}
+
+.kpi-card--style02 .kpi-card__icon-area > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style02 .kpi-card__icon-shadow {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 59.4%;
+  background: url("../../kit/widget/kpi-card/Style02/assets/image-base.png") center bottom / 100% auto no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-particle {
+  left: 13.86%;
+  top: 0;
+  width: 72.28%;
+  height: 59.4%;
+  background: url("../../kit/widget/kpi-card/Style02/assets/particle.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-symbol {
+  left: 33.66%;
+  top: 33.66%;
+  width: 34px;
+  height: 34px;
+  background: url("../../kit/widget/kpi-card/Style02/assets/icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style02 .kpi-card__icon-diamond {
+  left: 3px;
+  top: 7px;
+  width: 95.09px;
+  height: 95.09px;
+  transform: rotate(-45deg);
+  background: url("../../kit/widget/kpi-card/Style02/assets/diamond.svg") center / 67.24px 67.24px no-repeat;
+  opacity: 0.9;
+}
+
+.kpi-card--style02 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.kpi-card--style02 .kpi-card__title {
+  color: #c0e1ff;
+  font-size: clamp(14px, 8.65cqw, 16px);
+  line-height: 22px;
+}
+
+.kpi-card--style02 .kpi-card__value {
+  color: var(--theme-primary, #2feadf);
+  font-size: clamp(28px, 17.3cqw, 32px);
+  line-height: 37px;
+  text-shadow: 0 0 12px rgba(9, 255, 240, 0.28);
+}
+</style>
+        <section class="kpi-card kpi-card--style02" data-kit="widget/kpi-card/Style02">
+  <div class="kpi-card__icon-area" aria-hidden="true">
+    <span class="kpi-card__icon-shadow"></span>
+    <span class="kpi-card__icon-particle"></span>
+    <span class="kpi-card__icon-diamond"></span>
+    <span class="kpi-card__icon-symbol"></span>
+  </div>
+  <div class="kpi-card__content">
+    <h3 class="kpi-card__title" data-slot="title">完工数量</h3>
+    <strong class="kpi-card__value" data-slot="value">10</strong>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style02</strong><span>紧凑纵向标题、数值 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style03 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 488px;
+  max-height: 176px;
+  padding: clamp(10px, 13.27cqh, 13px) clamp(24px, 14.76cqw, 40px) clamp(12px, 17.35cqh, 17px) clamp(22px, 11.62cqw, 31.5px);
+  background: transparent;
+}
+
+.kpi-card--style03 .kpi-card__frame,
+.kpi-card--style03 .kpi-card__frame > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style03 .kpi-card__frame {
+  inset: 0 0.5px -1px 0;
+  z-index: 0;
+  background:
+    url("../../kit/widget/kpi-card/Style03/assets/frame-fill.svg") center / 100% 100% no-repeat,
+    url("../../kit/widget/kpi-card/Style03/assets/frame-line.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__corner {
+  width: 6px;
+  height: 6px;
+  background: url("../../kit/widget/kpi-card/Style03/assets/corner-a.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__corner--tl { left: 1px; top: 1px; }
+.kpi-card--style03 .kpi-card__corner--tr { right: 0.5px; top: 1px; background-image: url("../../kit/widget/kpi-card/Style03/assets/corner-b.svg"); transform: rotate(180deg) scaleY(-1); }
+.kpi-card--style03 .kpi-card__corner--bl { left: 1px; bottom: 2px; transform: scaleY(-1); }
+.kpi-card--style03 .kpi-card__corner--br { right: 0.5px; bottom: 2px; background-image: url("../../kit/widget/kpi-card/Style03/assets/corner-b.svg"); transform: rotate(180deg); }
+
+.kpi-card--style03 .kpi-card__corner::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3.5px;
+  width: 17.5px;
+  height: 15px;
+  background: url("../../kit/widget/kpi-card/Style03/assets/corner-line.svg") center / 100% 100% no-repeat;
+  opacity: 0.9;
+}
+
+.kpi-card--style03 .kpi-card__corner--tr::after,
+.kpi-card--style03 .kpi-card__corner--br::after {
+  left: auto;
+  right: 3px;
+}
+
+.kpi-card--style03 .kpi-card__cross {
+  width: 5px;
+  height: 5px;
+  opacity: 0.85;
+}
+
+.kpi-card--style03 .kpi-card__cross::before,
+.kpi-card--style03 .kpi-card__cross::after {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+}
+
+.kpi-card--style03 .kpi-card__cross::before {
+  left: 0;
+  top: 2.25px;
+  width: 5px;
+  height: 0.5px;
+}
+
+.kpi-card--style03 .kpi-card__cross::after {
+  left: 2.25px;
+  top: 0;
+  width: 0.5px;
+  height: 5px;
+}
+
+.kpi-card--style03 .kpi-card__cross--left { left: 1.5px; top: calc(50% - 3px); transform: translateY(-50%); }
+.kpi-card--style03 .kpi-card__cross--top { left: calc(50% - 0.25px); top: 2px; transform: translateX(-50%); }
+.kpi-card--style03 .kpi-card__cross--right { right: 2px; top: calc(50% - 3px); transform: translateY(-50%); }
+.kpi-card--style03 .kpi-card__cross--bottom { left: calc(50% - 0.25px); bottom: 3px; transform: translateX(-50%); }
+
+.kpi-card--style03 .kpi-card__body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 5.9cqw, 16px);
+  width: 100%;
+  min-width: 0;
+}
+
+.kpi-card--style03 .kpi-card__icon-area {
+  position: relative;
+  flex: 0 0 clamp(54px, 25.09cqw, 68px);
+  width: clamp(54px, 25.09cqw, 68px);
+  height: clamp(54px, 69.39cqh, 68px);
+}
+
+.kpi-card--style03 .kpi-card__icon-area > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style03 .kpi-card__icon-shadow {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 58.33%;
+  background: url("../../kit/widget/kpi-card/Style03/assets/image-base.png") center bottom / 100% auto no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__icon-diamond {
+  left: 2.2%;
+  top: 7.35%;
+  width: 95.6%;
+  height: 95.6%;
+  background: url("../../kit/widget/kpi-card/Style03/assets/icon-diamond.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__icon-particle {
+  inset: 0 11.67% 39.78% 15%;
+  background: url("../../kit/widget/kpi-card/Style03/assets/particle.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__icon-symbol {
+  left: 50%;
+  top: 13.24%;
+  width: 32px;
+  height: 32px;
+  transform: translateX(-50%);
+  background: url("../../kit/widget/kpi-card/Style03/assets/icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style03 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style03 .kpi-card__title {
+  color: rgba(255, 249, 234, 0.85);
+  font-size: clamp(14px, 5.9cqw, 16px);
+  line-height: 22px;
+}
+
+.kpi-card--style03 .kpi-card__value {
+  color: #fff9ea;
+  font-size: clamp(24px, 10.33cqw, 28px);
+  line-height: 33px;
+  letter-spacing: 0.1em;
+}
+</style>
+        <section class="kpi-card kpi-card--style03" data-kit="widget/kpi-card/Style03">
+  <div class="kpi-card__frame" aria-hidden="true">
+    <span class="kpi-card__corner kpi-card__corner--tl"></span>
+    <span class="kpi-card__corner kpi-card__corner--tr"></span>
+    <span class="kpi-card__corner kpi-card__corner--bl"></span>
+    <span class="kpi-card__corner kpi-card__corner--br"></span>
+    <span class="kpi-card__cross kpi-card__cross--left"></span>
+    <span class="kpi-card__cross kpi-card__cross--top"></span>
+    <span class="kpi-card__cross kpi-card__cross--right"></span>
+    <span class="kpi-card__cross kpi-card__cross--bottom"></span>
+  </div>
+  <div class="kpi-card__body">
+    <div class="kpi-card__icon-area" aria-hidden="true">
+      <span class="kpi-card__icon-shadow"></span>
+      <span class="kpi-card__icon-diamond"></span>
+      <span class="kpi-card__icon-particle"></span>
+      <span class="kpi-card__icon-symbol"></span>
+    </div>
+    <div class="kpi-card__content">
+      <h3 class="kpi-card__title" data-slot="title">进行中订单</h3>
+      <strong class="kpi-card__value" data-slot="value">70,701</strong>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style03</strong><span>紧凑纵向标题、数值 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style05 {
+  min-width: 174px;
+  min-height: 48px;
+  max-width: 300px;
+  max-height: 100px;
+  align-items: center;
+  padding: 5px 14px 5px 8px;
+  background: linear-gradient(90deg, rgba(97, 170, 174, 0.13) 70.47%, rgba(21, 25, 24, 0) 100%);
+  border: 1px solid;
+  border-image-source: linear-gradient(135deg, rgb(107, 174, 150, 1) 0% , hsla(159, 29%, 54%, 0) 20%);
+  border-image-slice: 1;
+}
+
+.kpi-card--style05 .kpi-card__icon-area {
+  flex: 0 0 clamp(36px, 22.99cqw, 40px);
+  width: clamp(36px, 22.99cqw, 40px);
+  height: clamp(36px, 83.33cqh, 40px);
+  background: url("../../kit/widget/kpi-card/Style05/assets/icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style05 .kpi-card__content {
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  padding-left: 8px;
+}
+
+.kpi-card--style05 .kpi-card__title {
+  color: #88a6b8;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.kpi-card--style05 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  min-width: 0;
+}
+
+.kpi-card--style05 .kpi-card__value {
+  color: #dbfff2;
+  font-family: "Orbitron", var(--kpi-font-num);
+  font-size: clamp(15px, 9.2cqw, 16px);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.kpi-card--style05 .kpi-card__unit {
+  color: #c9edff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.7;
+}
+</style>
+        <section class="kpi-card kpi-card--style05" data-kit="widget/kpi-card/Style05">
+  <span class="kpi-card__icon-area" aria-hidden="true"></span>
+  <div class="kpi-card__content">
+    <h3 class="kpi-card__title" data-slot="title">清洁能源发电</h3>
+    <div class="kpi-card__value-row">
+      <strong class="kpi-card__value" data-slot="value">2,937</strong>
+      <span class="kpi-card__unit" data-slot="unit">万kWh</span>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style05</strong><span>紧凑标题、数值、单位的多尺寸候选 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style08 {
+  min-width: 120px;
+  min-height: 91px;
+  max-width: 216px;
+  max-height: 164px;
+  background: transparent;
+}
+
+.kpi-card--style08 .kpi-card__frame,
+.kpi-card--style08 .kpi-card__frame > span {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style08 .kpi-card__frame {
+  inset: 0 0 10px 0;
+  z-index: 0;
+}
+
+.kpi-card--style08 .kpi-card__body-frame {
+  inset: 0 1.39% 1.23% 1.39%;
+  background: url("../../kit/widget/kpi-card/Style08/assets/body-frame.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style08 .kpi-card__bottom-fill {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34%;
+  background: url("../../kit/widget/kpi-card/Style08/assets/bottom-fill.svg") center bottom / 100% 100% no-repeat;
+}
+
+.kpi-card--style08 .kpi-card__divider {
+  left: 50%;
+  bottom: 24.69%;
+  width: 81px;
+  height: 1px;
+  transform: translateX(-50%);
+  background: url("../../kit/widget/kpi-card/Style08/assets/divider.svg") center / 100% 1px no-repeat;
+}
+
+.kpi-card--style08 .kpi-card__value-stack {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: calc(50% - 13px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.kpi-card--style08 .kpi-card__value {
+  color: #ffdfae;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: clamp(22px, 21.67cqw, 26px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kpi-card--style08 .kpi-card__unit {
+  color: #c0e1ff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.kpi-card--style08 .kpi-card__title {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 28px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  transform: translate(-50%, 100%);
+  white-space: nowrap;
+}
+</style>
+        <section class="kpi-card kpi-card--style08" data-kit="widget/kpi-card/Style08">
+  <div class="kpi-card__frame" aria-hidden="true">
+    <span class="kpi-card__body-frame"></span>
+    <span class="kpi-card__bottom-fill"></span>
+    <span class="kpi-card__divider"></span>
+  </div>
+  <div class="kpi-card__value-stack">
+    <strong class="kpi-card__value" data-slot="value">51,235</strong>
+    <span class="kpi-card__unit" data-slot="unit">(kW·h)</span>
+  </div>
+  <h3 class="kpi-card__title" data-slot="title">比亚迪</h3>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style08</strong><span>紧凑标题、数值、单位的多尺寸候选 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style09 {
+  min-width: 299px;
+  min-height: 100px;
+  max-width: 538px;
+  max-height: 180px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  border-image-source: linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.24) 55%, rgba(255, 255, 255, 0.05) 100%);
+  border-image-slice: 1;
+}
+
+.kpi-card--style09 .kpi-card__decor,
+.kpi-card--style09 .kpi-card__decor > span,
+.kpi-card--style09 .kpi-card__icon-area,
+.kpi-card--style09 .kpi-card__divider {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.kpi-card--style09 .kpi-card__decor {
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 38px;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.kpi-card--style09 .kpi-card__top-flow-right {
+  right: 0;
+  top: 20px;
+  width: 111px;
+  height: 18px;
+  background: url("../../kit/widget/kpi-card/Style09/assets/top-flow-right.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__top-flow-left {
+  left: 0;
+  top: 0;
+  width: 142.5px;
+  height: 38px;
+  background: url("../../kit/widget/kpi-card/Style09/assets/top-flow-left.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__dot {
+  top: 26px;
+  width: 7px;
+  height: 7px;
+}
+
+.kpi-card--style09 .kpi-card__dot--a {
+  left: 5px;
+  background: url("../../kit/widget/kpi-card/Style09/assets/dot-a.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__dot--b {
+  left: 17px;
+  background: url("../../kit/widget/kpi-card/Style09/assets/dot-b.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__small-flow {
+  left: 82px;
+  top: 21.5px;
+  width: 50px;
+  height: 4.5px;
+  background: url("../../kit/widget/kpi-card/Style09/assets/small-flow.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__icon-area {
+  left: 25px;
+  top: calc(50% + 10px);
+  width: 56px;
+  height: 56px;
+  transform: translateY(-50%);
+  background: url("../../kit/widget/kpi-card/Style09/assets/icon-area.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__divider {
+  left: 97px;
+  top: calc(50% + 10px);
+  width: 1px;
+  height: 56px;
+  transform: translateY(-50%);
+  background: url("../../kit/widget/kpi-card/Style09/assets/divider.svg") center / 1px 56px no-repeat;
+}
+
+.kpi-card--style09 .kpi-card__content {
+  position: absolute;
+  left: 113px;
+  right: 16px;
+  top: calc(50% + 10px);
+  width: auto;
+  transform: translateY(-50%);
+  gap: 4px;
+}
+
+.kpi-card--style09 .kpi-card__title {
+  color: #ffffff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.kpi-card--style09 .kpi-card__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
+}
+
+.kpi-card--style09 .kpi-card__value {
+  color: #f7bf50;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: clamp(24px, 9.36cqw, 28px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kpi-card--style09 .kpi-card__unit {
+  color: rgba(242, 255, 252, 0.5);
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+</style>
+        <section class="kpi-card kpi-card--style09" data-kit="widget/kpi-card/Style09">
+  <div class="kpi-card__decor" aria-hidden="true">
+    <span class="kpi-card__top-flow-left"></span>
+    <span class="kpi-card__top-flow-right"></span>
+    <span class="kpi-card__dot kpi-card__dot--a"></span>
+    <span class="kpi-card__dot kpi-card__dot--b"></span>
+    <span class="kpi-card__small-flow"></span>
+  </div>
+  <span class="kpi-card__icon-area" aria-hidden="true"></span>
+  <span class="kpi-card__divider" aria-hidden="true"></span>
+  <div class="kpi-card__content">
+    <h3 class="kpi-card__title" data-slot="title">总能源发电</h3>
+    <div class="kpi-card__value-row">
+      <strong class="kpi-card__value" data-slot="value">23,274,554</strong>
+      <span class="kpi-card__unit" data-slot="unit">kW·h</span>
+    </div>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style09</strong><span>紧凑标题、数值、单位的多尺寸候选 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style15 {
+  min-width: 160px;
+  min-height: 80px;
+  max-width: 322px;
+  max-height: 173px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.kpi-card--style15 .kpi-card__panel-frame {
+  position: absolute;
+  inset: 0;
+  background: url("../../kit/widget/kpi-card/Style15/assets/panel-frame.png") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+
+.kpi-card--style15 .kpi-card__value-stack {
+  position: absolute;
+  left: calc(50% + 1.5px);
+  top: calc(50% - 1.02px);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style15 .kpi-card__icon {
+  width: 15.36px;
+  height: 15.36px;
+  background: url("../../kit/widget/kpi-card/Style15/assets/top-icon.svg") center / contain no-repeat;
+}
+
+.kpi-card--style15 .kpi-card__metric {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.kpi-card--style15 .kpi-card__value {
+  background: linear-gradient(180deg, #ffe9ab 0%, #ffd24d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(18px, 11.06cqw, 19.8px);
+  font-weight: 500;
+  line-height: 21.6px;
+}
+
+.kpi-card--style15 .kpi-card__unit {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.91px;
+}
+
+.kpi-card--style15 .kpi-card__label {
+  width: 104px;
+  color: #ffffff;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+  text-align: center;
+}
+</style>
+        <section class="kpi-card kpi-card--style15" data-kit="widget/kpi-card/Style15">
+  <div class="kpi-card__panel-frame" aria-hidden="true"></div>
+  <div class="kpi-card__value-stack">
+    <span class="kpi-card__icon" aria-hidden="true"></span>
+    <div class="kpi-card__metric">
+      <strong class="kpi-card__value" data-slot="value">100</strong>
+      <span class="kpi-card__unit" data-slot="unit">件</span>
+    </div>
+    <span class="kpi-card__label" data-slot="label">工单总量</span>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style15</strong><span>紧凑标题、数值、单位的多尺寸候选 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style16 {
+  min-width: 160px;
+  min-height: 41px;
+  max-width: 466px;
+  max-height: 74px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kpi-card--style16 .kpi-card__button-frame,
+.kpi-card--style16 .kpi-card__button-frame span,
+.kpi-card--style16 .kpi-card__icon::before,
+.kpi-card--style16 .kpi-card__icon::after {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  content: "";
+}
+
+.kpi-card--style16 .kpi-card__button-frame {
+  inset: 0;
+}
+
+.kpi-card--style16 .kpi-card__frame-left-fill,
+.kpi-card--style16 .kpi-card__frame-left-line {
+  left: 0.08%;
+  top: 0.66%;
+  bottom: 1.2%;
+  width: 23.65%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__frame-left-fill {
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/frame-left-fill.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-left-line {
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/frame-left-line.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-body-fill,
+.kpi-card--style16 .kpi-card__frame-body-line {
+  left: 24.34%;
+  right: 0;
+  top: 0.66%;
+  bottom: 1.2%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__frame-body-fill {
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/frame-body-fill.svg");
+}
+
+.kpi-card--style16 .kpi-card__frame-body-line {
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/frame-body-line.svg");
+}
+
+.kpi-card--style16 .kpi-card__edge-left-outer,
+.kpi-card--style16 .kpi-card__edge-left-inner {
+  top: 0;
+  bottom: 1.07%;
+  width: 1.06%;
+  background: center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__edge-left-outer {
+  left: 0;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/edge-left-outer.svg");
+}
+
+.kpi-card--style16 .kpi-card__edge-left-inner {
+  left: 0.76%;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/edge-left-inner.svg");
+}
+
+.kpi-card--style16 .kpi-card__icon-line {
+  left: 2.96%;
+  top: 34.05%;
+  width: 0.76%;
+  height: 15.95%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/icon-line.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-top,
+.kpi-card--style16 .kpi-card__center-notch-bottom {
+  left: 22.97%;
+  width: 1.97%;
+  height: 4.92%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/center-notch.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-top {
+  top: 3.76%;
+}
+
+.kpi-card--style16 .kpi-card__center-notch-bottom {
+  bottom: 18.27%;
+}
+
+.kpi-card--style16 .kpi-card__center-glow {
+  left: 23.58%;
+  top: 28.54%;
+  bottom: 29.99%;
+  width: 0.91%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/center-glow.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__connector-left,
+.kpi-card--style16 .kpi-card__connector-right {
+  top: 44.66%;
+  width: 1.36%;
+  height: 7.17%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__connector-left {
+  left: 20.39%;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/connector-left.svg");
+}
+
+.kpi-card--style16 .kpi-card__connector-right {
+  left: 26.31%;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/connector-right.svg");
+}
+
+.kpi-card--style16 .kpi-card__right-mid {
+  right: 0;
+  top: 38.16%;
+  width: 0.46%;
+  height: 22.52%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/edge-right-mid.svg") center / 100% 100% no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__right-corner-top,
+.kpi-card--style16 .kpi-card__right-corner-bottom {
+  right: 0;
+  width: 1.37%;
+  height: 9.32%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__right-corner-top {
+  top: 0;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/corner-right-top.svg");
+}
+
+.kpi-card--style16 .kpi-card__right-corner-bottom {
+  bottom: 0;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/corner-right-bottom.svg");
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-1,
+.kpi-card--style16 .kpi-card__chevron-right-2 {
+  top: 42.85%;
+  width: 1.77%;
+  height: 14.7%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-1 {
+  right: 2.21%;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/chevron-right-1.svg");
+}
+
+.kpi-card--style16 .kpi-card__chevron-right-2 {
+  right: 4.42%;
+  background-image: url("../../kit/widget/kpi-card/Style16/assets/chevron-right-2.svg");
+}
+
+.kpi-card--style16 .kpi-card__icon {
+  position: absolute;
+  z-index: 2;
+  left: 2.78%;
+  top: 50%;
+  width: 17.61%;
+  height: 98.05%;
+  min-width: 34px;
+  max-width: 82px;
+  background: url("../../kit/widget/kpi-card/Style16/assets/icon-base.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.kpi-card--style16 .kpi-card__icon::before {
+  left: 14.56%;
+  right: 14.02%;
+  top: 38.86%;
+  bottom: -8.54%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/icon-glow.svg") center / contain no-repeat;
+}
+
+.kpi-card--style16 .kpi-card__icon::after {
+  left: 34%;
+  top: 31%;
+  width: 32%;
+  height: 38%;
+  background: url("../../kit/widget/kpi-card/Style16/assets/icon-vector.svg") center / contain no-repeat;
+  opacity: 0.95;
+}
+
+.kpi-card--style16 .kpi-card__title {
+  position: absolute;
+  z-index: 3;
+  left: 30.68%;
+  top: 50%;
+  max-width: 24%;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(12px, 6.18cqw, 16px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style16 .kpi-card__metric {
+  position: absolute;
+  z-index: 3;
+  right: 10.97%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: clamp(3px, 1.85cqw, 5px);
+  max-width: 38%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style16 .kpi-card__value {
+  color: #ffe393;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: clamp(16px, 7.72cqw, 20px);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.kpi-card--style16 .kpi-card__unit {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(10px, 4.63cqw, 12px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+</style>
+        <section class="kpi-card kpi-card--style16" data-kit="widget/kpi-card/Style16">
+  <div class="kpi-card__button-frame" aria-hidden="true">
+    <span class="kpi-card__frame-left-fill"></span>
+    <span class="kpi-card__frame-left-line"></span>
+    <span class="kpi-card__frame-body-fill"></span>
+    <span class="kpi-card__frame-body-line"></span>
+    <span class="kpi-card__edge-left-outer"></span>
+    <span class="kpi-card__edge-left-inner"></span>
+    <span class="kpi-card__icon-line"></span>
+    <span class="kpi-card__center-notch-top"></span>
+    <span class="kpi-card__center-notch-bottom"></span>
+    <span class="kpi-card__center-glow"></span>
+    <span class="kpi-card__connector-left"></span>
+    <span class="kpi-card__connector-right"></span>
+    <span class="kpi-card__right-mid"></span>
+    <span class="kpi-card__right-corner-top"></span>
+    <span class="kpi-card__right-corner-bottom"></span>
+    <span class="kpi-card__chevron-right-1"></span>
+    <span class="kpi-card__chevron-right-2"></span>
+  </div>
+  <span class="kpi-card__icon" aria-hidden="true"></span>
+  <span class="kpi-card__title" data-slot="title">总数：</span>
+  <span class="kpi-card__metric">
+    <strong class="kpi-card__value" data-slot="value">3,806</strong>
+    <span class="kpi-card__unit" data-slot="unit">(个)</span>
+  </span>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style16</strong><span>横向紧凑标题、数值、单位或进度 · 内容起点 0px</span></div>
+    </article>
+    <article class="component-card">
+      <div class="component-stage component-stage--kpi">
+        <style>.kpi-card,
+.kpi-card * {
+  box-sizing: border-box;
+}
+
+.kpi-card {
+  --kpi-text: var(--text, #f4fbff);
+  --kpi-muted: var(--muted, rgba(255, 255, 255, 0.7));
+  --kpi-label: rgba(171, 240, 255, 0.8);
+  --kpi-value: var(--accent-gold, #ffc073);
+  --kpi-font-body: var(--font-body, "Noto Sans SC", "Microsoft YaHei", sans-serif);
+  --kpi-font-num: var(--font-num, "D-DIN-PRO", "Inter", Arial, sans-serif);
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-family: var(--kpi-font-body);
+  container-type: size;
+}
+
+.kpi-card__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.kpi-card__title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__title {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--kpi-text);
+  font-size: var(--kpi-title-size, 18px);
+  font-weight: 700;
+  line-height: var(--kpi-title-line, 22px);
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__unit {
+  flex: 0 0 auto;
+  color: var(--kpi-muted);
+  font-size: var(--kpi-unit-size, 12px);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.kpi-card__metrics {
+  display: grid;
+  min-width: 0;
+  width: 100%;
+}
+
+.kpi-card__metric {
+  min-width: 0;
+  text-align: center;
+}
+
+.kpi-card__value,
+.kpi-card__label {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.kpi-card__value {
+  color: var(--kpi-value);
+  font-family: var(--kpi-font-num);
+  font-size: var(--kpi-value-size, 24px);
+  font-weight: 700;
+  line-height: var(--kpi-value-line, 27px);
+}
+
+.kpi-card__label {
+  color: var(--kpi-label);
+  font-size: var(--kpi-label-size, 14px);
+  font-weight: 400;
+  line-height: var(--kpi-label-line, 17px);
+}
+
+.kpi-card--style10 {
+  min-width: 156px;
+  min-height: 156px;
+  max-width: 281px;
+  max-height: 281px;
+  aspect-ratio: 1;
+  background: transparent;
+}
+
+.kpi-card--style10 .kpi-card__ring,
+.kpi-card--style10 .kpi-card__ring-background,
+.kpi-card--style10 .kpi-card__ring-foreground,
+.kpi-card--style10 .kpi-card__value-stack {
+  position: absolute;
+  display: block;
+}
+
+.kpi-card--style10 .kpi-card__ring {
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.kpi-card--style10 .kpi-card__ring-background,
+.kpi-card--style10 .kpi-card__ring-foreground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: 50% 50%;
+}
+
+.kpi-card--style10 .kpi-card__ring-background {
+  inset: 0;
+  background-image: url("../../kit/widget/kpi-card/Style10/assets/ring-background.png");
+  animation: kpi-style10-ring-background 5s linear infinite;
+}
+
+.kpi-card--style10 .kpi-card__ring-foreground {
+  inset: 13.46%;
+  background-image: url("../../kit/widget/kpi-card/Style10/assets/ring-foreground.svg");
+  animation: kpi-style10-ring-foreground 5s linear infinite;
+}
+
+@keyframes kpi-style10-ring-background {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes kpi-style10-ring-foreground {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.kpi-card--style10 .kpi-card__value-stack {
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(82, 170, 251, 0.7);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.kpi-card--style10 .kpi-card__value {
+  color: #ffffff;
+  font-family: "D-DIN-PRO", var(--kpi-font-num);
+  font-size: clamp(38px, 28.21cqw, 44px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kpi-card--style10 .kpi-card__label {
+  color: #ffffff;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+</style>
+        <section class="kpi-card kpi-card--style10" data-kit="widget/kpi-card/Style10">
+  <div class="kpi-card__ring" aria-hidden="true">
+    <span class="kpi-card__ring-background"></span>
+    <span class="kpi-card__ring-foreground"></span>
+  </div>
+  <div class="kpi-card__value-stack">
+    <strong class="kpi-card__value" data-slot="value">89</strong>
+    <span class="kpi-card__label" data-slot="label">运行效率指数</span>
+  </div>
+</section>
+
+      </div>
+      <div class="component-label"><strong>widget-kpi-card-style10</strong><span>总量、已完成等单个强调结果 · 内容起点 0px</span></div>
+    </article></div></section>
+  <footer class="footer">该页面展示已批准候选，并验证资源与主题匹配；规划器仍按布局和槽位确定单个组件。</footer>
+</body>
+</html>

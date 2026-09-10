@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "draft-0.1.0",
+  "status": "review",
+  "selectionEnabled": false,
+  "purpose": "供人工审核的样式信息补充稿；审核并完成视觉验证前，不参与 resolve-plan 自动选型。",
+  "sourceSnapshot": {
+    "themes": 6,
+    "layoutTypes": 8,
+    "layoutVariants": 26,
+    "topNavItemsIncludingSecondNav": 24,
+    "cardShells": 14,
+    "panelShells": 6,
+    "kpiStyles": 15,
+    "backgrounds": 9
+  },
+  "evidenceLevels": {
+    "catalog": "来自现有 catalog 或 meta 的结构化字段。",
+    "derived": "由尺寸、contentSlot、dataShape 等现有字段确定性推导。",
+    "visual-review": "需要截图或人工视觉审核后才能确认。"
+  },
+  "parameterOwnership": {
+    "theme": [
+      "backgroundColor",
+      "textColor",
+      "chartPalette",
+      "semanticStatusColor"
+    ],
+    "styleProfile": [
+      "densityMode",
+      "decorationLevel",
+      "motionLevel",
+      "preferredComponentFamilies"
+    ],
+    "componentMeta": [
+      "geometry",
+      "contentSlot",
+      "titleOverlay",
+      "fixedVisualDetails",
+      "adaptation"
+    ],
+    "layout": [
+      "slotGeometry",
+      "modulePlacement",
+      "gap",
+      "overflowStrategy"
+    ]
+  },
+  "proposedComponentFields": {
+    "styleFamily": {
+      "type": "string",
+      "examples": [
+        "minimal-line",
+        "industrial-frame",
+        "executive-metal",
+        "clean-cyan"
+      ],
+      "evidenceRequired": "visual-review"
+    },
+    "visualDensity": {
+      "type": "enum",
+      "values": [
+        "spacious",
+        "standard",
+        "compact"
+      ],
+      "evidenceRequired": "derived-and-visual-review"
+    },
+    "decorationLevel": {
+      "type": "enum",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "evidenceRequired": "visual-review"
+    },
+    "contrastMode": {
+      "type": "enum",
+      "values": [
+        "dark",
+        "light",
+        "mixed"
+      ],
+      "evidenceRequired": "catalog-or-visual-review"
+    },
+    "titleCapacity": {
+      "type": "object",
+      "fields": [
+        "maxRecommendedCharsZh",
+        "singleLineOnly",
+        "overflowPolicy"
+      ],
+      "evidenceRequired": "runtime-measurement"
+    },
+    "contentCapacity": {
+      "type": "object",
+      "fields": [
+        "minUsableWidth",
+        "minUsableHeight",
+        "recommendedRows",
+        "recommendedSeries",
+        "recommendedItems"
+      ],
+      "evidenceRequired": "derived-and-runtime-measurement"
+    },
+    "preferredRoles": {
+      "type": "array",
+      "values": [
+        "primary",
+        "summary",
+        "analysis",
+        "status",
+        "detail",
+        "overlay"
+      ],
+      "evidenceRequired": "visual-review"
+    },
+    "avoidWhen": {
+      "type": "array",
+      "examples": [
+        "long-title",
+        "high-density",
+        "small-slot",
+        "light-background"
+      ],
+      "evidenceRequired": "runtime-or-visual-review"
+    },
+    "validation": {
+      "type": "object",
+      "fields": [
+        "resolutions",
+        "contentCases",
+        "runtimePassed",
+        "visualPassed",
+        "reviewedAt"
+      ],
+      "evidenceRequired": "actual-validation"
+    }
+  },
+  "proposedLayoutVariantFields": {
+    "businessObject": "map|scene|equipment|core-metric|process|content|mixed",
+    "informationDensity": "low|medium|high|extreme",
+    "slotRatios": "每个 slot 的比例范围，不直接存最终坐标。",
+    "supportedModuleRange": "首屏建议模块数量范围。",
+    "overflowStrategies": [
+      "tabs",
+      "pagination",
+      "carousel",
+      "popup",
+      "drilldown",
+      "regroup"
+    ],
+    "requiredCapabilities": "map|chart|table|scene|interaction 等能力集合。",
+    "avoidWhen": "明确不适用的密度、标题长度或主对象条件。"
+  },
+  "proposedBackgroundFields": {
+    "brightness": "dark|light|mixed",
+    "textureLevel": "none|low|medium|high",
+    "visualFocus": "center|top|bottom|uniform",
+    "safeContentZones": "适合放置高密度文字和图表的区域。",
+    "compatibleContrastModes": [
+      "light-text",
+      "dark-text"
+    ],
+    "evidenceRequired": "visual-review"
+  },
+  "densityModes": {
+    "spacious": {
+      "recommendedModuleRange1920": [
+        5,
+        8
+      ],
+      "secondaryContent": "drilldown-or-popup",
+      "status": "review"
+    },
+    "standard": {
+      "recommendedModuleRange1920": [
+        8,
+        12
+      ],
+      "secondaryContent": "tabs-or-detail-slot",
+      "status": "review"
+    },
+    "compact": {
+      "recommendedModuleRange1920": [
+        10,
+        15
+      ],
+      "secondaryContent": "tabs-pagination-or-regroup",
+      "status": "review"
+    }
+  },
+  "candidateProfiles": [
+    {
+      "id": "blue-command-standard",
+      "label": "蓝色指挥标准型",
+      "status": "review",
+      "theme": "galaxy-azure",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style01",
+        "topnav-centertitle-1920-style02",
+        "topnav-centertitle-1920-style03"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style01",
+        "shell-cardshell-style03",
+        "shell-cardshell-style06"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style02",
+        "shell-panelshell-style03",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-galaxy-azure-1",
+        "bg-galaxy-azure-2"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap",
+      "visualReviewRequired": true
+    },
+    {
+      "id": "industrial-blue-compact",
+      "label": "工业深蓝紧凑型",
+      "status": "review",
+      "theme": "deep-tech-blue",
+      "densityMode": "compact",
+      "topNavCandidates": [
+        "topnav-lefttitle-1920-style01",
+        "topnav-centertitle-1920-style02"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style09",
+        "shell-cardshell-style13"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style03",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-deep-tech-blue-1",
+        "bg-deep-tech-blue-2"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap-and-compact-geometry",
+      "visualReviewRequired": true
+    },
+    {
+      "id": "cyan-clean-standard",
+      "label": "清透青色标准型",
+      "status": "review",
+      "theme": "frost-cyan",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style05",
+        "topnav-centertitle-1920-style06",
+        "topnav-centertitle-1920-style11"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style05",
+        "shell-cardshell-style08",
+        "shell-cardshell-style10"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style02",
+        "shell-panelshell-style05",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-frost-cyan-1"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap",
+      "visualReviewRequired": true
+    },
+    {
+      "id": "verdant-health-standard",
+      "label": "清绿健康标准型",
+      "status": "review",
+      "theme": "fresh-verdant",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style06",
+        "topnav-centertitle-1920-style11"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style05",
+        "shell-cardshell-style08",
+        "shell-cardshell-style10",
+        "shell-cardshell-style14"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style01",
+        "shell-panelshell-style02",
+        "shell-panelshell-style03",
+        "shell-panelshell-style05",
+        "shell-panelshell-style06"
+      ],
+      "backgroundCandidates": [
+        "bg-fresh-verdant-1"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap",
+      "visualReviewRequired": true
+    },
+    {
+      "id": "gold-executive-standard",
+      "label": "金色经营标准型",
+      "status": "review",
+      "theme": "dusk-rose-gold",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style12",
+        "topnav-lefttitle-1920-style03"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style04",
+        "shell-cardshell-style11",
+        "shell-cardshell-style12"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-dusk-rose-gold-1",
+        "bg-dusk-rose-gold-2"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap",
+      "visualReviewRequired": true
+    },
+    {
+      "id": "orange-formal-standard",
+      "label": "橙红正式标准型",
+      "status": "review",
+      "theme": "ember-orange",
+      "densityMode": "standard",
+      "topNavCandidates": [
+        "topnav-centertitle-1920-style04",
+        "topnav-lefttitle-1920-style03"
+      ],
+      "cardShellCandidates": [
+        "shell-cardshell-style04",
+        "shell-cardshell-style11"
+      ],
+      "panelShellCandidates": [
+        "shell-panelshell-style04"
+      ],
+      "backgroundCandidates": [
+        "bg-ember-orange-1",
+        "bg-dusk-rose-gold-2"
+      ],
+      "compatibilityEvidence": "catalog-theme-overlap",
+      "visualReviewRequired": true
+    }
+  ],
+  "kpiRoutingCandidates": [
+    {
+      "match": "多个同类指标组成一组",
+      "candidates": [
+        "widget-kpi-card-style01"
+      ],
+      "evidence": "catalog-dataShape"
+    },
+    {
+      "match": "需要同比、环比或趋势文字",
+      "candidates": [
+        "widget-kpi-card-style06"
+      ],
+      "evidence": "catalog-dataShape"
+    },
+    {
+      "match": "需要进度或完成率",
+      "candidates": [
+        "widget-kpi-card-style07"
+      ],
+      "evidence": "catalog-dataShape"
+    },
+    {
+      "match": "需要正负方向状态",
+      "candidates": [
+        "widget-kpi-card-style12"
+      ],
+      "evidence": "catalog-variantRule"
+    },
+    {
+      "match": "需要蓝、红、黄多状态并列",
+      "candidates": [
+        "widget-kpi-card-style17"
+      ],
+      "evidence": "catalog-variantRule"
+    },
+    {
+      "match": "纵向空间紧张且需要标题、数值、单位",
+      "candidates": [
+        "widget-kpi-card-style04",
+        "widget-kpi-card-style05",
+        "widget-kpi-card-style16"
+      ],
+      "evidence": "catalog-dataShape-and-size"
+    }
+  ],
+  "reviewChecklist": [
+    "候选 profile 的组件在 1920x1080 下分别生成组合预览。",
+    "确认 styleFamily、visualDensity、decorationLevel 等视觉字段。",
+    "验证长标题、短标题、空数据、8至12模块和高密度内容。",
+    "审核通过后再把 approved profile 接入 resolve-plan；review profile 永不自动选中。",
+    "新建浅色主题时单独检查所有固定白色文字和固定色 SVG，不直接复用深色 profile。"
+  ]
+}

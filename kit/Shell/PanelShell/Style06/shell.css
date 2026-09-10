@@ -1,0 +1,30 @@
+.bs-panel-shell--style06 {
+  --panel-title: var(--shell-panel-title, #ffffff);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  min-height: 120px;
+  max-width: 1600px;
+  max-height: 900px;
+  box-sizing: border-box;
+  color: var(--panel-title);
+  isolation: isolate;
+}
+.bs-panel-shell--style06,
+.bs-panel-shell--style06 * { box-sizing: border-box; }
+.bs-panel-shell--style06 .bs-panel-shell__frame,
+.bs-panel-shell--style06 .bs-panel-shell__corner { position: absolute; pointer-events: none; }
+.bs-panel-shell--style06 .bs-panel-shell__frame { inset: 0; z-index: 0; }
+.bs-panel-shell--style06 .bs-panel-shell__corner { width: 32px; height: 32px; z-index: 2; background: url("./assets/corner.png") 0 0/32px 32px no-repeat; }
+.bs-panel-shell--style06 .bs-panel-shell__corner--tl { top: 0; left: 0; }
+.bs-panel-shell--style06 .bs-panel-shell__corner--tr { top: 0; right: 0; transform: rotate(180deg) scaleY(-1); }
+.bs-panel-shell--style06 .bs-panel-shell__corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.bs-panel-shell--style06 .bs-panel-shell__corner--br { right: 0; bottom: 0; transform: rotate(180deg); }
+.bs-panel-shell--style06 .bs-panel-shell__glow { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-image: url("./assets/edge-top.png"), url("./assets/edge-bottom.png"), url("./assets/edge-left.png"), url("./assets/edge-right.png"); background-position: left 25px top 0, left 25px bottom 0, left 0 top 25px, right 0 top 25px; background-size: calc(100% - 50px) 17px, calc(100% - 50px) 17px, 17px calc(100% - 50px), 17px calc(100% - 50px); background-repeat: no-repeat; }
+.bs-panel-shell--style06 .bs-panel-shell__content-wrap { position: absolute; inset: 20px; z-index: 3; display: flex; min-width: 0; min-height: 0; flex-direction: column; gap: 12px; }
+.bs-panel-shell--style06 .bs-panel-shell__header { display: flex; flex: 0 0 40px; min-width: 0; align-items: center; overflow: hidden; }
+.bs-panel-shell--style06 .bs-panel-shell__title { margin: 0; overflow: hidden; color: var(--panel-title); font-family: "Alibaba PuHuiTi 2.0", "Microsoft YaHei", sans-serif; font-size: 20px; font-weight: 600; line-height: normal; letter-spacing: .4px; white-space: nowrap; text-overflow: ellipsis; }
+.bs-panel-shell--style06 .bs-panel-shell__content { flex: 1 1 auto; min-width: 0; min-height: 0; overflow: hidden; }
+.bs-panel-shell--style06[data-title-hidden="true"] .bs-panel-shell__header { display: none; }
+.bs-panel-shell--style06[data-title-hidden="true"] .bs-panel-shell__content-wrap { gap: 0; }

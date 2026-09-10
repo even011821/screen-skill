@@ -7,7 +7,7 @@ description: 使用本地 layout、theme、kit/meta.json 与 ECharts 资源创�
 
 ## 目标
 
-以数据和业务关系为起点，按 `layout_type -> layoutVariant -> slot geometry -> kit candidate -> output pruning` 生成可运行、可编辑、可本地打开的数据大屏。所有布局、主题和视觉积木都从本 Skill 的 catalog 与 `meta.json` 查表选择；没有资源时才降级，不靠记忆猜路径。
+以数据和业务关系为起点，按 `layout_type -> layoutVariant -> slot geometry -> approved style profile -> kit candidate -> output pruning` 生成可运行、可编辑、可本地打开的数据大屏。所有布局、主题和视觉积木都从本 Skill 的 catalog、`references/style-profiles.json` 与 `meta.json` 查表选择；没有资源时才降级，不靠记忆猜路径。
 
 保留以下核心逻辑：
 
@@ -79,6 +79,7 @@ data-first -> layout -> variant -> slots -> TopNav/Shell/KPI/runtime -> data bin
 layout/catalog.json
 -> selected layout rule + variants/catalog.json
 -> themes/catalog.json
+-> references/style-profiles.json
 -> kit/catalog.json
 -> needed branch catalog
 -> selected meta/code/css only
@@ -90,6 +91,7 @@ layout/catalog.json
 |---|---|
 | 所有 create | `layout/common/slot-schema.json`、`nav-height-rules.md`、`viewport-fit-rules.md` |
 | 使用 CardShell/PanelShell | `layout/common/shell-binding-rules.md` |
+| create 中自动选择视觉组件 | `references/style-profiles.json`；当前主题的 approved 候选优先 |
 | 高密度或内容数量变化 | `layout/common/density-rules.md` |
 | 计算具体 variant | `layout/common/layout-variant-rules.md` |
 | Node.js 不可用或需要手工重选 | `references/selection-guide.md` |
@@ -158,5 +160,20 @@ node scripts/validate-screen.mjs <screen-directory>
 - 地图：`references/map-kit-rules.md` 与维护 source map
 - Figma 来源：`references/figma-source-map.json`
 - catalog 一致性：运行 `node scripts/audit-catalogs.mjs`
+
+样式或组件调整后，优先运行一条完整自动化命令：
+
+```bash
+node scripts/verify-style-system.mjs --render
+```
+
+该命令依次同步 profile 归属与统一组件清单、检查 catalog 和主题兼容、实测 20 个 Shell 的标题容量与内容区、检查碰撞/溢出/滚动条、刷新 meta、执行六套固定 brief 回归，并重新生成组合预览。结果写入：
+
+- `references/style-inventory.generated.json`
+- `references/shell-runtime-audit.generated.json`
+- `references/regression-report.generated.json`
+- `references/style-system-verification.generated.json`
+
+浏览器审计不得以静态检查代替。缺少 Playwright 或 Chromium 时必须返回未运行/失败，不能把旧报告当成本轮通过。
 
 新增积木后更新对应分支 catalog 和统计，不需要把具体组件规则继续堆入本入口文件。

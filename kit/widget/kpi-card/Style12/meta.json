@@ -73,5 +73,8 @@
     "preserveAspectRatio": true,
     "notes": "Style12 and Style13 are merged into one KPI component with two variants. Positive value uses blue background, blue text and upward arrow. Negative value uses orange-tinted background, orange text and downward arrow. Backgrounds are local decoration screenshots and scale proportionally with background-size: contain; the negative variant also applies the source tint layer in CSS."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "positive-negative"
+  ]
 }

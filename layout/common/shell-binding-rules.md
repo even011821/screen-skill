@@ -76,6 +76,26 @@ code.css
 
 业务内容只能注入 `contentSlot`，不能直接贴满外壳。图表、列表、KPI 内容必须在 Shell 声明的内容插槽范围内渲染。
 
+## PanelShell 注入规则
+
+生成时必须读取选中 `PanelShell` 的 `meta.json`：
+
+```text
+minSize
+maxSize
+header.height
+adaptation.contentSlot
+adaptation.titleSlot
+adaptation.preservesFixedDecorations
+adaptation.backgroundMode
+code.html
+code.css
+```
+
+PanelShell 的固定角标、边线和装饰层必须保留在外壳层；业务内容只能注入 `contentSlot`。有标题时写入 `data-slot="title"`，无标题时在根节点设置 `data-title-hidden="true"`，不要通过删除装饰 DOM 或修改固定角标尺寸来适配宽高。尺寸超出 `minSize` 或 `maxSize` 时，先调整布局槽位，再回退到其他候选 PanelShell。
+
+当 `adaptation.backgroundMode` 为 `transparent-border-only` 时，PanelShell 只提供边框和角部装饰。不得给根节点、frame、伪元素或素材补实色背景；页面背景由当前 theme/background 负责。透明 PNG 已在资产阶段移除 Figma 截图底色，运行时不得再次使用滤镜或混合模式抠底。
+
 ## 禁止项
 
 - 不允许把 Shell 外壳重新切成整图背景。
@@ -90,15 +110,25 @@ code.css
 候选选择流程：
 
 ```text
-theme/status/size/adaptation filter -> score by slot fit -> highest score -> deterministic tie-break -> lock cardShellStyleLock
+explicit user choice -> approved theme profile -> status/size/adaptation filter -> score by slot fit -> deterministic tie-break -> lock
 ```
 
 - 如果用户显式指定 `Shell/CardShell/StyleXX`，直接使用指定样式。
-- 如果没有显式指定，先按 `theme`、`status:"ready"`、`assetType:"code"`、槽位尺寸和 `contentSlot` 适配过滤。
+- 如果用户显式指定 `styleProfile` 名称或 id，读取 `references/style-profiles.json`，并由该 profile 确定主题和候选范围。
+- 如果没有显式指定组件，先把候选限制在当前主题对应的 approved profile 中，再按 `status:"ready"`、槽位尺寸、`contentSlot` 和适配方式过滤。approved profile 没有可用项时才能回退完整 catalog，并写入 `change-log`。
+- 清单中的候选顺序不代表优先级。匹配分相同仍按 id 排序和 FNV-1a 规则选一个，不能默认取第一个。
 - 多个候选最高分相同时，按 id 排序并使用 `FNV-1a(projectTitle + layout_type + layoutVariant + theme + resolution + variationSeed)` 计算索引。
 - 页面内锁定后，后续 KPI、图表、列表、状态、任务和明细等普通业务模块继续复用该 CardShell。
 - `PanelShell` 也应按同样方式在候选中选择，但不参与 `cardShellStyleLock`。
 - TopNav、PanelShell 和 background 使用相同平局规则。相同 brief 必须复现；需要主动变化时才设置新的 `variationSeed`。
+
+## 固定颜色与主题适配
+
+- `references/style-profiles.json` 中列出的组合已经按深色大屏审核。组件包含固定色 SVG、PNG 或角饰时，保留 Figma 原色，不做全局换色。
+- 主题只覆盖 meta 明确声明的 CSS token。没有 token 的装饰色由候选 profile 保证可接受，不通过滤镜、`hue-rotate`、透明蒙版或替换资源强行改色。
+- PanelShell 的 `assets.localSvg`、`assets.localRaster` 属于 copy-only 文件。生成器复制它们，但模型不读取二进制内容参与选择。
+- `transparent-border-only` PanelShell 的 raster 必须自带透明通道；生成器只复制并定位，不得推断或生成面板底色。
+- PanelShell 适配必须遵守 `adaptation.layout`：固定角块保持 meta 尺寸，连接边只沿长轴伸缩；`stretchable-background-shell` 允许整体背景随宽高缩放。
 
 `change-log` 必须记录：
 

@@ -64,5 +64,8 @@
     },
     "notes": "kpi-card__ring is an aspect-ratio:1 container. Decoration/RingBackground uses local PNG @2x on the bottom layer and rotates counterclockwise. Decoration/RingForeground uses local SVG on the top layer and rotates clockwise. Both layers scale proportionally; value text remains static."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "total-completed"
+  ]
 }

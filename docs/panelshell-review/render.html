@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style01/shell.css">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style02/shell.css">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style03/shell.css">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style04/shell.css">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style05/shell.css">
+  <link rel="stylesheet" href="../../kit/Shell/PanelShell/Style06/shell.css">
+  <style>
+    html,body{margin:0;overflow:hidden;background:#07152b}
+    body{font-family:"Alibaba PuHuiTi 2.0","Microsoft YaHei",sans-serif}
+    .bs-panel-shell{width:400px;height:300px}
+  </style>
+</head>
+<body>
+  <section class="bs-panel-shell" id="panel">
+    <div class="bs-panel-shell__frame" aria-hidden="true">
+      <span class="bs-panel-shell__corner bs-panel-shell__corner--tl"></span>
+      <span class="bs-panel-shell__corner bs-panel-shell__corner--tr"></span>
+      <span class="bs-panel-shell__corner bs-panel-shell__corner--bl"></span>
+      <span class="bs-panel-shell__corner bs-panel-shell__corner--br"></span>
+      <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--left"></span>
+      <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--top"></span>
+      <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--right"></span>
+      <span class="bs-panel-shell__edge-mark bs-panel-shell__edge-mark--bottom"></span>
+      <span class="bs-panel-shell__glow"></span>
+    </div>
+    <div class="bs-panel-shell__content-wrap">
+      <header class="bs-panel-shell__header"><h3 class="bs-panel-shell__title">标题区域</h3></header>
+      <div class="bs-panel-shell__content"></div>
+    </div>
+  </section>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const style = params.get("style") || "01";
+    const panel = document.getElementById("panel");
+    panel.classList.add("bs-panel-shell--style" + style);
+    panel.style.width = (Number(params.get("w")) || 400) + "px";
+    panel.style.height = (Number(params.get("h")) || 300) + "px";
+    document.documentElement.style.background = params.get("bg") || "#07152b";
+    document.body.style.background = params.get("bg") || "#07152b";
+  </script>
+</body>
+</html>

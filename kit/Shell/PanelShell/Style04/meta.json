@@ -7,23 +7,56 @@
   "assetType": "code",
   "theme": [
     "galaxy-azure",
+    "deep-tech-blue",
+    "frost-cyan",
+    "fresh-verdant",
     "dusk-rose-gold",
     "ember-orange"
   ],
-  "accentColor": "#ffca75",
+  "accentColor": "#b5ffe1",
+  "textColor": "#ffffff",
   "size": {
     "w": 400,
     "h": 300
   },
   "minSize": {
-    "w": 260,
-    "h": 160
+    "w": 120,
+    "h": 100
+  },
+  "maxSize": {
+    "w": 1600,
+    "h": 900
+  },
+  "header": {
+    "height": 40,
+    "titleFontSize": 20,
+    "titleFontWeight": 600,
+    "titleLetterSpacing": 0.4,
+    "titleColor": "#ffffff",
+    "fontFamily": "Alibaba PuHuiTi 2.0"
   },
   "code": {
-    "html": "shell.html",
-    "css": "shell.css"
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localSvg": [
+      "assets/face.svg",
+      "assets/corner-left.svg",
+      "assets/corner-right.svg",
+      "assets/edge-mark.svg"
+    ],
+    "note": "Figma original SVGs are local. The face stretches with the shell; 20x20 corners and 7x7 edge marks remain fixed."
   },
   "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-panel-shell__title",
+      "default": "标题区域",
+      "required": false
+    },
     {
       "name": "content",
       "selector": ".bs-panel-shell__content",
@@ -33,13 +66,73 @@
   "adaptation": {
     "layout": "stretchable-code-shell",
     "contentSlot": {
-      "x": 20,
-      "y": 20,
-      "w": 360,
-      "h": 260
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20
     },
-    "usesImage": false,
-    "notes": "Use as a panel wrapper and inject business content into the content slot."
+    "titleSlot": {
+      "top": 20,
+      "left": 20,
+      "right": 20,
+      "height": 40
+    },
+    "usesImage": true,
+    "usesLocalSvgAssets": true,
+    "preservesFixedDecorations": true,
+    "hideTitle": "Set data-title-hidden=\"true\" on the root",
+    "notes": "Figma Style04: the face stretches; 20x20 low-contrast corners and 7x7 edge marks stay pinned. Content uses the 20px inset, 40px title row and 12px gap."
   },
-  "status": "ready"
+  "figma": {
+    "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+    "nodeId": "64:27500",
+    "componentSetNodeId": "343:21892",
+    "componentSetName": "PanelShell",
+    "backgroundNodeId": "59:25559",
+    "contentNodeId": "71:7768",
+    "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
+  },
+  "status": "ready",
+  "approvedProfiles": [
+    "blue-command-standard",
+    "cyan-clean-standard",
+    "gold-executive-standard",
+    "industrial-blue-compact",
+    "orange-formal-standard",
+    "verdant-health-standard"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 120,
+        "h": 100
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20,
+      "width": 360,
+      "height": 208
+    },
+    "titleCapacity": {
+      "cjk": 17,
+      "latinWide": 16,
+      "recommendedMaxCjk": 14,
+      "fontSize": 20,
+      "availableWidth": 360
+    },
+    "failedChecks": []
+  }
 }

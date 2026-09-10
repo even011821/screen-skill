@@ -6,25 +6,50 @@
   "style": "Style03",
   "assetType": "code",
   "theme": [
-    "galaxy-azure",
     "frost-cyan",
-    "fresh-verdant",
-    "deep-tech-blue"
+    "fresh-verdant"
   ],
-  "accentColor": "#15f6ee",
+  "accentColor": "#4fe6dd",
+  "textColor": "#ffffff",
   "size": {
     "w": 400,
     "h": 300
   },
   "minSize": {
-    "w": 260,
-    "h": 160
+    "w": 180,
+    "h": 150
+  },
+  "maxSize": {
+    "w": 1600,
+    "h": 900
+  },
+  "header": {
+    "height": 40,
+    "titleFontSize": 20,
+    "titleFontWeight": 600,
+    "titleLetterSpacing": 0.4,
+    "titleColor": "#ffffff",
+    "fontFamily": "Alibaba PuHuiTi 2.0"
   },
   "code": {
-    "html": "shell.html",
-    "css": "shell.css"
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localRaster": [
+      "assets/frame.png"
+    ],
+    "note": "Transparent PNG compiled from the Figma background-node screenshot. It contains border decoration only; the neutral screenshot matte, title and content are excluded."
   },
   "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-panel-shell__title",
+      "default": "标题区域",
+      "required": false
+    },
     {
       "name": "content",
       "selector": ".bs-panel-shell__content",
@@ -32,15 +57,76 @@
     }
   ],
   "adaptation": {
-    "layout": "stretchable-code-shell",
+    "layout": "stretchable-background-shell",
+    "backgroundMode": "transparent-border-only",
     "contentSlot": {
-      "x": 20,
-      "y": 20,
-      "w": 360,
-      "h": 260
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20
     },
-    "usesImage": false,
-    "notes": "Use as a panel wrapper and inject business content into the content slot."
+    "titleSlot": {
+      "top": 20,
+      "left": 20,
+      "right": 20,
+      "height": 40
+    },
+    "usesImage": true,
+    "usesLocalSvgAssets": false,
+    "preservesFixedDecorations": false,
+    "sourceBounds": {
+      "w": 401,
+      "h": 300
+    },
+    "hideTitle": "Set data-title-hidden=\"true\" on the root",
+    "notes": "Figma Style03 uses the decoration pixels from the background-node screenshot with its neutral matte removed, then scales the transparent frame with the shell. Content uses the 20px inset, 40px title row and 12px gap."
   },
-  "status": "ready"
+  "figma": {
+    "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+    "nodeId": "64:28143",
+    "componentSetNodeId": "343:21892",
+    "componentSetName": "PanelShell",
+    "backgroundNodeId": "23:18968",
+    "contentNodeId": "71:7763",
+    "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
+  },
+  "status": "ready",
+  "approvedProfiles": [
+    "cyan-clean-standard",
+    "verdant-health-standard"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 180,
+        "h": 150
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20,
+      "width": 360,
+      "height": 208
+    },
+    "titleCapacity": {
+      "cjk": 17,
+      "latinWide": 16,
+      "recommendedMaxCjk": 14,
+      "fontSize": 20,
+      "availableWidth": 360
+    },
+    "failedChecks": []
+  }
 }

@@ -94,5 +94,8 @@
     "supportsHeightStretch": true,
     "notes": "Use base.css plus Style01/style.css. Background and simple fills are CSS; complex frame corners and particles are local SVG assets."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "grouped-metrics"
+  ]
 }

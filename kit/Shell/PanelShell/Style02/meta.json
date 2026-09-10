@@ -7,24 +7,49 @@
   "assetType": "code",
   "theme": [
     "galaxy-azure",
-    "frost-cyan",
-    "fresh-verdant",
     "deep-tech-blue"
   ],
-  "accentColor": "#15f6ee",
+  "accentColor": "#4fe6dd",
+  "textColor": "#ffffff",
   "size": {
     "w": 400,
     "h": 300
   },
   "minSize": {
-    "w": 260,
-    "h": 160
+    "w": 180,
+    "h": 150
+  },
+  "maxSize": {
+    "w": 1600,
+    "h": 900
+  },
+  "header": {
+    "height": 40,
+    "titleFontSize": 20,
+    "titleFontWeight": 600,
+    "titleLetterSpacing": 0.4,
+    "titleColor": "#ffffff",
+    "fontFamily": "Alibaba PuHuiTi 2.0"
   },
   "code": {
-    "html": "shell.html",
-    "css": "shell.css"
+    "html": "component.html",
+    "css": "shell.css",
+    "preview": "shell.html"
+  },
+  "assets": {
+    "directory": "assets/",
+    "localRaster": [
+      "assets/frame.png"
+    ],
+    "note": "Transparent PNG compiled from the Figma decoration export. The neutral screenshot matte is removed; the canvas or theme owns the panel fill. Render with a 76px by 88px nine-slice so fixed corner structures do not stretch."
   },
   "slots": [
+    {
+      "name": "title",
+      "selector": ".bs-panel-shell__title",
+      "default": "标题区域",
+      "required": false
+    },
     {
       "name": "content",
       "selector": ".bs-panel-shell__content",
@@ -32,15 +57,82 @@
     }
   ],
   "adaptation": {
-    "layout": "stretchable-code-shell",
+    "layout": "nine-slice-raster-shell",
+    "backgroundMode": "transparent-border-only",
     "contentSlot": {
-      "x": 20,
-      "y": 20,
-      "w": 360,
-      "h": 260
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20
     },
-    "usesImage": false,
-    "notes": "Use as a panel wrapper and inject business content into the content slot."
+    "titleSlot": {
+      "top": 20,
+      "left": 20,
+      "right": 20,
+      "height": 40
+    },
+    "usesImage": true,
+    "usesLocalSvgAssets": false,
+    "preservesFixedDecorations": true,
+    "sourceBounds": {
+      "w": 400,
+      "h": 302
+    },
+    "nineSlice": {
+      "top": 76,
+      "right": 88,
+      "bottom": 76,
+      "left": 88
+    },
+    "hideTitle": "Set data-title-hidden=\"true\" on the root",
+    "notes": "Figma Style02: 88x76 corner structures stay fixed while the center edges stretch. The shell has no panel fill. Content uses the 20px inset, 40px title row and 12px gap."
   },
-  "status": "ready"
+  "figma": {
+    "fileKey": "Le0uixa62TTpV9FkmU6nJy",
+    "nodeId": "64:28146",
+    "componentSetNodeId": "343:21892",
+    "componentSetName": "PanelShell",
+    "backgroundNodeId": "59:26910",
+    "contentNodeId": "71:7758",
+    "sourceUrl": "https://www.figma.com/design/Le0uixa62TTpV9FkmU6nJy/BigScreen-Skill?node-id=343-21892"
+  },
+  "status": "ready",
+  "approvedProfiles": [
+    "blue-command-standard",
+    "industrial-blue-compact"
+  ],
+  "runtimeAudit": {
+    "status": "pass",
+    "report": "../../../../references/shell-runtime-audit.generated.json",
+    "testedSizes": [
+      {
+        "w": 180,
+        "h": 150
+      },
+      {
+        "w": 400,
+        "h": 300
+      },
+      {
+        "w": 640,
+        "h": 360
+      }
+    ],
+    "measuredContentSlot": {
+      "top": 72,
+      "left": 20,
+      "right": 20,
+      "bottom": 20,
+      "width": 360,
+      "height": 208
+    },
+    "titleCapacity": {
+      "cjk": 17,
+      "latinWide": 16,
+      "recommendedMaxCjk": 14,
+      "fontSize": 20,
+      "availableWidth": 360
+    },
+    "failedChecks": []
+  }
 }

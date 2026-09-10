@@ -1,0 +1,44 @@
+{
+  "blue-command-standard": {
+    "theme": "galaxy-azure",
+    "topNav": "topnav-centertitle-1920-style12",
+    "cardShellStyleLock": "shell-cardshell-style03",
+    "panelShell": "shell-panelshell-style02",
+    "background": "bg-galaxy-azure-1"
+  },
+  "industrial-blue-compact": {
+    "theme": "deep-tech-blue",
+    "topNav": "topnav-centertitle-1920-style03",
+    "cardShellStyleLock": "shell-cardshell-style13",
+    "panelShell": "shell-panelshell-style01",
+    "background": "bg-deep-tech-blue-2"
+  },
+  "cyan-clean-standard": {
+    "theme": "frost-cyan",
+    "topNav": "topnav-centertitle-1920-style06",
+    "cardShellStyleLock": "shell-cardshell-style08",
+    "panelShell": "shell-panelshell-style03",
+    "background": "bg-frost-cyan-1"
+  },
+  "verdant-health-standard": {
+    "theme": "fresh-verdant",
+    "topNav": "topnav-centertitle-1920-style05",
+    "cardShellStyleLock": "shell-cardshell-style05",
+    "panelShell": "shell-panelshell-style03",
+    "background": "bg-fresh-verdant-1"
+  },
+  "gold-executive-standard": {
+    "theme": "dusk-rose-gold",
+    "topNav": "topnav-centertitle-1920-style12",
+    "cardShellStyleLock": "shell-cardshell-style11",
+    "panelShell": "shell-panelshell-style01",
+    "background": "bg-dusk-rose-gold-1"
+  },
+  "orange-formal-standard": {
+    "theme": "ember-orange",
+    "topNav": "topnav-centertitle-1920-style04",
+    "cardShellStyleLock": "shell-cardshell-style04",
+    "panelShell": "shell-panelshell-style01",
+    "background": "bg-ember-orange-1"
+  }
+}

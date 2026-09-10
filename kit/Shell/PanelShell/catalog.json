@@ -4,7 +4,7 @@
   "category": "Shell",
   "kind": "PanelShell",
   "structure": "Shell/PanelShell/{style}",
-  "updatedAt": "2026-05-21",
+  "updatedAt": "2026-09-10",
   "items": [
     {
       "id": "shell-panelshell-style01",
@@ -29,6 +29,11 @@
     {
       "id": "shell-panelshell-style05",
       "meta": "Style05/meta.json",
+      "status": "ready"
+    },
+    {
+      "id": "shell-panelshell-style06",
+      "meta": "Style06/meta.json",
       "status": "ready"
     }
   ]

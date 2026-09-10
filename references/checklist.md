@@ -15,6 +15,8 @@
 - [ ] 默认 TopNav 只有主标题、日期、实时时间；无未授权副标题、天气、组织名或业务页签。
 - [ ] 同一页面普通业务模块只使用一个 `cardShellStyleLock`。
 - [ ] CardShell/PanelShell 内容位于其 `contentSlot`。
+- [ ] PanelShell 每个 Style 都有 `component.html`、`shell.css`、`shell.html`、`meta.json`；运行时只引用 `code.html` 与 `code.css`，`shell.html` 仅用于预览。
+- [ ] PanelShell 的 `minSize`、`maxSize`、`titleSlot`、`contentSlot` 和固定装饰适配字段与实际 CSS 一致。
 - [ ] 没有占位标题、编造的 kit 路径或整图业务模块。
 - [ ] 字段映射和 change log 存在。
 

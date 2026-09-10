@@ -237,7 +237,7 @@ function loadMetaCandidates(catalogPath, basePath, itemsKey = "items") {
     .filter(({ meta }) => meta.status === "ready" || meta.assetStatus === "ready");
 }
 
-function chooseMetaCandidate({ candidates, explicit, resolution, theme, seed, titlePosition }) {
+function chooseMetaCandidate({ candidates, explicit, resolution, theme, seed, titlePosition, allowedIds }) {
   const explicitNorm = normalize(explicit);
   if (explicitNorm && explicitNorm !== "auto") {
     const match = candidates.find(({ item, meta }) =>
@@ -249,9 +249,13 @@ function chooseMetaCandidate({ candidates, explicit, resolution, theme, seed, ti
     if (match) return { ...match, score: 100, reason: "用户明确指定" };
   }
 
-  let filtered = candidates;
+  const allowed = new Set((allowedIds || []).map(normalize));
+  let filtered = allowed.size
+    ? candidates.filter(({ item, meta }) => allowed.has(normalize(item.id)) || allowed.has(normalize(meta.id)))
+    : candidates;
+  if (!filtered.length) filtered = candidates;
   if (resolution) {
-    const exactResolution = candidates.filter(({ meta }) =>
+    const exactResolution = filtered.filter(({ meta }) =>
       Number(meta.size?.w || meta.resolution) === resolution.w
       || normalize(meta.resolution) === String(resolution.w)
     );
@@ -264,7 +268,8 @@ function chooseMetaCandidate({ candidates, explicit, resolution, theme, seed, ti
     return { ...candidate, score };
   });
   const selected = highest(scored, seed);
-  return selected ? { ...selected, reason: `兼容条件得分 ${selected.score}` } : null;
+  const profileReason = allowed.size ? "已批准主题候选内，" : "";
+  return selected ? { ...selected, reason: `${profileReason}兼容条件得分 ${selected.score}` } : null;
 }
 
 function navReservedHeight(meta) {
@@ -278,6 +283,26 @@ function navReservedHeight(meta) {
 
 function assetBeside(metaPath, file) {
   return file ? path.posix.join(path.posix.dirname(metaPath), file) : null;
+}
+
+function localMetaAssets(candidate) {
+  if (!candidate?.metaPath || !candidate.meta?.assets) return [];
+  const assets = candidate.meta.assets;
+  const files = Array.isArray(assets)
+    ? assets.map((item) => typeof item === "string" ? item : item.file).filter(Boolean)
+    : [
+      ...(assets.localSvg || []),
+      ...(assets.localRaster || []),
+      ...(assets.files || [])
+    ];
+  const directory = Array.isArray(assets) ? "" : String(assets.directory || "").replaceAll("\\", "/");
+  return files.map((file) => {
+    const normalized = String(file).replaceAll("\\", "/");
+    const relative = directory && !normalized.startsWith(directory)
+      ? path.posix.join(directory, normalized)
+      : normalized;
+    return assetBeside(candidate.metaPath, relative);
+  });
 }
 
 function selectionRecord(candidate, extra = {}) {
@@ -307,7 +332,25 @@ const resolution = parseResolution(brief.resolution);
 const contentPlan = normalizeContent(brief, assumptions);
 const text = searchableBrief({ ...brief, contentItems: contentPlan });
 const layout = chooseLayout(brief, resolution, contentPlan, text);
-const theme = chooseTheme(brief, text, `${brief.title}|theme|${resolution.value}|${brief.variationSeed || ""}`);
+const styleProfileConfig = readJson("references/style-profiles.json");
+const requestedProfile = normalize(brief.styleProfile);
+const explicitStyleProfile = styleProfileConfig.selectionEnabled && requestedProfile && requestedProfile !== "auto"
+  ? styleProfileConfig.profiles.find((profile) =>
+    normalize(profile.id) === requestedProfile
+    || normalize(profile.label) === requestedProfile
+    || requestedProfile.includes(normalize(profile.id))
+    || requestedProfile.includes(normalize(profile.label))
+  )
+  : null;
+let theme = chooseTheme(brief, text, `${brief.title}|theme|${resolution.value}|${brief.variationSeed || ""}`);
+if (explicitStyleProfile) {
+  const themeCatalog = readJson("themes/catalog.json");
+  const profileTheme = themeCatalog.themes.find((item) => item.id === explicitStyleProfile.theme);
+  if (profileTheme) theme = { item: profileTheme, reason: `由 styleProfile ${explicitStyleProfile.id} 确定` };
+}
+const activeStyleProfile = styleProfileConfig.selectionEnabled
+  ? explicitStyleProfile || styleProfileConfig.profiles.find((profile) => profile.theme === theme.item.id)
+  : null;
 const variant = chooseVariant(
   brief,
   layout.item,
@@ -332,32 +375,39 @@ const topNav = chooseMetaCandidate({
   resolution,
   theme: theme.item,
   titlePosition: brief.titlePosition || "CenterTitle",
-  seed: `${seed}|topnav`
+  seed: `${seed}|topnav`,
+  allowedIds: activeStyleProfile?.topNavCandidates
 });
 const cardShell = chooseMetaCandidate({
   candidates: loadMetaCandidates("kit/Shell/CardShell/catalog.json", "kit/Shell/CardShell"),
   explicit: brief.cardShell,
   theme: theme.item,
-  seed: `${seed}|cardshell`
+  seed: `${seed}|cardshell`,
+  allowedIds: activeStyleProfile?.cardShellCandidates
 });
 const panelShell = chooseMetaCandidate({
   candidates: loadMetaCandidates("kit/Shell/PanelShell/catalog.json", "kit/Shell/PanelShell"),
   explicit: brief.panelShell,
   theme: theme.item,
-  seed: `${seed}|panelshell`
+  seed: `${seed}|panelshell`,
+  allowedIds: activeStyleProfile?.panelShellCandidates
 });
 
-const backgrounds = readJson("kit/background/meta.json").backgrounds
+const allBackgrounds = readJson("kit/background/meta.json").backgrounds
   .filter((item) => item.status === "ready")
   .map((item) => ({ ...item, score: (item.theme || []).includes(theme.item.id) ? 8 : 0 }));
 const explicitBackground = normalize(brief.background);
+const allowedBackgrounds = new Set((activeStyleProfile?.backgroundCandidates || []).map(normalize));
+const backgrounds = (!explicitBackground || explicitBackground === "auto") && allowedBackgrounds.size
+  ? allBackgrounds.filter((item) => allowedBackgrounds.has(normalize(item.id)))
+  : allBackgrounds;
 const background = explicitBackground && explicitBackground !== "auto"
-  ? backgrounds.find((item) => normalize(item.id) === explicitBackground)
+  ? allBackgrounds.find((item) => normalize(item.id) === explicitBackground)
   : highest(backgrounds, `${seed}|background`);
 const backgroundReason = explicitBackground && explicitBackground !== "auto" && background
   ? "用户明确指定"
   : background
-    ? `主题兼容得分 ${background.score}`
+    ? `${activeStyleProfile ? "已批准主题候选内，" : ""}主题兼容得分 ${background.score}`
     : "无 Ready 背景，使用 CSS fallback";
 
 const types = new Set(contentPlan.map((item) => normalize(item.type)));
@@ -371,6 +421,7 @@ const usesLists = [...types].some((type) =>
 const usesKpi = types.has("kpi");
 
 const readNext = [
+  "references/style-profiles.json",
   `layout/${layout.item.rule}`,
   `layout/${layout.item.variants}`,
   "layout/common/slot-schema.json",
@@ -404,6 +455,8 @@ const readNext = [
 const copyOnlyAssets = [
   topNav && assetBeside(topNav.metaPath, topNav.meta.file || topNav.meta.pngFallback),
   background?.file && `kit/background/${background.file}`,
+  ...localMetaAssets(cardShell),
+  ...localMetaAssets(panelShell),
   usesCharts && "runtime/echarts.min.js",
   usesMap && "kit/map/china/1.6.3/china.geo.json"
 ];
@@ -419,7 +472,7 @@ const runtimeFiles = [
 ];
 
 const manifest = {
-  schemaVersion: "2.2.0",
+  schemaVersion: "2.3.0",
   mode: "create",
   brief: {
     ...brief,
@@ -431,6 +484,12 @@ const manifest = {
     layoutType: { id: layout.item.id, rule: `layout/${layout.item.rule}`, reason: layout.reason },
     layoutVariant: { id: variant.item.id, catalog: `layout/${layout.item.variants}`, reason: variant.reason },
     theme: { id: theme.item.id, file: `themes/${theme.item.file}`, reason: theme.reason },
+    styleProfile: activeStyleProfile ? {
+      id: activeStyleProfile.id,
+      label: activeStyleProfile.label,
+      source: "references/style-profiles.json",
+      reason: explicitStyleProfile ? "用户明确指定 styleProfile" : "按已选主题匹配批准候选组"
+    } : null,
     topNav: selectionRecord(topNav, topNav ? {
       asset: assetBeside(topNav.metaPath, topNav.meta.file || topNav.meta.pngFallback),
       reservedHeight: navReservedHeight(topNav.meta),
@@ -444,7 +503,8 @@ const manifest = {
       asset: `kit/background/${background.file}`,
       cssFallback: background.cssFallback,
       reason: backgroundReason
-    } : null
+    } : null,
+    kpiRouting: usesKpi ? styleProfileConfig.kpiRoutingCandidates : []
   },
   contentPlan,
   readNext: unique(readNext),

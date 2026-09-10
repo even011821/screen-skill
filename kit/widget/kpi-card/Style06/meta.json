@@ -80,5 +80,8 @@
     "supportsWidthStretch": true,
     "supportsHeightStretch": true
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "trend-comparison"
+  ]
 }

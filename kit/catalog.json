@@ -68,8 +68,8 @@
       "label": "Shell components",
       "path": "Shell",
       "assetType": "code",
-      "itemCount": 19,
-      "readyCount": 19,
+      "itemCount": 20,
+      "readyCount": 20,
       "catalogs": [
         {
           "id": "CardShell",
@@ -84,8 +84,8 @@
           "label": "Panel shell",
           "path": "Shell/PanelShell/catalog.json",
           "structure": "Shell/PanelShell/{style}",
-          "itemCount": 5,
-          "readyCount": 5
+          "itemCount": 6,
+          "readyCount": 6
         }
       ],
       "usage": "Runtime must read component.html, shell.css and meta.json. CardShell style must be locked per screen; do not mix multiple CardShell styles in one generated screen unless the user explicitly requests it. PanelShell is mainly for center visual backgrounds or frames without a card title."

@@ -64,5 +64,8 @@
     "supportsHeightStretch": true,
     "notes": "Icon area is a local SVG; title stripe and value layout are CSS."
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "compact-title-value-unit"
+  ]
 }

@@ -91,5 +91,8 @@
     ],
     "runtime": "generator sets data-variant; no runtime script required"
   },
-  "status": "ready"
+  "status": "ready",
+  "approvedKpiRoutes": [
+    "multi-state"
+  ]
 }
